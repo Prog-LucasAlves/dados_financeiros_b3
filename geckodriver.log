@@ -1,3 +1,4 @@
+
 1624630273575	geckodriver	INFO	Listening on 127.0.0.1:50841
 1624630276569	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Lucas\\AppData\\Local\\Temp\\rust_mozprofileVj1leq"
 1624630277238	Marionette	INFO	Marionette enabled
