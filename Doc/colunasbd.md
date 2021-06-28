@@ -11,3 +11,5 @@
 - papel:
 1. Descrição -> ticker da ação negociada na B3
 2. Tipo(type) -> varchar(255)
+
+- 
