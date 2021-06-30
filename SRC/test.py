@@ -1,4 +1,4 @@
 from datetime import date
 
-a = date.today() 
+a = date.today()
 print(a)
