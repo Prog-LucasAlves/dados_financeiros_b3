@@ -14,10 +14,11 @@ services:
             
     bi:
         image: metabase/metabase
+        restart: always
         ports: 
             - "3000:3000"
         volumes: 
-            - ./metabase:/dev/random:ro   
+            - ./metabase:/metabase-data  
         links: 
             - db
     

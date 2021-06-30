@@ -6,16 +6,19 @@ import backoff
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 import time
-import datetime
 from datetime import date, datetime
 
 RED = "\033[1;31m"
 GREEN = "\033[0;32m"
 RESET = "\033[0;0m"
 YELLOW = "\033[1;33m"
+BLUE = "\033[1;34m"
 
 # @backoff.on_exception(backoff.expo,(Exception,TimeoutError), max_tries=10)
 def dados():
+
+    inicio = time.time()
+
     options = FirefoxOptions()
     options.add_argument("--headless")
     web = webdriver.Firefox(options=options)
@@ -28,6 +31,8 @@ def dados():
     acao = __list__.lst_acao
 
     dt = date.today()
+
+    n = 0
 
     for i in acao:
         # Consulta no bando de dados para verificar se os dados já se encontram no mesmo
@@ -103,6 +108,21 @@ def dados():
             __conectdb__.in_dados(query_insert_bd)
             print(f"+{GREEN} dados da ação: {i}, gravados com sucesso {RESET}+")
             # --- #
+
+            n += 1
+
+    web.quit()
+
+    fim = time.time()
+    hours, rem = divmod(fim - inicio, 3600)
+    minutes, seconds = divmod(rem, 60)
+
+    # Fim
+    print(f"{RED}-----------------{RESET}")
+    print(f"{BLUE}Finalizou. {n} Empresas Cadastradas")
+    print("Tempo: {:0>2}:{:0>2}:{:05.2f}".format(int(hours),int(minutes),seconds))
+    print(f"{RESET}{RED}-----------------{RESET}")
+
 
 
 dados()
