@@ -1,4 +1,5 @@
 lst_acao = [
+    "LLLL3",
     "AALR3",
     "ABCB4",
     "ABEV3",

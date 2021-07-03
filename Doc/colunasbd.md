@@ -9,7 +9,7 @@
 2. Tipo(type) -> date
 
 - (2) papel:
-1. Descrição -> ticker da ação negociada na B3.
+1. Descrição -> Código da ação.
 2. Tipo(type) -> varchar(255)
 
 - (3) tipo:
@@ -18,25 +18,41 @@ https://comoinvestir.thecap.com.br/diferenca-entre-acoes-preferenciais-ordinaria
 2. Tipo(Type) -> varchar(255)
 
 - (4) empresa:
-1. Descrição -> nome da empresa.
-2. Tipo(Type) -> varchar(255)
+1. Descrição -> Nome comercial da empresa.
+2. Tipo(type) -> varchar(255)
 
 - (5) setor:
-1. Descrição -> setor em que a empresa atua
+1. Descrição -> Classificação setorial.
 2. Tipo(type) -> varchar(255)
 
 - (6) cotacao:
-1. Descrição -> valor da ação no dia em que foi coletado os dado.
+1. Descrição -> Cotação de fechamento da ação.
 2. Tipo(type) -> money
 
 - (7) data_ult_cotacao
-1. Descrição -> data da última negociação da ação
-2. Tipo(Type) -> date
+1. Descrição -> data do último pregão em que o ativo foi negociada.
+2. Tipo(type) -> date
 
 - (8) min_52_sem:
-1. Descrição -> menor valor da cotação em 52 semanas
+1. Descrição -> menor cotação da ação nos últimos 12 meses
 2. Tipo(type) -> money
 
 - (9) max_52_sem:
-1. Descrição -> maior valor da cotação em 52 semanas
+1. Descrição -> maior cotação da ação nos últimos 12 meses
 2. Tipo(type) -> money
+
+- (10) vol_med(2m):
+1. Descrição -> volume médio de negociações da ação nos últimos 2 meses.
+2. Tipo(type) -> money
+
+- (11) valor_mercado:
+1. Descrição -> valor de mercado da empresa - Calculando multiplicando o preço da ação pelo número total de ações.
+2. Tipo(type) -> money
+
+- (12) valor_firma:
+1. Descrição -> Valor da firma(Enterprise Value) é calculado somando o valor de mercado da empresa a sua dívida líquida.
+2. Tipo(type) -> money
+
+- (13) ult_balanco_pro:
+1. Descrição -> Data do último balanço processado pela empresa.
+2. Tipo(type) -> date

@@ -1,7 +1,7 @@
 version: '3'
 services: 
     db:
-        image: postgres
+        build: .
         container_name: "pg_container"
         environment: 
             - POSTGRES_USER=root
