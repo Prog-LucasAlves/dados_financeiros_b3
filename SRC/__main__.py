@@ -1,6 +1,7 @@
 import __conectdb__
 import __query__
 import __check__
+import __check_semana__
 
 #import __log__
 import __list__
@@ -23,13 +24,21 @@ GRAY = "\033[1;35m"
 @backoff.on_exception(backoff.expo, (NoSuchElementException), max_tries=2)
 def dados():
 
-    dt = date.today() - timedelta(days=3)
+    dt = date.today() - timedelta(days=0)
+    dt_sem = dt.weekday()
+    dt_dia_sem = __check_semana__.DIAS[dt_sem]
     dt = dt.strftime("%d/%m/%Y")
+    #dt = date(dt)
+    #dt_sem = dt.weekday()
 
-    if __check__.data_check != dt:
+    if __check__.data_check != dt \
+       or dt_dia_sem == 'Sábado' \
+       or dt_dia_sem == 'Domingo':
         print(f"+{GRAY} Site não atualizado {RESET}+")
-        print(dt)
-        print(__check__.data_check)
+        print("--------------------------------------")
+        print(f"Hoje é dia: {dt} - {dt_dia_sem} ")
+        print(f"Data do site é: {__check__.data_check} - {__check__.day}")
+        print("--------------------------------------")
 
     else:
 
@@ -126,9 +135,9 @@ def dados():
                         "/html/body/div[1]/div[2]/table[2]/tbody/tr[1]/td[4]/span"
                     ).text
                     # Insere os dados coletados no banco de dados #
-                    query_insert_bd = f" INSERT INTO dados VALUES ('{dt}','{papel}','{tipo}','{empresa}','{setor}',\
-                    '{cotacao}','{dt_ult_cotacao}','{min_52_sem}','{max_52_sem}','{vol_med}','{valor_mercado}',\
-                    '{valor_firma}','{ult_balanco_pro}') "
+                    query_insert_bd = f" INSERT INTO dados VALUES ('{dt}','{papel}','{tipo}','{empresa}', \
+                    '{setor}','{cotacao}','{dt_ult_cotacao}','{min_52_sem}','{max_52_sem}','{vol_med}',   \
+                    '{valor_mercado}','{valor_firma}','{ult_balanco_pro}') "
                     __conectdb__.in_dados(query_insert_bd)
                     print(f"+{GREEN} dados da ação: {i}, gravados com sucesso {RESET}+")
                     # --- #
@@ -138,7 +147,6 @@ def dados():
                 print(f"+ {RED} Dados da ação: {i}, não gravados {RESET} +")
                 pass
             
-
         # Removendo linhas(tabela dados) do BD com valores vazios (ref.: na coluna papel)
         delete_vazio = __query__.delete_vazio_query
         __conectdb__.in_dados(delete_vazio)
@@ -147,6 +155,7 @@ def dados():
         delete_dublicados = __query__.delete_dublicados_query
         __conectdb__.in_dados(delete_dublicados)
 
+        # Finalizando o Navegador
         web.quit()
 
         fim = time.time()
