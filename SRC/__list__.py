@@ -456,4 +456,5 @@ lst_acao = [
     "GGPS3",
     "BLAU3",
     "DOTZ3",
-    "BRBI11"]
+    "BRBI11",
+]

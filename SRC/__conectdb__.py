@@ -12,6 +12,7 @@ def conexao():
         database=os.getenv("POSTGRES_DB"),
         host="localhost",
     )
+
     return con
 
 
@@ -31,3 +32,17 @@ def se_dados(query):
     vcon.commit()
     vcon.close()
     return rows
+
+
+def verifica_conexao():
+    try:
+        con = psycopg2.connect(
+            user=os.getenv("POSTGRES_USER"),
+            password=os.getenv("POSTGRES_PASSWORD"),
+            database=os.getenv("POSTGRES_DB"),
+            host="localhost",
+        )
+        return con, True
+
+    except:
+        return False

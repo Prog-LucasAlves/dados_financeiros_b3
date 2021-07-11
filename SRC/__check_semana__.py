@@ -1,11 +1,9 @@
-
-
 DIAS = [
-    'Segunda-feira',
-    'Terça-feira',
-    'Quarta-feira',
-    'Quinta-Feira',
-    'Sexta-feira',
-    'Sábado',
-    'Domingo'
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-Feira",
+    "Sexta-feira",
+    "Sábado",
+    "Domingo",
 ]

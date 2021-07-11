@@ -3,14 +3,14 @@ import __query__
 import __check__
 import __check_semana__
 
-#import __log__
+# import __log__
 import __list__
 import backoff
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.common.exceptions import NoSuchElementException
 import time
-from datetime import date, datetime, timedelta
+from datetime import date, timedelta
 
 RED = "\033[1;31m"
 GREEN = "\033[0;32m"
@@ -28,12 +28,10 @@ def dados():
     dt_sem = dt.weekday()
     dt_dia_sem = __check_semana__.DIAS[dt_sem]
     dt = dt.strftime("%d/%m/%Y")
-    #dt = date(dt)
-    #dt_sem = dt.weekday()
+    # dt = date(dt)
+    # dt_sem = dt.weekday()
 
-    if __check__.data_check != dt \
-       or dt_dia_sem == 'Sábado' \
-       or dt_dia_sem == 'Domingo':
+    if __check__.data_check != dt or dt_dia_sem == "Sábado" or dt_dia_sem == "Domingo":
         print(f"+{GRAY} Site não atualizado {RESET}+")
         print("--------------------------------------")
         print(f"Hoje é dia: {dt} - {dt_dia_sem} ")
@@ -42,131 +40,152 @@ def dados():
 
     else:
 
-        print(f"+{GREEN_T} Site atualizado vamos começar a coletar os dados {RESET} +")
+        print(f"+{GREEN_T} Site atualizado vamos começar a coletar os dados. {RESET}+")
 
-        inicio = time.time()
+        if __conectdb__.verifica_conexao() == False:
+            return print(
+                f""" 
++{RED} Conexão não estabelecida com o Banco de Dados, verifique: {RESET}+
+-{RED} Docker {RESET} 
+            """
+            )
 
-        options = FirefoxOptions()
-        #options.add_argument("--headless")
-        web = webdriver.Firefox(options=options)
+        else:
+            print(
+                f"""
++{GREEN_T} Conexão estabelecida com sucesso ao Banco de Dados. {RESET}+ """
+            )
+            print("-------------------------------------------------------")
 
-        web.implicitly_wait(20)
-    
-        url = "https://fundamentus.com.br/"
-        web.get(url)
+            inicio = time.time()
 
-        acao = __list__.lst_acao
+            options = FirefoxOptions()
+            options.add_argument("--headless")
+            web = webdriver.Firefox(options=options)
 
-        n = 0
-        
-        for i in acao:
-        
-            try: 
-       
-                # Consulta no bando de dados para verificar se os dados já se encontram no mesmo (Ref.: data_ult_cotacao / papel)
-                query_consult_bd = f" SELECT data_dado_inserido, papel \
-                                            FROM dados \
-                                                WHERE data_ult_cotacao = '{dt}' \
-                                                    AND papel = '{i}' "
-                result = __conectdb__.se_dados(query_consult_bd)
-                # --- #
+            web.implicitly_wait(20)
 
-                if result != []:
+            url = "https://fundamentus.com.br/"
+            web.get(url)
 
-                    print(f"+{YELLOW} dados da ação: {i}, já cadastrados {RESET}+")
+            acao = __list__.lst_acao
 
-                else:
+            n = 0
 
-                    time.sleep(2)
-                    web.find_element_by_xpath(
-                        "/html/body/div[1]/div[1]/form/fieldset/input[1]"
-                    ).send_keys(i)
-                    web.find_element_by_xpath(
-                        "/html/body/div[1]/div[1]/form/fieldset/input[2]"
-                    ).click()
-            
-                    # Inicio da coleta dos dados #
-                    time.sleep(2)
-                    papel = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[1]/tbody/tr[1]/td[2]/span"
-                    ).text
-                    #
-                    tipo = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[1]/tbody/tr[2]/td[2]/span"
-                    ).text
-                    #
-                    empresa = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[1]/tbody/tr[3]/td[2]/span"
-                    ).text
-                    #
-                    setor = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[1]/tbody/tr[4]/td[2]/span/a"
-                    ).text
-                    #
-                    cotacao = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[1]/tbody/tr[1]/td[4]/span"
-                    ).text
-                    #
-                    dt_ult_cotacao = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[1]/tbody/tr[2]/td[4]/span"
-                    ).text
-                    #
-                    min_52_sem = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[1]/tbody/tr[3]/td[4]/span"
-                    ).text
-                    #
-                    max_52_sem = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[1]/tbody/tr[4]/td[4]/span"
-                    ).text
-                    #
-                    vol_med = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[1]/tbody/tr[5]/td[4]/span"
-                    ).text.replace(".", "")
-                    #
-                    valor_mercado = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[2]/tbody/tr[1]/td[2]/span"
-                    ).text.replace(".", "")
-                    #
-                    valor_firma = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[2]/tbody/tr[2]/td[2]/span"
-                    ).text.replace(".", "")
-                    #
-                    ult_balanco_pro = web.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/table[2]/tbody/tr[1]/td[4]/span"
-                    ).text
-                    # Insere os dados coletados no banco de dados #
-                    query_insert_bd = f" INSERT INTO dados VALUES ('{dt}','{papel}','{tipo}','{empresa}', \
-                    '{setor}','{cotacao}','{dt_ult_cotacao}','{min_52_sem}','{max_52_sem}','{vol_med}',   \
-                    '{valor_mercado}','{valor_firma}','{ult_balanco_pro}') "
-                    __conectdb__.in_dados(query_insert_bd)
-                    print(f"+{GREEN} dados da ação: {i}, gravados com sucesso {RESET}+")
+            for i in acao:
+
+                try:
+
+                    # Consulta no bando de dados para verificar se os dados já se encontram no mesmo (Ref.: data_ult_cotacao / papel)
+                    query_consult_bd = f" SELECT data_dado_inserido, papel \
+                                                FROM dados \
+                                                    WHERE data_ult_cotacao = '{dt}' \
+                                                        AND papel = '{i}' "
+                    result = __conectdb__.se_dados(query_consult_bd)
                     # --- #
 
-                    n += 1
-            except:
-                print(f"+ {RED} Dados da ação: {i}, não gravados {RESET} +")
-                pass
-            
-        # Removendo linhas(tabela dados) do BD com valores vazios (ref.: na coluna papel)
-        delete_vazio = __query__.delete_vazio_query
-        __conectdb__.in_dados(delete_vazio)
+                    if result != []:
 
-        # Removendo linhas(tabela dados) do BD duplicados (ref.: na coluna papel / data_ult_cotacao )
-        delete_dublicados = __query__.delete_dublicados_query
-        __conectdb__.in_dados(delete_dublicados)
+                        print(f"+{YELLOW} Dados da ação: {i}, já cadastrados {RESET}+")
 
-        # Finalizando o Navegador
-        web.quit()
+                    else:
 
-        fim = time.time()
-        hours, rem = divmod(fim - inicio, 3600)
-        minutes, seconds = divmod(rem, 60)
+                        time.sleep(2)
+                        web.find_element_by_xpath(
+                            "/html/body/div[1]/div[1]/form/fieldset/input[1]"
+                        ).send_keys(i)
+                        web.find_element_by_xpath(
+                            "/html/body/div[1]/div[1]/form/fieldset/input[2]"
+                        ).click()
 
-        # Fim
-        print(f"{RED}-----------------{RESET}")
-        print(f"{BLUE}Finalizou. {n} Empresas Cadastradas")
-        print("Tempo: {:0>2}:{:0>2}:{:05.2f}".format(int(hours), int(minutes), seconds))
-        print(f"{RESET}{RED}-----------------{RESET}")
+                        # Inicio da coleta dos dados #
+                        time.sleep(2)
+                        papel = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[1]/tbody/tr[1]/td[2]/span"
+                        ).text
+                        #
+                        tipo = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[1]/tbody/tr[2]/td[2]/span"
+                        ).text
+                        #
+                        empresa = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[1]/tbody/tr[3]/td[2]/span"
+                        ).text
+                        #
+                        setor = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[1]/tbody/tr[4]/td[2]/span/a"
+                        ).text
+                        #
+                        cotacao = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[1]/tbody/tr[1]/td[4]/span"
+                        ).text
+                        #
+                        dt_ult_cotacao = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[1]/tbody/tr[2]/td[4]/span"
+                        ).text
+                        #
+                        min_52_sem = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[1]/tbody/tr[3]/td[4]/span"
+                        ).text
+                        #
+                        max_52_sem = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[1]/tbody/tr[4]/td[4]/span"
+                        ).text
+                        #
+                        vol_med = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[1]/tbody/tr[5]/td[4]/span"
+                        ).text.replace(".", "")
+                        #
+                        valor_mercado = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[2]/tbody/tr[1]/td[2]/span"
+                        ).text.replace(".", "")
+                        #
+                        valor_firma = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[2]/tbody/tr[2]/td[2]/span"
+                        ).text.replace(".", "")
+                        #
+                        ult_balanco_pro = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[2]/tbody/tr[1]/td[4]/span"
+                        ).text
+                        # Insere os dados coletados no banco de dados #
+                        query_insert_bd = f" INSERT INTO dados VALUES ('{dt}','{papel}','{tipo}','{empresa}', \
+                        '{setor}','{cotacao}','{dt_ult_cotacao}','{min_52_sem}','{max_52_sem}','{vol_med}',   \
+                        '{valor_mercado}','{valor_firma}','{ult_balanco_pro}') "
+                        __conectdb__.in_dados(query_insert_bd)
+                        print(
+                            f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+"
+                        )
+                        # --- #
+
+                        n += 1
+                except:
+                    print(f"+{RED} Dados da ação: {i}, não gravados {RESET} +")
+                    pass
+
+            # Removendo linhas(tabela dados) do BD com valores vazios (ref.: na coluna papel)
+            delete_vazio = __query__.delete_vazio_query
+            __conectdb__.in_dados(delete_vazio)
+
+            # Removendo linhas(tabela dados) do BD duplicados (ref.: na coluna papel / data_ult_cotacao )
+            delete_dublicados = __query__.delete_dublicados_query
+            __conectdb__.in_dados(delete_dublicados)
+
+            # Finalizando o Navegador
+            web.quit()
+
+            fim = time.time()
+            hours, rem = divmod(fim - inicio, 3600)
+            minutes, seconds = divmod(rem, 60)
+
+            # Fim
+            print(f"{RED}-----------------{RESET}")
+            print(f"{BLUE}Finalizou. {n} Empresas Cadastradas")
+            print(
+                "Tempo: {:0>2}:{:0>2}:{:05.2f}".format(
+                    int(hours), int(minutes), seconds
+                )
+            )
+            print(f"{RESET}{RED}-----------------{RESET}")
 
 
 dados()
