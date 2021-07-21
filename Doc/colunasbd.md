@@ -56,3 +56,11 @@ https://comoinvestir.thecap.com.br/diferenca-entre-acoes-preferenciais-ordinaria
 - (13) ult_balanco_pro:
 1. Descrição -> Data do último balanço processado pela empresa.
 2. Tipo(type) -> date
+
+- (14) nr_acoes:
+1. Descrição -> Número total de ações somadas(ON / PN / UNIT)
+2. Tipo(type) -> integer
+
+- (15) os_dia:
+1. Descrição -> Oscilação da ação no dia da coleta dos dados
+2. Tipo(type) -> double precision

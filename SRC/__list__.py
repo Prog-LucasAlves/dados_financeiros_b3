@@ -1,5 +1,4 @@
 lst_acao = [
-    "LLLL3",
     "AALR3",
     "ABCB4",
     "ABEV3",
@@ -89,7 +88,7 @@ lst_acao = [
     "BSEV3",
     "BSLI3",
     "BSLI4",
-    "BTOW3",
+    #"BTOW3",
     "BTTL3",
     "CAMB3",
     "CAML3",
@@ -457,5 +456,8 @@ lst_acao = [
     "BLAU3",
     "DOTZ3",
     "BRBI11",
-    "IFCM3"
+    "IFCM3",
+    "TTEN3",
+    "SMFT3",
+    "CBAV3"
 ]
