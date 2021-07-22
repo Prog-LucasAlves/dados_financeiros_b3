@@ -6,3 +6,4 @@ geckodriver.exe
 .venv
 .vscode
 Makefile
+Dados_Financeiros.pbix

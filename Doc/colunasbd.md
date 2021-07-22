@@ -1,6 +1,6 @@
 # Descrição das colunas do Banco de dados
 
-- BD -> dados_financeiros
+## Nome do banco de dados -> dados_financeiros
 
 ## Colunas
 
