@@ -3,7 +3,7 @@ import __query__
 import __check__
 import __check_semana__
 
-#import __log__
+# import __log__
 import __list__
 import backoff
 from selenium import webdriver
@@ -152,11 +152,15 @@ def dados():
                         ).text.replace(".", "")
                         os_dia = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[2]/td[2]/span/font"
-                        ).text.replace("%","").replace(",",".")
+                            ).text.replace("%", "").replace(",", ".")
+                        pl = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[2]/td[4]/span"
+                        ).text.replace(".","").replace(",",".")
+
                         # Insere os dados coletados no banco de dados #
                         query_insert_bd = f" INSERT INTO dados VALUES ('{dt}','{papel}','{tipo}','{empresa}', \
                         '{setor}','{cotacao}','{dt_ult_cotacao}','{min_52_sem}','{max_52_sem}','{vol_med}',   \
-                        '{valor_mercado}','{valor_firma}','{ult_balanco_pro}','{nr_acoes}',{os_dia}) "
+                        '{valor_mercado}','{valor_firma}','{ult_balanco_pro}','{nr_acoes}',{os_dia},'{pl}') "
                         __conectdb__.in_dados(query_insert_bd)
                         print(
                             f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+"
@@ -164,7 +168,7 @@ def dados():
                         # --- #
 
                         n += 1
-                except(TypeError):
+                except (TypeError):
                     print(TypeError)
                     print(f"+{RED} Dados da ação: {i}, não gravados {RESET} +")
                     pass
