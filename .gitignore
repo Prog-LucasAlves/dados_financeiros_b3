@@ -7,3 +7,4 @@ geckodriver.exe
 .vscode
 Makefile
 Dados_Financeiros.pbix
+__streamlit__.py
