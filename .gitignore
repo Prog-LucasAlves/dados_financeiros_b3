@@ -8,3 +8,4 @@ geckodriver.exe
 Makefile
 Dados_Financeiros.pbix
 __streamlit__.py
+__listcolumns__.py
