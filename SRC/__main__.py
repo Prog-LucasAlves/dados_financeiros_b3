@@ -156,11 +156,39 @@ def dados():
                         pl = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[2]/td[4]/span"
                         ).text.replace(".","").replace(",",".")
+                        lpa = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[2]/td[6]/span"
+                        ).text.replace(".","").replace(",",".")
+                        pvp = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[3]/td[4]/span"
+                        ).text.replace(".","").replace(",",".")
+                        vpa = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[3]/td[6]/span"
+                        ).text.replace(".","").replace(",",".").replace("-","0")
+                        p_ebit = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[4]/span"
+                        ).text.replace(".","").replace(",",".").replace("-","0")
+                        marg_bruta = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[6]/span"
+                        ).text.replace(".","").replace(",",".").replace("%","").replace("-","0")
+                        psr = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[4]"
+                        ).text.replace(".","").replace(",",".").replace("-","0")
+                        marg_ebit = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[6]/span"
+                        ).text.replace(".","").replace(",",".").replace("%","").replace("-","0")
+                        p_ativo = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[6]/td[4]/span"
+                        ).text.replace(".","").replace(",",".").replace("-","0")
+                        marg_liquida = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[6]/td[6]/span"
+                        ).text.replace(".","").replace(",",".").replace("%","").replace("-","0")
 
                         # Insere os dados coletados no banco de dados #
-                        query_insert_bd = f" INSERT INTO dados VALUES ('{dt}','{papel}','{tipo}','{empresa}', \
+                        query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel}','{tipo}','{empresa}', \
                         '{setor}','{cotacao}','{dt_ult_cotacao}','{min_52_sem}','{max_52_sem}','{vol_med}',   \
-                        '{valor_mercado}','{valor_firma}','{ult_balanco_pro}','{nr_acoes}',{os_dia},'{pl}') "
+                        '{valor_mercado}','{valor_firma}','{ult_balanco_pro}','{nr_acoes}',{os_dia},'{pl}','{lpa}', \
+                        '{pvp}','{vpa}','{p_ebit}','{marg_bruta}','{psr}','{marg_ebit}','{p_ativo}','{marg_liquida}' ) "
                         __conectdb__.in_dados(query_insert_bd)
                         print(
                             f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+"

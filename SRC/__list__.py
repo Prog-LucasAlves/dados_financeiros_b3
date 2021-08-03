@@ -461,4 +461,12 @@ lst_acao = [
     "TTEN3",
     "SMFT3",
     "CBAV3",
+    "DESK3",
+    "MLAS3",
+    "LVTC3",
+    "AGXY3",
+    "FIQE3",
+    "TRAD3",
+    "ARML3",
+    "BRIT3"
 ]

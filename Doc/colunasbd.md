@@ -64,3 +64,43 @@ https://comoinvestir.thecap.com.br/diferenca-entre-acoes-preferenciais-ordinaria
 - (15) os_dia:
 1. Descrição -> Oscilação da ação no dia da coleta dos dados
 2. Tipo(type) -> double precision
+
+- (16) pl:
+1. Descrição -> Preço da ação dividido pelo lucro por ação
+2. Tipo(type) -> double precision
+
+- (17) lpa:
+1. Descrição -> Lucro por ação
+2. Tipo(type) -> double precision
+
+- (18) pvp:
+1. Descrição -> Preço da ação dividido pelo valor patrimonial por ação
+2. Tipo(type) -> double precision
+
+- (19) vpa: Valor Patrimonial por Ação
+1. Descrição -> Valor do patrimônio líquido dividido pelo número total de ações
+2. Tipo(type) -> double precision
+
+- (20) p_ebit: 
+1. Descrição -> Preço da ação dividido pelo ebit por ação
+2. Tipo(type) -> double precision
+
+- (21) marg_bruta:
+1. Descrição -> Lucro bruto dividido pela receita líquida
+2. Tipo(type) -> double precision
+
+- (22) psr:
+1. Descrição -> Preço da ação dividido pela receita líquida por ação
+2. Tipo(type) -> double precision
+
+- (23) marg_ebit:
+1. Descrição -> Ebit dividido pela receita líquida
+2. Tipo(type) -> double precision
+
+- (24) p_ativos:
+1. Descrição -> Preço da ação dividido pelos ativos totais por ação
+2. Tipo(type) -> double precision
+   
+- (25) marg_liquida:
+1. Descrição -> Lucro líquido dividido pela receita líquida
+2. Tipo(type) -> double precision
