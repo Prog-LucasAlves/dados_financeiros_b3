@@ -104,3 +104,67 @@ https://comoinvestir.thecap.com.br/diferenca-entre-acoes-preferenciais-ordinaria
 - (25) marg_liquida:
 1. Descrição -> Lucro líquido dividido pela receita líquida
 2. Tipo(type) -> double precision
+   
+- (26) p_cap_giro:
+1. Descrição -> Preço da ação dividido pelo capital de giro por ação
+2. Tipo(type) -> double precision  
+
+- (27) ebit_ativo:
+1. Descrição -> Ebit dividido pelos ativos totais
+2. Tipo(type) -> double precision 
+
+- (28) p_ativo_circ_liq:
+1. Descrição -> Preço da ação dividido pelos ativos circulantes líquidos por ação
+2. Tipo(type) -> double precision
+
+- (29) roic: Retorno sobre o capital investido
+1. Descrição -> ebit dividido por ativos/fornecedores/caixa
+2. Tipo(type) -> double precision
+
+- (30) div_yield:
+1. Descrição -> Dividendo pago por ação dividddo pelo preço da ação
+2. Tipo(type) -> double precision
+   
+- (31) roe: Retorno sobre o patrimônio líquido
+1. Descrição -> Lucro líquido dividdo pelo patrimônio líquido
+2. Tipo(type) -> double precision
+
+- (32) ev_ebitda:
+1. Descrição -> Valor da firma(Enterprise value) dividido pelo ebitda
+2. Tipo(type) -> double precision
+
+- (33) liquidez_corr:
+1. Descrição -> Ativo circulante dividido pelo passivo circulante
+2. Tipo(type) -> double precision
+
+- (34) ev_ebit:
+1. Descrição -> Valor da firma(Enterprise value) dividido pelo ebit
+2. Tipo(type) -> double precision
+
+- (35) cres_rec(5a):
+1. Descrição -> Crescimento da receita líquida nos últimos 5 anos
+2. Tipo(type) -> double precision
+
+- (36) ativo:
+1. Descrição -> Todos os bens, direitos e valores a receber de uma entidade
+2. Tipo(type) -> money
+
+- (37) disponibilidades:
+1. Descrição -> Contas que representam bens numerários(Dinheiro)
+2. Tipo(type) -> money
+   
+- (38) ativo_circulante:
+1. Descrição -> Bens ou direitos que podem ser convertidos em dinheiro em curto prazo
+2. Tipo(type) -> money
+
+- (39) div_bruta:
+1. Descrição -> Dívida bruta é obtida somando-se as dívidas de curto e longo prazo mais as debêntures de curto e longo prazo
+2. Tipo(type) ->  money
+
+- (40) div_liquida:
+1. Descrição -> Dívida bruta menos disponibilidades(Se esse valor é negativo, significa que a empresa possui caixa líquido positivo )
+2. Tipo(type) -> money
+
+- (41) patr_liquido:
+1. Descrição ->
+2. Tipo(type) -> Money

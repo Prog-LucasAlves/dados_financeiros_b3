@@ -28,8 +28,6 @@ def dados():
     dt_sem = dt.weekday()
     dt_dia_sem = __check_semana__.DIAS[dt_sem]
     dt = dt.strftime("%d/%m/%Y")
-    # dt = date(dt)
-    # dt_sem = dt.weekday()
 
     if __check__.data_check != dt or dt_dia_sem == "Sábado" or dt_dia_sem == "Domingo":
         print(f"+{GRAY} Site não atualizado {RESET}+")
@@ -147,48 +145,137 @@ def dados():
                         ult_balanco_pro = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[2]/tbody/tr[1]/td[4]/span"
                         ).text
+                        #
                         nr_acoes = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[2]/tbody/tr[2]/td[4]/span"
                         ).text.replace(".", "")
+                        #
                         os_dia = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[2]/td[2]/span/font"
-                            ).text.replace("%", "").replace(",", ".")
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[2]/td[2]/span/font"
+                        ).text.replace("%", "").replace(",", ".")
+                        #
                         pl = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[2]/td[4]/span"
-                        ).text.replace(".","").replace(",",".")
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[2]/td[4]/span"
+                        ).text.replace(".", "").replace(",", ".")
+                        #
                         lpa = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[2]/td[6]/span"
-                        ).text.replace(".","").replace(",",".")
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[2]/td[6]/span"
+                        ).text.replace(".", "").replace(",", ".")
+                        #
                         pvp = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[3]/td[4]/span"
-                        ).text.replace(".","").replace(",",".")
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[3]/td[4]/span"
+                        ).text.replace(".", "").replace(",", ".")
+                        #
                         vpa = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[3]/td[6]/span"
-                        ).text.replace(".","").replace(",",".").replace("-","0")
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[3]/td[6]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        #
                         p_ebit = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[4]/span"
-                        ).text.replace(".","").replace(",",".").replace("-","0")
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[4]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        #
                         marg_bruta = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[6]/span"
-                        ).text.replace(".","").replace(",",".").replace("%","").replace("-","0")
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[6]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        #
                         psr = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[4]"
-                        ).text.replace(".","").replace(",",".").replace("-","0")
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[4]"
+                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        #
                         marg_ebit = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[6]/span"
-                        ).text.replace(".","").replace(",",".").replace("%","").replace("-","0")
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[6]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        #
                         p_ativo = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[6]/td[4]/span"
-                        ).text.replace(".","").replace(",",".").replace("-","0")
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[6]/td[4]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        #
                         marg_liquida = web.find_element_by_xpath(
-                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[6]/td[6]/span"
-                        ).text.replace(".","").replace(",",".").replace("%","").replace("-","0")
-
+                                "/html/body/div[1]/div[2]/table[3]/tbody/tr[6]/td[6]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        #
+                        p_cap_giro = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[7]/td[4]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        #
+                        ebit_ativo = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[7]/td[6]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        #
+                        p_ativo_circ_liq = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[8]/td[4]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        #
+                        roic = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[8]/td[6]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        #
+                        div_yield = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[9]/td[4]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        #
+                        roe = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[9]/td[6]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        #
+                        ev_ebitda = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[10]/td[4]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        #
+                        liquidez_corr = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[10]/td[6]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        #
+                        ev_ebit = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[11]/td[4]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        #
+                        cres_rec = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[3]/tbody/tr[12]/td[4]/span"
+                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        #
+                        ativo = web.find_element_by_xpath(
+                            "/html/body/div[1]/div[2]/table[4]/tbody/tr[2]/td[2]/span"
+                        ).text.replace(".","")
+                        #
+                        if setor == 'Intermediários Financeiros':
+                            disponibilidades = '0'
+                            ativo_circulante = '0'
+                            divd_bruta = '0'
+                            divd_liquida = '0'
+                            patr_liquido = web.find_element_by_xpath(
+                                "/html/body/div[1]/div[2]/table[4]/tbody/tr[3]/td[4]/span"
+                        ).text
+                        #
+                        else: 
+                            disponibilidades = web.find_element_by_xpath(
+                                "/html/body/div[1]/div[2]/table[4]/tbody/tr[3]/td[2]/span"
+                            ).text.replace(".","")
+                        #
+                            ativo_circulante = web.find_element_by_xpath(
+                                "/html/body/div[1]/div[2]/table[4]/tbody/tr[4]/td[2]/span"
+                            ).text.replace(".","")
+                        #
+                            divd_bruta = web.find_element_by_xpath(
+                                "/html/body/div[1]/div[2]/table[4]/tbody/tr[2]/td[4]/span"
+                            ).text.replace(".","")
+                        #
+                            divd_liquida = web.find_element_by_xpath(
+                                "/html/body/div[1]/div[2]/table[4]/tbody/tr[3]/td[4]/span"
+                            ).text.replace(".","")
+                        #
+                            patr_liquido = web.find_element_by_xpath(
+                                "/html/body/div[1]/div[2]/table[4]/tbody/tr[4]/td[4]/span"
+                            ).text.replace(".","")
+                        #
                         # Insere os dados coletados no banco de dados #
                         query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel}','{tipo}','{empresa}', \
-                        '{setor}','{cotacao}','{dt_ult_cotacao}','{min_52_sem}','{max_52_sem}','{vol_med}',   \
-                        '{valor_mercado}','{valor_firma}','{ult_balanco_pro}','{nr_acoes}',{os_dia},'{pl}','{lpa}', \
-                        '{pvp}','{vpa}','{p_ebit}','{marg_bruta}','{psr}','{marg_ebit}','{p_ativo}','{marg_liquida}' ) "
+                        '{setor}','{cotacao}','{dt_ult_cotacao}','{min_52_sem}','{max_52_sem}','{vol_med}', \
+                        '{valor_mercado}','{valor_firma}','{ult_balanco_pro}','{nr_acoes}','{os_dia}','{pl}','{lpa}', \
+                        '{pvp}','{vpa}','{p_ebit}','{marg_bruta}','{psr}','{marg_ebit}','{p_ativo}','{marg_liquida}', \
+                        '{p_cap_giro}','{ebit_ativo}','{p_ativo_circ_liq}','{roic}','{div_yield}','{roe}', \
+                        '{ev_ebitda}','{liquidez_corr}','{ev_ebit}','{cres_rec}','{ativo}','{disponibilidades}', \
+                        '{ativo_circulante}','{divd_bruta}','{divd_liquida}','{patr_liquido}' ) "
                         __conectdb__.in_dados(query_insert_bd)
                         print(
                             f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+"
