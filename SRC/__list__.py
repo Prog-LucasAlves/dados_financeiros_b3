@@ -437,7 +437,7 @@ lst_acao = [
     "VIVT3",
     "VLID3",
     "VULC3",
-    "VVAR3",
+    "VIIA3",
     "WEGE3",
     "WEST3",
     "WHRL3",

@@ -166,5 +166,13 @@ https://comoinvestir.thecap.com.br/diferenca-entre-acoes-preferenciais-ordinaria
 2. Tipo(type) -> money
 
 - (41) patr_liquido:
-1. Descrição ->
-2. Tipo(type) -> Money
+1. Descrição -> Representa os valores que os sócios ou acionistas tem na empresa em um determinado momento
+2. Tipo(type) -> money
+
+- (42) lucro_liquido_12m:
+1. Descriçao -> O que sobra das vendas após a dedução de todas as vendas(12 Meses)
+2. Tipo(type) -> money
+
+- (43) lucro_liquido_3m:
+1. Descrição -> O que sobra das vendas após a dedução de todas as vendas(3 Meses)
+2. Tipo(type) -> money

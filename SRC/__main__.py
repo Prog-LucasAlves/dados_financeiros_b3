@@ -24,7 +24,7 @@ GRAY = "\033[1;35m"
 @backoff.on_exception(backoff.expo, (NoSuchElementException), max_tries=2)
 def dados():
 
-    dt = date.today() - timedelta(days=0)
+    dt = date.today() - timedelta(days=1)
     dt_sem = dt.weekday()
     dt_dia_sem = __check_semana__.DIAS[dt_sem]
     dt = dt.strftime("%d/%m/%Y")
@@ -268,6 +268,14 @@ def dados():
                                 "/html/body/div[1]/div[2]/table[4]/tbody/tr[4]/td[4]/span"
                             ).text.replace(".","")
                         #
+                            lucro_liquido_12m = web.find_element_by_xpath(
+                                "/html/body/div[1]/div[2]/table[5]/tbody/tr[5]/td[2]/span"
+                            ).text.replace(".","")
+                        #    
+                            lucro_liquido_3m = web.find_element_by_xpath(
+                                "/html/body/div[1]/div[2]/table[5]/tbody/tr[5]/td[4]/span"
+                            ).text.replace(".","")
+                        #    
                         # Insere os dados coletados no banco de dados #
                         query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel}','{tipo}','{empresa}', \
                         '{setor}','{cotacao}','{dt_ult_cotacao}','{min_52_sem}','{max_52_sem}','{vol_med}', \
@@ -275,7 +283,8 @@ def dados():
                         '{pvp}','{vpa}','{p_ebit}','{marg_bruta}','{psr}','{marg_ebit}','{p_ativo}','{marg_liquida}', \
                         '{p_cap_giro}','{ebit_ativo}','{p_ativo_circ_liq}','{roic}','{div_yield}','{roe}', \
                         '{ev_ebitda}','{liquidez_corr}','{ev_ebit}','{cres_rec}','{ativo}','{disponibilidades}', \
-                        '{ativo_circulante}','{divd_bruta}','{divd_liquida}','{patr_liquido}' ) "
+                        '{ativo_circulante}','{divd_bruta}','{divd_liquida}','{patr_liquido}','{lucro_liquido_12m}', \
+                        '{lucro_liquido_3m}' ) "
                         __conectdb__.in_dados(query_insert_bd)
                         print(
                             f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+"
