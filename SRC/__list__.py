@@ -472,5 +472,5 @@ lst_acao = [
     "RAIZ4",
     "VVEO3",
     "ONCO3",
-    #"KRSA3"
+    "KRSA3",
 ]
