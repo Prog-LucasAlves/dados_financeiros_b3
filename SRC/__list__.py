@@ -161,7 +161,7 @@ lst_acao = [
     "DOHL3",
     "DOHL4",
     "DTCY3",
-    "DTEX3",
+    #"DTEX3",
     "EALT3",
     "EALT4",
     "ECOR3",
