@@ -11,6 +11,7 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.common.exceptions import NoSuchElementException
 import time
 from datetime import date, timedelta
+import logging
 
 RED = "\033[1;31m"
 GREEN = "\033[0;32m"
@@ -20,6 +21,8 @@ YELLOW = "\033[1;33m"
 BLUE = "\033[1;34m"
 GRAY = "\033[1;35m"
 
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
 
 @backoff.on_exception(backoff.expo, (NoSuchElementException), max_tries=2)
 def dados():
