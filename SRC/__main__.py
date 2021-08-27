@@ -27,7 +27,7 @@ logging.basicConfig(level=logging.INFO)
 @backoff.on_exception(backoff.expo, (NoSuchElementException), max_tries=2)
 def dados():
 
-    dt = date.today() - timedelta(days=0)
+    dt = date.today() - timedelta(days=1)
     dt_sem = dt.weekday()
     dt_dia_sem = __check_semana__.DIAS[dt_sem]
     dt = dt.strftime("%d/%m/%Y")
