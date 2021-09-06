@@ -27,7 +27,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkins-ci.plugins.workflow</groupId>
   <artifactId>workflow-step-api</artifactId>
-  <version>2.23</version>
+  <version>2.24</version>
   <packaging>hpi</packaging>
   <name>Pipeline: Step API</name>
   <description>The Jenkins Plugins Parent POM Project</description>
@@ -42,7 +42,7 @@
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/workflow-step-api-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/workflow-step-api-plugin.git</developerConnection>
-    <tag>workflow-step-api-2.23</tag>
+    <tag>workflow-step-api-2.24</tag>
     <url>https://github.com/jenkinsci/workflow-step-api-plugin</url>
   </scm>
   <distributionManagement>

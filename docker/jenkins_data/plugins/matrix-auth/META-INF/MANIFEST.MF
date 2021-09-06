@@ -6,14 +6,14 @@ Build-Jdk: 1.8.0_222
 Extension-Name: matrix-auth
 Specification-Title: The Jenkins Plugins Parent POM Project
 Implementation-Title: matrix-auth
-Implementation-Version: 2.6.7
+Implementation-Version: 2.6.8
 Group-Id: org.jenkins-ci.plugins
 Short-Name: matrix-auth
 Long-Name: Matrix Authorization Strategy Plugin
 Url: https://github.com/jenkinsci/matrix-auth-plugin
 Compatible-Since-Version: 2.0
 Minimum-Java-Version: 1.8
-Plugin-Version: 2.6.7
+Plugin-Version: 2.6.8
 Hudson-Version: 2.222.1
 Jenkins-Version: 2.222.1
 Plugin-Dependencies: configuration-as-code:1.35;resolution:=optional,c

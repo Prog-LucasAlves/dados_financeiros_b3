@@ -27,7 +27,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkinsci.plugins</groupId>
   <artifactId>pipeline-stage-tags-metadata</artifactId>
-  <version>1.8.5</version>
+  <version>1.9.1</version>
   <packaging>hpi</packaging>
   <name>Pipeline: Stage Tags Metadata</name>
   <description>Library plugin for Pipeline stage tag metadata</description>
@@ -49,7 +49,7 @@
   <scm>
     <connection>scm:git:https://github.com/jenkinsci/pipeline-model-definition-plugin</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/pipeline-model-definition-plugin.git</developerConnection>
-    <tag>pipeline-model-definition-1.8.5</tag>
+    <tag>pipeline-model-definition-1.9.1</tag>
     <url>https://github.com/jenkinsci/pipeline-model-definition-plugin</url>
   </scm>
   <distributionManagement>
@@ -66,13 +66,13 @@
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-api</artifactId>
-      <version>2.40</version>
+      <version>2.46</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.main</groupId>
       <artifactId>jenkins-core</artifactId>
-      <version>2.190.3</version>
+      <version>2.235.5</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -84,7 +84,7 @@
     <dependency>
       <groupId>com.github.spotbugs</groupId>
       <artifactId>spotbugs-annotations</artifactId>
-      <version>3.1.12</version>
+      <version>4.3.0</version>
       <scope>provided</scope>
       <optional>true</optional>
     </dependency>
@@ -98,7 +98,7 @@
     <dependency>
       <groupId>org.codehaus.mojo</groupId>
       <artifactId>animal-sniffer-annotations</artifactId>
-      <version>1.19</version>
+      <version>1.20</version>
       <scope>provided</scope>
       <optional>true</optional>
     </dependency>
@@ -111,7 +111,7 @@
     <dependency>
       <groupId>org.kohsuke</groupId>
       <artifactId>access-modifier-annotation</artifactId>
-      <version>1.14</version>
+      <version>1.22</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>

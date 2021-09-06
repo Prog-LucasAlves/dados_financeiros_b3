@@ -7,13 +7,13 @@ Extension-Name: credentials-binding
 Specification-Title: Allows credentials to be bound to environment var
  iables for use from miscellaneous build steps.
 Implementation-Title: credentials-binding
-Implementation-Version: 1.26
+Implementation-Version: 1.27
 Group-Id: org.jenkins-ci.plugins
 Short-Name: credentials-binding
 Long-Name: Credentials Binding Plugin
 Url: https://github.com/jenkinsci/credentials-binding-plugin
 Minimum-Java-Version: 1.8
-Plugin-Version: 1.26
+Plugin-Version: 1.27
 Hudson-Version: 2.235.5
 Jenkins-Version: 2.235.5
 Plugin-Dependencies: workflow-step-api:2.23,credentials:2.5,plain-cred

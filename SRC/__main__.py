@@ -24,10 +24,10 @@ GRAY = "\033[1;35m"
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
-@backoff.on_exception(backoff.expo, (NoSuchElementException), max_tries=2)
+@backoff.on_exception(backoff.expo, (NoSuchElementException), max_tries=10)
 def dados():
 
-    dt = date.today() - timedelta(days=1)
+    dt = date.today() - timedelta(days=0)
     dt_sem = dt.weekday()
     dt_dia_sem = __check_semana__.DIAS[dt_sem]
     dt = dt.strftime("%d/%m/%Y")
@@ -171,39 +171,43 @@ def dados():
                         #
                         vpa = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[3]/td[6]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".")
                         #
                         p_ebit = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[4]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".")
+                        if len(p_ebit) >= 1:
+                            p_ebit = 0
+                        else:
+                            p_ebit = p_ebit    
                         #
                         marg_bruta = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[6]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".").replace("%", "")
                         #
                         psr = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[4]"
-                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".")
                         #
                         marg_ebit = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[6]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".").replace("%", "")
                         #
                         p_ativo = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[6]/td[4]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".")
                         #
                         marg_liquida = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[6]/td[6]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".").replace("%", "")
                         #
                         p_cap_giro = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[7]/td[4]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".")
                         #
                         ebit_ativo = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[7]/td[6]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".").replace("%", "")
                         #
                         p_ativo_circ_liq = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[8]/td[4]/span"
@@ -211,31 +215,31 @@ def dados():
                         #
                         roic = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[8]/td[6]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".").replace("%", "")
                         #
                         div_yield = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[9]/td[4]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".").replace("%", "")
                         #
                         roe = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[9]/td[6]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".").replace("%", "")
                         #
                         ev_ebitda = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[10]/td[4]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".")
                         #
                         liquidez_corr = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[10]/td[6]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".")
                         #
                         ev_ebit = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[11]/td[4]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".")
                         #
                         cres_rec = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[12]/td[4]/span"
-                        ).text.replace(".", "").replace(",", ".").replace("%", "").replace("-", "0")
+                        ).text.replace(".", "").replace(",", ".").replace("%", "")
                         #
                         ativo = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[4]/tbody/tr[2]/td[2]/span"

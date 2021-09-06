@@ -27,7 +27,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkinsci.plugins</groupId>
   <artifactId>pipeline-model-extensions</artifactId>
-  <version>1.8.5</version>
+  <version>1.9.1</version>
   <packaging>hpi</packaging>
   <name>Pipeline: Declarative Extension Points API</name>
   <description>APIs for extension points used in Declarative Pipelines</description>
@@ -49,7 +49,7 @@
   <scm>
     <connection>scm:git:https://github.com/jenkinsci/pipeline-model-definition-plugin</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/pipeline-model-definition-plugin.git</developerConnection>
-    <tag>pipeline-model-definition-1.8.5</tag>
+    <tag>pipeline-model-definition-1.9.1</tag>
     <url>https://github.com/jenkinsci/pipeline-model-definition-plugin</url>
   </scm>
   <distributionManagement>
@@ -66,43 +66,43 @@
     <dependency>
       <groupId>org.jenkinsci.plugins</groupId>
       <artifactId>pipeline-model-api</artifactId>
-      <version>1.8.5</version>
+      <version>1.9.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-cps</artifactId>
-      <version>2.83</version>
+      <version>2.92</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-job</artifactId>
-      <version>2.40</version>
+      <version>2.41</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>credentials</artifactId>
-      <version>2.3.11</version>
+      <version>2.5</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>credentials-binding</artifactId>
-      <version>1.24</version>
+      <version>1.25</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>pipeline-stage-step</artifactId>
-      <version>2.3</version>
+      <version>2.5</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.main</groupId>
       <artifactId>jenkins-core</artifactId>
-      <version>2.190.3</version>
+      <version>2.235.5</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -114,7 +114,7 @@
     <dependency>
       <groupId>com.github.spotbugs</groupId>
       <artifactId>spotbugs-annotations</artifactId>
-      <version>3.1.12</version>
+      <version>4.3.0</version>
       <scope>provided</scope>
       <optional>true</optional>
     </dependency>
@@ -128,7 +128,7 @@
     <dependency>
       <groupId>org.codehaus.mojo</groupId>
       <artifactId>animal-sniffer-annotations</artifactId>
-      <version>1.19</version>
+      <version>1.20</version>
       <scope>provided</scope>
       <optional>true</optional>
     </dependency>
@@ -141,7 +141,7 @@
     <dependency>
       <groupId>org.kohsuke</groupId>
       <artifactId>access-modifier-annotation</artifactId>
-      <version>1.14</version>
+      <version>1.22</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>

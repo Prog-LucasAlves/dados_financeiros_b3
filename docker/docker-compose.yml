@@ -2,7 +2,7 @@ version: '3'
 services: 
     db:
         build: .
-        container_name: "pg_container"
+        container_name: pg_container
         environment: 
             - POSTGRES_USER=root
             - POSTGRES_PASSWORD=root
@@ -14,7 +14,7 @@ services:
             
     bi:
         image: metabase/metabase
-        restart: always
+        container_name: metabase
         ports: 
             - "3000:3000"
         volumes: 
@@ -23,13 +23,13 @@ services:
             - db
     
     jenkins:
-        image: jenkins/jenkins:lts
+        image: jenkins/jenkins
         container_name: my-jenkins-3
-        privileged: true
-        user: root
         ports:
             - 8083:8080
             - 50003:50000
         volumes:
             - ./jenkins_data:/var/jenkins_home
-            - /var/run/docker.sock:/var/run/docker.sock           
+            - ./SRC:/SRC   
+    
+

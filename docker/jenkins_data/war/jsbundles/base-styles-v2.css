@@ -2595,8 +2595,8 @@ rgba(0, 0, 0, 0.3);
 .icon-aborted-anime .build-status-icon__outer .svg-icon,
 .icon-disabled-anime .build-status-icon__outer .svg-icon,
 .icon-nobuilt-anime .build-status-icon__outer .svg-icon {
-  -webkit-animation: spin-reverse 2s linear infinite;
-          animation: spin-reverse 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
 }
 .button-link {
   color: #0b6aa2;

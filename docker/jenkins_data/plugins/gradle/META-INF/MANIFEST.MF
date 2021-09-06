@@ -7,7 +7,7 @@ Compatible-Since-Version: 1.0
 Plugin-Developers: Stefan Wolf:wolfs:
 Group-Id: org.jenkins-ci.plugins
 Minimum-Java-Version: 1.8
-Plugin-Version: 1.36
+Plugin-Version: 1.37.1
 Jenkins-Version: 2.138.4
 Extension-Name: gradle
 Url: https://github.com/jenkinsci/gradle-plugin

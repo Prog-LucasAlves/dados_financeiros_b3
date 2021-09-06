@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.jenkins.plugins</groupId>
   <artifactId>plugin-util-api</artifactId>
-  <version>2.3.0</version>
+  <version>2.4.0</version>
   <packaging>hpi</packaging>
   <name>Plugin Utilities API Plugin</name>
   <description>Provides several utility classes that can be used to accelerate plugin development.</description>
@@ -26,7 +26,7 @@
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/plugin-util-api-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/plugin-util-api-plugin.git</developerConnection>
-    <tag>v2.3.0</tag>
+    <tag>v2.4.0</tag>
     <url>https://github.com/jenkinsci/plugin-util-api-plugin</url>
   </scm>
   <distributionManagement>
@@ -43,7 +43,7 @@
     <dependency>
       <groupId>edu.hm.hafner</groupId>
       <artifactId>codingstyle</artifactId>
-      <version>2.6.0</version>
+      <version>2.8.0</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
@@ -83,7 +83,7 @@
     <dependency>
       <groupId>org.jenkins-ci.main</groupId>
       <artifactId>jenkins-core</artifactId>
-      <version>2.249.1</version>
+      <version>2.263.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -95,7 +95,7 @@
     <dependency>
       <groupId>com.github.spotbugs</groupId>
       <artifactId>spotbugs-annotations</artifactId>
-      <version>4.0.3</version>
+      <version>4.1.3</version>
       <scope>provided</scope>
       <optional>true</optional>
     </dependency>
