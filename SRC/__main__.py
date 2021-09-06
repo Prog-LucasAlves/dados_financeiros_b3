@@ -184,6 +184,7 @@ def dados():
                         marg_bruta = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[6]/span"
                         ).text.replace(".", "").replace(",", ".").replace("%", "")
+
                         #
                         psr = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[4]"
