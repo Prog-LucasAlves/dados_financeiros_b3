@@ -33,6 +33,10 @@ def se_dados(query):
     vcon.close()
     return rows
 
+def bk(query, file):
+    vcon = conexao()    
+    c = vcon.cursor()
+    c.copy_expert(query, file)
 
 def verifica_conexao():
     try:

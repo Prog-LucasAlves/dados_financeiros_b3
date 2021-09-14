@@ -19,3 +19,5 @@ delete_dublicados_query = " DELETE FROM dados a USING (SELECT MAX(ctid) AS ctid,
                                                        AND a.ctid <> b.ctid \
                                                        AND a.data_ult_cotacao = b.data_ult_cotacao \
                                                        AND a.ctid <> b.ctid "
+
+backup_query = " COPY (SELECT * FROM dados) TO STDOUT WITH CSV HEADER DELIMITER ';' ENCODING 'UTF-8' "

@@ -13,6 +13,7 @@ import time
 from datetime import date, timedelta
 import logging
 
+# Cores utilizada no script
 RED = "\033[1;31m"
 GREEN = "\033[0;32m"
 GREEN_T = "\033[92m"
@@ -25,13 +26,16 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 @backoff.on_exception(backoff.expo, (NoSuchElementException), max_tries=10)
+# Inicio da função para coleta dos dados
 def dados():
-
+    # Variável(dt) - responsável por informar qual (x) dia será feita a coleta dos dados
+    # Ex.: dt = date.today() - timedelta(days=3) -> volta 3 dias atrás no calendário  
     dt = date.today() - timedelta(days=0)
     dt_sem = dt.weekday()
+    # Variável dt_dia_sem - responsável por verificar qual e o dia da semana(Se for Sábado ou Domingo - não haverá coleta de dados)
     dt_dia_sem = __check_semana__.DIAS[dt_sem]
     dt = dt.strftime("%d/%m/%Y")
-
+    #Faz a checagem se o dia da semana e Sábado ou Domingo
     if __check__.data_check != dt or dt_dia_sem == "Sábado" or dt_dia_sem == "Domingo":
         print(f"+{GRAY} Site não atualizado {RESET}+")
         print("--------------------------------------")
@@ -42,7 +46,7 @@ def dados():
     else:
 
         print(f"+{GREEN_T} Site atualizado vamos começar a coletar os dados. {RESET}+")
-
+        # Faz checagem se a conexão com o banco de dados foi estabelecida
         if __conectdb__.verifica_conexao() == False:
             return print(
                 f""" 
@@ -65,10 +69,10 @@ def dados():
             web = webdriver.Firefox(options=options)
 
             web.implicitly_wait(20)
-
+            # Site utilizado para coleta dos dados
             url = "https://fundamentus.com.br/"
             web.get(url)
-
+            # Variável (acao) - armazena uma lista com os tickers da ações
             acao = __list__.lst_acao
 
             n = 0
@@ -77,7 +81,7 @@ def dados():
 
                 try:
 
-                    # Consulta no bando de dados para verificar se os dados já se encontram no mesmo (Ref.: data_ult_cotacao / papel)
+                    # Consulta no banco de dados para verificar se os dados já se encontram no mesmo (Ref.: data_ult_cotacao / papel)
                     query_consult_bd = f" SELECT data_dado_inserido, papel \
                                                 FROM dados \
                                                     WHERE data_ult_cotacao = '{dt}' \
@@ -176,7 +180,7 @@ def dados():
                         p_ebit = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[4]/span"
                         ).text.replace(".", "").replace(",", ".")
-                        if len(p_ebit) >= 1:
+                        if len(p_ebit) <= 1:
                             p_ebit = 0
                         else:
                             p_ebit = p_ebit    
@@ -184,63 +188,122 @@ def dados():
                         marg_bruta = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[4]/td[6]/span"
                         ).text.replace(".", "").replace(",", ".").replace("%", "")
-
+                        if len(marg_bruta) <= 1:
+                            marg_bruta = 0
+                        else:
+                            marg_bruta = marg_bruta    
                         #
                         psr = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[4]"
                         ).text.replace(".", "").replace(",", ".")
+                        if len(psr) <= 1:
+                            psr = 0
+                        else:
+                            psr = psr    
                         #
                         marg_ebit = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[5]/td[6]/span"
                         ).text.replace(".", "").replace(",", ".").replace("%", "")
+                        if len(marg_ebit) <= 1:
+                            marg_ebit = 0
+                        else:
+                            marg_ebit = marg_ebit    
                         #
                         p_ativo = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[6]/td[4]/span"
                         ).text.replace(".", "").replace(",", ".")
+                        if len(p_ativo) <= 1:
+                            p_ativo = 0
+                        else:
+                            p_ativo = p_ativo    
                         #
                         marg_liquida = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[3]/tbody/tr[6]/td[6]/span"
                         ).text.replace(".", "").replace(",", ".").replace("%", "")
+                        if len(marg_liquida) <= 1:
+                            marg_liquida = 0
+                        else:
+                            marg_liquida = marg_liquida     
                         #
                         p_cap_giro = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[7]/td[4]/span"
                         ).text.replace(".", "").replace(",", ".")
+                        if len(p_cap_giro) <= 1:
+                            p_cap_giro = 0
+                        else:
+                            p_cap_giro = p_cap_giro    
                         #
                         ebit_ativo = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[7]/td[6]/span"
                         ).text.replace(".", "").replace(",", ".").replace("%", "")
+                        if len(ebit_ativo) <= 1:
+                            ebit_ativo = 0
+                        else:
+                            ebit_ativo = ebit_ativo    
                         #
                         p_ativo_circ_liq = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[8]/td[4]/span"
                         ).text.replace(".", "").replace(",", ".").replace("-", "0")
+                        if len(p_ativo_circ_liq) <= 1:
+                            p_ativo_circ_liq = 0
+                        else:
+                            p_ativo_circ_liq = p_ativo_circ_liq    
                         #
                         roic = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[8]/td[6]/span"
                         ).text.replace(".", "").replace(",", ".").replace("%", "")
+                        if len(roic) <= 1:
+                            roic = 0
+                        else:
+                            roic = roic    
                         #
                         div_yield = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[9]/td[4]/span"
                         ).text.replace(".", "").replace(",", ".").replace("%", "")
+                        if len(div_yield) <= 1:
+                            div_yield = 0
+                        else:
+                            div_yield = div_yield    
                         #
                         roe = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[9]/td[6]/span"
                         ).text.replace(".", "").replace(",", ".").replace("%", "")
+                        if len(roe) <= 1:
+                            roe = 0
+                        else:
+                            roe = roe    
                         #
                         ev_ebitda = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[10]/td[4]/span"
                         ).text.replace(".", "").replace(",", ".")
+                        if len(ev_ebitda) <= 1:
+                            ev_ebitda = 0
+                        else:
+                            ev_ebitda = ev_ebitda
                         #
                         liquidez_corr = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[10]/td[6]/span"
                         ).text.replace(".", "").replace(",", ".")
+                        if len(liquidez_corr) <= 1:
+                            liquidez_corr = 0
+                        else:
+                            liquidez_corr = liquidez_corr    
                         #
                         ev_ebit = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[11]/td[4]/span"
                         ).text.replace(".", "").replace(",", ".")
+                        if len(ev_ebit) <= 1:
+                            ev_ebit = 0
+                        else:
+                            ev_ebit = ev_ebit    
                         #
                         cres_rec = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[3]/tbody/tr[12]/td[4]/span"
                         ).text.replace(".", "").replace(",", ".").replace("%", "")
+                        if len(cres_rec) <= 1:
+                            cres_rec = 0
+                        else:
+                            cres_rec = cres_rec    
                         #
                         ativo = web.find_element_by_xpath(
                             "/html/body/div[1]/div[2]/table[4]/tbody/tr[2]/td[2]/span"
@@ -312,6 +375,12 @@ def dados():
             # Removendo linhas(tabela dados) do BD duplicados (ref.: na coluna papel / data_ult_cotacao )
             delete_dublicados = __query__.delete_dublicados_query
             __conectdb__.in_dados(delete_dublicados)
+
+            # backup do banco de dados
+            csv_file_name = '../Backup/some_file.csv'
+            bk = __query__.backup_query
+            with open(csv_file_name, 'w') as f:
+                __conectdb__.bk(bk, f)
 
             # Finalizando o Navegador
             web.quit()

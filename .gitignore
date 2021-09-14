@@ -6,9 +6,10 @@ geckodriver.exe
 .venv
 .vscode
 Makefile
-Dados_Financeiros.pbix
-__streamlit__.py
-__listcolumns__.py
 data
 jenkins_data
 metabase
+
+#####
+__script__.py
+tarefa.txt

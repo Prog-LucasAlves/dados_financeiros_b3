@@ -1,3 +1,4 @@
+lst_acao2 = ["AALR3"]
 
 lst_acao = [
     "AALR3",
@@ -474,4 +475,5 @@ lst_acao = [
     "VVEO3",
     "ONCO3",
     "KRSA3",
+    "VITT3",
 ]
