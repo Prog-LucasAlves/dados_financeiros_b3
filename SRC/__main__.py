@@ -1,3 +1,5 @@
+# This Python file uses the following encoding: utf-8
+
 import __conectdb__
 import __query__
 import __check__
@@ -26,16 +28,16 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 @backoff.on_exception(backoff.expo, (NoSuchElementException), max_tries=10)
-# Inicio da função para coleta dos dados
+# Inicio da funcao para coleta dos dados
 def dados():
-    # Variável(dt) - responsável por informar qual (x) dia será feita a coleta dos dados
-    # Ex.: dt = date.today() - timedelta(days=3) -> volta 3 dias atrás no calendário  
+    # Variável(dt) - responsavel por informar qual (x) dia sera feita a coleta dos dados
+    # Ex.: dt = date.today() - timedelta(days=3) -> volta 3 dias atras no calendario  
     dt = date.today() - timedelta(days=0)
     dt_sem = dt.weekday()
-    # Variável dt_dia_sem - responsável por verificar qual e o dia da semana(Se for Sábado ou Domingo - não haverá coleta de dados)
+    # Variavel dt_dia_sem - responsavel por verificar qual e o dia da semana(Se for Sabado ou Domingo - nao havera coleta de dados)
     dt_dia_sem = __check_semana__.DIAS[dt_sem]
     dt = dt.strftime("%d/%m/%Y")
-    #Faz a checagem se o dia da semana e Sábado ou Domingo
+    #Faz a checagem se o dia da semana e Sabado ou Domingo
     if __check__.data_check != dt or dt_dia_sem == "Sábado" or dt_dia_sem == "Domingo":
         print(f"+{GRAY} Site não atualizado {RESET}+")
         print("--------------------------------------")
@@ -46,7 +48,7 @@ def dados():
     else:
 
         print(f"+{GREEN_T} Site atualizado vamos começar a coletar os dados. {RESET}+")
-        # Faz checagem se a conexão com o banco de dados foi estabelecida
+        # Faz checagem se a conexao com o banco de dados foi estabelecida
         if __conectdb__.verifica_conexao() == False:
             return print(
                 f""" 
@@ -72,7 +74,7 @@ def dados():
             # Site utilizado para coleta dos dados
             url = "https://fundamentus.com.br/"
             web.get(url)
-            # Variável (acao) - armazena uma lista com os tickers da ações
+            # Variável (acao) - armazena uma lista com os tickers da acoes
             acao = __list__.lst_acao
 
             n = 0

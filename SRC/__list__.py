@@ -97,7 +97,7 @@ lst_acao = [
     "CARD3",
     "CASH3",
     "CBEE3",
-    "CCPR3",
+    # "CCPR3",
     "CCRO3",
     "CEAB3",
     "CEBR3",
