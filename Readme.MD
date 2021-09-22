@@ -6,5 +6,3 @@
 - Consulta ao banco de dados = DBeaver(^21.1.0)
 
 ![ ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/image/img01.png)
-
-
