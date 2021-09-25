@@ -14,6 +14,7 @@ from selenium.common.exceptions import NoSuchElementException
 import time
 from datetime import date, timedelta
 import logging
+from tqdm import tqdm
 
 # Cores utilizada no script
 RED = "\033[1;31m"
@@ -79,7 +80,7 @@ def dados():
 
             n = 0
 
-            for i in acao:
+            for i in tqdm(acao):
 
                 try:
 
