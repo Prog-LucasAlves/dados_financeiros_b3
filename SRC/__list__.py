@@ -70,7 +70,7 @@ lst_acao = [
     "BPAN4",
     "BRAP3",
     "BRAP4",
-    "BRDT3",
+    #"BRDT3",
     "BRFS3",
     "BRGE11",
     "BRGE12",
@@ -476,4 +476,5 @@ lst_acao = [
     "ONCO3",
     "KRSA3",
     "VITT3",
+    "VBBR3",
 ]
