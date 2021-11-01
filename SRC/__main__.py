@@ -4,6 +4,7 @@ import __conectdb__
 import __query__
 import __check__
 import __check_semana__
+import __conectheroku__
 
 # import __log__
 import __list__
@@ -12,7 +13,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.common.exceptions import NoSuchElementException
 import time
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 import logging
 from tqdm import tqdm
 
@@ -319,7 +320,7 @@ def dados():
                             divd_liquida = '0'
                             patr_liquido = web.find_element_by_xpath(
                                 "/html/body/div[1]/div[2]/table[4]/tbody/tr[3]/td[4]/span"
-                        ).text
+                        ).text.replace(".","")
                         #
                         else: 
                             disponibilidades = web.find_element_by_xpath(
@@ -360,6 +361,23 @@ def dados():
                         '{ativo_circulante}','{divd_bruta}','{divd_liquida}','{patr_liquido}','{lucro_liquido_12m}', \
                         '{lucro_liquido_3m}' ) "
                         __conectdb__.in_dados(query_insert_bd)
+
+                        dt_h = date.today() - timedelta(days=0)
+                        dt_ult_cotacao_h = datetime.strptime(dt_ult_cotacao, '%d/%m/%Y').date()
+                        ult_balanco_pro_h = datetime.strptime(ult_balanco_pro, '%d/%m/%Y').date()
+                        cotacao_h = cotacao.replace(",",".")
+                        min_52_sem_h = min_52_sem.replace(",",".")
+                        max_52_sem_h = max_52_sem.replace(",",".")
+
+                        query_insert_bd_h = f" INSERT INTO dados VALUES ( '{dt_h}','{papel}','{tipo}','{empresa}', \
+                        '{setor}','{cotacao_h}','{dt_ult_cotacao_h}','{min_52_sem_h}','{max_52_sem_h}','{vol_med}', \
+                        '{valor_mercado}','{valor_firma}','{ult_balanco_pro_h}','{nr_acoes}','{os_dia}','{pl}','{lpa}', \
+                        '{pvp}','{vpa}','{p_ebit}','{marg_bruta}','{psr}','{marg_ebit}','{p_ativo}','{marg_liquida}', \
+                        '{p_cap_giro}','{ebit_ativo}','{p_ativo_circ_liq}','{roic}','{div_yield}','{roe}', \
+                        '{ev_ebitda}','{liquidez_corr}','{ev_ebit}','{cres_rec}','{ativo}','{disponibilidades}', \
+                        '{ativo_circulante}','{divd_bruta}','{divd_liquida}','{patr_liquido}','{lucro_liquido_12m}', \
+                        '{lucro_liquido_3m}' ) "
+                        __conectheroku__.in_dados(query_insert_bd_h)
                         print(
                             f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+"
                         )
@@ -374,10 +392,12 @@ def dados():
             # Removendo linhas(tabela dados) do BD com valores vazios (ref.: na coluna papel)
             delete_vazio = __query__.delete_vazio_query
             __conectdb__.in_dados(delete_vazio)
+            __conectheroku__.in_dados(delete_vazio)
 
             # Removendo linhas(tabela dados) do BD duplicados (ref.: na coluna papel / data_ult_cotacao )
             delete_dublicados = __query__.delete_dublicados_query
             __conectdb__.in_dados(delete_dublicados)
+            __conectheroku__.in_dados(delete_dublicados)
 
             # backup do banco de dados
             csv_file_name = '../Backup/some_file.csv'
