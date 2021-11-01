@@ -6,7 +6,7 @@
 
 # Tecnologias Utilizadas:
 
-- BD = Postgres(13.3) -> Docker
+- BD = Postgres(13.3) -> Docker / Postgres() -> Heroku
 - BI = Metabase(0.39.4) -> Docker
 - Consulta ao banco de dados = DBeaver(^21.1.0)
 
