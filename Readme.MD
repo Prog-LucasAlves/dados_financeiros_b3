@@ -12,4 +12,4 @@
 
 ![ ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/image/img01.png)
 
-![ ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/LICENSE)
+![ LICENSE ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/LICENSE)
