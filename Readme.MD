@@ -2,7 +2,7 @@
 
 ## I'm Lucas Alves!
 
-## About me
+# Sobre min:
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucasalves-ast/)](https://www.linkedin.com/in/lucasalves-ast/)
 
