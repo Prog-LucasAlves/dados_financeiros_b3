@@ -12,11 +12,14 @@
 
 ## About me
 
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucasalves-ast/)](https://www.linkedin.com/in/lucasalves-ast/)
 
 # Objetivo:
 
 - Coletar/Tratar os dados das Ações listadas na Bolsa de Valores do Brasil.
 - Armazenar esses dados em um Banco de Dados para realizar consultas.
+
+[ LICENSE ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/LICENSE)
 
 # Tecnologias Utilizadas:
 
@@ -26,6 +29,5 @@
 
 ![ ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/image/img01.png)
 
-[ LICENSE ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/LICENSE)
+[![NOMEGIT GitHub stats](https://github-readme-stats.vercel.app/api?username=NOMEGIT)](https://github.com/NOMEGIT/github-readme-stats)
 
-[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucasalves-ast/)](https://www.linkedin.com/in/lucasalves-ast/)
