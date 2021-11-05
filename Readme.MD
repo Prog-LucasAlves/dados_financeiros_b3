@@ -7,6 +7,8 @@
 - Coletar/Tratar os dados das Ações listadas na Bolsa de Valores do Brasil.
 - Armazenar esses dados em um Banco de Dados para realizar consultas.
 
+![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/Prog-LucasAlves/dados_financeiros_b3?style=plastic)
+
 # Tecnologias Utilizadas:
 
 - BD = Postgres(13.3) -> Docker / Postgres() -> Heroku
