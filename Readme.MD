@@ -19,6 +19,7 @@
 
 [ LICENSE ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/LICENSE)
 
-https://img.shields.io/github/license/Prog-LucasAlves/dados_financeiros_b3
+<code><src="https://img.shields.io/github/license/Prog-LucasAlves/dados_financeiros_b3"></code>
 
 
+<code><img height="23" src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=black"></code>
