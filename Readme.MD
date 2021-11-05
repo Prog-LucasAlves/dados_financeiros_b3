@@ -16,5 +16,4 @@
 ![ ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/image/img01.png)
 
 ![GitHub](https://img.shields.io/github/license/Prog-LucasAlves/dados_financeiros_b3)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Prog-LucasAlves/dados_financeiros_b3)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Prog-LucasAlves/dados_financeiros_b3)
