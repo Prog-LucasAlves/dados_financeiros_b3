@@ -1,14 +1,6 @@
 # Welcome!
 
-## I'm (Lucas Alves)!
-
-:computer: I'm Front-End Developer!
-
-:house_with_garden: I’m from Brazil.
-
-:books: I’m currently learning everything.
-
-:outbox_tray: 2021 Goals: create a new project and find a new job.
+## I'm Lucas Alves!
 
 ## About me
 
@@ -29,5 +21,4 @@
 
 ![ ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/image/img01.png)
 
-[![NOMEGIT GitHub stats](https://github-readme-stats.vercel.app/api?username=Prog-LucasAlves/dados_financeiros_b3)](https://github.com/Prog-LucasAlves/dados_financeiros_b3/github-readme-stats)
 
