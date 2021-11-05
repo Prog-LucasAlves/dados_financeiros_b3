@@ -29,5 +29,5 @@
 
 ![ ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/image/img01.png)
 
-[![NOMEGIT GitHub stats](https://github-readme-stats.vercel.app/api?username=dados_financeiros_b3)](https://github.com/dados_financeiros_b3/github-readme-stats)
+[![NOMEGIT GitHub stats](https://github-readme-stats.vercel.app/api?username=Prog-LucasAlves)](https://github.com/Prog-LucasAlves/github-readme-stats)
 
