@@ -19,6 +19,5 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Prog-LucasAlves/dados_financeiros_b3)
 ![GitHub top language](https://img.shields.io/github/languages/top/Prog-LucasAlves/dados_financeiros_b3)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/y/Prog-LucasAlves/dados_financeiros_b3)
+![GitHub last commit](https://img.shields.io/github/last-commit/Prog-LucasAlves/Prog-LucasAlves)
 
-
-![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/ms-azuretools.vscode-docker?style=flat-square)
