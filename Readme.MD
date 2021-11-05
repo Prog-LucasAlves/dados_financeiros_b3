@@ -13,3 +13,8 @@
 ![ ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/image/img01.png)
 
 [ LICENSE ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/LICENSE)
+
+[[params.social]]
+    icon = "linkedin"
+    icon_pack = "fa"
+    link = "//linkedin.com/in/USERNAME"
