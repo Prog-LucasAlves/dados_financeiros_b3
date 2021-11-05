@@ -20,4 +20,4 @@
 [https://img.shields.io/github/license/Prog-LucasAlves/dados_financeiros_b3](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/LICENSE)
 
 
-![GitHub] (https://img.shields.io/github/license/Prog-LucasAlves/dados_financeiros_b3)
+![GitHub](https://img.shields.io/github/license/Prog-LucasAlves/dados_financeiros_b3)
