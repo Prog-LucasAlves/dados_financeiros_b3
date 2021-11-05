@@ -14,7 +14,7 @@
 
 [ LICENSE ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/LICENSE)
 
-[[ params . social ]]
-   icon = " google-scholar "
-   icon_pack = " ai "
-   link = " https://scholar.google.co.in/citations?user=USERID "
+[[params.social]]
+    icon = "linkedin"
+    icon_pack = "fa"
+    link = "//linkedin.com/in/USERNAME"
