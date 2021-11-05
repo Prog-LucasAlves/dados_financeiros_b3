@@ -17,3 +17,5 @@
 
 ![GitHub](https://img.shields.io/github/license/Prog-LucasAlves/dados_financeiros_b3)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Prog-LucasAlves/dados_financeiros_b3)
+![GitHub top language](https://img.shields.io/github/languages/top/Prog-LucasAlves/dados_financeiros_b3)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/y/Prog-LucasAlves/dados_financeiros_b3)
