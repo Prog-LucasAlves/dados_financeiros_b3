@@ -17,6 +17,8 @@ from datetime import date, datetime, timedelta
 import logging
 from tqdm import tqdm
 
+# TODO #1 Criar Sheduler 
+
 # Cores utilizada no script
 RED = "\033[1;31m"
 GREEN = "\033[0;32m"

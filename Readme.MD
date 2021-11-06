@@ -23,3 +23,5 @@
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Prog-LucasAlves/dados_financeiros_b3?include_prereleases)
 ![GitHub Release Date](https://img.shields.io/github/release-date/Prog-LucasAlves/dados_financeiros_b3)
 ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/Prog-LucasAlves/dados_financeiros_b3/latest)
+![GitHub issues](https://img.shields.io/github/issues/Prog-LucasAlves/dados_financeiros_b3)
+![GitHub Repo stars](https://img.shields.io/github/stars/Prog-LucasAlves/dados_financeiros_b3?style=social)
