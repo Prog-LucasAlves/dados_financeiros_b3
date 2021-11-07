@@ -72,7 +72,7 @@ def dados():
 
             options = FirefoxOptions()
             options.add_argument("--headless")
-            options.page_load_strategy = 'eager'
+            options.page_load_strategy = 'none'
             web = webdriver.Firefox(options=options)
 
             web.implicitly_wait(20)
