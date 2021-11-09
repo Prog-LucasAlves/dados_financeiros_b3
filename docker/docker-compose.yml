@@ -22,15 +22,6 @@ services:
         links: 
             - db
     
-    jenkins:
-        image: pyjenkins
-        container_name: my-jenkins-3
-        ports:
-            - 8083:8080
-            - 50003:50000
-        volumes:
-            - ./jenkins_data:/var/jenkins_home
-            - "../SRC/:/SRC" 
               
     
 
