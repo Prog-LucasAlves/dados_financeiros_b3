@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
-from datetime import date, datetime, timedelta
+from datetime import datetime
 
 import __check_semana__
 
