@@ -504,6 +504,6 @@ def dados():
                     int(hours), int(minutes), seconds
                 )
             )
-            print(f"{RESET}{RED}-----------------{RESET}")
+            print(f"{RESET}{RED}-----------------{RESET}" + 'lucas')
 
 dados()                
