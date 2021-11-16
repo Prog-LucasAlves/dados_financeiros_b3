@@ -456,7 +456,7 @@ def dados():
                                 else:
                                     lucro_liquido_3m.append(0)
 
-                            # Insere os dados coletados no banco de dados #
+                            # Insere os dados coletados no banco de dados Postgres 
                             query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel[1]}','{tipo[1]}','{empresa[1]}', \
                             '{setor[1]}','{cotacao[1]}','{dt_ult_cotacao[1]}','{min_52_sem[1]}','{max_52_sem[1]}','{vol_med[1]}', \
                             '{valor_mercado[1]}','{valor_firma[1]}','{ult_balanco_pro[1]}','{nr_acoes[1]}','{os_dia[1]}','{pl[1]}','{lpa[1]}', \
@@ -466,6 +466,25 @@ def dados():
                             '{ativo_circulante[1]}','{divd_bruta[1]}','{divd_liquida[1]}','{patr_liquido[1]}','{lucro_liquido_12m[1]}', \
                             '{lucro_liquido_3m[1]}' ) "
                             __conectdb__.in_dados(query_insert_bd)
+
+                            # Ajustando os dados para serem inseridos no banco de dados Heroku(Postgres)
+                            dt_h = date.today() - timedelta(days=0)
+                            dt_ult_cotacao_h = datetime.strptime(dt_ult_cotacao, '%d/%m/%Y').date()
+                            ult_balanco_pro_h = datetime.strptime(ult_balanco_pro, '%d/%m/%Y').date()
+                            cotacao_h = cotacao.replace(",",".")
+                            min_52_sem_h = min_52_sem.replace(",",".")
+                            max_52_sem_h = max_52_sem.replace(",",".")
+
+                            query_insert_bd_h = f" INSERT INTO dados VALUES ( '{dt_h}','{papel}','{tipo}','{empresa}', \
+                            '{setor}','{cotacao_h}','{dt_ult_cotacao_h}','{min_52_sem_h}','{max_52_sem_h}','{vol_med}', \
+                            '{valor_mercado}','{valor_firma}','{ult_balanco_pro_h}','{nr_acoes}','{os_dia}','{pl}','{lpa}', \
+                            '{pvp}','{vpa}','{p_ebit}','{marg_bruta}','{psr}','{marg_ebit}','{p_ativo}','{marg_liquida}', \
+                            '{p_cap_giro}','{ebit_ativo}','{p_ativo_circ_liq}','{roic}','{div_yield}','{roe}', \
+                            '{ev_ebitda}','{liquidez_corr}','{ev_ebit}','{cres_rec}','{ativo}','{disponibilidades}', \
+                            '{ativo_circulante}','{divd_bruta}','{divd_liquida}','{patr_liquido}','{lucro_liquido_12m}', \
+                            '{lucro_liquido_3m}' ) "
+                            __conectheroku__.in_dados(query_insert_bd_h)
+
                             print(
                                 f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+")
                             # --- #
