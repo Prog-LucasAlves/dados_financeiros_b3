@@ -8,7 +8,7 @@ def conexao():
     con = psycopg2.connect(
         user=os.getenv("USER"),
         password=os.getenv("PASSWORD"),
-        database=os.getenv("DATABASE"),
+        database=os.getenv("DATABASE_URL"),
         host=os.getenv("HOST"),
     )
     return con

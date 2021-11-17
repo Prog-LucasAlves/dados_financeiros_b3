@@ -38,7 +38,7 @@ def dados():
 
     # Variável(dt) - responsavel por informar qual (x) dia sera feita a coleta dos dados
     # Ex.: dt = date.today() - timedelta(days=3) -> volta 3 dias atras no calendario  
-    dt = date.today() - timedelta(days=1)
+    dt = date.today() - timedelta(days=0)
     dt_sem = dt.weekday()
 
     # Variavel dt_dia_sem - responsavel por verificar qual e o dia da semana(Se for Sabado ou Domingo - nao havera coleta de dados)
@@ -60,13 +60,13 @@ def dados():
         if __conectdb__.verifica_conexao() == False:
             return print(
                 f""" 
-                +{RED} Conexão não estabelecida com o Banco de Dados, verifique: {RESET}+
-                -{RED} Docker {RESET} 
++{RED} Conexão não estabelecida com o Banco de Dados, verifique: {RESET}+
+-{RED} Docker {RESET} 
                 """ )
         else:
             print(
                 f"""
-                +{GREEN_T} Conexão estabelecida com sucesso ao Banco de Dados. {RESET}+ """ )
++{GREEN_T} Conexão estabelecida com sucesso ao Banco de Dados. {RESET}+ """ )
             print("-------------------------------------------------------")
 
             # Inicio do contador de tempo de execução do script
@@ -280,7 +280,7 @@ def dados():
                             #
                             psr.append(dadosI[46].text)
                             if 'PSR' in psr:
-                                psr.append(dadosI[47].text.replace("\n","").replace(",","."))
+                                psr.append(dadosI[47].text.replace("\n","").replace(".","").replace(",","."))
                                 if len(psr[1]) <= 1:
                                     psr[1] = 0
                             else:
@@ -468,7 +468,7 @@ def dados():
                             __conectdb__.in_dados(query_insert_bd)
 
                             # Ajustando os dados para serem inseridos no banco de dados Heroku(Postgres)
-                            dt_h = date.today() - timedelta(days=0)
+                            """ dt_h = date.today() - timedelta(days=0)
                             dt_ult_cotacao_h = datetime.strptime(dt_ult_cotacao, '%d/%m/%Y').date()
                             ult_balanco_pro_h = datetime.strptime(ult_balanco_pro, '%d/%m/%Y').date()
                             cotacao_h = cotacao.replace(",",".")
@@ -483,7 +483,7 @@ def dados():
                             '{ev_ebitda}','{liquidez_corr}','{ev_ebit}','{cres_rec}','{ativo}','{disponibilidades}', \
                             '{ativo_circulante}','{divd_bruta}','{divd_liquida}','{patr_liquido}','{lucro_liquido_12m}', \
                             '{lucro_liquido_3m}' ) "
-                            __conectheroku__.in_dados(query_insert_bd_h)
+                            __conectheroku__.in_dados(query_insert_bd_h) """
 
                             print(
                                 f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+")
