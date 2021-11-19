@@ -18,7 +18,6 @@ data_check = check.find_element_by_xpath(
 ).text
 check.quit()
 
-# data_check_dt = date(data_check.replace("/","-"))
 data_check_dt = datetime.strptime(data_check, "%d/%m/%Y").date()
 data_check_dt_t = data_check_dt.strftime("%d/%m/%Y")
 data_check_sem = data_check_dt.weekday()

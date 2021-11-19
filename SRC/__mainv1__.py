@@ -381,6 +381,7 @@ def dados():
                         '{ativo_circulante}','{divd_bruta}','{divd_liquida}','{patr_liquido}','{lucro_liquido_12m}', \
                         '{lucro_liquido_3m}' ) "
                         __conectheroku__.in_dados(query_insert_bd_h)
+                        
                         print(
                             f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+"
                         )

@@ -1,5 +1,7 @@
 # This Python file uses the following encoding: utf-8
 
+from os import error
+from tqdm.std import TqdmTypeError
 import __conectdb__
 import __query__
 import __check__
@@ -73,7 +75,7 @@ def dados():
             inicio = time.time()
 
             # Variável (acao) - armazena uma lista com os tickers da acoes
-            acao = __list__.lst_acao
+            acao = __list__.lst_acao2
 
             # Variável contador
             n = 0
@@ -456,48 +458,45 @@ def dados():
                                 else:
                                     lucro_liquido_3m.append(0)
 
-                            # Insere os dados coletados no banco de dados Postgres 
-                            query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel[1]}','{tipo[1]}','{empresa[1]}', \
-                            '{setor[1]}','{cotacao[1]}','{dt_ult_cotacao[1]}','{min_52_sem[1]}','{max_52_sem[1]}','{vol_med[1]}', \
-                            '{valor_mercado[1]}','{valor_firma[1]}','{ult_balanco_pro[1]}','{nr_acoes[1]}','{os_dia[1]}','{pl[1]}','{lpa[1]}', \
-                            '{pvp[1]}','{vpa[1]}','{p_ebit[1]}','{marg_bruta[1]}','{psr[1]}','{marg_ebit[1]}','{p_ativo[1]}','{marg_liquida[1]}', \
-                            '{p_cap_giro[1]}','{ebit_ativo[1]}','{p_ativo_circ_liq[1]}','{roic[1]}','{div_yield[1]}','{roe[1]}', \
-                            '{ev_ebitda[1]}','{liquidez_corr[1]}','{ev_ebit[1]}','{cres_rec[1]}','{ativo[1]}','{disponibilidades[1]}', \
-                            '{ativo_circulante[1]}','{divd_bruta[1]}','{divd_liquida[1]}','{patr_liquido[1]}','{lucro_liquido_12m[1]}', \
-                            '{lucro_liquido_3m[1]}' ) "
-                            __conectdb__.in_dados(query_insert_bd)
-
                             # Ajustando os dados para serem inseridos no banco de dados Heroku(Postgres)
-                            """ dt_h = date.today() - timedelta(days=0)
-                            dt_ult_cotacao_h = datetime.strptime(dt_ult_cotacao, '%d/%m/%Y').date()
-                            ult_balanco_pro_h = datetime.strptime(ult_balanco_pro, '%d/%m/%Y').date()
-                            cotacao_h = cotacao.replace(",",".")
-                            min_52_sem_h = min_52_sem.replace(",",".")
-                            max_52_sem_h = max_52_sem.replace(",",".")
+                            dt_h = date.today()
+                            dt_h_n = dt_h.strftime('%Y-%m-%d')
+                            dt_ult_cotacao_h = datetime.strptime(dt_ult_cotacao[1], '%d/%m/%Y').date()
+                            dt_ult_cotacao_h_n = dt_ult_cotacao_h.strftime('%Y-%m-%d')
+                            dt_ult_ult_balanco_pro_h = datetime.strptime(ult_balanco_pro[1], '%d/%m/%Y').date()
+                            dt_ult_ult_balanco_pro_h_n = dt_ult_ult_balanco_pro_h.strftime('%Y-%m-%d')
 
-                            query_insert_bd_h = f" INSERT INTO dados VALUES ( '{dt_h}','{papel}','{tipo}','{empresa}', \
-                            '{setor}','{cotacao_h}','{dt_ult_cotacao_h}','{min_52_sem_h}','{max_52_sem_h}','{vol_med}', \
-                            '{valor_mercado}','{valor_firma}','{ult_balanco_pro_h}','{nr_acoes}','{os_dia}','{pl}','{lpa}', \
-                            '{pvp}','{vpa}','{p_ebit}','{marg_bruta}','{psr}','{marg_ebit}','{p_ativo}','{marg_liquida}', \
-                            '{p_cap_giro}','{ebit_ativo}','{p_ativo_circ_liq}','{roic}','{div_yield}','{roe}', \
-                            '{ev_ebitda}','{liquidez_corr}','{ev_ebit}','{cres_rec}','{ativo}','{disponibilidades}', \
-                            '{ativo_circulante}','{divd_bruta}','{divd_liquida}','{patr_liquido}','{lucro_liquido_12m}', \
-                            '{lucro_liquido_3m}' ) "
-                            __conectheroku__.in_dados(query_insert_bd_h) """
+                            cotacao_h = cotacao[1].replace(",",".")
+                            min_52_sem_h = min_52_sem[1].replace(",",".")
+                            max_52_sem_h = max_52_sem[1].replace(",",".")
+                            vol_med_h = vol_med[1].replace(".","")
+                            valor_mercado_h = valor_mercado[1].replace(".","")
+                            valor_firma_h = valor_firma[1].replace(".","")
+                            nr_acoes_h = nr_acoes[1].replace(".","")
+
+                            #dt_ult_balanco_pro_h = datetime.strptime(ult_balanco_pro[1], '%d/%m/%Y').date()
+                            #dt_ult_balanco_pro_h_n = dt_ult_balanco_pro_h.strftime('%Y-%m-%d')
+
+                            # Insere os dados coletados no banco de dados Heroku(Postgres) 
+                            query_insert_bd_h = f" INSERT INTO dados VALUES ( '{dt_h_n}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao_h}','{dt_ult_cotacao_h_n}','{min_52_sem_h}','{max_52_sem_h}','{vol_med_h}','{valor_mercado_h}','{valor_firma_h}','{dt_ult_ult_balanco_pro_h_n}','{nr_acoes_h}','{os_dia[1]}','{pl[1]}','{lpa[1]}' ) "
+                            __conectheroku__.in_dados(query_insert_bd_h)
+
+                            # Insere os dados coletados no banco de dados Postgres 
+                            query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel[1]}' ) "
+                            __conectdb__.in_dados(query_insert_bd)
 
                             print(
                                 f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+")
                             # --- #
                             n += 1
-                except (TypeError):
-                    print(TypeError)
+                except:
                     print(f"+{RED} Dados da ação: {i}, não gravados {RESET} +")
-                    pass             
+                    return error          
 
             # Removendo linhas(tabela dados) do Banco de Dados com valores vazios (ref.: na coluna papel)
             delete_vazio = __query__.delete_vazio_query
-            __conectdb__.in_dados(delete_vazio)
-            __conectheroku__.in_dados(delete_vazio)
+            #__conectdb__.in_dados(delete_vazio)
+            #__conectheroku__.in_dados(delete_vazio)
 
             # Removendo linhas(tabela dados) do Banco de Dados duplicados (ref.: na coluna papel / data_ult_cotacao )
             delete_dublicados = __query__.delete_dublicados_query
@@ -517,12 +516,12 @@ def dados():
 
             # Fim
             print(f"{RED}-----------------{RESET}")
-            print(f"{BLUE}Finalizou. {n} Empresas Cadastradas")
+            print(f"{BLUE}Finalizou. {n} Empresa(s) Cadastrada(s)")
             print(
                 "Tempo: {:0>2}:{:0>2}:{:05.2f}".format(
                     int(hours), int(minutes), seconds
                 )
             )
-            print(f"{RESET}{RED}-----------------{RESET}"+'Lucas')
+            print(f"{RESET}{RED}-----------------{RESET}")
 
 dados()                
