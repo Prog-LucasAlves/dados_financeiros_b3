@@ -6,7 +6,7 @@ dotenv.load_dotenv(dotenv.find_dotenv())
 
 def conexao():
     """
-    
+    Função que tem o objetivo de de fazer a conexão com o banco de dados
     """
     con = psycopg2.connect(
         user=os.getenv("USER"),
@@ -18,7 +18,7 @@ def conexao():
 
 def in_dados(query):
     """
-    
+    Função que tem o objetivo de realizar - INSERT / DELETE no banco de dados
     """
     vcon = conexao()
     c = vcon.cursor()

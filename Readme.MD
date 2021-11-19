@@ -4,14 +4,15 @@
 
 # Objetivo:
 
-- Coletar/Tratar os dados das Ações listadas na Bolsa de Valores do Brasil.
+- Coletar/Tratar os dados das Ações listadas na Bolsa de Valores do Brasil(B3).
 - Armazenar esses dados em um Banco de Dados para realizar consultas.
+- Realizar relatórios com os dados coletados.
 
 # Tecnologias Utilizadas:
 
-- BD = Postgres(13.3) -> Docker / Postgres() -> Heroku
+- BD = Postgres(13.3) -> Docker / Postgres(13.4) -> Heroku
 - BI = Metabase(0.39.4) -> Docker
-- Consulta ao banco de dados = DBeaver(^21.1.0)
+- Consulta ao banco de dados = DBeaver(^21.2.5) /
 
 ![ ](https://github.com/Prog-LucasAlves/dados_financeiros_b3/blob/master/image/img01.png)
 

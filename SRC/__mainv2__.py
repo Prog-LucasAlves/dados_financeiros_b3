@@ -40,7 +40,7 @@ def dados():
 
     # Variável(dt) - responsavel por informar qual (x) dia sera feita a coleta dos dados
     # Ex.: dt = date.today() - timedelta(days=3) -> volta 3 dias atras no calendario  
-    dt = date.today() - timedelta(days=0)
+    dt = date.today() - timedelta(days=1)
     dt_sem = dt.weekday()
 
     # Variavel dt_dia_sem - responsavel por verificar qual e o dia da semana(Se for Sabado ou Domingo - nao havera coleta de dados)
@@ -478,11 +478,11 @@ def dados():
                             #dt_ult_balanco_pro_h_n = dt_ult_balanco_pro_h.strftime('%Y-%m-%d')
 
                             # Insere os dados coletados no banco de dados Heroku(Postgres) 
-                            query_insert_bd_h = f" INSERT INTO dados VALUES ( '{dt_h_n}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao_h}','{dt_ult_cotacao_h_n}','{min_52_sem_h}','{max_52_sem_h}','{vol_med_h}','{valor_mercado_h}','{valor_firma_h}','{dt_ult_ult_balanco_pro_h_n}','{nr_acoes_h}','{os_dia[1]}','{pl[1]}','{lpa[1]}' ) "
+                            query_insert_bd_h = f" INSERT INTO dados VALUES ( '{dt_h_n}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao_h}','{dt_ult_cotacao_h_n}','{min_52_sem_h}','{max_52_sem_h}','{vol_med_h}','{valor_mercado_h}','{valor_firma_h}','{dt_ult_ult_balanco_pro_h_n}','{nr_acoes_h}','{os_dia[1]}','{pl[1]}','{lpa[1]}','{pvp[1]}','{vpa[1]}','{p_ebit[1]}' ) "
                             __conectheroku__.in_dados(query_insert_bd_h)
 
                             # Insere os dados coletados no banco de dados Postgres 
-                            query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel[1]}' ) "
+                            query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao[1]}','{dt_ult_cotacao[1]}','{min_52_sem[1]}','{max_52_sem[1]}','{vol_med[1]}','{valor_mercado[1]}','{valor_firma[1]}','{ult_balanco_pro[1]}','{nr_acoes[1]}','{os_dia[1]}','{pl[1]}','{lpa[1]}','{pvp[1]}','{vpa[1]}','{p_ebit[1]}' ) "
                             __conectdb__.in_dados(query_insert_bd)
 
                             print(
@@ -499,9 +499,9 @@ def dados():
             #__conectheroku__.in_dados(delete_vazio)
 
             # Removendo linhas(tabela dados) do Banco de Dados duplicados (ref.: na coluna papel / data_ult_cotacao )
-            delete_dublicados = __query__.delete_dublicados_query
-            __conectdb__.in_dados(delete_dublicados)
-            __conectheroku__.in_dados(delete_dublicados)
+            delete_duplicados = __query__.delete_duplicados_query
+            __conectdb__.in_dados(delete_duplicados)
+            __conectheroku__.in_dados(delete_duplicados)
 
             # backup do banco de dados
             csv_file_name = '../Backup/some_file.csv'

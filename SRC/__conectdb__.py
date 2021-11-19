@@ -4,8 +4,10 @@ import psycopg2
 
 dotenv.load_dotenv(dotenv.find_dotenv())
 
-
 def conexao():
+    """
+    Função que tem o objetivo de de fazer a conexão com o banco de dados
+    """
     con = psycopg2.connect(
         user=os.getenv("POSTGRES_USER"),
         password=os.getenv("POSTGRES_PASSWORD"),
@@ -17,6 +19,9 @@ def conexao():
 
 
 def in_dados(query):
+    """
+    Função que tem o objetivo de realizar - INSERT / DELETE no banco de dados
+    """
     vcon = conexao()
     c = vcon.cursor()
     c.execute(query)
@@ -25,6 +30,9 @@ def in_dados(query):
 
 
 def se_dados(query):
+    """
+    Função que tem o objetivo de realizar - SELECT no banco de dados
+    """
     vcon = conexao()
     c = vcon.cursor()
     c.execute(query)
@@ -34,11 +42,17 @@ def se_dados(query):
     return rows
 
 def bk(query, file):
+    """
+    Função que tem o objetivo de realizar um backup do banco de dados
+    """
     vcon = conexao()    
     c = vcon.cursor()
     c.copy_expert(query, file)
 
 def verifica_conexao():
+    """
+    Função que tem o objetivo de verificar se conexão com o banco de dados foi realizada com sucesso
+    """
     try:
         con = psycopg2.connect(
             user=os.getenv("POSTGRES_USER"),
