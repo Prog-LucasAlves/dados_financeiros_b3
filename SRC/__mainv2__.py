@@ -473,16 +473,24 @@ def dados():
                             valor_mercado_h = valor_mercado[1].replace(".","")
                             valor_firma_h = valor_firma[1].replace(".","")
                             nr_acoes_h = nr_acoes[1].replace(".","")
+                            ativo_h = ativo[1].replace(".","")
+                            disponibilidades_h = disponibilidades[1].replace(".","")
+                            ativo_circulante_h = ativo_circulante[1].replace(".","")
+                            divd_bruta_h = divd_bruta[1].replace(".","")
+                            divd_liquida_h = divd_liquida[1].replace(".","")
+                            patr_liquido_h = patr_liquido[1].replace(".","")
+                            lucro_liquido_12m_h = lucro_liquido_12m[1].replace(".","") 
+                            lucro_liquido_3m_h = lucro_liquido_3m[1].replace(".","")
 
                             #dt_ult_balanco_pro_h = datetime.strptime(ult_balanco_pro[1], '%d/%m/%Y').date()
                             #dt_ult_balanco_pro_h_n = dt_ult_balanco_pro_h.strftime('%Y-%m-%d')
 
                             # Insere os dados coletados no banco de dados Heroku(Postgres) 
-                            query_insert_bd_h = f" INSERT INTO dados VALUES ( '{dt_h_n}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao_h}','{dt_ult_cotacao_h_n}','{min_52_sem_h}','{max_52_sem_h}','{vol_med_h}','{valor_mercado_h}','{valor_firma_h}','{dt_ult_ult_balanco_pro_h_n}','{nr_acoes_h}','{os_dia[1]}','{pl[1]}','{lpa[1]}','{pvp[1]}','{vpa[1]}','{p_ebit[1]}' ) "
+                            query_insert_bd_h = f" INSERT INTO dados VALUES ( '{dt_h_n}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao_h}','{dt_ult_cotacao_h_n}','{min_52_sem_h}','{max_52_sem_h}','{vol_med_h}','{valor_mercado_h}','{valor_firma_h}','{dt_ult_ult_balanco_pro_h_n}','{nr_acoes_h}','{os_dia[1]}','{pl[1]}','{lpa[1]}','{pvp[1]}','{vpa[1]}','{p_ebit[1]}','{marg_bruta[1]}','{psr[1]}','{marg_ebit[1]}','{p_ativo[1]}','{marg_liquida[1]}','{p_cap_giro[1]}','{ebit_ativo[1]}','{p_ativo_circ_liq[1]}','{roic[1]}','{div_yield[1]}','{roe[1]}','{ev_ebitda[1]}','{liquidez_corr[1]}','{ev_ebit[1]}','{cres_rec[1]}','{ativo_h}','{disponibilidades_h}','{ativo_circulante_h}','{divd_bruta_h}','{divd_liquida_h}','{patr_liquido_h}','{lucro_liquido_12m_h}','{lucro_liquido_3m_h}' ) "
                             __conectheroku__.in_dados(query_insert_bd_h)
 
                             # Insere os dados coletados no banco de dados Postgres 
-                            query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao[1]}','{dt_ult_cotacao[1]}','{min_52_sem[1]}','{max_52_sem[1]}','{vol_med[1]}','{valor_mercado[1]}','{valor_firma[1]}','{ult_balanco_pro[1]}','{nr_acoes[1]}','{os_dia[1]}','{pl[1]}','{lpa[1]}','{pvp[1]}','{vpa[1]}','{p_ebit[1]}' ) "
+                            query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao[1]}','{dt_ult_cotacao[1]}','{min_52_sem[1]}','{max_52_sem[1]}','{vol_med[1]}','{valor_mercado[1]}','{valor_firma[1]}','{ult_balanco_pro[1]}','{nr_acoes[1]}','{os_dia[1]}','{pl[1]}','{lpa[1]}','{pvp[1]}','{vpa[1]}','{p_ebit[1]}','{marg_bruta[1]}','{psr[1]}','{marg_ebit[1]}','{p_ativo[1]}','{marg_liquida[1]}','{p_cap_giro[1]}','{ebit_ativo[1]}','{p_ativo_circ_liq[1]}','{roic[1]}','{div_yield[1]}','{roe[1]}','{ev_ebitda[1]}','{liquidez_corr[1]}','{ev_ebit[1]}','{cres_rec[1]}','{ativo[1]}','{disponibilidades[1]}','{ativo_circulante[1]}','{divd_bruta[1]}','{divd_liquida[1]}','{patr_liquido[1]}','{lucro_liquido_12m[1]}','{lucro_liquido_3m[1]}' ) "
                             __conectdb__.in_dados(query_insert_bd)
 
                             print(
