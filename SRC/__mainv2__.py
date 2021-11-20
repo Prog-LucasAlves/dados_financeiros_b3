@@ -40,7 +40,7 @@ def dados():
 
     # Variável(dt) - responsavel por informar qual (x) dia sera feita a coleta dos dados
     # Ex.: dt = date.today() - timedelta(days=3) -> volta 3 dias atras no calendario  
-    dt = date.today() - timedelta(days=1)
+    dt = date.today() - timedelta(days=0)
     dt_sem = dt.weekday()
 
     # Variavel dt_dia_sem - responsavel por verificar qual e o dia da semana(Se for Sabado ou Domingo - nao havera coleta de dados)
@@ -75,7 +75,7 @@ def dados():
             inicio = time.time()
 
             # Variável (acao) - armazena uma lista com os tickers da acoes
-            acao = __list__.lst_acao2
+            acao = __list__.lst_acao
 
             # Variável contador
             n = 0
@@ -396,13 +396,13 @@ def dados():
                                 ativo.append('Ativo')
                                 ativo.append(dadosI[87].text)
                                 disponibilidades.append('Disponibilidades')
-                                disponibilidades.append(0)
+                                disponibilidades.append('0')
                                 ativo_circulante.append('Ativo Circulante')
-                                ativo_circulante.append(0)
+                                ativo_circulante.append('0')
                                 divd_bruta.append('Dív. Bruta')
-                                divd_bruta.append(0)
+                                divd_bruta.append('0')
                                 divd_liquida.append('Dív. Líquida')
-                                divd_liquida.append(0)
+                                divd_liquida.append('0')
                                 patr_liquido.append('Patrim. Líq')
                                 patr_liquido.append(dadosI[93].text)
                                 lucro_liquido_12m.append('Lucro Líquido')
@@ -458,37 +458,6 @@ def dados():
                                 else:
                                     lucro_liquido_3m.append(0)
 
-                            # Ajustando os dados para serem inseridos no banco de dados Heroku(Postgres)
-                            dt_h = date.today()
-                            dt_h_n = dt_h.strftime('%Y-%m-%d')
-                            dt_ult_cotacao_h = datetime.strptime(dt_ult_cotacao[1], '%d/%m/%Y').date()
-                            dt_ult_cotacao_h_n = dt_ult_cotacao_h.strftime('%Y-%m-%d')
-                            dt_ult_ult_balanco_pro_h = datetime.strptime(ult_balanco_pro[1], '%d/%m/%Y').date()
-                            dt_ult_ult_balanco_pro_h_n = dt_ult_ult_balanco_pro_h.strftime('%Y-%m-%d')
-
-                            cotacao_h = cotacao[1].replace(",",".")
-                            min_52_sem_h = min_52_sem[1].replace(",",".")
-                            max_52_sem_h = max_52_sem[1].replace(",",".")
-                            vol_med_h = vol_med[1].replace(".","")
-                            valor_mercado_h = valor_mercado[1].replace(".","")
-                            valor_firma_h = valor_firma[1].replace(".","")
-                            nr_acoes_h = nr_acoes[1].replace(".","")
-                            ativo_h = ativo[1].replace(".","")
-                            disponibilidades_h = disponibilidades[1].replace(".","")
-                            ativo_circulante_h = ativo_circulante[1].replace(".","")
-                            divd_bruta_h = divd_bruta[1].replace(".","")
-                            divd_liquida_h = divd_liquida[1].replace(".","")
-                            patr_liquido_h = patr_liquido[1].replace(".","")
-                            lucro_liquido_12m_h = lucro_liquido_12m[1].replace(".","") 
-                            lucro_liquido_3m_h = lucro_liquido_3m[1].replace(".","")
-
-                            #dt_ult_balanco_pro_h = datetime.strptime(ult_balanco_pro[1], '%d/%m/%Y').date()
-                            #dt_ult_balanco_pro_h_n = dt_ult_balanco_pro_h.strftime('%Y-%m-%d')
-
-                            # Insere os dados coletados no banco de dados Heroku(Postgres) 
-                            query_insert_bd_h = f" INSERT INTO dados VALUES ( '{dt_h_n}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao_h}','{dt_ult_cotacao_h_n}','{min_52_sem_h}','{max_52_sem_h}','{vol_med_h}','{valor_mercado_h}','{valor_firma_h}','{dt_ult_ult_balanco_pro_h_n}','{nr_acoes_h}','{os_dia[1]}','{pl[1]}','{lpa[1]}','{pvp[1]}','{vpa[1]}','{p_ebit[1]}','{marg_bruta[1]}','{psr[1]}','{marg_ebit[1]}','{p_ativo[1]}','{marg_liquida[1]}','{p_cap_giro[1]}','{ebit_ativo[1]}','{p_ativo_circ_liq[1]}','{roic[1]}','{div_yield[1]}','{roe[1]}','{ev_ebitda[1]}','{liquidez_corr[1]}','{ev_ebit[1]}','{cres_rec[1]}','{ativo_h}','{disponibilidades_h}','{ativo_circulante_h}','{divd_bruta_h}','{divd_liquida_h}','{patr_liquido_h}','{lucro_liquido_12m_h}','{lucro_liquido_3m_h}' ) "
-                            __conectheroku__.in_dados(query_insert_bd_h)
-
                             # Insere os dados coletados no banco de dados Postgres 
                             query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao[1]}','{dt_ult_cotacao[1]}','{min_52_sem[1]}','{max_52_sem[1]}','{vol_med[1]}','{valor_mercado[1]}','{valor_firma[1]}','{ult_balanco_pro[1]}','{nr_acoes[1]}','{os_dia[1]}','{pl[1]}','{lpa[1]}','{pvp[1]}','{vpa[1]}','{p_ebit[1]}','{marg_bruta[1]}','{psr[1]}','{marg_ebit[1]}','{p_ativo[1]}','{marg_liquida[1]}','{p_cap_giro[1]}','{ebit_ativo[1]}','{p_ativo_circ_liq[1]}','{roic[1]}','{div_yield[1]}','{roe[1]}','{ev_ebitda[1]}','{liquidez_corr[1]}','{ev_ebit[1]}','{cres_rec[1]}','{ativo[1]}','{disponibilidades[1]}','{ativo_circulante[1]}','{divd_bruta[1]}','{divd_liquida[1]}','{patr_liquido[1]}','{lucro_liquido_12m[1]}','{lucro_liquido_3m[1]}' ) "
                             __conectdb__.in_dados(query_insert_bd)
@@ -503,13 +472,11 @@ def dados():
 
             # Removendo linhas(tabela dados) do Banco de Dados com valores vazios (ref.: na coluna papel)
             delete_vazio = __query__.delete_vazio_query
-            #__conectdb__.in_dados(delete_vazio)
-            #__conectheroku__.in_dados(delete_vazio)
+            __conectdb__.in_dados(delete_vazio)
 
             # Removendo linhas(tabela dados) do Banco de Dados duplicados (ref.: na coluna papel / data_ult_cotacao )
             delete_duplicados = __query__.delete_duplicados_query
             __conectdb__.in_dados(delete_duplicados)
-            __conectheroku__.in_dados(delete_duplicados)
 
             # backup do banco de dados
             csv_file_name = '../Backup/some_file.csv'

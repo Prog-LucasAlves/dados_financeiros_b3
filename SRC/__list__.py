@@ -1,4 +1,4 @@
-lst_acao2 = ["AALR3"]
+lst_acao2 = ["ABEV3"]
 
 lst_acao = [
     "AALR3",
