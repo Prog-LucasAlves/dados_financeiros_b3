@@ -4,6 +4,7 @@ import psycopg2
 
 dotenv.load_dotenv(dotenv.find_dotenv())
 
+
 def conexao():
     """
     Função que tem o objetivo de de fazer a conexão com o banco de dados
@@ -41,13 +42,15 @@ def se_dados(query):
     vcon.close()
     return rows
 
+
 def bk(query, file):
     """
     Função que tem o objetivo de realizar um backup do banco de dados
     """
-    vcon = conexao()    
+    vcon = conexao()
     c = vcon.cursor()
     c.copy_expert(query, file)
+
 
 def verifica_conexao():
     """
