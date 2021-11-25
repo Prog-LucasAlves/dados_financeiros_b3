@@ -1,13 +1,6 @@
 import streamlit as st
-import sys
+import pandas as pd
 
-import __conectdb__
+df = pd.read_csv('./Backup/some_file.csv', sep=';')
 
-from . import __conectdb__
-
-sys.path('./SRC/__conectdb__.py')
-
-rows = " SELECT * FROM dados "
-result = __conectdb__.se_dados(rows)
-
-st.dataframe(result)
+st.dataframe(df)
