@@ -6,8 +6,6 @@ geckodriver.exe
 .venv
 .vscode
 Makefile
-Procfile
-setup.sh
 data
 jenkins_data
 metabase
