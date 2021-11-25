@@ -6,6 +6,6 @@ dt = date.today() - timedelta(days=1)
 df = pd.read_csv('./Backup/some_file.csv', sep=';', encoding='ISO-8859-1')
 
 
-view = df.query(f' data_dado_inserido = {dt} ')
+view = df[(df['data_dado_inserido'] == {dt})]
 
 st.dataframe(view)
