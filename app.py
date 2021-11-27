@@ -22,7 +22,7 @@ papel_result = papel['papel'][papel_index]
 col1.metric(label="Papel", value = papel_result)
 
 #col2.1 - empresa
-empresa = df[df['empresa'] == col1_selection]
+empresa = df[df['papel'] == col1_selection]
 empresa_index = int(empresa['Unnamed: 0'])
 empresa_result = empresa['empresa'][empresa_index]
 col2.metric(label="Empresa", value = empresa_result)
