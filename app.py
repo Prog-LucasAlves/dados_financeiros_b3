@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from streamlit.state.session_state import Value
 
 #####
 st.subheader('Dados Financeiros das Ações listadas na bolsa brasileira')
@@ -15,6 +16,10 @@ col1_selection = st.sidebar.selectbox("Papel", df.papel, list(df.papel).index("A
 col1 , col2 = st.columns(2)
 
 #col1 - papel
-papel = df['papel']
-col1.metrics(papel)
+papel = df['papel' == col1_selection]
+papel_index = int(papel['papel'])
+papel_result = papel['papel'][papel_index]
+col1.metrics(labe="Papel", value=papel_result)
+
+
     
