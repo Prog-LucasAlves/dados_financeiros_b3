@@ -14,6 +14,7 @@ import time
 from datetime import date, datetime, timedelta
 import logging
 from tqdm import tqdm
+import pandas as pd
 
 # TODO #1 Criar Sheduler
 
@@ -35,6 +36,11 @@ logging.basicConfig(level=logging.INFO)
 @backoff.on_exception(backoff.expo, (), max_tries=10)
 # Inicio da funcao para coleta dos dados
 def dados():
+
+    # Dados atual
+    dados_atual = pd.DataFrame(columns=[
+                'papel','tipo','empresa','setor','cotacao','dt_ult_cotacao','min_52_sem','max_52_sem','vol_med'  ]
+                )  
 
     # Variável(dt) - responsavel por informar qual (x) dia sera feita a coleta dos dados
     # Ex.: dt = date.today() - timedelta(days=3) -> volta 3 dias atras no calendario
@@ -104,7 +110,7 @@ def dados():
                         page = requests.get(url, headers=hearder)
                         soup = BeautifulSoup(page.content, "html.parser")
 
-                        dados = soup.findAll("div", {"class": "conteudo clearfix"})
+                        dados = soup.findAll("div", {"class": "conteudo clearfix"}) 
 
                         # cria a lista das variaveis aonde seram armazenados os dados coletados
                         for data in dados:
@@ -548,11 +554,20 @@ def dados():
                             query_insert_bd = f" INSERT INTO dados VALUES ( '{dt}','{papel[1]}','{tipo[1]}','{empresa[1]}','{setor[1]}','{cotacao[1]}','{dt_ult_cotacao[1]}','{min_52_sem[1]}','{max_52_sem[1]}','{vol_med[1]}','{valor_mercado[1]}','{valor_firma[1]}','{ult_balanco_pro[1]}','{nr_acoes[1]}','{os_dia[1]}','{pl[1]}','{lpa[1]}','{pvp[1]}','{vpa[1]}','{p_ebit[1]}','{marg_bruta[1]}','{psr[1]}','{marg_ebit[1]}','{p_ativo[1]}','{marg_liquida[1]}','{p_cap_giro[1]}','{ebit_ativo[1]}','{p_ativo_circ_liq[1]}','{roic[1]}','{div_yield[1]}','{roe[1]}','{ev_ebitda[1]}','{liquidez_corr[1]}','{ev_ebit[1]}','{cres_rec[1]}','{ativo[1]}','{disponibilidades[1]}','{ativo_circulante[1]}','{divd_bruta[1]}','{divd_liquida[1]}','{patr_liquido[1]}','{lucro_liquido_12m[1]}','{lucro_liquido_3m[1]}' ) "
                             __conectdb__.in_dados(query_insert_bd)
 
+                            #dados_atual.to_csv('../Dados_Atual/dados.csv', sep=';')   
+
                             print(
                                 f"+{GREEN} Dados da ação: {i}, gravados com sucesso {RESET}+"
                             )
                             # --- #
                             n += 1
+
+                        # Dados atual
+                        dados_atual.loc[dados_atual.shape[0]] = [
+                        papel[1],tipo[1],empresa[1],setor[1],cotacao[1],dt_ult_cotacao[1],min_52_sem[1],max_52_sem[1],vol_med[1]
+                        ]
+                        dados_atual.to_csv('../Dados_Atual/dados.csv', sep=';')     
+
                 except:
                     print(f"+{RED} Dados da ação: {i}, não gravados {RESET} +")
                     return
@@ -565,11 +580,11 @@ def dados():
             delete_duplicados = __query__.delete_duplicados_query
             __conectdb__.in_dados(delete_duplicados)
 
-            # backup do banco de dados
+            # Backup do banco de dados
             csv_file_name = "../Backup/some_file.csv"
             bk = __query__.backup_query
             with open(csv_file_name, "w") as f:
-                __conectdb__.bk(bk, f)
+                __conectdb__.bk(bk, f)            
 
             # Fim do contador de Tempo do script
             fim = time.time()
@@ -584,7 +599,6 @@ def dados():
                     int(hours), int(minutes), seconds
                 )
             )
-            print(f"{RESET}{RED}-----------------{RESET}")
-
+            print(f"{RESET}{RED}-----------------{RESET}")      
 
 dados()
