@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 #####
-st.title('Dados Financeiros das Ações listadas na bolsa brasileira')
+st.markdown('Dados Financeiros das Ações listadas na bolsa brasileira')
 
 #####
 df = pd.read_csv('./Dados_Atual/dados.csv', sep=';')
