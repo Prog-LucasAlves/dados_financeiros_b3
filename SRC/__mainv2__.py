@@ -37,7 +37,7 @@ logging.basicConfig(level=logging.INFO)
 # Inicio da funcao para coleta dos dados
 def dados():
 
-    # Dados atual
+    # Dados atual - Criando um DataFrame só com os dados atuais
     dados_atual = pd.DataFrame(columns=[
                 'papel','tipo','empresa','setor','cotacao','dt_ult_cotacao','min_52_sem','max_52_sem','vol_med'  ]
                 )  
@@ -562,10 +562,11 @@ def dados():
                             # --- #
                             n += 1
 
-                        # Dados atual
+                        # Dados atual - Salvando os dados atuais no Dataframe
                         dados_atual.loc[dados_atual.shape[0]] = [
                         papel[1],tipo[1],empresa[1],setor[1],cotacao[1],dt_ult_cotacao[1],min_52_sem[1],max_52_sem[1],vol_med[1]
                         ]
+                        # Dados atual - Salvando os dados atuais em um arquivo .csv
                         dados_atual.to_csv('../Dados_Atual/dados.csv', sep=';')     
 
                 except:

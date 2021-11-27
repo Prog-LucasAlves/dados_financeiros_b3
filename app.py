@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
-from streamlit.state.session_state import Value
 
 #####
 st.subheader('Dados Financeiros das Ações listadas na bolsa brasileira')
 
 #####
+# Importando os dados atuais
 df = pd.read_csv('./Dados_Atual/dados.csv', sep=';')
 
 # Cria barra lateral
