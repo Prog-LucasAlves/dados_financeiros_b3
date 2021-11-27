@@ -19,7 +19,7 @@ col1 , col2 = st.columns(2)
 papel = df[df['papel'] == col1_selection]
 papel_index = int(papel['Unnamed: 0'])
 papel_result = papel['papel'][papel_index]
-col1.metrics(labe="Papel", value=papel_result)
+col1.metrics(label="Papel", value=papel_result)
 
 
     
