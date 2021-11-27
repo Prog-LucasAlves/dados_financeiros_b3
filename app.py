@@ -14,5 +14,7 @@ col1_selection = st.sidebar.selectbox("Papel", df.papel, list(df.papel).index("A
 # Cria colunas
 col1 , col2 = st.columns(2)
 
-
+#col1 - papel
+papel = df['papel']
+col1.metrics(papel)
     
