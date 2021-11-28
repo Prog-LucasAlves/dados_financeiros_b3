@@ -27,4 +27,14 @@ empresa_index = int(empresa['Unnamed: 0'])
 empresa_result = empresa['empresa'][empresa_index]
 col2.metric(label="Empresa", value = empresa_result)
 
-    
+#col1.2 - tipo
+tipo = df[df['papel'] == col1_selection]
+tipo_index = int(tipo['Unnamed: 0'])
+tipo_result = tipo['tipo'][tipo_index]
+col1.metric(label="Tipo", value = tipo_result)
+
+#col2.2 - setor
+setor = df[df['papel'] == col1_selection]
+setor_index = int(setor['Unnamed: 0'])
+setor_result = setor['setor'][setor_index]
+col2.metric(label="Setor", value = setor_result)
