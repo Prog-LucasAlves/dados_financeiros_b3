@@ -27,5 +27,5 @@ empresa_index = int(empresa['Unnamed: 0'])
 empresa_result = empresa['empresa'][empresa_index]
 col2.metric(label="Empresa", value = empresa_result)
 
-
+st.header('__________')
 st.markdown("🚧 - Em contrução")
