@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
+import vectorbt as vbt
 
 #####
-st.subheader('Dados Financeiros das Ações listadas na bolsa brasileira')
+st.subheader('Dados Financeiros das Ações Listadas na Bolsa Brasileira')
 
 #####
 # Importando os dados atuais
@@ -26,4 +27,30 @@ empresa = df[df['papel'] == col1_selection]
 empresa_index = int(empresa['Unnamed: 0'])
 empresa_result = empresa['empresa'][empresa_index]
 col2.metric(label="Empresa", value = empresa_result)
+
+#####
+# Backtesting
+
+st.write("-----------------------------------------")
+
+st.write(
+    f" 🚦 Backtesting da Ação {col1_selection} - Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) \n \
+    Intervalo utilizado = Diário / Fechamento"
+)
+
+dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2000-01-01")
+fechamento = dados_back["Close"]
+media_rapida = vbt.MA.run(fechamento, 17)
+media_lenta = vbt.MA.run(fechamento, 72)
+
+entradas = media_rapida.ma_above(media_lenta, crossover=True)
+saidas = media_rapida.ma_below(media_lenta, crossover=True)
+
+pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
+
+fig = pf.plot()
+st.plotly_chart(fig)
+pf_s = pf.stats()
+
+st.markdown(print(pf_s))
 
