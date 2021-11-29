@@ -16,13 +16,13 @@ col1_selection = st.sidebar.selectbox("Papel", df.papel, list(df.papel).index("A
 # Cria colunas
 col1 , col2 = st.columns(2)
 
-#col1.1 - tipo
+# col1.1 - tipo
 tipo = df[df['papel'] == col1_selection]
 tipo_index = int(tipo['Unnamed: 0'])
 tipo_result = tipo['tipo'][tipo_index]
 col1.metric(label="Tipo", value = tipo_result)
 
-#col2.1 - empresa
+# col2.1 - empresa
 empresa = df[df['papel'] == col1_selection]
 empresa_index = int(empresa['Unnamed: 0'])
 empresa_result = empresa['empresa'][empresa_index]
@@ -32,7 +32,8 @@ st.header('__________')
 st.markdown("🚧 - Em contrução")
 
 
-
+######
+# Backtesting
 
 st.write(
     f" 🚦 Backtesting da Ação {col1_selection} - Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) \n \
