@@ -3,7 +3,7 @@ import pandas as pd
 import vectorbt as vbt
 
 ######
-st.subheader(' 🆚 Informações das Ações Listadas na Bolsa Brasileira')
+st.title('🆚 Informações das Ações Listadas na Bolsa de Valores Brasileira')
 
 ######
 # Importando os dados atuais
