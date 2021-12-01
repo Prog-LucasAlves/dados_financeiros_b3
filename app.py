@@ -28,12 +28,10 @@ empresa_index = int(empresa['Unnamed: 0'])
 empresa_result = empresa['empresa'][empresa_index]
 col2.metric(label="Empresa", value = empresa_result)
 
-st.header('__________')
-st.markdown("🚧 - Em contrução")
 
 ######
 # Backtesting
-
+st.header('---------------------')
 st.write( f" 🚦 Backtesting da Ação {col1_selection}" )
 st.write( " 🚦 Estratégia: " ) 
 st.write( " 🚦 Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) " )
