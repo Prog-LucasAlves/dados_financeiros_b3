@@ -2,17 +2,19 @@ import streamlit as st
 import pandas as pd
 import vectorbt as vbt
 
-#####
+######
 st.subheader('Dados Financeiros das Ações Listadas na Bolsa Brasileira')
 
-#####
+######
 # Importando os dados atuais
 df = pd.read_csv('./Dados_Atual/dados.csv', sep=';')
 
+######
 # Cria barra lateral
 st.sidebar.header("Escolha sua ação")
 col1_selection = st.sidebar.selectbox("Papel", df.papel, list(df.papel).index("AALR3"))
 
+######
 # Cria colunas
 col1 , col2 = st.columns(2)
 
@@ -28,14 +30,15 @@ empresa_index = int(empresa['Unnamed: 0'])
 empresa_result = empresa['empresa'][empresa_index]
 col2.metric(label="Empresa", value = empresa_result)
 
+######
 
 ######
 # Backtesting
-st.header('---------------------')
+st.write("-----------------------------------------")
 st.write( f" 🚦 Backtesting da Ação {col1_selection}" )
 st.write( " 🚦 Estratégia: " ) 
-st.write( " 🚦 Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) " )
-st.write(" 🚦 Intervalo utilizado = Diário / Fechamento " )
+st.write( " 📎 Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) " )
+st.write( " 📎 Intervalo utilizado = Diário / Fechamento " )
 
 dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2000-01-01")
 fechamento = dados_back["Close"]
@@ -46,3 +49,6 @@ saidas = media_rapida.ma_below(media_lenta, crossover=True)
 pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
 fig = pf.plot()
 st.plotly_chart(fig)
+
+st.write( " ----------------------------------------- " )
+st.Write( " *Utilize modo light para uma melhor visualização* " )
