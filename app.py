@@ -3,7 +3,7 @@ import pandas as pd
 import vectorbt as vbt
 
 ######
-st.subheader('Dados Financeiros das Ações Listadas na Bolsa Brasileira')
+st.subheader('Informações das Ações Listadas na Bolsa Brasileira')
 
 ######
 # Importando os dados atuais
@@ -38,7 +38,7 @@ st.write("-----------------------------------------")
 st.write( f" 🚦 Backtesting da Ação {col1_selection}" )
 st.write( " 🚦 Estratégia: " ) 
 st.write( " 📎 Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) " )
-st.write( " 📎 Intervalo utilizado = Diário / Fechamento " )
+st.write( " 📎 Intervalo utilizado -> Diário(Fechamento) " )
 
 dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2000-01-01")
 fechamento = dados_back["Close"]
