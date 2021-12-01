@@ -33,7 +33,7 @@ col2.metric(label="Empresa", value = empresa_result)
 # col1.2 - data da última cotação
 dt_ult_cotacao = df[df['papel'] == col1_selection]
 dt_ult_cotacao_index = int(dt_ult_cotacao['Unnamed: 0'])
-dt_ult_cotacao_result = dt_ult_cotacao['dt_ult_empresa'][dt_ult_cotacao_index]
+dt_ult_cotacao_result = dt_ult_cotacao['dt_ult_cotacao'][dt_ult_cotacao_index]
 col1.metric(label="Data da Última Cotação", value = dt_ult_cotacao_result )
 
 # col2.2 - valor da cotação
