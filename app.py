@@ -50,5 +50,7 @@ pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
 fig = pf.plot()
 st.plotly_chart(fig)
 
+######
+# Rodapé
 st.write( " ----------------------------------------- " )
-st.Write( " *Utilize modo light para uma melhor visualização* " )
+st.write( " *Utilize modo light para uma melhor visualização* " )
