@@ -3,7 +3,7 @@ import pandas as pd
 import vectorbt as vbt
 
 ######
-st.subheader('🆚 Informações das Ações Listadas na Bolsa de Valores Brasileira')
+st.subheader('🆚 Informações das Ações Listadas na B3')
 
 ######
 # Importando os dados atuais
@@ -40,7 +40,13 @@ col1.metric(label="Data da Última Cotação", value = dt_ult_cotacao_result )
 cotacao = df[df['papel'] == col1_selection]
 cotacao_index = int(cotacao['Unnamed: 0'])
 cotacao_result = cotacao['cotacao'][cotacao_index]
-col2.metric(label="Valor da Ação", value = cotacao_result)
+col2.metric(label="Valor da Ação", value = f"R${cotacao_result}")
+
+# col1.3 - maxima do valor da cotação em 52 semanas
+max_52_sem = df[df['papel'] == col1_selection]
+max_52_sem_index = int(max_52_sem['Unnamed: 0'])
+max_52_sem_result = max_52_sem['max_52_sem'][max_52_sem_index]
+col1.metric(label="Valor Máximo Cotação 52 Semanas", value = f"R${max_52_sem_result}")
 
 ######
 
@@ -49,8 +55,8 @@ col2.metric(label="Valor da Ação", value = cotacao_result)
 st.write("-----------------------------------------")
 st.write( f" 🚦 Backtesting da Ação {col1_selection}" )
 st.write( " 🚦 Estratégia: " ) 
-st.write( " 📎 Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) " )
-st.write( " 📎 Intervalo utilizado -> Diário(Fechamento) " )
+st.write( " 🚦 Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) " )
+st.write( " 🚦 Intervalo utilizado -> Diário(Fechamento) " )
 
 dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2000-01-01")
 fechamento = dados_back["Close"]
