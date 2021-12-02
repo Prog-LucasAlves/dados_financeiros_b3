@@ -5,7 +5,6 @@ geckodriver.log
 geckodriver.exe
 .venv
 .vscode
-Makefile
 data
 jenkins_data
 metabase

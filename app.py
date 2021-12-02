@@ -46,13 +46,13 @@ col2.metric(label="Valor da Ação", value = f"R${cotacao_result}")
 max_52_sem = df[df['papel'] == col1_selection]
 max_52_sem_index = int(max_52_sem['Unnamed: 0'])
 max_52_sem_result = max_52_sem['max_52_sem'][max_52_sem_index]
-col1.metric(label="Valor Máximo Cotação 52 Semanas", value = f"R${max_52_sem_result}")
+col1.metric(label="Valor Máximo da Cotação em 52 Semanas", value = f"R${max_52_sem_result}")
 
 # col2.3 - mínima dao valor da cotação em 52 semanas
 min_52_sem = df[df['papel'] == col1_selection]
 min_52_sem_index = int(max_52_sem['Unnamed: 0'])
 min_52_sem_result = min_52_sem['min_52_sem'][min_52_sem_index]
-col2.metric(label="Valor Mínimo Cotação 52 Semanas", value = f"R${min_52_sem_result}")
+col2.metric(label="Valor Mínimo da Cotação em 52 Semanas", value = f"R${min_52_sem_result}")
 
 ######
 
