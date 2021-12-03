@@ -76,7 +76,7 @@ col1.metric(label="Valor da Firma", value = f"R${valor_firma_result},00")
 nr_acoes = df[df['papel'] == col1_selection]
 nr_acoes_index = int(nr_acoes['Unnamed: 0'])
 nr_acoes_result = nr_acoes['nr_acoes'][nr_acoes_index]
-col2.metric(label="Número de Ações em Circulação", value = float(nr_acoes_result))
+col2.metric(label="Número de Ações em Circulação", value = int(nr_acoes_result))
 
 ######
 
