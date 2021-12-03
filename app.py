@@ -46,18 +46,18 @@ col2.metric(label="Valor da Ação", value = f"R${cotacao_result}")
 max_52_sem = df[df['papel'] == col1_selection]
 max_52_sem_index = int(max_52_sem['Unnamed: 0'])
 max_52_sem_result = max_52_sem['max_52_sem'][max_52_sem_index]
-col1.metric(label="Valor Máximo da Cotação em 52 Semanas", value = f"R${max_52_sem_result}")
+col1.metric(label="Valor Máximo da Ação em 52 Semanas", value = f"R${max_52_sem_result}")
 
 # col2.3 - mínima dao valor da cotação em 52 semanas
 min_52_sem = df[df['papel'] == col1_selection]
 min_52_sem_index = int(max_52_sem['Unnamed: 0'])
 min_52_sem_result = min_52_sem['min_52_sem'][min_52_sem_index]
-col2.metric(label="Valor Mínimo da Cotação em 52 Semanas", value = f"R${min_52_sem_result}")
+col2.metric(label="Valor Mínimo da Ação em 52 Semanas", value = f"R${min_52_sem_result}")
 
 # col1.4 - volume de negociações
 vol_med = df[df['papel'] == col1_selection]
 vol_med_index = int(vol_med['Unnamed: 0'])
-vol_med_result = vol_med['vol_med'[vol_med_index]]
+vol_med_result = vol_med['vol_med'][vol_med_index]
 col1.metric(label="Volume de Negociações", value = f"R${vol_med_result}")
 
 # col2.4 - valor de mercado da empresa
