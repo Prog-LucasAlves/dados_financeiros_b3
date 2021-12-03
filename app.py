@@ -54,6 +54,18 @@ min_52_sem_index = int(max_52_sem['Unnamed: 0'])
 min_52_sem_result = min_52_sem['min_52_sem'][min_52_sem_index]
 col2.metric(label="Valor Mínimo da Cotação em 52 Semanas", value = f"R${min_52_sem_result}")
 
+# col1.4 - volume de negociações
+vol_med = df[df['papel'] == col1_selection]
+vol_med_index = int(vol_med['Unnamed: 0'])
+vol_med_result = vol_med['vol_med'[vol_med_index]]
+col1.metric(label="Volume de Negociações", value = f"R${vol_med_result}")
+
+# col2.4 - valor de mercado da empresa
+valor_mercado = df[df['papel'] == col1_selection]
+valor_mercado_index = int(valor_mercado['Unnamed: 0'])
+valor_mercado_result = valor_mercado['valor_mercado'][valor_mercado_index]
+col2.metric(label="Valor de Mercado", value = f"R${valor_mercado_result}")
+
 ######
 
 ######
