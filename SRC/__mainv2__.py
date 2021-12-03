@@ -45,7 +45,7 @@ def dados():
 
     # Dados atual - Criando um DataFrame só com os dados atuais
     dados_atual = pd.DataFrame(columns=[
-                'papel','tipo','empresa','setor','cotacao','dt_ult_cotacao','min_52_sem','max_52_sem','vol_med','valor_mercado','valor_firma','ult_balanco_pro','nr_acoes','os_dia','pl','lpa','pvp','vpa','p_ebit','marg_bruta','psr'  ]
+                'papel','tipo','empresa','setor','cotacao','dt_ult_cotacao','min_52_sem','max_52_sem','vol_med','valor_mercado','valor_firma','ult_balanco_pro','nr_acoes','os_dia','pl','lpa','pvp','vpa','p_ebit','marg_bruta','psr','marg_ebit','p_ativo','marg_liquida','p_cap_giro','ebit_ativo','p_ativo_circ_liq','roic','div_yield','roe','ev_ebitda','liquidez_corr','ev_ebit','cres_rec','ativo','disponibilidades','ativo_circulante','divd_bruta','divd_liquida','patr_liquido','lucro_liquido_12m','lucro_liquido_3m'  ]
                 )  
 
     # Variável(dt) - responsavel por informar qual (x) dia sera feita a coleta dos dados
@@ -570,7 +570,7 @@ def dados():
 
                         # Dados atual - Salvando os dados atuais no Dataframe
                         dados_atual.loc[dados_atual.shape[0]] = [
-                        papel[1],tipo[1],empresa[1],setor[1],cotacao[1],dt_ult_cotacao[1],min_52_sem[1],max_52_sem[1],vol_med[1],valor_mercado[1],valor_firma[1],ult_balanco_pro[1],nr_acoes[1],os_dia[1],pl[1],lpa[1],pvp[1],vpa[1],p_ebit[1],marg_bruta[1],psr[1]
+                        papel[1],tipo[1],empresa[1],setor[1],cotacao[1],dt_ult_cotacao[1],min_52_sem[1],max_52_sem[1],vol_med[1],valor_mercado[1],valor_firma[1],ult_balanco_pro[1],nr_acoes[1],os_dia[1],pl[1],lpa[1],pvp[1],vpa[1],p_ebit[1],marg_bruta[1],psr[1],marg_ebit[1],p_ativo[1],marg_liquida[1],p_cap_giro[1],ebit_ativo[1],p_ativo_circ_liq[1],roic[1],div_yield[1],roe[1],ev_ebitda[1],liquidez_corr[1],ev_ebit[1],cres_rec[1],ativo[1],disponibilidades[1],ativo_circulante[1],divd_bruta[1],divd_liquida[1],patr_liquido[1],lucro_liquido_12m[1],lucro_liquido_3m[1]
                         ]
 
                         # Dados atual - Salvando os dados atuais em um arquivo .csv
