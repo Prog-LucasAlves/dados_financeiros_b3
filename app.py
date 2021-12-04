@@ -88,7 +88,7 @@ st.write( " 🚦 Estratégia: " )
 st.write( " 🚦 Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) " )
 st.write( " 🚦 Intervalo utilizado -> Diário(Fechamento) " )
 
-dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2000-01-01")
+dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2020-01-01")
 fechamento = dados_back["Close"]
 media_rapida = vbt.MA.run(fechamento, 17)
 media_lenta = vbt.MA.run(fechamento, 72)
