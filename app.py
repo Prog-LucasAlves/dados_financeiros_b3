@@ -90,7 +90,7 @@ col2.metric(label="Número de Ações em Circulação", value=nr_acoes_int)
 pl = df[df['papel'] == col1_selection]
 pl_index = int(pl['Unnamed: 0'])
 pl_result = pl['pl'][pl_index]
-col1.metric(label="P/L - (Preço/Lucro)", value=pl_result)
+col1.metric(label="P/L - (Preço/Lucro)", value=f"{pl_result:.2f}")
 
 # col2.6 - lucro por ação
 lpa = df[df['papel'] == col1_selection]
