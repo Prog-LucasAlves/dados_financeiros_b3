@@ -134,6 +134,18 @@ marg_ebit_index = int(marg_ebit['Unnamed: 0'])
 marg_ebit_result = marg_ebit['marg_ebit'][marg_ebit_index]
 col2.metric(label="Margem Ebit", value=f"{marg_ebit_result:.2f}%")
 
+# col1.10 - P/Ativo
+p_ativo = df[df['papel'] == col1_selection]
+p_ativo_index = int(p_ativo['Unnamed: 0'])
+p_ativo_result = p_ativo['p_ativo'][p_ativo_index]
+col1.metric(label="P/Ativos", value=f"{p_ativo_result:.2f}")
+
+# col2.10 - margem liquida
+marg_liquida = df[df['papel'] == col1_selection]
+marg_liquida_index = int(marg_liquida['Unnamed: 0'])
+marg_liquida_result = marg_liquida['marg_liquida'][marg_liquida_index]
+col2.metric(label="Margem Líquida", value=f"{marg_liquida_result:.2f}%")
+
 ######
 
 ######

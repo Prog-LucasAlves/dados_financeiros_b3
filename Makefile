@@ -8,5 +8,3 @@ install:
 run:
 	cd Docker
 	docker-compose up -d
-
-
