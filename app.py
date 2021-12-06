@@ -83,7 +83,7 @@ nr_acoes = df[df['papel'] == col1_selection]
 nr_acoes_index = int(nr_acoes['Unnamed: 0'])
 nr_acoes_result = nr_acoes['nr_acoes'][nr_acoes_index]
 
-di = re.sub(r'(?<!^)(?=(\d{3})+$)', r'.', nr_acoes_result)
+di = re.sub(r'(?<!^)(?=(\d{3})+$)', r'.', int(nr_acoes_result))
 
 col2.metric(label="Número de Ações em Circulação", value=di)
 
