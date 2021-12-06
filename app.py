@@ -122,13 +122,24 @@ marg_bruta_index = int(marg_bruta['Unnamed: 0'])
 marg_bruta_result = marg_bruta['marg_bruta'][marg_bruta_index]
 col2.metric(label="Margem Bruta", value=f"{marg_bruta_result:.2f}%")
 
+# col1.9 - psr
+psr = df[df['papel'] == col1_selection]
+psr_index = int(psr['Unnamed: 0'])
+psr_result = psr['psr'][psr_index]
+col1.metric(label="PSR", value=f"{psr:.2f}")
+
+# col2.9 - margem ebit
+marg_ebit = df[df['papel'] == col1_selection]
+marg_ebit_index = int(marg_ebit['Unnamed: 0'])
+marg_ebit_result = marg_ebit['marg_ebit'][marg_ebit_index]
+col2.metric(label="Margem Ebit", value=f"{marg_ebit_result:.2f}%")
+
 ######
 
 ######
 # Backtesting
 
 data = datetime.today().strftime('%d-%m-%Y')
-
 st.write("-----------------------------------------")
 st.write( f" 🚦 Backtesting da Ação {col1_selection}" )
 st.write( " 🚦 *Estratégia:* " ) 
