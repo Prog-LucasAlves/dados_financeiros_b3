@@ -96,25 +96,25 @@ col1.metric(label="P/L - (Preço/Lucro)", value=f"{pl_result:.2f}")
 lpa = df[df['papel'] == col1_selection]
 lpa_index = int(lpa['Unnamed: 0'])
 lpa_result = lpa['lpa'][lpa_index]
-col2.metric(label="LPA - (Lucro por Ação)", value=lpa_result)
+col2.metric(label="LPA - (Lucro por Ação)", value=f"{lpa_result:.2f}")
 
 # col1.7 - preço / valor patrimonial por ação
 pvp = df[df['papel'] == col1_selection]
 pvp_index = int(pvp['Unnamed: 0'])
 pvp_result = pvp['pvp'][pvp_index]
-col1.metric(label="P/VP - (Preço/Valor Patrimonial por Ação)", value=pvp_result)
+col1.metric(label="P/VP - (Preço/Valor Patrimonial por Ação)", value=f"{pvp_result:.2f}")
 
 # col2.7 - valor patrimonial por ação
 vpa = df[df['papel'] == col1_selection]
 vpa_index = int(vpa['Unnamed: 0'])
 vpa_result = vpa['vpa'][vpa_index]
-col2.metric(label="VPA - (Valor Patrimonial por Ação)", value=vpa_result)
+col2.metric(label="VPA - (Valor Patrimonial por Ação)", value=f"{vpa_result:.2f}")
 
 # col1.8 - preço da ação divido pelo ebit por ação
 p_ebit = df[df['papel'] == col1_selection]
 p_ebit_index = int(p_ebit['Unnamed: 0'])
 p_ebit_result = p_ebit['p_ebit'][p_ebit_index]
-col1.metric(label="P/EBIT - (Preço/Ebit por Ação)", value=p_ebit_result)
+col1.metric(label="P/EBIT - (Preço/Ebit por Ação)", value=f"{p_ebit_result:.2f}")
 
 # col2.8 - margem bruta
 marg_bruta = df[df['papel'] == col1_selection]
