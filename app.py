@@ -82,10 +82,20 @@ col1.metric(label="Valor da Firma", value=f"R${valor_firma_result},00")
 nr_acoes = df[df['papel'] == col1_selection]
 nr_acoes_index = int(nr_acoes['Unnamed: 0'])
 nr_acoes_result = nr_acoes['nr_acoes'][nr_acoes_index]
+nr_acoes_int = re.sub(r'(?<!^)(?=(\d{3})+$)', r'.', str(nr_acoes_result))
+col2.metric(label="Número de Ações em Circulação", value=nr_acoes_int)
 
-di = re.sub(r'(?<!^)(?=(\d{3})+$)', r'.', str(nr_acoes_result))
+# col1.6 - preço / lucro
+pl = df[df['papel'] == col1_selection]
+pl_index = int(pl['Unnamed: 0'])
+pl_result = pl['pl'][pl_index]
+col1.metric(label="P/L - (Preço/Lucro)", value=pl_result)
 
-col2.metric(label="Número de Ações em Circulação", value=di)
+# col2.6 - lucro por ação
+lpa = df[df['papel'] == col1_selection]
+lpa_index = int(lpa['Unnamed: 0'])
+lpa_result = lpa['lpa'][lpa_index]
+col2.metric(label="LPA - (Lucro por Ação)", value=lpa_result)
 
 ######
 
