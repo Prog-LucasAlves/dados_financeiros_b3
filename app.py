@@ -102,7 +102,7 @@ col2.metric(label="LPA - (Lucro por Ação)", value=lpa_result)
 pvp = df[df['papel'] == col1_selection]
 pvp_index = int(pvp['Unnamed: 0'])
 pvp_result = pvp['pvp'][pvp_index]
-col1.metric(label="P/VP - (Preço/Valor Patrimonial por Ação)")
+col1.metric(label="P/VP - (Preço/Valor Patrimonial por Ação)", value=pvp_result)
 
 # col2.7 - valor patrimonial por ação
 vpa = df[df['papel'] == col1_selection]
