@@ -175,4 +175,4 @@ https://comoinvestir.thecap.com.br/diferenca-entre-acoes-preferenciais-ordinaria
 
 - (43) lucro_liquido_3m:
 1. Descrição -> O que sobra das vendas após a dedução de todas as vendas(3 Meses)
-2. Tipo(type) -> money
+2. Tipo(type) -> mone
