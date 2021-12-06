@@ -126,7 +126,7 @@ col2.metric(label="Margem Bruta", value=f"{marg_bruta_result:.2f}%")
 psr = df[df['papel'] == col1_selection]
 psr_index = int(psr['Unnamed: 0'])
 psr_result = psr['psr'][psr_index]
-col1.metric(label="PSR", value=f"{psr:.2f}")
+col1.metric(label="PSR", value=f"{psr_result:.2f}")
 
 # col2.9 - margem ebit
 marg_ebit = df[df['papel'] == col1_selection]
