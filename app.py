@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import vectorbt as vbt
+import re
 
 ######
 st.subheader('🆚 Informações das Ações Listadas na B3')
@@ -81,7 +82,10 @@ col1.metric(label="Valor da Firma", value=f"R${valor_firma_result},00")
 nr_acoes = df[df['papel'] == col1_selection]
 nr_acoes_index = int(nr_acoes['Unnamed: 0'])
 nr_acoes_result = nr_acoes['nr_acoes'][nr_acoes_index]
-col2.metric(label="Número de Ações em Circulação", value=f"{int(nr_acoes_result):.2%}")
+
+di = re.sub(r'(?<!^)(?=(\d{3})+$)', r'.', nr_acoes_result)
+
+col2.metric(label="Número de Ações em Circulação", value=di)
 
 ######
 
