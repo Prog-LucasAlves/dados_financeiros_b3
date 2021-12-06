@@ -120,7 +120,7 @@ col1.metric(label="P/EBIT - (Preço/Ebit por Ação)", value=p_ebit_result)
 marg_bruta = df[df['papel'] == col1_selection]
 marg_bruta_index = int(marg_bruta['Unnamed: 0'])
 marg_bruta_result = marg_bruta['marg_bruta'][marg_bruta_index]
-col2.metric(label="Margem Bruta", value=f"{marg_bruta_result}%")
+col2.metric(label="Margem Bruta", value=f"{marg_bruta_result:.2f}%")
 
 ######
 
