@@ -110,6 +110,18 @@ vpa_index = int(vpa['Unnamed: 0'])
 vpa_result = vpa['vpa'][vpa_index]
 col2.metric(label="VPA - (Valor Patrimonial por Ação)", value=vpa_result)
 
+# col1.8 - preço da ação divido pelo ebit por ação
+p_ebit = df[df['papel'] == col1_selection]
+p_ebit_index = int(p_ebit['Unnamed: 0'])
+p_ebit_result = p_ebit['p_ebit'][p_ebit_index]
+col1.metric(label="P/EBIT - (Preço/Ebit por Ação)", value=p_ebit_result)
+
+# col2.8 - margem bruta
+marg_bruta = df[df['papel'] == col1_selection]
+marg_bruta_index = int(marg_bruta['Unnamed: 0'])
+marg_bruta_result = marg_bruta['marg_bruta'][marg_bruta_index]
+col2.metric(label="Margem Bruta", value=f"{marg_bruta_result}%")
+
 ######
 
 ######
