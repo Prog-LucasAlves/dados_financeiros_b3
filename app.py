@@ -45,7 +45,7 @@ os_dia = df[df['papel'] == col1_selection]
 os_dia_index = int(os_dia['Unnamed: 0'])
 os_dia_result = os_dia['os_dia'][os_dia_index]
 
-col2.metric(label="Valor da Ação", value=f"R${cotacao_result}", delta=os_dia_result)
+col2.metric(label="Valor da Ação", value=f"R${cotacao_result}", delta=f"{os_dia_result}%")
 
 # col1.3 - máxima do valor da cotação em 52 semanas
 max_52_sem = df[df['papel'] == col1_selection]
@@ -81,7 +81,7 @@ col1.metric(label="Valor da Firma", value=f"R${valor_firma_result},00")
 nr_acoes = df[df['papel'] == col1_selection]
 nr_acoes_index = int(nr_acoes['Unnamed: 0'])
 nr_acoes_result = nr_acoes['nr_acoes'][nr_acoes_index]
-col2.metric(label="Número de Ações em Circulação", value=int(nr_acoes_result))
+col2.metric(label="Número de Ações em Circulação", value=f"{int(nr_acoes_result):.2%}")
 
 ######
 
