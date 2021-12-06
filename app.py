@@ -22,61 +22,66 @@ col1 , col2 = st.columns(2)
 tipo = df[df['papel'] == col1_selection]
 tipo_index = int(tipo['Unnamed: 0'])
 tipo_result = tipo['tipo'][tipo_index]
-col1.metric(label="Tipo", value = tipo_result)
+col1.metric(label="Tipo", value=tipo_result)
 
 # col2.1 - empresa
 empresa = df[df['papel'] == col1_selection]
 empresa_index = int(empresa['Unnamed: 0'])
 empresa_result = empresa['empresa'][empresa_index]
-col2.metric(label="Empresa", value = empresa_result)
+col2.metric(label="Empresa", value=empresa_result)
 
 # col1.2 - data da última cotação
 dt_ult_cotacao = df[df['papel'] == col1_selection]
 dt_ult_cotacao_index = int(dt_ult_cotacao['Unnamed: 0'])
 dt_ult_cotacao_result = dt_ult_cotacao['dt_ult_cotacao'][dt_ult_cotacao_index]
-col1.metric(label="Data da Última Cotação", value = dt_ult_cotacao_result )
+col1.metric(label="Data da Última Cotação", value=dt_ult_cotacao_result, delta="Janeiro")
 
-# col2.2 - valor da cotação
+# col2.2 - valor da cotação + Variação do dia anterior
 cotacao = df[df['papel'] == col1_selection]
 cotacao_index = int(cotacao['Unnamed: 0'])
 cotacao_result = cotacao['cotacao'][cotacao_index]
-col2.metric(label="Valor da Ação", value = f"R${cotacao_result}")
+
+os_dia = df[df['papel'] == col1_selection]
+os_dia_index = int(os_dia['Unnamed: 0'])
+os_dia_result = os_dia['os_dia'][os_dia_index]
+
+col2.metric(label="Valor da Ação", value=f"R${cotacao_result}", delta=os_dia_result)
 
 # col1.3 - máxima do valor da cotação em 52 semanas
 max_52_sem = df[df['papel'] == col1_selection]
 max_52_sem_index = int(max_52_sem['Unnamed: 0'])
 max_52_sem_result = max_52_sem['max_52_sem'][max_52_sem_index]
-col1.metric(label="Valor Máximo da Ação em 52 Semanas", value = f"R${max_52_sem_result}")
+col1.metric(label="Valor Máximo da Ação em 52 Semanas", value=f"R${max_52_sem_result}")
 
 # col2.3 - mínima dao valor da cotação em 52 semanas
 min_52_sem = df[df['papel'] == col1_selection]
 min_52_sem_index = int(max_52_sem['Unnamed: 0'])
 min_52_sem_result = min_52_sem['min_52_sem'][min_52_sem_index]
-col2.metric(label="Valor Mínimo da Ação em 52 Semanas", value = f"R${min_52_sem_result}")
+col2.metric(label="Valor Mínimo da Ação em 52 Semanas", value=f"R${min_52_sem_result}")
 
 # col1.4 - volume de negociações
 vol_med = df[df['papel'] == col1_selection]
 vol_med_index = int(vol_med['Unnamed: 0'])
 vol_med_result = vol_med['vol_med'][vol_med_index]
-col1.metric(label="Volume médio de Negociações(2 meses)", value = f"R${vol_med_result},00")
+col1.metric(label="Volume médio de Negociações(2 meses)", value=f"R${vol_med_result},00")
 
 # col2.4 - valor de mercado da empresa
 valor_mercado = df[df['papel'] == col1_selection]
 valor_mercado_index = int(valor_mercado['Unnamed: 0'])
 valor_mercado_result = valor_mercado['valor_mercado'][valor_mercado_index]
-col2.metric(label="Valor de Mercado", value = f"R${valor_mercado_result},00")
+col2.metric(label="Valor de Mercado", value=f"R${valor_mercado_result},00")
 
 # col1.5 - valor da firma
 valor_firma = df[df['papel'] == col1_selection]
 valor_firma_index = int(valor_firma['Unnamed: 0'])
 valor_firma_result = valor_firma['valor_firma'][valor_firma_index]
-col1.metric(label="Valor da Firma", value = f"R${valor_firma_result},00")
+col1.metric(label="Valor da Firma", value=f"R${valor_firma_result},00")
 
 # col2.5 - número de ações em circulação
 nr_acoes = df[df['papel'] == col1_selection]
 nr_acoes_index = int(nr_acoes['Unnamed: 0'])
 nr_acoes_result = nr_acoes['nr_acoes'][nr_acoes_index]
-col2.metric(label="Número de Ações em Circulação", value = int(nr_acoes_result))
+col2.metric(label="Número de Ações em Circulação", value=int(nr_acoes_result))
 
 ######
 
