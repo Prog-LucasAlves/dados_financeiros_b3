@@ -98,6 +98,18 @@ lpa_index = int(lpa['Unnamed: 0'])
 lpa_result = lpa['lpa'][lpa_index]
 col2.metric(label="LPA - (Lucro por Ação)", value=lpa_result)
 
+# col1.7 - preço / valor patrimonial por ação
+pvp = df[df['papel'] == col1_selection]
+pvp_index = int(pvp['Unnamed: 0'])
+pvp_result = pvp['pvp'][pvp_index]
+col1.metric(label="P/VP - (Preço/Valor Patrimonial por Ação)")
+
+# col2.7 - valor patrimonial por ação
+vpa = df[df['papel'] == col1_selection]
+vpa_index = int(vpa['Unnamed: 0'])
+vpa_result = vpa['vpa'][vpa_index]
+col2.metric(label="VPA - (Valor Patrimonial por Ação)", value=vpa_result)
+
 ######
 
 ######
