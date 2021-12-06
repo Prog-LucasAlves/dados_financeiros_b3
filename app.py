@@ -65,7 +65,7 @@ col2.metric(label="Valor Mínimo da Ação em 52 Semanas", value=f"R${min_52_sem
 vol_med = df[df['papel'] == col1_selection]
 vol_med_index = int(vol_med['Unnamed: 0'])
 vol_med_result = vol_med['vol_med'][vol_med_index]
-col1.metric(label="Volume médio de Negociações(2 meses)", value=f"R${vol_med_result},00")
+col1.metric(label="Volume Médio de Negociações(2 meses)", value=f"R${vol_med_result},00")
 
 # col2.4 - valor de mercado da empresa
 valor_mercado = df[df['papel'] == col1_selection]
@@ -110,7 +110,7 @@ vpa_index = int(vpa['Unnamed: 0'])
 vpa_result = vpa['vpa'][vpa_index]
 col2.metric(label="VPA - (Valor Patrimonial por Ação)", value=f"{vpa_result:.2f}")
 
-# col1.8 - preço da ação divido pelo ebit por ação
+# col1.8 - preço da ação / pelo ebit por ação
 p_ebit = df[df['papel'] == col1_selection]
 p_ebit_index = int(p_ebit['Unnamed: 0'])
 p_ebit_result = p_ebit['p_ebit'][p_ebit_index]
@@ -146,19 +146,19 @@ marg_liquida_index = int(marg_liquida['Unnamed: 0'])
 marg_liquida_result = marg_liquida['marg_liquida'][marg_liquida_index]
 col2.metric(label="Margem Líquida", value=f"{marg_liquida_result:.2f}%")
 
-# col1.11 - preço dividido pelo capital de giro por ação
+# col1.11 - preço / pelo capital de giro por ação
 p_cap_giro = df[df['papel'] == col1_selection]
 p_cap_giro_index = int(p_cap_giro['Unnamed: 0'])
 p_cap_giro_result = p_cap_giro['p_cap_giro'][p_cap_giro_index]
 col1.metric(label="P/Cap. Giro", value=f"{p_cap_giro_result:.2f}")
 
-# col2.11 - ebit dividido por ativos totais
+# col2.11 - ebit / por ativos totais
 ebit_ativo = df[df['papel'] == col1_selection]
 ebit_ativo_index = int(ebit_ativo['Unnamed: 0'])
 ebit_ativo_result = ebit_ativo['ebit_ativo'][ebit_ativo_index]
 col2.metric(label="Ebit/Ativo", value=f"{ebit_ativo_result:.2f}")
 
-# col1.12 - preço dividido pelos ativos circulantes líquidos por ação
+# col1.12 - preço / pelos ativos circulantes líquidos por ação
 p_ativo_circ_liq = df[df['papel'] == col1_selection]
 p_ativo_circ_liq_index = int(p_ativo_circ_liq['Unnamed: 0'])
 p_ativo_circ_liq_result = p_ativo_circ_liq['p_ativo_circ_liq'][p_ativo_circ_liq_index]
@@ -175,6 +175,12 @@ div_yield = df[df['papel'] == col1_selection]
 div_yield_index = int(div_yield['Unnamed: 0'])
 div_yield_result = div_yield['div_yield'][div_yield_index]
 col1.metric(label="Divd. Yield", value=f"{div_yield_result:.2f}%")
+
+# col2.13 - roe
+roe = df[df['papel'] == col1_selection]
+roe_index = int(roe['Unnamed: 0'])
+roe_result = roe['roe'][roe_index]
+col2.metric(label="ROE", value=f"{roe_result:.2f}%")
 
 ######
 
