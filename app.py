@@ -146,6 +146,18 @@ marg_liquida_index = int(marg_liquida['Unnamed: 0'])
 marg_liquida_result = marg_liquida['marg_liquida'][marg_liquida_index]
 col2.metric(label="Margem Líquida", value=f"{marg_liquida_result:.2f}%")
 
+# col1.11 - preço dividido pelo capital de giro por ação
+p_cap_giro = df[df['papel'] == col1_selection]
+p_cap_giro_index = int(p_cap_giro['Unnamed: 0'])
+p_cap_giro_result = p_cap_giro['p_cap_giro'][p_cap_giro_index]
+col1.metric(label="P/Cap. Giro", value=f"{p_cap_giro_result:.2f}")
+
+# col2.11 - ebit dividido por ativos totais
+ebit_ativo = df[df['papel'] == col1_selection]
+ebit_ativo_index = int(ebit_ativo['Unnamed: 0'])
+ebit_ativo_result = ebit_ativo['ebit_ativo'][ebit_ativo_index]
+col2.metric(label="Ebit/Ativo", value=f"{ebit_ativo_result:.2f}")
+
 ######
 
 ######
