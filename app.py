@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import vectorbt as vbt
 import re
+from datetime import datetime
 
 ######
 st.subheader('🆚 Informações das Ações Listadas na B3')
@@ -101,11 +102,15 @@ col2.metric(label="LPA - (Lucro por Ação)", value=lpa_result)
 
 ######
 # Backtesting
+
+data = datetime.today().strftime('%d-%m-%Y')
+
 st.write("-----------------------------------------")
 st.write( f" 🚦 Backtesting da Ação {col1_selection}" )
-st.write( " 🚦 Estratégia: " ) 
+st.write( " 🚦 *Estratégia:* " ) 
 st.write( " 🚦 Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) " )
 st.write( " 🚦 Intervalo utilizado -> Diário(Fechamento) " )
+st.write(f" 🚦Periodo: 01-01-2020 até {data} ")
 
 dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2020-01-01")
 fechamento = dados_back["Close"]
