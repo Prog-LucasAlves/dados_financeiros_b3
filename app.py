@@ -168,7 +168,13 @@ col1.metric(label="P/Ativ. Cir. liq.", value=f"{p_ativo_circ_liq_result:.2f}")
 roic = df[df['papel'] == col1_selection]
 roic_index = int(roic['Unnamed: 0'])
 roic_result = roic['roic'][roic_index]
-col2.metric(label="ROIC", value=f"{roic:.2f}%")
+col2.metric(label="ROIC", value=f"{roic_result:.2f}%")
+
+# col1.13 - dividend yield
+div_yield = df[df['papel'] == col1_selection]
+div_yield_index = int(div_yield['Unnamed: 0'])
+div_yield_result = div_yield['div_yield'][div_yield_index]
+col1.metric(label="Divd. Yield", value=f"{div_yield_result:.2f}%")
 
 ######
 
