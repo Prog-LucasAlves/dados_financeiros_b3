@@ -242,11 +242,23 @@ divd_bruta_index = int(divd_bruta['Unnamed: 0'])
 divd_bruta_result = divd_bruta['divd_bruta'][divd_bruta_index]
 col1.metric(label="Dívida Bruta", value=f"R${divd_bruta_result},00")
 
-# col1.20 - dívida líquida
+# col2.19 - dívida líquida
 divd_liquida = df[df['papel'] == col1_selection]
 divd_liquida_index = int(divd_liquida['Unnamed: 0'])
 divd_liquida_result = divd_liquida['divd_liquida'][divd_liquida_index]
 col2.metric(label="Dívida Líquida", value=f"R${divd_liquida_result},00")
+
+# col1.20 - lucro líquido 12m
+lucro_liquido_12m = df[df['papel'] == col1_selection]
+lucro_liquido_12m_index = int(lucro_liquido_12m['Unnamed: 0'])
+lucro_liquido_12m_result = lucro_liquido_12m['lucro_liquido_12m'][lucro_liquido_12m_index]
+col1.metric(label="Lucro Líquido Últimos 12 Meses", value=f"R${lucro_liquido_12m_result},00")
+
+# col2.20 - lucro líquido 3m
+lucro_liquido_3m = df[df['papel'] == col1_selection]
+lucro_liquido_3m_index = int(lucro_liquido_3m['Unnamed: 0'])
+lucro_liquido_3m_result = lucro_liquido_3m['lucro_liquido_3m'][lucro_liquido_3m_index]
+col2.metric(label="Lucro Líquido Últimos 3 Meses", value=f"R${lucro_liquido_3m_result},00")
 
 ######
 
