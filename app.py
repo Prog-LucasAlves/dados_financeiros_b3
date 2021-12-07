@@ -207,10 +207,22 @@ cres_rec_result = cres_rec['cres_rec'][cres_rec_index]
 col2.metric(label="Crescimento da Receita Líquida(5 anos)", value=f"{cres_rec_result:.2f}%")
 
 # col1.16 -
-col1.metric(label="---------------", value="")
+col1.metric(label="--------------------------------------", value="")
 
 # col2.16 -
-col2.metric(label="---------------", value="")
+col2.metric(label="---------------------------------------", value="")
+
+# col1.17 - ativo
+ativo = df[df['papel'] == col1_selection]
+ativo_index = int(ativo['Unnamed: 0'])
+ativo_result = ativo['ativo'][ativo_index]
+col1.metric(label="Ativo", value=f"R${ativo_result},00")
+
+# col2.17 - disponibilidades
+disponibilidades = df[df['papel'] == col1_selection]
+disponibilidades_index = int(disponibilidades['Unnamed: 0'])
+disponibilidades_result = disponibilidades['disponibilidades'][disponibilidades_index]
+col2.metric(label="Disponibilidades", value=f"R${disponibilidades_result},00")
 
 ######
 
