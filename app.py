@@ -194,6 +194,18 @@ liquidez_corr_index = int(liquidez_corr['Unnamed: 0'])
 liquidez_corr_result = liquidez_corr['liquidez_corr'][liquidez_corr_index]
 col2.metric(label="Liquidez Corrente - (Ativo Circulante / Passivo Circulante)", value=f"{liquidez_corr_result:.2f}")
 
+# col1.15 - ev / ebit
+ev_ebit = df[df['papel'] == col1_selection]
+ev_ebit_index = int(ev_ebit['Unnamed: 0'])
+ev_ebit_result = ev_ebit['ev_ebit'][ev_ebit_index]
+col1.metric(label="EV/Ebit", value=f"{ev_ebit_result:.2f}")
+
+# col2.15 - crescimento da receita líquida (5a)
+cres_rec = df[df['papel'] == col1_selection]
+cres_rec_index = int(cres_rec['Unnamed: 0'])
+cres_rec_result = cres_rec['cres_rec'][cres_rec_index]
+col2.metric(label="Crescimento da receita Líquida(5 anos)", value=f"{cres_rec_result:.2f}%")
+
 ######
 
 ######
