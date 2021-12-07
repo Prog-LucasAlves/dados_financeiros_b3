@@ -185,8 +185,14 @@ col2.metric(label="ROE", value=f"{roe_result:.2f}%")
 # col1.14 - ev / ebitda
 ev_ebitda = df[df['papel'] == col1_selection]
 ev_ebitda_index = int(ev_ebitda['Unnamed: 0'])
-ev_ebitda_result = ev_ebitda['ev_ebtida'][ev_ebitda_index]
-col1.metric(label="EV/Ebtida", value=f"{ev_ebitda_result:.2f}")
+ev_ebitda_result = ev_ebitda['ev_ebitda'][ev_ebitda_index]
+col1.metric(label="EV/Ebitda", value=f"{ev_ebitda_result:.2f}")
+
+# col2.14 - liquidez corrente
+liquidez_corr = df[df['papel'] == col1_selection]
+liquidez_corr_index = int(liquidez_corr['Unnamed: 0'])
+liquidez_corr_result = liquidez_corr['liquidez_corr'][liquidez_corr_index]
+col2.metric(label="Liquidez Corrente - (Ativo Circulante / Passivo Circulante)", value=f"{liquidez_corr_result:.2f}")
 
 ######
 
