@@ -204,7 +204,13 @@ col1.metric(label="EV/Ebit", value=f"{ev_ebit_result:.2f}")
 cres_rec = df[df['papel'] == col1_selection]
 cres_rec_index = int(cres_rec['Unnamed: 0'])
 cres_rec_result = cres_rec['cres_rec'][cres_rec_index]
-col2.metric(label="Crescimento da receita Líquida(5 anos)", value=f"{cres_rec_result:.2f}%")
+col2.metric(label="Crescimento da Receita Líquida(5 anos)", value=f"{cres_rec_result:.2f}%")
+
+# col1.16 -
+col1.metric(label="--------------")
+
+# col2.16 -
+col2.metric(label="---------------")
 
 ######
 
