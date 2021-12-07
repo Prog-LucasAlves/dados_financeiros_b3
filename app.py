@@ -236,6 +236,18 @@ patr_liquido_index = int(patr_liquido['Unnamed: 0'])
 patr_liquido_result = patr_liquido['patr_liquido'][patr_liquido_index]
 col2.metric(label="Patrimônio Líquido", value=f"R${patr_liquido_result},00")
 
+# col1.19 - dívida bruta
+divd_bruta = df[df['papel'] == col1_selection]
+divd_bruta_index = int(divd_bruta['Unnamed: 0'])
+divd_bruta_result = divd_bruta['divd_bruta'][divd_bruta_index]
+col1.metric(label="Dívida Bruta", value=f"R${divd_bruta_result},00")
+
+# col1.20 - dívida líquida
+divd_liquida = df[df['papel'] == col1_selection]
+divd_liquida_index = int(divd_liquida['Unnamed: 0'])
+divd_liquida_result = divd_liquida['divd_liquida'][divd_liquida_index]
+col2.metric(label="Dívida Líquida", value=f"R${divd_liquida_result},00")
+
 ######
 
 ######
