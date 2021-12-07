@@ -207,10 +207,10 @@ cres_rec_result = cres_rec['cres_rec'][cres_rec_index]
 col2.metric(label="Crescimento da Receita Líquida(5 anos)", value=f"{cres_rec_result:.2f}%")
 
 # col1.16 -
-col1.metric(label="--------------")
+col1.metric(label="---------------", value="")
 
 # col2.16 -
-col2.metric(label="---------------")
+col2.metric(label="---------------", value="")
 
 ######
 
