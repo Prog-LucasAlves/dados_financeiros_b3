@@ -224,6 +224,18 @@ disponibilidades_index = int(disponibilidades['Unnamed: 0'])
 disponibilidades_result = disponibilidades['disponibilidades'][disponibilidades_index]
 col2.metric(label="Disponibilidades", value=f"R${disponibilidades_result},00")
 
+# col1.18 - ativo circulante
+ativo_circulante = df[df['papel'] == col1_selection]
+ativo_circulante_index = int(ativo_circulante['Unnamed: 0'])
+ativo_circulante_result = ativo_circulante['ativo_circulante'][ativo_circulante_index]
+col1.metric(label="Ativo Circulante", value=f"R${ativo_circulante_result},00")
+
+# col2.18 - patrimônio líquido
+patr_liquido = df[df['papel'] == col1_selection]
+patr_liquido_index = int(patr_liquido['Unnamed: 0'])
+patr_liquido_result = patr_liquido['patr_liquido'][patr_liquido_index]
+col2.metric(label="Patrimônio Líquido", value=f"R${patr_liquido_result},00")
+
 ######
 
 ######
