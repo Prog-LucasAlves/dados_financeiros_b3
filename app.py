@@ -182,6 +182,12 @@ roe_index = int(roe['Unnamed: 0'])
 roe_result = roe['roe'][roe_index]
 col2.metric(label="ROE", value=f"{roe_result:.2f}%")
 
+# col1.14 - ev / ebitda
+ev_ebitda = df[df['papel'] == col1_selection]
+ev_ebitda_index = int(ev_ebitda['Unnamed: 0'])
+ev_ebitda_result = ev_ebitda['ev_ebtida'][ev_ebitda_index]
+col1.metric(label="EV/Ebtida", value=f"{ev_ebitda_result:.2f}")
+
 ######
 
 ######
