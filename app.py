@@ -264,14 +264,14 @@ col2.metric(label="Lucro Líquido Últimos 3 Meses", value=f"R${lucro_liquido_3m
 ######
 
 # Tabela Fatos Relevantes
-'''st.write("-----------------------------------------")
-fl = df[df.papel == col1_selection]
-fl_index = int(fl["Unnamed: 0"])
-fl_papel = fl["papel"][fl_index]
-fl_df = pd.read_csv(f"./fatos_relevantes/{fl_papel}.csv", sep=";")
-fl_df_1 = fl_df[["Data", "Hora", "Descrição", "Link"]]
+st.write("-----------------------------------------")
+fr = df[df['papel'] == col1_selection]
+fr_index = int(fr["Unnamed: 0"])
+fr_papel = fr['papel'][fr_index]
+fr_df = pd.read_csv(f"./fatos_relevantes/{fr_papel}.csv", sep=";")
+fr_df_1 = fr_df[['Data', 'Hora', 'Descrição', 'Link']]
 st.caption(" ⏰ Fatos Relevamtes ")
-st.write(fl_df_1)'''
+st.write(fr_df_1)
 
 ######
 

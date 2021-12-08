@@ -1,0 +1,58 @@
+import pandas as pd
+from urllib.request import urlopen, Request
+from bs4 import BeautifulSoup as bs
+from tqdm import tqdm
+import requests
+
+import __list__
+
+# Lista com o nome das ações
+acao = __list__.lst_acao
+
+for i in tqdm(acao):
+        url = f'https://www.fundamentus.com.br/fatos_relevantes.php?papel={i}'
+        hearder = {'user-agent':'Mozilla/5.0'}
+        ret1 = requests.get(url, headers=hearder)
+        soup1 = bs(ret1.text, 'html.parser')
+    
+        # Coletando os nomes das colunas
+        column_headers = soup1.findAll('tr')[0]
+        column_headers = [i.getText() for i in column_headers.findAll('th')]
+    
+        # Coletando os dados das colunas
+        rows = soup1.findAll('tr')[1:]
+        df_dados = []
+        for h in range(len(rows)):
+            df_dados.append([col.getText() for col in rows[h].findAll('td')])
+            df_dados
+
+            # Coletando o link do documento
+            rows1 = soup1.findAll('tr')[1:]
+            lista_link = []
+            for t in range(len(rows1)):
+                for link in rows1[t].find_all('a'):
+                    lista_link.append(link.get('href'))
+
+        # Adicionando os dados coletados em um DataFrame
+        data = pd.DataFrame(df_dados, columns=column_headers[:])     
+        data['Link'] = lista_link
+
+        # Deletando colunas nulas
+        del data['Download']
+        del data['Tipo']
+
+        # Ajustando a coluna Data e criando um nova coluna Hora e Acao( com o código da ação )
+        df = data['Data'].apply(lambda x: str(x)[10:])
+        data['Data'] = data['Data'].apply(lambda x: str(x)[:12])
+        data['Hora'] = df
+        data['Acao'] = i 
+
+        # Organizando as colunas no DataFrame
+        data = data[['Acao', 'Data', 'Hora', 'Descrição', 'Link']]
+
+        # Removendo os espaços vazios das colunas Data e Hora
+        data['Data'] = data['Data'].str.strip() 
+        data['Hora'] = data['Hora'].str.strip()
+
+        # Salavando os dados em um arquivo .csv
+        data.to_csv(f'./fatos_relevantes/{i}.csv', sep=';')
