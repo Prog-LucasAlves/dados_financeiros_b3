@@ -5,6 +5,8 @@ Author: Lucas Alves
 Linkedin: https://www.linkedin.com/in/lucasalves-ast/
 '''
 
+# TODO #4 Atualizar python 3.9.5 -> 3.9.9
+
 # Importar bibliotecas internas
 import __conectdb__
 import __query__

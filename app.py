@@ -3,6 +3,7 @@ import pandas as pd
 import vectorbt as vbt
 import re
 from datetime import datetime
+import os
 
 ######
 st.subheader('🆚 Informações das Ações Listadas na B3')
@@ -262,9 +263,19 @@ col2.metric(label="Lucro Líquido Últimos 3 Meses", value=f"R${lucro_liquido_3m
 
 ######
 
-######
-# Backtesting
+# Tabela Fatos Relevantes
+'''st.write("-----------------------------------------")
+fl = df[df.papel == col1_selection]
+fl_index = int(fl["Unnamed: 0"])
+fl_papel = fl["papel"][fl_index]
+fl_df = pd.read_csv(f"./fatos_relevantes/{fl_papel}.csv", sep=";")
+fl_df_1 = fl_df[["Data", "Hora", "Descrição", "Link"]]
+st.caption(" ⏰ Fatos Relevamtes ")
+st.write(fl_df_1)'''
 
+######
+
+# Backtesting
 data = datetime.today().strftime('%d-%m-%Y')
 st.write("-----------------------------------------")
 st.write( f" 🚦 Backtesting da Ação {col1_selection}" )
