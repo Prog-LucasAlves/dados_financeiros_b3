@@ -268,7 +268,7 @@ st.write("-----------------------------------------")
 fr = df[df['papel'] == col1_selection]
 fr_index = int(fr["Unnamed: 0"])
 fr_papel = fr['papel'][fr_index]
-fr_df = pd.read_csv(f"./fatos_relevantes/{fr_papel}.csv", sep=";")
+fr_df = pd.read_csv(f"./Api/fatos_relevantes/{fr_papel}.csv", sep=";")
 fr_df_1 = fr_df[['Data', 'Hora', 'Descrição', 'Link']]
 st.caption(" ⏰ Fatos Relevamtes ")
 st.write(fr_df_1)
