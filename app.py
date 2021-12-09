@@ -294,6 +294,8 @@ pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
 df_pf = pf.stats()
 fig = pf.plot()
 st.plotly_chart(fig)
+st.write('-----')
+st.write('*Resultado a Estratégia:*')
 st.text(df_pf)
 
 ######
