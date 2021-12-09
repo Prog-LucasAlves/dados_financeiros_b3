@@ -292,10 +292,8 @@ entradas = media_rapida.ma_above(media_lenta, crossover=True)
 saidas = media_rapida.ma_below(media_lenta, crossover=True)
 pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
 df_pf = pf.stats()
-df_pf_1 = pd.DataFrame(df_pf)
 fig = pf.plot()
 st.plotly_chart(fig)
-st.dataframe(f"{df_pf_1}")
 st.text('Dados: \n' + df_pf)
 
 ######
