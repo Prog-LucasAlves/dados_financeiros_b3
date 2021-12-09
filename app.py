@@ -294,7 +294,7 @@ pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
 df_pf = pd.DataFrame(pf.stats())
 fig = pf.plot()
 st.plotly_chart(fig)
-st.write(f"{df_pf}")
+st.dataframe(f"{df_pf}")
 
 ######
 # Rodapé
