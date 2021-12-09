@@ -291,8 +291,10 @@ media_lenta = vbt.MA.run(fechamento, 72)
 entradas = media_rapida.ma_above(media_lenta, crossover=True)
 saidas = media_rapida.ma_below(media_lenta, crossover=True)
 pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
+df_pf = pf.stats()
 fig = pf.plot()
 st.plotly_chart(fig)
+st.write(f"{df_pf}")
 
 ######
 # Rodapé
