@@ -1,12 +1,20 @@
+'''
+Descrição:
+Esse código pega os dados dos fatos relevantes das empresas listadas na bolsa brasileira e armazena cada ação com os dados coletados em um arquivo .csv
+
+Local: pasta(fatos_relevantes)
+'''
+
+# Bibliotecas utilizadas
 import pandas as pd
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as bs
 from tqdm import tqdm
 import requests
 
+# Lista com o nome das ações
 import __list__
 
-# Lista com o nome das ações
 acao = __list__.lst_acao
 
 for i in tqdm(acao):
