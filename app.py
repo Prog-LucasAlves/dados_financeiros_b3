@@ -296,6 +296,7 @@ df_pf_1 = pd.DataFrame(df_pf)
 fig = pf.plot()
 st.plotly_chart(fig)
 st.dataframe(f"{df_pf_1}")
+st.text('Dados: \n' + df_pf)
 
 ######
 # Rodapé
