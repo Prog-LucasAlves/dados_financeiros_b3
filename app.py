@@ -280,12 +280,12 @@ data = datetime.today().strftime('%d-%m-%Y')
 st.write("-----------------------------------------")
 st.write( f" 🚦 Backtesting da Ação {col1_selection}" )
 st.write( " 🚦 *Estratégia:* " ) 
-st.write( " 🚦 Cruzamento de Médias Moveis (Rapida -> 17 / Lenta -> 72) " )
+st.write( " 🚦 Cruzamento de Médias Moveis (Rápida -> 17 / Lenta -> 72) " )
 st.write( " 🚦 Intervalo utilizado -> Diário(Fechamento) " )
 st.write(f" 🚦Periodo: 01-01-2020 até {data} ")
 
-number = st.number_input('Insert a number')
-st.write('The current number is ', number)
+media_ra = st.number_input('Insira o Valor da Média Rápida', value=17,  step=int)
+media_le = st.number_input('Insira o Valor da Média Lenta', value=72, step=int)
 
 dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2020-01-01")
 fechamento = dados_back["Close"]
