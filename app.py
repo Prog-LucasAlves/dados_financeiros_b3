@@ -305,7 +305,7 @@ pr_index = int(pr["Unnamed: 0"])
 pr_papel = pr["papel"][pr_index]
 # Pagando os dados dos proventos nos arquivos .csv
 if os.path.isfile(f"./Api/proventos/{pr_papel}.csv"):
-    pr_df = pd.read_csv(f"./proventos/{pr_papel}.csv", sep=";")
+    pr_df = pd.read_csv(f"./Api/proventos/{pr_papel}.csv", sep=";")
     pr_df_1 = pr_df[["Data", "Valor", "Tipo", "Data de Pagamento", "Por quantas ações"]]
     st.caption(" 💵 Proventos ")
     st.caption(
