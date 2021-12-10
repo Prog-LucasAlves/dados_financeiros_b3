@@ -277,6 +277,15 @@ cagr_stock = qs.utils.download_returns(f"{cagr_result}.SA")
 cagr_cagr = round(cagr_stock.cagr(), 2)
 col1.metric(label="CAGR", value=f"{cagr_cagr}")
 
+# col2.22 - sharpe
+sharpe = df[df.papel == col1_selection]
+sharpe_index = int(sharpe["Unnamed: 0"])
+sharpe_result = sharpe["papel"][sharpe_index]
+qs.extend_pandas()
+sharpe_stock = qs.utils.download_returns(f"{sharpe_result}.SA")
+sharpe_sharpe = round(sharpe_stock.sharpe(), 2)
+col2.metric(label="sharpe", value=f"{sharpe_sharpe}")
+
 ######
 
 # Tabela Fatos Relevantes
