@@ -290,9 +290,9 @@ col2.metric(label="Sharpe", value=f"{sharpe_sharpe}")
 test = df[df['papel'] == col1_selection]
 test_index = int(test['Unnamed: 0'])
 test_result = test['papel'][test_index]
-#test_fig = qs.plots.snapshot(test_result, title='Facebook Performance')
-#test_fig_p = test_fig.plot()
-st.plotly_chart(qs.plots.snapshot(test_result, title='Facebook Performance'))
+test_fig = qs.plots.snapshot(test_result, title='Facebook Performance')
+test_fig_p = test_fig.plot()
+st.plotly_chart(test_fig_p)
 
 ######
 
