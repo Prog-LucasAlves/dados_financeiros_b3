@@ -269,9 +269,11 @@ col1.metric(label="--------------------------------------", value="")
 col2.metric(label="---------------------------------------", value="")
 
 # col1.22 - CAGR
-cagr = df[df.papel == col1_selection]
+cagr = df[df['papel'] == col1_selection]
+cagr_index = int(cagr['Unnamed: 0'])
+cagr_result = cagr['papel'][cagr_index]
 qs.extend_pandas()
-cagr_stock = qs.utils.download_returns(f"{cagr}.SA")
+cagr_stock = qs.utils.download_returns(f"{cagr_result}.SA")
 cagr_cagr = round(cagr_stock.cagr(), 2)
 col1.metric(label="CAGR", value=f"{cagr_cagr}")
 
