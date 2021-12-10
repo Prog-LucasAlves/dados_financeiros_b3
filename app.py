@@ -284,8 +284,8 @@ st.write( " 🚦 Cruzamento de Médias Moveis " )
 st.write( " 🚦 Intervalo utilizado -> Diário(Fechamento) " )
 st.write(f" 🚦Periodo: 01-01-2020 até {data} ")
 
-media_ra = st.number_input('Insira o Valor da Média Rápida', min_value=0, max_value=100)
-media_le = st.number_input('Insira o Valor da Média Lenta', min_value=0, max_value=100)
+media_ra = st.number_input('Insira o Valor da Média Rápida',value=17, min_value=0, max_value=100)
+media_le = st.number_input('Insira o Valor da Média Lenta',value=72, min_value=0, max_value=100)
 
 dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2020-01-01")
 fechamento = dados_back["Close"]
