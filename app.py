@@ -280,7 +280,7 @@ data = datetime.today().strftime('%d-%m-%Y')
 st.write("-----------------------------------------")
 st.write( f" 🚦 Backtesting da Ação {col1_selection}" )
 st.write( " 🚦 *Estratégia:* " ) 
-st.write( " 🚦 Cruzamento de Médias Moveis (Rápida -> 17 / Lenta -> 72) " )
+st.write( " 🚦 Cruzamento de Médias Moveis " )
 st.write( " 🚦 Intervalo utilizado -> Diário(Fechamento) " )
 st.write(f" 🚦Periodo: 01-01-2020 até {data} ")
 
@@ -289,8 +289,8 @@ media_le = st.number_input('Insira o Valor da Média Lenta', min_value=0, max_va
 
 dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2020-01-01")
 fechamento = dados_back["Close"]
-media_rapida = vbt.MA.run(fechamento, 17)
-media_lenta = vbt.MA.run(fechamento, 72)
+media_rapida = vbt.MA.run(fechamento, media_ra)
+media_lenta = vbt.MA.run(fechamento, media_le)
 entradas = media_rapida.ma_above(media_lenta, crossover=True)
 saidas = media_rapida.ma_below(media_lenta, crossover=True)
 pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
