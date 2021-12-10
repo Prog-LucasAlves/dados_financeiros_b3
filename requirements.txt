@@ -85,11 +85,13 @@ pytz-deprecation-shim==0.1.0.post0
 #pywin32==302
 #pywinpty==1.1.6
 pyzmq==22.3.0
+QuantStats==0.0.47
 regex==2021.11.10
 requests==2.26.0
 schedule==1.1.0
 scikit-learn==1.0.1
 scipy==1.7.3
+seaborn==0.11.2
 selenium==4.1.0
 Send2Trash==1.8.0
 setuptools-scm==6.3.2
@@ -99,6 +101,7 @@ sniffio==1.2.0
 sortedcontainers==2.4.0
 soupsieve==2.3.1
 streamlit==1.2.0
+tabulate==0.8.9
 tenacity==8.0.1
 terminado==0.12.1
 testpath==0.5.0

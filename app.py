@@ -3,6 +3,7 @@ import pandas as pd
 import vectorbt as vbt
 import re
 from datetime import datetime
+import quantstats as qs
 import os
 
 ######
@@ -261,6 +262,19 @@ lucro_liquido_3m_index = int(lucro_liquido_3m['Unnamed: 0'])
 lucro_liquido_3m_result = lucro_liquido_3m['lucro_liquido_3m'][lucro_liquido_3m_index]
 col2.metric(label="Lucro Líquido Últimos 3 Meses", value=f"R${lucro_liquido_3m_result},00")
 
+# col1.21 -
+col1.metric(label="--------------------------------------", value="")
+
+# col2.21 -
+col2.metric(label="---------------------------------------", value="")
+
+# col1.22 - CAGR
+cagr = df[df.papel == col1_selection]
+qs.extend_pandas()
+cagr_stock = qs.utils.download_returns(f"{cagr}.SA")
+cagr_cagr = round(cagr_stock.cagr(), 2)
+col1.metric(label="CAGR", value=f"{cagr_cagr}")
+
 ######
 
 # Tabela Fatos Relevantes
@@ -284,8 +298,8 @@ st.write( " 🚦 Cruzamento de Médias Moveis " )
 st.write( " 🚦 Intervalo utilizado -> Diário(Fechamento) " )
 st.write(f" 🚦Periodo: 01-01-2020 até {data} ")
 
-media_ra = st.number_input('Insira o Valor da Média Rápida',value=17, min_value=0, max_value=100)
-media_le = st.number_input('Insira o Valor da Média Lenta',value=72, min_value=0, max_value=100)
+media_ra = st.number_input('Insira o Valor da Média Rápida(1-200)',value=17, min_value=1, max_value=200)
+media_le = st.number_input('Insira o Valor da Média Lenta(1-200)',value=72, min_value=1, max_value=200)
 
 dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2020-01-01")
 fechamento = dados_back["Close"]
