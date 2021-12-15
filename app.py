@@ -354,7 +354,7 @@ st.write(f" 📈📉 Histórico de Fechamento da Ação {precos_papel} ")
 fig_pre = px.line(precos_df_ad, x="Date", y=f"{precos_papel}")
 st.plotly_chart(fig_pre)
 
-df_download = pd.read_csv(f"./precos/{precos_papel}.csv", sep=";")
+df_download = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
 csv = df_download.to_csv().encode("utf-8")
 st.download_button(
     label=f"Download Cotação da Ação {precos_papel}",
