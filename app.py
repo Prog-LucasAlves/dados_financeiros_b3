@@ -365,6 +365,16 @@ st.download_button(
 
 ######
 
+# Gráfico de Retornos
+st.write("-----------------------------------------")
+st.write(f" ⌛ Retornos Diarios da Ação {precos_papel} ")
+precos_df_ret = precos_df_ad[f"{precos_papel}"].pct_change()
+precos_df_ad[f"Ret {precos_papel}"] = precos_df_ret
+fig_ret = px.line(precos_df_ad, x="Date", y=f"Ret {precos_papel}")
+st.plotly_chart(fig_ret)
+
+######
+
 # Backtesting
 data = datetime.today().strftime('%d-%m-%Y')
 st.write("-----------------------------------------")
