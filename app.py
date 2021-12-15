@@ -291,7 +291,7 @@ col2.metric(label="Sharpe", value=f"{sharpe_sharpe}")
 # Tabela Fatos Relevantes
 st.write("-----------------------------------------")
 fr = df[df['papel'] == col1_selection]
-fr_index = int(fr["Unnamed: 0"])
+fr_index = int(fr['Unnamed: 0'])
 fr_papel = fr['papel'][fr_index]
 fr_df = pd.read_csv(f"./Api/fatos_relevantes/{fr_papel}.csv", sep=";")
 fr_df_1 = fr_df[['Data', 'Hora', 'Descrição', 'Link']]
@@ -301,12 +301,12 @@ st.write(fr_df_1)
 # Tabela Proventos
 st.write("-----------------------------------------")
 pr = df[df['papel'] == col1_selection]
-pr_index = int(pr["Unnamed: 0"])
-pr_papel = pr["papel"][pr_index]
+pr_index = int(pr['Unnamed: 0'])
+pr_papel = pr['papel'][pr_index]
 # Pagando os dados dos proventos nos arquivos .csv
 if os.path.isfile(f"./Api/proventos/{pr_papel}.csv"):
     pr_df = pd.read_csv(f"./Api/proventos/{pr_papel}.csv", sep=";")
-    pr_df_1 = pr_df[["Data", "Valor", "Tipo", "Data de Pagamento", "Por quantas ações"]]
+    pr_df_1 = pr_df[['Data', 'Valor', 'Tipo', 'Data de Pagamento', 'Por quantas ações']]
     st.caption(" 💵 Proventos ")
     st.caption(
         ' *A data se refere ao "último dia com", ou seja, \
@@ -320,17 +320,17 @@ else:
 
 # Tabela Dados Trimestrais
 st.write("-----------------------------------------")
-tdt = df[df['papel'] == col1_selection]
-tdt_index = int(tdt["Unnamed: 0"])
-tdt_papel = tdt["papel"][tdt_index]
+tri = df[df['papel'] == col1_selection]
+tri_index = int(tri["Unnamed: 0"])
+tri_papel = tri['papel'][tri_index]
 # Pagando os dados dos resultados trimestrais nos arquivos .csv
-dt_df = pd.read_csv(f"./dados_tri/{tdt_papel}.csv", sep=";")
-dt_df_1 = dt_df[["Data Referência", "Demonstração Financeira", "Release de Resultados"]]
+tri_df = pd.read_csv(f"./Api/trimestre/{tri_papel}.csv", sep=";")
+tri_df_1 = tri_df[["Data Referência", "Demonstração Financeira", "Release de Resultados"]]
 st.caption(" 💵 Dados Trimestrais ")
-st.write(dt_df_1)
-dt_c = dt_df_1["Data Referência"][0]
-df_l = dt_df_1["Release de Resultados"][0]
-st.write(f"📝 Data de Referência {dt_c} - Download Release {tdt_papel}: [link]({df_l})")
+st.write(tri_df_1)
+tri_ref = tri_df_1["Data Referência"][0]
+tri_rel = tri_df_1["Release de Resultados"][0]
+st.write(f"📝 Data de Referência {tri_ref} - Download Release {tri_papel}: [link]({tri_rel})")
 
 # Backtesting
 data = datetime.today().strftime('%d-%m-%Y')
