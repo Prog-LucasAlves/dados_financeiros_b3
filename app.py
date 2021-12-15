@@ -6,6 +6,7 @@ from datetime import datetime
 import quantstats as qs
 import os
 import plotly.express as px
+import seaborn as sb
 
 ######
 st.subheader('🆚 Informações das Ações Listadas na B3')
@@ -326,7 +327,7 @@ tri_index = int(tri["Unnamed: 0"])
 tri_papel = tri['papel'][tri_index]
 # Pagando os dados dos resultados trimestrais nos arquivos .csv
 tri_df = pd.read_csv(f"./Api/trimestre/{tri_papel}.csv", sep=";")
-tri_df_1 = tri_df[["Data Referência", "Demonstração Financeira", "Release de Resultados"]]
+tri_df_1 = tri_df[['Data Referência', 'Demonstração Financeira', 'Release de Resultados']]
 st.caption(" 💵 Dados Trimestrais ")
 st.write(tri_df_1)
 tri_ref = tri_df_1["Data Referência"][0]
@@ -335,8 +336,8 @@ st.write(f"📝 Data de Referência {tri_ref} - Download Release {tri_papel}: [l
 
 ######
 
-st.write("-----------------------------------------") ###
 # Código para pegar o preço das ações
+st.write("-----------------------------------------") 
 precos = df[df['papel'] == col1_selection]
 precos_index = int(precos['Unnamed: 0'])
 precos_papel = precos['papel'][pr_index]
@@ -368,10 +369,19 @@ st.download_button(
 # Gráfico de Retornos
 st.write("-----------------------------------------")
 st.write(f" ⌛ Retornos Diarios da Ação {precos_papel} ")
-precos_df_ret = precos_df_ad[f"{precos_papel}"].pct_change()
-precos_df_ad[f"Ret {precos_papel}"] = precos_df_ret
+precos_df_ret = precos_df_ad[f'{precos_papel}'].pct_change()
+precos_df_ad[f'Ret {precos_papel}'] = precos_df_ret
 fig_ret = px.line(precos_df_ad, x="Date", y=f"Ret {precos_papel}")
 st.plotly_chart(fig_ret)
+
+######
+
+# Tabela de Retornos
+st.write("-----------------------------------------")
+st.write(f" ✳️ Retornos da Ação {precos_papel} - Mensal ")
+tb_df = pd.read_csv(f"./Api/historico/{precos_papel}.csv", sep=";", index_col=[0])
+cm = sb.light_palette("green", as_cmap=True)
+st.table(tb_df.style.background_gradient(cmap=cm))
 
 ######
 
@@ -384,11 +394,11 @@ st.write( " 🚦 Cruzamento de Médias Moveis " )
 st.write( " 🚦 Intervalo utilizado -> Diário(Fechamento) " )
 st.write(f" 🚦Periodo: 01-01-2020 até {data} ")
 
-media_ra = st.number_input('Insira o Valor da Média Rápida(1-200)',value=17, min_value=1, max_value=200)
-media_le = st.number_input('Insira o Valor da Média Lenta(1-200)',value=72, min_value=1, max_value=200)
+media_ra = st.number_input("Insira o Valor da Média Rápida(1-200)",value=17, min_value=1, max_value=200)
+media_le = st.number_input("Insira o Valor da Média Lenta(1-200)",value=72, min_value=1, max_value=200)
 
-dados_back = vbt.YFData.download_symbol(f"{col1_selection}.SA", start="2020-01-01")
-fechamento = dados_back["Close"]
+dados_back = vbt.YFData.download_symbol(f'{col1_selection}.SA', start='2020-01-01')
+fechamento = dados_back['Close']
 media_rapida = vbt.MA.run(fechamento, media_ra)
 media_lenta = vbt.MA.run(fechamento, media_le)
 entradas = media_rapida.ma_above(media_lenta, crossover=True)
@@ -397,11 +407,12 @@ pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
 df_pf = pf.stats()
 fig = pf.plot()
 st.plotly_chart(fig)
-st.write('-----')
-st.write('*Informações sobre a Estratégia:*')
+st.write("-----")
+st.write("*Informações sobre a Estratégia:*")
 st.text(df_pf)
 
 ######
+
 # Rodapé
-st.write( " ----------------------------------------- " )
-st.write( " *Utilize modo light para uma melhor visualização* " )
+st.write("-----------------------------------------")
+st.write("*Utilize modo light para uma melhor visualização.*")
