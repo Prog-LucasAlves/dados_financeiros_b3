@@ -5,6 +5,7 @@ import re
 from datetime import datetime
 import quantstats as qs
 import os
+import plotly.express as px
 
 ######
 st.subheader('🆚 Informações das Ações Listadas na B3')
@@ -331,6 +332,38 @@ st.write(tri_df_1)
 tri_ref = tri_df_1["Data Referência"][0]
 tri_rel = tri_df_1["Release de Resultados"][0]
 st.write(f"📝 Data de Referência {tri_ref} - Download Release {tri_papel}: [link]({tri_rel})")
+
+######
+
+st.write("-----------------------------------------") ###
+# Código para pegar o preço das ações
+precos = df[df['papel'] == col1_selection]
+precos_index = int(precos['Unnamed: 0'])
+precos_papel = precos['papel'][pr_index]
+# Pegando os dados dos preços nos arquivos .csv
+precos_df = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
+precos_df_ad = precos_df.rename(
+    {"Adj Close": f"{precos_papel}"}, axis=1
+)
+precos_df_ad = precos_df_ad.drop(
+    precos_df_ad.columns[[1, 2, 3, 4, 6]], axis=1
+)
+
+# Gráfico com o historico de fechamento
+st.write(f" 📈📉 Histórico de Fechamento da Ação {precos_papel} ")
+fig_pre = px.line(precos_df_ad, x="Date", y=f"{precos_papel}")
+st.plotly_chart(fig_pre)
+
+df_download = pd.read_csv(f"./precos/{precos_papel}.csv", sep=";")
+csv = df_download.to_csv().encode("utf-8")
+st.download_button(
+    label=f"Download Cotação da Ação {precos_papel}",
+    data=csv,
+    file_name=f"{precos_papel}.csv",
+    mime="text/csv",
+)
+
+######
 
 # Backtesting
 data = datetime.today().strftime('%d-%m-%Y')
