@@ -318,6 +318,20 @@ else:
 
 ######
 
+# Tabela Dados Trimestrais
+st.write("-----------------------------------------")
+tdt = df[df['papel'] == col1_selection]
+tdt_index = int(tdt["Unnamed: 0"])
+tdt_papel = tdt["papel"][tdt_index]
+# Pagando os dados dos resultados trimestrais nos arquivos .csv
+dt_df = pd.read_csv(f"./dados_tri/{tdt_papel}.csv", sep=";")
+dt_df_1 = dt_df[["Data Referência", "Demonstração Financeira", "Release de Resultados"]]
+st.caption(" 💵 Dados Trimestrais ")
+st.write(dt_df_1)
+dt_c = dt_df_1["Data Referência"][0]
+df_l = dt_df_1["Release de Resultados"][0]
+st.write(f"📝 Data de Referência {dt_c} - Download Release {tdt_papel}: [link]({df_l})")
+
 # Backtesting
 data = datetime.today().strftime('%d-%m-%Y')
 st.write("-----------------------------------------")

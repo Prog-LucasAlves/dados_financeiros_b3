@@ -395,6 +395,7 @@ lst_acao = [
     "SULA3",
     "SULA4",
     "SUZB3",
+    "SYNE3"
     "TAEE11",
     "TAEE3",
     "TAEE4",
