@@ -397,6 +397,16 @@ st.table(tb_df.style.background_gradient(cmap=cm))
 
 ######
 
+# Gráfico de Voltilidade
+st.write("-----------------------------------------")
+st.write(f" 🔥 Volatiliadade da Ação {precos_papel} - (30 dias) ")
+precos_df_vol = (
+    precos_df_ad[f"Ret {precos_papel}"].rolling(window=30).std()
+)
+precos_df_ad[f"Vol {precos_papel}"] = precos_df_vol
+fig_vol = px.line(precos_df_ad, x="Date", y=f"Vol {precos_papel}")
+st.plotly_chart(fig_vol)
+
 # Backtesting
 data = datetime.today().strftime('%d-%m-%Y')
 st.write("-----------------------------------------")
