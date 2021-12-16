@@ -372,7 +372,6 @@ lst_acao = [
     "SLCE3",
     "SLED3",
     "SLED4",
-    "SMLS3",
     "SMTO3",
     "SNSY5",
     "SOMA3",

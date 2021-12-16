@@ -1,3 +1,9 @@
+
+
+###################################
+# Bibliotecas/Pacotes importadas
+###################################
+
 import streamlit as st
 import pandas as pd
 import vectorbt as vbt
@@ -8,7 +14,12 @@ import os
 import plotly.express as px
 import seaborn as sb
 
+###################################
+# Inicio da Construção Streamlit
+###################################
+
 ######
+# Cabeçalho da página
 st.subheader('🆚 Informações das Ações Listadas na B3')
 
 ######
@@ -51,6 +62,7 @@ os_dia = df[df['papel'] == col1_selection]
 os_dia_index = int(os_dia['Unnamed: 0'])
 os_dia_result = os_dia['os_dia'][os_dia_index]
 
+# varição da cotação da ação(%)
 col2.metric(label="Valor da Ação", value=f"R${cotacao_result}", delta=f"{os_dia_result}%")
 
 # col1.3 - máxima do valor da cotação em 52 semanas
