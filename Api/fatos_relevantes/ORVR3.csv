@@ -1,16 +1,17 @@
 ;Acao;Data;Hora;Descrição;Link
-0;ORVR3;14/12/2021;09:56;Procedimento de bookbuilding;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=925756&descTipo=IPE&CodigoInstituicao=1
-1;ORVR3;18/11/2021;22:09;Rating da Orizon Valorização de Residuos e emissão de debêntures.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=918700&descTipo=IPE&CodigoInstituicao=1
-2;ORVR3;17/11/2021;00:19;Aprovação da emissão de debêntures da Orizon Meio Ambiente S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=917933&descTipo=IPE&CodigoInstituicao=1
-3;ORVR3;04/11/2021;19:04;Leilão Recuperação Judicial Estre;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=913321&descTipo=IPE&CodigoInstituicao=1
-4;ORVR3;04/11/2021;14:51;Leilão Recuperação Judicial Estre;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=913065&descTipo=IPE&CodigoInstituicao=1
-5;ORVR3;30/09/2021;19:13;Leilão de Energia Nova A-5 ;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=904496&descTipo=IPE&CodigoInstituicao=1
-6;ORVR3;30/07/2021;17:27;Contratação de Formador de Mercado;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=887905&descTipo=IPE&CodigoInstituicao=1
-7;ORVR3;06/07/2021;17:03;Participação da Companhia em evento online (?live?);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=881475&descTipo=IPE&CodigoInstituicao=1
-8;ORVR3;14/05/2021;21:40;Proposta Vinculante aquisição UPI Aterros ESTRE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=868043&descTipo=IPE&CodigoInstituicao=1
-9;ORVR3;14/05/2021;21:18;Proposta Vinculante aquisição UPI Aterros ESTRE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=868039&descTipo=IPE&CodigoInstituicao=1
-10;ORVR3;14/05/2021;10:29;Proposta Vinculante AGC Grupo Estre;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=867557&descTipo=IPE&CodigoInstituicao=1
-11;ORVR3;14/05/2021;09:34;Proposta Vinculante AGC Grupo Estre;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=867529&descTipo=IPE&CodigoInstituicao=1
-12;ORVR3;06/05/2021;18:58;UTM Pernambuco;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=863751&descTipo=IPE&CodigoInstituicao=1
-13;ORVR3;27/04/2021;18:27;Participação da Companhia em evento online (?live?);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=857931&descTipo=IPE&CodigoInstituicao=1
-14;ORVR3;19/04/2021;17:35;Participação da Companhia em evento online (?live?);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=855061&descTipo=IPE&CodigoInstituicao=1
+0;ORVR3;23/12/2021;18:31;Encerramento da oferta pública da 4 emissão de debentures da Orizon Meio Ambiente S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928721&descTipo=IPE&CodigoInstituicao=1
+1;ORVR3;14/12/2021;09:56;Procedimento de bookbuilding;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=925756&descTipo=IPE&CodigoInstituicao=1
+2;ORVR3;18/11/2021;22:09;Rating da Orizon Valorização de Residuos e emissão de debêntures.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=918700&descTipo=IPE&CodigoInstituicao=1
+3;ORVR3;17/11/2021;00:19;Aprovação da emissão de debêntures da Orizon Meio Ambiente S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=917933&descTipo=IPE&CodigoInstituicao=1
+4;ORVR3;04/11/2021;19:04;Leilão Recuperação Judicial Estre;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=913321&descTipo=IPE&CodigoInstituicao=1
+5;ORVR3;04/11/2021;14:51;Leilão Recuperação Judicial Estre;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=913065&descTipo=IPE&CodigoInstituicao=1
+6;ORVR3;30/09/2021;19:13;Leilão de Energia Nova A-5 ;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=904496&descTipo=IPE&CodigoInstituicao=1
+7;ORVR3;30/07/2021;17:27;Contratação de Formador de Mercado;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=887905&descTipo=IPE&CodigoInstituicao=1
+8;ORVR3;06/07/2021;17:03;Participação da Companhia em evento online (?live?);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=881475&descTipo=IPE&CodigoInstituicao=1
+9;ORVR3;14/05/2021;21:40;Proposta Vinculante aquisição UPI Aterros ESTRE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=868043&descTipo=IPE&CodigoInstituicao=1
+10;ORVR3;14/05/2021;21:18;Proposta Vinculante aquisição UPI Aterros ESTRE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=868039&descTipo=IPE&CodigoInstituicao=1
+11;ORVR3;14/05/2021;10:29;Proposta Vinculante AGC Grupo Estre;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=867557&descTipo=IPE&CodigoInstituicao=1
+12;ORVR3;14/05/2021;09:34;Proposta Vinculante AGC Grupo Estre;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=867529&descTipo=IPE&CodigoInstituicao=1
+13;ORVR3;06/05/2021;18:58;UTM Pernambuco;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=863751&descTipo=IPE&CodigoInstituicao=1
+14;ORVR3;27/04/2021;18:27;Participação da Companhia em evento online (?live?);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=857931&descTipo=IPE&CodigoInstituicao=1
+15;ORVR3;19/04/2021;17:35;Participação da Companhia em evento online (?live?);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=855061&descTipo=IPE&CodigoInstituicao=1
