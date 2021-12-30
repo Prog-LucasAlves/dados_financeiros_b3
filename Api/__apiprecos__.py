@@ -25,10 +25,10 @@ acao = __list__.lst_acao
 
 # Coletando as cotações das ações
 for i in tqdm(acao):
-    df = yf.download(f'{i}.SA', start=inicio, end=fim)
+    df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
     df.to_csv(f'./precos/{i}.csv',sep=';')
 
 # Coletando as cotações do índice bovespa
 ticker = 'BVSP'
-df_b = yf.download(f'^{ticker}', start=inicio, end=fim)
+df_b = yf.download(f'^{ticker}', start=inicio, end=fim, progress=False, threads=False)
 df_b.to_csv(f'./precos/{ticker}.csv',sep=';')  
