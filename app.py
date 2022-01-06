@@ -13,6 +13,7 @@ import quantstats as qs
 import os
 import plotly.express as px
 import seaborn as sb
+import math
 
 ###################################
 # Inicio da Construção Streamlit
@@ -324,7 +325,24 @@ else:
     st.caption(f'A empresa {acao_g_result} nos últimos 12 meses teve um lucro de: R${lucro_f:},00.')
     st.caption(f'\n*Vamos continuar e achar o valor justo da ação {acao_g_result} segundo o cálculo de Graham.')
 
+# Valor do cálculo de Graham:
 valor_gh = round(22.5 * vpa_f * lpa_f , 2)
+
+#Valor justo da ação analisada:
+valor_jt = round(math.sqrt(valor_gh), 2)
+
+#Cálculo do Upside / Downside:
+up_dw = round(((prc_f / valor_jt) - 1) * 100, 2)
+
+#Resultado da análise:
+st.caption(f'O valor justo da ação {acao_g_result}: R${valor_jt}.')
+st.caption(f'O valor atual da ação {acao_g_result}: R${prc_f}.')
+if up_dw > 0:
+    st.caption(f'\n*A ação {acao_g_result}, esta com {up_dw}% acima do seu valor justo.')
+    st.caption(f'\nAlguns indicadores:')    
+else:
+    st.caption(f'\n*A ação {acao_g_result}, esta com {up_dw}% abaixo do seu valor justo.')
+    st.caption(f'\nAlguns indicadores:\n')
 
 ######
 
