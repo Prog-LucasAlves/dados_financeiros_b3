@@ -319,7 +319,7 @@ divb_f = acao_g['divd_bruta'][acao_g_index]
 prtl_f = acao_g['patr_liquido'][acao_g_index]
 lucro_f = acao_g['lucro_liquido_12m'][acao_g_index]
 
-if vpa_f < 0 or lpa_f < 0:
+if vpa_f <= 0 or lpa_f <= 0:
     st.write(f" A empresa {acao_g_result} nos últimos 12 meses teve um prejuizo de: R${lucro_f},00. ")
     st.write(f" Obs.: Empresa com prejuízo!!! - Não será possível achar o valor justo da ação {acao_g_result} segundo o cálculo de Graham. ")
     st.write(f" \n**Busque por outra empresa**" )
