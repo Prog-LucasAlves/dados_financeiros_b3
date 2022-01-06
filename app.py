@@ -304,6 +304,7 @@ col2.metric(label="Sharpe", value=f"{sharpe_sharpe}")
 
 # valor justo de uma ação segundo o cálculo de Graham
 st.write("-----------------------------------------")
+st.caption(" Valor Justo de uma ação segundo o cálculo de Graham ")
 acao_g = df[df['papel'] == col1_selection]
 acao_g_index = int(acao_g['Unnamed: 0'])
 acao_g_result = acao_g['papel'][acao_g_index]
@@ -319,6 +320,12 @@ if vpa_f < 0 or lpa_f < 0:
     st.caption(f" A empresa {acao_g_result} nos últimos 12 meses teve um prejuizo de: R${lucro_f}. ")
     st.caption(f" Obs.: Empresa com prejuízo!!! - Não será possível achar o valor justo da ação {acao_g_result} segundo o cálculo de Graham. ")
     st.caption(f" \n**Busque por outra empresa**" )
+else:
+    st.caption(f'A empresa {acao_g_result} nos últimos 12 meses teve um lucro de: R${lucro_f}.')
+    st.caption(f'\n*Vamos continuar e achar o valor justo da ação {acao_g_result} segundo o cálculo de Graham.')
+
+valor_gh = round(22.5 * vpa_f * lpa_f , 2)
+
 ######
 
 # Tabela Fatos Relevantes
