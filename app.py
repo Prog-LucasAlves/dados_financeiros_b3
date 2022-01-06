@@ -315,7 +315,7 @@ media_papel = df[df['papel'] == col1_selection]
 media_papel_index = int(media_papel['Unnamed: 0'])
 media_papel_result = media_papel['papel'][media_papel_index]
 df_media = pd.read_csv(f"./Api/precos/{media_papel_result}.csv", sep=";")
-df_media_ret = df_media['Adj Close'].pct_change()
+df_media_ret = df_media['Adj Close'].pct_change().dropna()
 media = statistics.mean(df_media_ret)
 col1.metric(label="Média dos Retornos Diarios", value=f'{media:.2f}')
 
