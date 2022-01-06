@@ -4,6 +4,7 @@
 # Bibliotecas/Pacotes importadas
 ###################################
 
+from multiprocessing import Value
 import streamlit as st
 import pandas as pd
 import vectorbt as vbt
@@ -14,6 +15,7 @@ import os
 import plotly.express as px
 import seaborn as sb
 import math
+import statistics
 
 ###################################
 # Inicio da Construção Streamlit
@@ -300,6 +302,26 @@ qs.extend_pandas()
 sharpe_stock = qs.utils.download_returns(f"{sharpe_result}.SA")
 sharpe_sharpe = round(sharpe_stock.sharpe(), 2)
 col2.metric(label="Sharpe", value=f"{sharpe_sharpe}")
+
+# col1.23 -
+col1.metric(label="--------------------------------------", value="")
+
+# col2.23 -
+col2.metric(label="---------------------------------------", value="")
+
+# col1.24 - Média dos Retornos Diários
+
+media_papel = df[df['papel'] == col1_selection]
+media_papel_index = int(media_papel['Unnamed: 0'])
+media_papel_result = media_papel['papel'][media_papel_index]
+df_media = pd.read_csv(f"./Api/precos/{media_papel_result}.csv", sep=";")
+df_media_ret = df_media[f'{media_papel_result}'].pct_change()
+media = statistics.mean(df_media_ret)
+col1.metric(lable="Média dos Retornos Diarios", Value=f'{media:.2f}')
+
+# col2.24 - Variância dos Retornos Diarios
+
+# col1.25 - Desvio Padrão dos retornos Diarios
 
 ######
 
