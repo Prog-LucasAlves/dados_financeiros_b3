@@ -222,7 +222,6 @@ lst_acao = [
     "HBSA3",
     "HBTS5",
     "HETA4",
-    "HGTX3",
     "HOOT4",
     "HYPE3",
     "IGBR3",
