@@ -303,8 +303,10 @@ col2.metric(label="Sharpe", value=f"{sharpe_sharpe}")
 ######
 
 # valor justo de uma ação segundo o cálculo de Graham
+st.write("-----------------------------------------")
 acao_g = df[df['papel'] == col1_selection]
 acao_g_index = int(acao_g['Unnamed: 0'])
+acao_g_result = acao_g['papel'][acao_g_index]
 
 vpa_f = acao_g['vpa'][acao_g_index]
 lpa_f = acao_g['lpa'][acao_g_index]
@@ -314,7 +316,7 @@ prtl_f = acao_g['patr_liquido'][acao_g_index]
 lucro_f = acao_g['lucro_liquido_12m'][acao_g_index]
 
 if vpa_f < 0 or lpa_f < 0:
-    st.caption(f" A empresa {acao_g} nos últimos 12 meses teve um prejuizo de: R${lucro_f}.') ")
+    st.caption(f" A empresa {acao_g_result} nos últimos 12 meses teve um prejuizo de: R${lucro_f}.') ")
 
 ######
 
