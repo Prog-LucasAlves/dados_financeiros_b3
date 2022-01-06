@@ -326,22 +326,22 @@ if vpa_f < 0 or lpa_f < 0:
 else:
     st.write(f'A empresa {acao_g_result} nos últimos 12 meses teve um lucro de: R${lucro_f},00.')
 
-# Valor do cálculo de Graham:
-valor_gh = round(22.5 * vpa_f * lpa_f , 2)
+    # Valor do cálculo de Graham:
+    valor_gh = round(22.5 * vpa_f * lpa_f , 2)
 
-#Valor justo da ação analisada:
-valor_jt = round(math.sqrt(valor_gh), 2)
+    #Valor justo da ação analisada:
+    valor_jt = round(math.sqrt(valor_gh), 2)
 
-#Cálculo do Upside / Downside:
-up_dw = round(((prc_f2 / valor_jt) - 1) * 100, 2)
+    #Cálculo do Upside / Downside:
+    up_dw = round(((prc_f2 / valor_jt) - 1) * 100, 2)
 
-#Resultado da análise:
-st.write(f'O valor justo da ação {acao_g_result}: R${valor_jt}.')
-st.write(f'O valor atual da ação {acao_g_result}: R${prc_f}.')
-if up_dw > 0:
-    st.write(f'\n 📈 A ação {acao_g_result}, esta com *{up_dw:.2f}%* acima do seu valor justo.')   
-else:
-    st.write(f'\n 📉 A ação {acao_g_result}, esta com *{up_dw:.2f}%* abaixo do seu valor justo.')
+    #Resultado da análise:
+    st.write(f'O valor justo da ação {acao_g_result}: R${valor_jt}.')
+    st.write(f'O valor atual da ação {acao_g_result}: R${prc_f}.')
+    if up_dw > 0:
+        st.write(f'\n 📈 A ação {acao_g_result}, esta com *{up_dw:.2f}%* acima do seu valor justo.')   
+    else:
+        st.write(f'\n 📉 A ação {acao_g_result}, esta com *{up_dw:.2f}%* abaixo do seu valor justo.')
 
 ######
 
