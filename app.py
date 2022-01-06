@@ -332,7 +332,7 @@ valor_gh = round(22.5 * vpa_f * lpa_f , 2)
 valor_jt = round(math.sqrt(valor_gh), 2)
 
 #Cálculo do Upside / Downside:
-up_dw = round(((prc_f / valor_jt) - 1) * 100, 2)
+up_dw = round(((float(prc_f) / valor_jt) - 1) * 100, 2)
 
 #Resultado da análise:
 st.caption(f'O valor justo da ação {acao_g_result}: R${valor_jt}.')
