@@ -339,9 +339,9 @@ up_dw = round(((prc_f2 / valor_jt) - 1) * 100, 2)
 st.write(f'O valor justo da ação {acao_g_result}: R${valor_jt}.')
 st.write(f'O valor atual da ação {acao_g_result}: R${prc_f}.')
 if up_dw > 0:
-    st.write(f'\n*A ação {acao_g_result}, esta com *{up_dw}%* acima do seu valor justo.')   
+    st.write(f'\n 📈 A ação {acao_g_result}, esta com *{up_dw}%* acima do seu valor justo.')   
 else:
-    st.write(f'\n*A ação {acao_g_result}, esta com *{up_dw}%* abaixo do seu valor justo.')
+    st.write(f'\n 📉 A ação {acao_g_result}, esta com *{up_dw}%* abaixo do seu valor justo.')
 
 ######
 
