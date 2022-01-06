@@ -313,6 +313,7 @@ acao_g_result = acao_g['papel'][acao_g_index]
 vpa_f = acao_g['vpa'][acao_g_index]
 lpa_f = acao_g['lpa'][acao_g_index]
 prc_f = acao_g['cotacao'][acao_g_index]
+prc_f = prc_f.replace(',','.')
 divb_f = acao_g['divd_bruta'][acao_g_index]
 prtl_f = acao_g['patr_liquido'][acao_g_index]
 lucro_f = acao_g['lucro_liquido_12m'][acao_g_index]
@@ -332,7 +333,7 @@ valor_gh = round(22.5 * vpa_f * lpa_f , 2)
 valor_jt = round(math.sqrt(valor_gh), 2)
 
 #Cálculo do Upside / Downside:
-up_dw = round(((float(prc_f) / valor_jt) - 1) * 100, 2)
+up_dw = round(((prc_f / valor_jt) - 1) * 100, 2)
 
 #Resultado da análise:
 st.caption(f'O valor justo da ação {acao_g_result}: R${valor_jt}.')
