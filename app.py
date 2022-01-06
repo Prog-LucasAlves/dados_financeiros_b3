@@ -305,7 +305,7 @@ col2.metric(label="Sharpe", value=f"{sharpe_sharpe}")
 
 # valor justo de uma ação segundo o cálculo de Graham
 st.write("-----------------------------------------")
-st.caption(" Valor Justo de uma ação segundo o cálculo de Graham ")
+st.subheader(" Valor Justo de uma ação segundo o cálculo de Graham ")
 acao_g = df[df['papel'] == col1_selection]
 acao_g_index = int(acao_g['Unnamed: 0'])
 acao_g_result = acao_g['papel'][acao_g_index]
@@ -325,7 +325,6 @@ if vpa_f < 0 or lpa_f < 0:
     st.caption(f" \n**Busque por outra empresa**" )
 else:
     st.caption(f'A empresa {acao_g_result} nos últimos 12 meses teve um lucro de: R${lucro_f:},00.')
-    st.caption(f'\n*Vamos continuar e achar o valor justo da ação {acao_g_result} segundo o cálculo de Graham.')
 
 # Valor do cálculo de Graham:
 valor_gh = round(22.5 * vpa_f * lpa_f , 2)
@@ -340,11 +339,9 @@ up_dw = round(((prc_f2 / valor_jt) - 1) * 100, 2)
 st.caption(f'O valor justo da ação {acao_g_result}: R${valor_jt}.')
 st.caption(f'O valor atual da ação {acao_g_result}: R${prc_f}.')
 if up_dw > 0:
-    st.caption(f'\n*A ação {acao_g_result}, esta com {up_dw}% acima do seu valor justo.')
-    st.caption(f'\nAlguns indicadores:')    
+    st.caption(f'\n*A ação {acao_g_result}, esta com {up_dw}% acima do seu valor justo.')   
 else:
     st.caption(f'\n*A ação {acao_g_result}, esta com {up_dw}% abaixo do seu valor justo.')
-    st.caption(f'\nAlguns indicadores:\n')
 
 ######
 
