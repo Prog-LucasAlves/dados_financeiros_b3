@@ -336,7 +336,7 @@ valor_jt = round(math.sqrt(valor_gh), 2)
 up_dw = round(((prc_f2 / valor_jt) - 1) * 100, 2)
 
 #Resultado da análise:
-st.caption(f'O valor justo da ação {acao_g_result}: R${valor_jt}.')
+st.write(f'O valor justo da ação {acao_g_result}: R${valor_jt}.')
 st.caption(f'O valor atual da ação {acao_g_result}: R${prc_f}.')
 if up_dw > 0:
     st.caption(f'\n*A ação {acao_g_result}, esta com {up_dw}% acima do seu valor justo.')   
