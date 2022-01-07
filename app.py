@@ -321,7 +321,9 @@ drawdown_precos_df['Picos'] = drawdown_precos_df['Carteira'].cummax()
 drawdown_precos_df['Drawdown'] = (drawdown_precos_df['Carteira'] - drawdown_precos_df['Picos']) / drawdown_precos_df['Picos']
 max_drawdown = drawdown_precos_df['Drawdown'].min()
 max_drawdown = round(max_drawdown * -100, 2)
-col1.metric(label=f"Maximo Drawdown da Ação {drawdown_precos_papel}", value=f"{max_drawdown}")
+drawdown_data = datetime.today().strftime('%d-%m-%Y')
+col1.metric(label=f"Máximo Drawdown da Ação {drawdown_precos_papel}", value=f"{max_drawdown:.2f}")
+col1.metric(label=f"Período - 01/01/2010 até {drawdown_data} ")
 
 # col2.24 - Drawdown
 
