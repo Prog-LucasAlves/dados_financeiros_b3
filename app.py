@@ -455,6 +455,7 @@ max_drawdown = drawdown_precos_df['Drawdown'].min()
 max_drawdown = round(max_drawdown * -100, 2)
 drawdown_data = datetime.today().strftime('%d-%m-%Y')
 drawdown_fig = px.line(drawdown_precos_df, x='Date', y='Drawdown')
+st.write(f"{max_drawdown:.2f}")
 st.plotly_chart(drawdown_fig)
 
 ######
