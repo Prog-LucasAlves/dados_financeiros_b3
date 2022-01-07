@@ -322,8 +322,7 @@ drawdown_precos_df['Drawdown'] = (drawdown_precos_df['Carteira'] - drawdown_prec
 max_drawdown = drawdown_precos_df['Drawdown'].min()
 max_drawdown = round(max_drawdown * -100, 2)
 drawdown_data = datetime.today().strftime('%d-%m-%Y')
-col1.metric(label=f"Máximo Drawdown da Ação {drawdown_precos_papel}", value=f"{max_drawdown:.2f}")
-col1.metric(label=f"Período - 01/01/2010 até {drawdown_data} ")
+col1.metric(label=f"Máximo Drawdown da Ação {drawdown_precos_papel} \n Período - 01/01/2010 até {drawdown_data}", value=f"{max_drawdown:.2f}")
 
 # col2.24 - Drawdown
 
