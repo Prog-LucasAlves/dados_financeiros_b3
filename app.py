@@ -488,8 +488,8 @@ dados_back = vbt.YFData.download_symbol(f'{col1_selection}.SA', start='2020-01-0
 fechamento = dados_back['Close']
 media_rapida = vbt.MA.run(fechamento, media_ra)
 media_lenta = vbt.MA.run(fechamento, media_le)
-entradas = media_rapida.ma_above(media_lenta, crossover=True) 
-saidas = media_rapida.ma_below(media_lenta, crossover=True)
+entradas = media_rapida.ma_above(media_lenta) 
+saidas = media_rapida.ma_below(media_lenta)
 pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
 df_pf = pf.stats()
 fig = pf.plot()
