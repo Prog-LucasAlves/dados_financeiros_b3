@@ -484,10 +484,12 @@ st.write(f" 🚦Periodo: 01-01-2020 até {data} ")
 media_ra = st.number_input("Insira o Valor da Média Rápida(1-200)",value=17, min_value=1, max_value=200)
 media_le = st.number_input("Insira o Valor da Média Lenta(1-200)",value=72, min_value=1, max_value=200)
 
+windows = media_ra, media_le
+
 dados_back = vbt.YFData.download_symbol(f'{col1_selection}.SA', start='2020-01-01')
 fechamento = dados_back['Close']
-media_rapida = vbt.MA.run_combs(fechamento, window=media_ra)
-media_lenta = vbt.MA.run_combs(fechamento, window=media_le)
+media_rapida, media_lenta = vbt.MA.run_combs(fechamento, window=windows, r=2)
+
 entradas = media_rapida.ma_crossed_above(media_lenta) 
 saidas = media_rapida.ma_crossed_below(media_lenta)
 pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
