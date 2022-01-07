@@ -1,3 +1,11 @@
+'''
+Descrição:
+Esse código pega os dados dos releases trimestrais das empresas listadas na bolsa brasileira e armazena cada ação com os dados coletados em um arquivo .csv
+
+Local: pasta(trimestre)
+'''
+
+# Bibliotecas utilizadas
 import pandas as pd
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as bs
@@ -5,6 +13,7 @@ from tqdm import tqdm
 import requests
 import numpy as np
 
+# Lista com o nome das ações
 import __list__
 
 

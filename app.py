@@ -308,20 +308,30 @@ col1.metric(label="--------------------------------------", value="")
 # col2.23 -
 col2.metric(label="---------------------------------------", value="")
 
-# col1.24 - Média dos Retornos Diários
+# col1.24 - Drawdown
+drawdown_precos = df[df['papel'] == col1_selection]
+drawdown_precos_index = int(drawdown_precos['Unnamed: 0'])
+drawdown_precos_papel = drawdown_precos['papel'][drawdown_precos_index]
+# Pegando os dados dos preços nos arquivos .csv
+#%%
+import pandas as pd
+drawdown_precos_df = pd.read_csv(f"./Api/precos/{drawdown_precos_papel}.csv", sep=";")
+drawdown_precos_df.drop(['Date','Open','High','Low','Close','Volume'], inplace=True, axis=1)
+drawdown_precos_df['Retornos'] = drawdown_precos_df['Adj Close'].pct_change()
+drawdown_precos_df['Carteira'] = 100 * (drawdown_precos_df['Retornos'] + 1)
+drawdown_precos_df['Picos'] = drawdown_precos_df['Carteira'].cummax()
+drawdown_precos_df['Drawdown'] = (drawdown_precos_df['Carteira'] - drawdown_precos_df['Picos']) / drawdown_precos_df['Picos']
+max_drawdown = drawdown_precos_df['Drawdown'].min()
+max_drawdown = round(max_drawdown * -100, 2)
+col1.metric(label=f"Maximo Drawdown da Ação {drawdown_precos_papel}", value=f"{max_drawdown}")
 
-media_papel = df[df['papel'] == col1_selection]
-media_papel_index = int(media_papel['Unnamed: 0'])
-media_papel_result = media_papel['papel'][media_papel_index]
-df_media = pd.read_csv(f"./Api/precos/{media_papel_result}.csv", sep=";")
-df_media_ret = df_media['Adj Close'].pct_change()
-df_media_ret.dropna(inplace=True)
-media = statistics.mean(df_media_ret) * 10
-col1.metric(label="Média dos Retornos Diarios", value=f'{media:.2f}')
+# %%
+# col2.24 - Drawdown
 
-# col2.24 - Variância dos Retornos Diarios
+
 
 # col1.25 - Desvio Padrão dos retornos Diarios
+
 
 ######
 

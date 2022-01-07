@@ -1,6 +1,15 @@
+'''
+Descrição:
+Esse código pega os dados upside ou dowside mês a mês em porcentagem das empresas listadas na bolsa brasileira e armazena cada ação com os dados coletados em um arquivo .csv
+
+Local: pasta(histórico)
+'''
+
+# Bibliotecas utilizadas
 import quantstats as qs
 from tqdm import tqdm
 
+# Lista com o nome das ações
 import __list__
 
 acao = __list__.lst_acao
