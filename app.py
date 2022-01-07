@@ -308,21 +308,7 @@ col1.metric(label="--------------------------------------", value="")
 # col2.23 -
 col2.metric(label="---------------------------------------", value="")
 
-# col1.24 - Drawdown
-drawdown_precos = df[df['papel'] == col1_selection]
-drawdown_precos_index = int(drawdown_precos['Unnamed: 0'])
-drawdown_precos_papel = drawdown_precos['papel'][drawdown_precos_index]
-# Pegando os dados dos preços nos arquivos .csv
-drawdown_precos_df = pd.read_csv(f"./Api/precos/{drawdown_precos_papel}.csv", sep=";")
-drawdown_precos_df.drop(['Date','Open','High','Low','Close','Volume'], inplace=True, axis=1)
-drawdown_precos_df['Retornos'] = drawdown_precos_df['Adj Close'].pct_change()
-drawdown_precos_df['Carteira'] = 100 * (drawdown_precos_df['Retornos'] + 1)
-drawdown_precos_df['Picos'] = drawdown_precos_df['Carteira'].cummax()
-drawdown_precos_df['Drawdown'] = (drawdown_precos_df['Carteira'] - drawdown_precos_df['Picos']) / drawdown_precos_df['Picos']
-max_drawdown = drawdown_precos_df['Drawdown'].min()
-max_drawdown = round(max_drawdown * -100, 2)
-drawdown_data = datetime.today().strftime('%d-%m-%Y')
-col1.metric(label=f"Máximo Drawdown da Ação {drawdown_precos_papel} \n Período - 01/01/2010 até {drawdown_data}", value=f"{max_drawdown:.2f}")
+
 
 # col2.24 - Drawdown
 
@@ -421,6 +407,7 @@ st.write(f"📝 Data de Referência {tri_ref} - Download Release {tri_papel}: [l
 
 ######
 
+# Gráfico de preço de fechamento da ações
 # Código para pegar o preço das ações
 st.write("-----------------------------------------") 
 precos = df[df['papel'] == col1_selection]
@@ -448,6 +435,27 @@ st.download_button(
     file_name=f"{precos_papel}.csv",
     mime="text/csv",
 )
+
+######
+
+# Grafico Drawdown
+st.write("-----------------------------------------")
+st.write(f" 📈📉 Drawdown da Ação {precos_papel} ")
+drawdown_precos = df[df['papel'] == col1_selection]
+drawdown_precos_index = int(drawdown_precos['Unnamed: 0'])
+drawdown_precos_papel = drawdown_precos['papel'][drawdown_precos_index]
+# Pegando os dados dos preços nos arquivos .csv
+drawdown_precos_df = pd.read_csv(f"./Api/precos/{drawdown_precos_papel}.csv", sep=";")
+drawdown_precos_df.drop(['Open','High','Low','Close','Volume'], inplace=True, axis=1)
+drawdown_precos_df['Retornos'] = drawdown_precos_df['Adj Close'].pct_change()
+drawdown_precos_df['Carteira'] = 100 * (drawdown_precos_df['Retornos'] + 1)
+drawdown_precos_df['Picos'] = drawdown_precos_df['Carteira'].cummax()
+drawdown_precos_df['Drawdown'] = (drawdown_precos_df['Carteira'] - drawdown_precos_df['Picos']) / drawdown_precos_df['Picos']
+max_drawdown = drawdown_precos_df['Drawdown'].min()
+max_drawdown = round(max_drawdown * -100, 2)
+drawdown_data = datetime.today().strftime('%d-%m-%Y')
+drawdown_fig = px.line(drawdown_precos_df, x='Date', y='Drawdown')
+st.plotly_chart(drawdown_fig)
 
 ######
 
