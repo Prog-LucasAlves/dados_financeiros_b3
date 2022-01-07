@@ -313,8 +313,6 @@ drawdown_precos = df[df['papel'] == col1_selection]
 drawdown_precos_index = int(drawdown_precos['Unnamed: 0'])
 drawdown_precos_papel = drawdown_precos['papel'][drawdown_precos_index]
 # Pegando os dados dos preços nos arquivos .csv
-#%%
-import pandas as pd
 drawdown_precos_df = pd.read_csv(f"./Api/precos/{drawdown_precos_papel}.csv", sep=";")
 drawdown_precos_df.drop(['Date','Open','High','Low','Close','Volume'], inplace=True, axis=1)
 drawdown_precos_df['Retornos'] = drawdown_precos_df['Adj Close'].pct_change()
@@ -325,7 +323,6 @@ max_drawdown = drawdown_precos_df['Drawdown'].min()
 max_drawdown = round(max_drawdown * -100, 2)
 col1.metric(label=f"Maximo Drawdown da Ação {drawdown_precos_papel}", value=f"{max_drawdown}")
 
-# %%
 # col2.24 - Drawdown
 
 
