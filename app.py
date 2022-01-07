@@ -4,7 +4,6 @@
 # Bibliotecas/Pacotes importadas
 ###################################
 
-from multiprocessing import Value
 import streamlit as st
 import pandas as pd
 import vectorbt as vbt
@@ -489,8 +488,8 @@ dados_back = vbt.YFData.download_symbol(f'{col1_selection}.SA', start='2020-01-0
 fechamento = dados_back['Close']
 media_rapida = vbt.MA.run(fechamento, media_ra)
 media_lenta = vbt.MA.run(fechamento, media_le)
-entradas = media_rapida.ma_above(media_lenta, crossover=True)
-saidas = media_rapida.ma_below(media_lenta, crossover=True)
+entradas = media_rapida.ma_crossed_above(media_lenta, crossover=True) 
+saidas = media_rapida.ma_crossed_below(media_lenta, crossover=True)
 pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
 df_pf = pf.stats()
 fig = pf.plot()
