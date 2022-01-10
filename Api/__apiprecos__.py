@@ -32,3 +32,5 @@ for i in tqdm(acao):
 ticker = 'BVSP'
 df_b = yf.download(f'^{ticker}', start=inicio, end=fim, progress=False, threads=False)
 df_b.to_csv(f'./precos/{ticker}.csv',sep=';')  
+
+
