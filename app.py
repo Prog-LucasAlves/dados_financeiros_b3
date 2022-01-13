@@ -519,6 +519,13 @@ st.text(df_pf)
 
 ######
 
+date_att = datetime.today().strftime('%d-%m-%Y')
+st.write(f"Atualizações do dia {date_att}:")
+
+
+
+######
+
 # Rodapé
 st.write("-----------------------------------------")
 st.write("*Utilize modo light para uma melhor visualização.*")

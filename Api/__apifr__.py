@@ -11,11 +11,12 @@ from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as bs
 from tqdm import tqdm
 import requests
+import glob
 
 # Lista com o nome das ações
 import __list__
 
-acao = __list__.lst_acao
+acao = __list__.lst_acao2
 
 for i in tqdm(acao):
         url = f'https://www.fundamentus.com.br/fatos_relevantes.php?papel={i}'
@@ -64,3 +65,19 @@ for i in tqdm(acao):
 
         # Salavando os dados em um arquivo .csv
         data.to_csv(f'./fatos_relevantes/{i}.csv', sep=';')
+          
+
+arquivos = glob.glob('./fatos_relevantes/*.csv')
+# 'arquivos' agora é um array com o nome de todos os .csv que começam com 'arquivo'
+array_df = []
+
+for x in arquivos:
+    temp_df = pd.read_csv(x, sep=';')
+    array_df.append(temp_df)
+
+df = pd.concat(array_df, axis=0)
+df.to_csv('../Todos/FT.csv')
+
+#####
+
+df_analisar = pd.read_csv
