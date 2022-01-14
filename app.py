@@ -524,7 +524,7 @@ date_att = datetime.today().strftime('%d-%m-%Y')
 st.write(f"Atualizações do dia {date_att}:")
 st.write('Fatos Relevantes')
 df_analisar = pd.read_csv("./Todos/FT.csv", sep=";")
-df_date = df.loc[df['Data'] == '12/01/2022', ['Acao']]
+df_date = df_analisar.loc[df_analisar['Data'] == '12/01/2022', ['Acao']]
 st.text(df_date['Acao'])
 
 ######
