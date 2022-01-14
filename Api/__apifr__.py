@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup as bs
 from tqdm import tqdm
 import requests
 import glob
+from datetime import datetime
 
 # Lista com o nome das ações
 import __list__
@@ -80,4 +81,7 @@ df.to_csv('../Todos/FT.csv')
 
 #####
 
-df_analisar = pd.read_csv
+date_att = datetime.today().strftime('%d-%m-%Y')
+df_analisar = pd.read_csv('../Todos/FT.csv', sep=';')
+df_date = df.loc[df['Data'] == '12/01/2022', ['Acao']]
+
