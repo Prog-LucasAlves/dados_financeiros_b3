@@ -525,7 +525,7 @@ st.write(f"Atualizações do dia {date_att}:")
 st.write('Fatos Relevantes')
 df_analisar = pd.read_csv("./Todos/FT.csv", sep=";")
 df_date = df_analisar.loc[df_analisar['Data'] == date_att, ['Acao']]
-if df_date.empty == True:
+if df_date.empty == False:
     st.text(list(df_date['Acao']))
 else:
     st.text('Sem Atualizações')    
