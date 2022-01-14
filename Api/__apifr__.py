@@ -83,5 +83,5 @@ df.to_csv('../Todos/FT.csv', sep=';')
 
 date_att = datetime.today().strftime('%d-%m-%Y')
 df_analisar = pd.read_csv('../Todos/FT.csv', sep=';')
-df_date = df.loc[df['Data'] == '12/01/2022', ['Acao']]
+df_date = df.loc[df['Data'] == date_att, ['Acao']]
 
