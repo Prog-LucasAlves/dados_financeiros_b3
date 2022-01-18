@@ -521,7 +521,7 @@ st.text(df_pf)
 
 st.write("-----------------------------------------")
 date_att = datetime.today()
-atraso = timedelta(1)
+atraso = timedelta(2)
 date_atual = date_att - atraso
 st.write(f"Atualizações do dia {date_att}:")
 st.write('Fatos Relevantes')
