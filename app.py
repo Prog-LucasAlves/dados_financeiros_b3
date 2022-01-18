@@ -522,10 +522,11 @@ st.text(df_pf)
 st.write("-----------------------------------------")
 date_att = datetime.today().strftime('%d/%m/%Y')
 atraso = timedelta(1)
+date_atual = date_att - atraso
 st.write(f"Atualizações do dia {date_att}:")
 st.write('Fatos Relevantes')
 df_analisar = pd.read_csv("./Todos/FT.csv", sep=";")
-df_date = df_analisar.loc[df_analisar['Data'] == (date_att - atraso), ['Acao']]
+df_date = df_analisar.loc[df_analisar['Data'] == date_atual , ['Acao']]
 if df_date.empty == False:
     st.write(list(df_date['Acao']))
 else:
