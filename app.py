@@ -520,7 +520,7 @@ st.text(df_pf)
 ######
 
 st.write("-----------------------------------------")
-date_att = datetime.today().strftime('%d/%m/%Y')
+date_att = datetime.today()
 atraso = timedelta(1)
 date_atual = date_att - atraso
 st.write(f"Atualizações do dia {date_att}:")
