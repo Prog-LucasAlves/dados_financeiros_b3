@@ -8,7 +8,7 @@ import streamlit as st
 import pandas as pd
 import vectorbt as vbt
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 import quantstats as qs
 import os
 import plotly.express as px
@@ -521,10 +521,11 @@ st.text(df_pf)
 
 st.write("-----------------------------------------")
 date_att = datetime.today().strftime('%d/%m/%Y')
+atraso = timedelta(1)
 st.write(f"Atualizações do dia {date_att}:")
 st.write('Fatos Relevantes')
 df_analisar = pd.read_csv("./Todos/FT.csv", sep=";")
-df_date = df_analisar.loc[df_analisar['Data'] == '14/01/2022', ['Acao']]
+df_date = df_analisar.loc[df_analisar['Data'] == (date_att - atraso), ['Acao']]
 if df_date.empty == False:
     st.write(list(df_date['Acao']))
 else:
