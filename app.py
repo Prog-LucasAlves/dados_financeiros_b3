@@ -526,12 +526,20 @@ date_atual = date_att - atraso
 date_atual = date_atual.strftime('%d/%m/%Y')
 st.write(f"Atualizações do dia {date_atual}:")
 st.write('Fatos Relevantes')
-df_analisar = pd.read_csv("./Todos/FT.csv", sep=";")
-df_date = df_analisar.loc[df_analisar['Data'] == date_atual , ['Acao']]
-if df_date.empty == False:
-    st.write(list(df_date['Acao']))
+df_analisar_ft = pd.read_csv("./Todos/FT.csv", sep=";")
+df_date_ft = df_analisar_ft.loc[df_analisar_ft['Data'] == date_atual , ['Acao']]
+if df_date_ft.empty == False:
+    st.write(list(df_date_ft['Acao']))
 else:
     st.write('Sem Atualizações')    
+
+st.write('Proventos')
+df_analisar_pr = pd.read_csv("./Todos/PR.csv", sep=";")
+df_date_pr = df_analisar_pr.loc[df_analisar_pr['Data'] == date_atual , ['Acao']]
+if df_date_pr.empty == False:
+    st.write(list(df_date_pr['Acao']))
+else:
+    st.write('Sem Atualizações') 
 
 ######
 

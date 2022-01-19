@@ -66,7 +66,6 @@ for i in tqdm(acao):
 
         # Salavando os dados em um arquivo .csv
         data.to_csv(f'./fatos_relevantes/{i}.csv', sep=';')
-          
 
 arquivos = glob.glob('./fatos_relevantes/*.csv')
 # 'arquivos' agora é um array com o nome de todos os .csv que começam com 'arquivo'
