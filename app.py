@@ -541,6 +541,8 @@ if df_date_pr.empty == False:
 else:
     st.write('Sem Atualizações') 
 
+st.write('Dados Trimestrais - Release de Resultados')
+
 ######
 
 # Rodapé
