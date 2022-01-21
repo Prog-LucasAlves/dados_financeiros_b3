@@ -11,6 +11,7 @@ from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as bs
 from tqdm import tqdm
 import requests
+import glob
 import numpy as np
 
 # Lista com o nome das ações
@@ -60,6 +61,18 @@ for i in tqdm(acao):
     data = pd.DataFrame(df_dados, columns=column_headers[:])
     data['Demonstração Financeira'] = lista_df
     data['Release de Resultados'] = pd.Series(lista_rr)
+    data['Acao'] = i
 
     # Salavando os dados em um arquivo .csv
     data.to_csv(f'../Api/trimestre/{i}.csv', sep=';') 
+
+arquivos = glob.glob('./trimestre/*.csv')
+# 'arquivos' agora é um array com o nome de todos os .csv que começam com 'arquivo'
+array_df = []
+
+for x in arquivos:
+    temp_df = pd.read_csv(x, sep=';')
+    array_df.append(temp_df)
+
+df = pd.concat(array_df, axis=0)
+df.to_csv('../Todos/TR.csv', sep=';')    
