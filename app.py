@@ -5,6 +5,7 @@
 ###################################
 
 from cgitb import html
+from numpy import imag
 import streamlit as st
 import pandas as pd
 import vectorbt as vbt
@@ -548,8 +549,8 @@ stock = qs.utils.download_returns(f'{precos_papel}.SA')
 
 st.download_button(
     label = f'{precos_papel} info',
-    data = html,
-    file_name = qs.reports.html(stock, "^BVSP"),
+    data = qs.reports.html(stock, "^BVSP"),
+    file_name = 'text.html',
     mime = 'text/html'
 )
 
