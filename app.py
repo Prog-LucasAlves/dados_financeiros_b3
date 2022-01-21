@@ -540,7 +540,7 @@ df_date_pr = df_analisar_pr.loc[df_analisar_pr['Data'] == date_atual , ['Acao']]
 if df_date_pr.empty == False:
     st.write(list(df_date_pr['Acao']))
 else:
-    st.write('Sem Atualizações') 
+    st.markdown("<h1 style='color:#F00;'>Sem Atualizações</h1>", unsafe_allow_html=True) 
 
 st.write('Dados Trimestrais - Release de Resultados:')
 df_analisar_tr = pd.read_csv("./Todos/TR.csv", sep=";")
