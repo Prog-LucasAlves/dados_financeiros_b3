@@ -4,6 +4,7 @@
 # Bibliotecas/Pacotes importadas
 ###################################
 
+from cgitb import html
 import streamlit as st
 import pandas as pd
 import vectorbt as vbt
@@ -542,13 +543,17 @@ else:
 ######
 
 st.write("-----------------------------------------")
-st.write(f'Download de informações da Ação {precos_papel} vs Ibovepa')
-b_result = st.button('Download')
-if b_result:
-    stock = qs.utils.download_returns(f'{precos_papel}.SA')
-    qs.reports.html(stock, "^BVSP")
-else:
-    st.write('Download não disponível no momento')    
+st.write(f'Download de informações da Ação {precos_papel} vs Ibovespa')
+stock = qs.utils.download_returns(f'{precos_papel}.SA')
+stock_d = qs.reports.html(stock, "^BVSP")
+
+st.download_button(
+    label = f'{precos_papel} info',
+    data = html,
+    file_name = stock_d,
+    mime = 'text/html'
+)
+
 ######
 
 # Rodapé
