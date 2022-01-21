@@ -532,7 +532,7 @@ df_date_ft = df_analisar_ft.loc[df_analisar_ft['Data'] == date_atual , ['Acao']]
 if df_date_ft.empty == False:
     st.write(list(df_date_ft['Acao'].unique()))
 else:
-    st.write('*Sem Atualizações*')    
+    st.write('*Sem Atualizações* :Waving Hand:')    
 
 st.write('Proventos:')
 df_analisar_pr = pd.read_csv("./Todos/PR.csv", sep=";")
@@ -540,7 +540,7 @@ df_date_pr = df_analisar_pr.loc[df_analisar_pr['Data'] == date_atual , ['Acao']]
 if df_date_pr.empty == False:
     st.write(list(df_date_pr['Acao'].unique()))
 else:
-    st.write('*Sem Atualizações*') 
+    st.write('*Sem Atualizações* :Waving Hand:') 
 
 st.write('Dados Trimestrais - Release de Resultados:')
 df_analisar_tr = pd.read_csv("./Todos/TR.csv", sep=";")
@@ -548,7 +548,7 @@ df_date_tr = df_analisar_tr.loc[df_analisar_tr['Data Referência'] == date_atual
 if df_date_tr.empty == False:
     st.write(list(df_date_tr['Acao'].unique()))
 else:
-    st.write('*Sem Atualizações*') 
+    st.write('*Sem Atualizações* :Waving Hand:') 
 
 ######
 
