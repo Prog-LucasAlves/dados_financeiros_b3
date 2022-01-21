@@ -530,25 +530,25 @@ st.write('Fatos Relevantes:')
 df_analisar_ft = pd.read_csv("./Todos/FT.csv", sep=";")
 df_date_ft = df_analisar_ft.loc[df_analisar_ft['Data'] == date_atual , ['Acao']]
 if df_date_ft.empty == False:
-    st.write(list(df_date_ft['Acao']))
+    st.write(list(df_date_ft['Acao'].unique()))
 else:
-    st.markdown("<h1 style='color:#F00;'>Sem Atualizações</h1>", unsafe_allow_html=True)    
+    st.write('*Sem Atualizações*')    
 
 st.write('Proventos:')
 df_analisar_pr = pd.read_csv("./Todos/PR.csv", sep=";")
 df_date_pr = df_analisar_pr.loc[df_analisar_pr['Data'] == date_atual , ['Acao']]
 if df_date_pr.empty == False:
-    st.write(list(df_date_pr['Acao']))
+    st.write(list(df_date_pr['Acao'].unique()))
 else:
-    st.markdown("<h1 style='color:#F00;'>Sem Atualizações</h1>", unsafe_allow_html=True) 
+    st.write('*Sem Atualizações*') 
 
 st.write('Dados Trimestrais - Release de Resultados:')
 df_analisar_tr = pd.read_csv("./Todos/TR.csv", sep=";")
-df_date_tr = df_analisar_tr.loc[df_analisar_tr['Data'] == date_atual , ['Acao']]
+df_date_tr = df_analisar_tr.loc[df_analisar_tr['Data Referência'] == date_atual , ['Acao']]
 if df_date_tr.empty == False:
-    st.write(list(df_date_tr['Acao']))
+    st.write(list(df_date_tr['Acao'].unique()))
 else:
-    st.write('Sem Atualizações') 
+    st.write('*Sem Atualizações*') 
 
 ######
 
