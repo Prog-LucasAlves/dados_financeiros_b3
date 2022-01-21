@@ -545,12 +545,11 @@ else:
 st.write("-----------------------------------------")
 st.write(f'Download de informações da Ação {precos_papel} vs Ibovespa')
 stock = qs.utils.download_returns(f'{precos_papel}.SA')
-stock_d = qs.reports.html(stock, "^BVSP")
 
 st.download_button(
     label = f'{precos_papel} info',
     data = html,
-    file_name = stock_d,
+    file_name = qs.reports.html(stock, "^BVSP"),
     mime = 'text/html'
 )
 
