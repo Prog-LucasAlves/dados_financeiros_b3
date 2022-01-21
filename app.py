@@ -302,19 +302,8 @@ sharpe_stock = qs.utils.download_returns(f"{sharpe_result}.SA")
 sharpe_sharpe = round(sharpe_stock.sharpe(), 2)
 col2.metric(label="Sharpe", value=f"{sharpe_sharpe}")
 
-# col1.23 -
-col1.metric(label="--------------------------------------", value="")
-
-# col2.23 -
-col2.metric(label="---------------------------------------", value="")
 
 
-
-# col2.24 - Drawdown
-
-
-
-# col1.25 - Desvio Padrão dos retornos Diarios
 
 
 ######
@@ -550,6 +539,16 @@ if df_date_tr.empty == False:
 else:
     st.write('*Sem Atualizações* 🤫') 
 
+######
+
+st.write("-----------------------------------------")
+st.write(f'Download de informações da Ação {precos_papel} vs Ibovepa')
+b_result = st.button('Download')
+if b_result:
+    stock = qs.utils.download_returns(f'{precos_papel}.SA')
+    qs.reports.html(stock, "^BVSP")
+else:
+    st.write('Download não disponível no momento')    
 ######
 
 # Rodapé
