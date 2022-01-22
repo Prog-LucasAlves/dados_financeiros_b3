@@ -304,9 +304,14 @@ sharpe_stock = qs.utils.download_returns(f"{sharpe_result}.SA")
 sharpe_sharpe = round(sharpe_stock.sharpe(), 2)
 col2.metric(label="Sharpe", value=f"{sharpe_sharpe}")
 
-
-
-
+# col1.23 - avg retorno
+avg_return = df[df.papel == col1_selection]
+avg_return_index = int(avg_return['Unnamed: 0'])
+avg_return_result = avg_return['papel'][avg_return_index]
+qs.extend_pandas()
+avg_return_stock = qs.utils.download_returns(f"{avg_return_result}.SA")
+avg_return_return = round(avg_return_stock.avg_return(), 2)
+col1.metric(label="Média de Retornos", value=f"{avg_return_return}")
 
 ######
 
@@ -541,18 +546,6 @@ if df_date_tr.empty == False:
 else:
     st.write('*Sem Atualizações* 🤫') 
 
-######
-
-st.write("-----------------------------------------")
-st.write(f'Download de informações da Ação {precos_papel} vs Ibovespa')
-stock = qs.utils.download_returns(f'{precos_papel}.SA')
-
-st.download_button(
-    label = f'{precos_papel} info',
-    data = qs.reports.html(stock, "^BVSP"),
-    file_name = 'text.html',
-    mime = 'text/html'
-)
 
 ######
 
