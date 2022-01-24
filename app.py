@@ -309,7 +309,16 @@ calmar_result = calmar['papel'][calmar_index]
 qs.extend_pandas()
 calmar_stock = qs.utils.download_returns(f"{calmar_result}.SA")
 calmar_calmar = round(calmar_stock.calmar(), 2)
-col2.metric(label="calmar", value=f"{calmar_calmar}")
+col1.metric(label="índice Calmar", value=f"{calmar_calmar}")
+
+# col2.23 - kurtosis
+kurtosis = df[df.papel == col1_selection]
+kurtosis_index = int(kurtosis['Unnamed: 0'])
+kurtosis_result = kurtosis['papel'][kurtosis_index]
+qs.extend_pandas()
+kurtosis_stock = qs.utils.download_returns(f"{kurtosis_result}.SA")
+kurtosis_kurtosis = round(kurtosis_stock.kurtosis(), 2)
+col2.metric(label="kurtosis", value=f"{kurtosis_kurtosis}")
 
 
 ######
