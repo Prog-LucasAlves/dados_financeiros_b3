@@ -320,6 +320,8 @@ kurtosis_stock = qs.utils.download_returns(f"{kurtosis_result}.SA")
 kurtosis_kurtosis = round(kurtosis_stock.kurtosis(), 2)
 col2.metric(label="kurtosis", value=f"{kurtosis_kurtosis}")
 
+# col1.24 - monthly_returns
+
 
 ######
 
