@@ -4,8 +4,6 @@
 # Bibliotecas/Pacotes importadas
 ###################################
 
-from cgitb import html
-from numpy import imag
 import streamlit as st
 import pandas as pd
 import vectorbt as vbt
@@ -304,14 +302,15 @@ sharpe_stock = qs.utils.download_returns(f"{sharpe_result}.SA")
 sharpe_sharpe = round(sharpe_stock.sharpe(), 2)
 col2.metric(label="Sharpe", value=f"{sharpe_sharpe}")
 
-# col1.23 - avg retorno
-avg_return = df[df.papel == col1_selection]
-avg_return_index = int(avg_return['Unnamed: 0'])
-avg_return_result = avg_return['papel'][avg_return_index]
+# col1.23 - calmar
+calmar = df[df.papel == col1_selection]
+calmar_index = int(calmar['Unnamed: 0'])
+calmar_result = calmar['papel'][calmar_index]
 qs.extend_pandas()
-avg_return_stock = qs.utils.download_returns(f"{avg_return_result}.SA")
-avg_return_return = round(avg_return_stock.avg_return(), 2)
-col1.metric(label="Média de Retornos", value=f"{avg_return_return}")
+calmar_stock = qs.utils.download_returns(f"{calmar_result}.SA")
+calmar_calmar = round(calmar_stock.calmar(), 2)
+col2.metric(label="calmar", value=f"{calmar_calmar}")
+
 
 ######
 
