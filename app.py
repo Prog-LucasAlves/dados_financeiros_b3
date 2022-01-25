@@ -347,6 +347,15 @@ sortino_stock = qs.utils.download_returns(f"{sortino_result}.SA")
 sortino_sortino = round(sortino_stock.sortino(), 2) 
 col1.metric(label="Índice de Sortino", value=f"{sortino_sortino}")
 
+# col2.25 - common_sense_ratio
+common_sense_ratio = df[df.papel == col1_selection]
+common_sense_ratio_index = int(common_sense_ratio['Unnamed: 0'])
+common_sense_ratio_result = common_sense_ratio['papel'][common_sense_ratio_index]
+qs.extend_pandas()
+common_sense_ratio_stock = qs.utils.download_returns(f"{common_sense_ratio_result}.SA")
+common_sense_ratio_common_sense_ratio = round(common_sense_ratio_stock.common_sense_ratio(), 2) 
+col1.metric(label="Common Sense Ratio", value=f"{common_sense_ratio_common_sense_ratio}")
+
 ######
 
 # valor justo de uma ação segundo o cálculo de Graham
