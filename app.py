@@ -321,6 +321,13 @@ kurtosis_kurtosis = round(kurtosis_stock.kurtosis(), 2)
 col2.metric(label="kurtosis", value=f"{kurtosis_kurtosis}")
 
 # col1.24 - monthly_returns
+monthly_returns = df[df.papel == col1_selection]
+monthly_returns_index = int(monthly_returns['Unnamed: 0'])
+monthly_returns_result = monthly_returns['papel'][monthly_returns_index]
+qs.extend_pandas()
+monthly_returns_stock = qs.utils.download_returns(f"{monthly_returns_result}.SA")
+monthly_returns_monthly_returns = round(monthly_returns_stock.monthly_returns(), 2)
+col2.metric(label="monthly_returns", value=f"{monthly_returns_monthly_returns}")
 
 
 ######
@@ -555,8 +562,7 @@ if df_date_tr.empty == False:
     st.write(list(df_date_tr['Acao'].unique()))
 else:
     st.write('*Sem Atualizações* 🤫') 
-
-
+    
 ######
 
 # Rodapé
