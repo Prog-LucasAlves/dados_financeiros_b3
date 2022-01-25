@@ -354,7 +354,16 @@ common_sense_ratio_result = common_sense_ratio['papel'][common_sense_ratio_index
 qs.extend_pandas()
 common_sense_ratio_stock = qs.utils.download_returns(f"{common_sense_ratio_result}.SA")
 common_sense_ratio_common_sense_ratio = round(common_sense_ratio_stock.common_sense_ratio(), 2) 
-col1.metric(label="Common Sense Ratio", value=f"{common_sense_ratio_common_sense_ratio}")
+col2.metric(label="Common Sense Ratio", value=f"{common_sense_ratio_common_sense_ratio}")
+
+# col1.26 - profit factor
+profit_factor = df[df.papel == col1_selection]
+profit_factor_index = int(profit_factor['Unnamed: 0'])
+profit_factor_result = profit_factor['papel'][profit_factor_index]
+qs.extend_pandas()
+profit_factor_stock = qs.utils.download_returns(f"{profit_factor_result}.SA")
+profit_factor_profit_factor = round(profit_factor_stock.profit_factor(), 2) 
+col2.metric(label="Profit Factor", value=f"{profit_factor_profit_factor}")
 
 ######
 
