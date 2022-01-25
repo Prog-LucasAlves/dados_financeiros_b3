@@ -309,7 +309,7 @@ calmar_result = calmar['papel'][calmar_index]
 qs.extend_pandas()
 calmar_stock = qs.utils.download_returns(f"{calmar_result}.SA")
 calmar_calmar = round(calmar_stock.calmar(), 2)
-col1.metric(label="índice Calmar", value=f"{calmar_calmar}")
+col1.metric(label="Índice Calmar", value=f"{calmar_calmar}")
 
 # col2.23 - kurtosis
 kurtosis = df[df.papel == col1_selection]
@@ -320,7 +320,7 @@ kurtosis_stock = qs.utils.download_returns(f"{kurtosis_result}.SA")
 kurtosis_kurtosis = round(kurtosis_stock.kurtosis(), 2)
 col2.metric(label="kurtosis", value=f"{kurtosis_kurtosis}")
 
-# col1.24 - conditional_value_at_risk
+# col1.24 - conditional value at risk
 conditional_value_at_risk = df[df.papel == col1_selection]
 conditional_value_at_risk_index = int(conditional_value_at_risk['Unnamed: 0'])
 conditional_value_at_risk_result = conditional_value_at_risk['papel'][conditional_value_at_risk_index]
@@ -329,14 +329,23 @@ conditional_value_at_risk_stock = qs.utils.download_returns(f"{conditional_value
 conditional_value_at_risk_conditional_value_at_risk = round(conditional_value_at_risk_stock.conditional_value_at_risk(), 2)
 col1.metric(label="Conditional Value at Risk", value=f"{conditional_value_at_risk_conditional_value_at_risk}")
 
-# col2.24 - profit_ratio
+# col2.24 - profit ratio
 profit_ratio = df[df.papel == col1_selection]
 profit_ratio_index = int(profit_ratio['Unnamed: 0'])
 profit_ratio_result = profit_ratio['papel'][profit_ratio_index]
 qs.extend_pandas()
 profit_ratio_stock = qs.utils.download_returns(f"{profit_ratio_result}.SA")
-profit_ratio_profit_ratio = round(profit_ratio_stock.profit_ratio(), 2)
-col2.metric(label="Profit Ratio", value=f"{profit_ratio_profit_ratio}" * 100)
+profit_ratio_profit_ratio = round(profit_ratio_stock.profit_ratio(), 2) * 100
+col2.metric(label="Índice de Lucro", value=f"{profit_ratio_profit_ratio}")
+
+# col1.25 - sortino
+sortino = df[df.papel == col1_selection]
+sortino_index = int(sortino['Unnamed: 0'])
+sortino_result = sortino['papel'][sortino_index]
+qs.extend_pandas()
+sortino_stock = qs.utils.download_returns(f"{sortino_result}.SA")
+sortino_sortino = round(sortino_stock.sortino(), 2) 
+col1.metric(label="Índice de Sortino", value=f"{sortino_sortino}")
 
 ######
 
