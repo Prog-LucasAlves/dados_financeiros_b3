@@ -329,6 +329,15 @@ conditional_value_at_risk_stock = qs.utils.download_returns(f"{conditional_value
 conditional_value_at_risk_conditional_value_at_risk = round(conditional_value_at_risk_stock.conditional_value_at_risk(), 2)
 col1.metric(label="Conditional Value at Risk", value=f"{conditional_value_at_risk_conditional_value_at_risk}")
 
+# col2.24 - profit_ratio
+profit_ratio = df[df.papel == col1_selection]
+profit_ratio_index = int(profit_ratio['Unnamed: 0'])
+profit_ratio_result = profit_ratio['papel'][profit_ratio_index]
+qs.extend_pandas()
+profit_ratio_stock = qs.utils.download_returns(f"{profit_ratio_result}.SA")
+profit_ratio_profit_ratio = round(profit_ratio_stock.profit_ratio(), 2)
+col1.metric(label="Profit", value=f"{profit_ratio_profit_ratio}")
+
 ######
 
 # valor justo de uma ação segundo o cálculo de Graham
