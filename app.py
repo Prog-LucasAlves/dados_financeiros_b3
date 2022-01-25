@@ -363,7 +363,16 @@ profit_factor_result = profit_factor['papel'][profit_factor_index]
 qs.extend_pandas()
 profit_factor_stock = qs.utils.download_returns(f"{profit_factor_result}.SA")
 profit_factor_profit_factor = round(profit_factor_stock.profit_factor(), 2) 
-col2.metric(label="Profit Factor", value=f"{profit_factor_profit_factor}")
+col1.metric(label="Profit Factor", value=f"{profit_factor_profit_factor}")
+
+# col2.27 - ulcer index
+ulcer_index = df[df.papel == col1_selection]
+ulcer_index_index = int(ulcer_index['Unnamed: 0'])
+ulcer_index_result = ulcer_index['papel'][ulcer_index_index]
+qs.extend_pandas()
+ulcer_index_stock = qs.utils.download_returns(f"{ulcer_index_result}.SA")
+ulcer_index_ulcer_index = round(ulcer_index_stock.ulcer_index(), 2) 
+col2.metric(label="Profit Factor", value=f"{ulcer_index_ulcer_index}")
 
 ######
 
