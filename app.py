@@ -320,15 +320,14 @@ kurtosis_stock = qs.utils.download_returns(f"{kurtosis_result}.SA")
 kurtosis_kurtosis = round(kurtosis_stock.kurtosis(), 2)
 col2.metric(label="kurtosis", value=f"{kurtosis_kurtosis}")
 
-# col1.24 - monthly_returns
-monthly_returns = df[df.papel == col1_selection]
-monthly_returns_index = int(monthly_returns['Unnamed: 0'])
-monthly_returns_result = monthly_returns['papel'][monthly_returns_index]
+# col1.24 - compsum
+compsum = df[df.papel == col1_selection]
+compsum_index = int(compsum['Unnamed: 0'])
+compsum_result = compsum['papel'][compsum_index]
 qs.extend_pandas()
-monthly_returns_stock = qs.utils.download_returns(f"{monthly_returns_result}.SA")
-monthly_returns_monthly_returns = round(monthly_returns_stock.monthly_returns(), 2)
-col2.metric(label="monthly_returns", value=f"{monthly_returns_monthly_returns}")
-
+compsum_stock = qs.utils.download_returns(f"{compsum_result}.SA")
+compsum_compsum = round(compsum_stock.compsum(), 2)
+col2.metric(label="compsum", value=f"{compsum_compsum}")
 
 ######
 
