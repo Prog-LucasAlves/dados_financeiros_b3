@@ -327,7 +327,7 @@ conditional_value_at_risk_result = conditional_value_at_risk['papel'][conditiona
 qs.extend_pandas()
 conditional_value_at_risk_stock = qs.utils.download_returns(f"{conditional_value_at_risk_result}.SA")
 conditional_value_at_risk_conditional_value_at_risk = round(conditional_value_at_risk_stock.conditional_value_at_risk(), 2)
-col2.metric(label="conditional_value_at_risk", value=f"{conditional_value_at_risk_conditional_value_at_risk}")
+col1.metric(label="Conditional Value at Risk", value=f"{conditional_value_at_risk_conditional_value_at_risk}")
 
 ######
 
