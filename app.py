@@ -320,14 +320,14 @@ kurtosis_stock = qs.utils.download_returns(f"{kurtosis_result}.SA")
 kurtosis_kurtosis = round(kurtosis_stock.kurtosis(), 2)
 col2.metric(label="kurtosis", value=f"{kurtosis_kurtosis}")
 
-# col1.24 - compsum
-compsum = df[df.papel == col1_selection]
-compsum_index = int(compsum['Unnamed: 0'])
-compsum_result = compsum['papel'][compsum_index]
+# col1.24 - conditional_value_at_risk
+conditional_value_at_risk = df[df.papel == col1_selection]
+conditional_value_at_risk_index = int(conditional_value_at_risk['Unnamed: 0'])
+conditional_value_at_risk_result = conditional_value_at_risk['papel'][conditional_value_at_risk_index]
 qs.extend_pandas()
-compsum_stock = qs.utils.download_returns(f"{compsum_result}.SA")
-compsum_compsum = round(compsum_stock.compsum(), 2)
-col2.metric(label="compsum", value=f"{compsum_compsum}")
+conditional_value_at_risk_stock = qs.utils.download_returns(f"{conditional_value_at_risk_result}.SA")
+conditional_value_at_risk_conditional_value_at_risk = round(conditional_value_at_risk_stock.conditional_value_at_risk(), 2)
+col2.metric(label="conditional_value_at_risk", value=f"{conditional_value_at_risk_conditional_value_at_risk}")
 
 ######
 
