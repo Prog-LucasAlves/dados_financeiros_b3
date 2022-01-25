@@ -335,7 +335,7 @@ profit_ratio_index = int(profit_ratio['Unnamed: 0'])
 profit_ratio_result = profit_ratio['papel'][profit_ratio_index]
 qs.extend_pandas()
 profit_ratio_stock = qs.utils.download_returns(f"{profit_ratio_result}.SA")
-profit_ratio_profit_ratio = round(profit_ratio_stock.profit_ratio(), 2) * 100
+profit_ratio_profit_ratio = round(profit_ratio_stock.profit_ratio(), 2)
 col2.metric(label="Índice de Lucro", value=f"{profit_ratio_profit_ratio}")
 
 # col1.25 - sortino
