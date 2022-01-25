@@ -336,7 +336,7 @@ profit_ratio_result = profit_ratio['papel'][profit_ratio_index]
 qs.extend_pandas()
 profit_ratio_stock = qs.utils.download_returns(f"{profit_ratio_result}.SA")
 profit_ratio_profit_ratio = round(profit_ratio_stock.profit_ratio(), 2)
-col1.metric(label="Profit", value=f"{profit_ratio_profit_ratio}")
+col2.metric(label="Profit Ratio", value=f"{profit_ratio_profit_ratio}" * 100)
 
 ######
 
