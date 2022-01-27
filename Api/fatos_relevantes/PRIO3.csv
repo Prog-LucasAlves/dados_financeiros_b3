@@ -1,101 +1,101 @@
 ;Acao;Data;Hora;Descrição;Link
-0;PRIO3;22/01/2022;15:21;Esclarecimentos Sobre Notícia Veiculada na Imprensa;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=935020&descTipo=IPE&CodigoInstituicao=1
-1;PRIO3;06/01/2022;18:34;Dados Operacionais - Dezembro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=931518&descTipo=IPE&CodigoInstituicao=1
-2;PRIO3;22/12/2021;08:58;Declaração de Comercialidade de Wahoo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928076&descTipo=IPE&CodigoInstituicao=1
-3;PRIO3;06/12/2021;18:14;Dados Operacionais - Novembro/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=922723&descTipo=IPE&CodigoInstituicao=1
-4;PRIO3;09/11/2021;18:20;Dados Operacionais Outubro/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=914896&descTipo=IPE&CodigoInstituicao=1
-5;PRIO3;05/11/2021;11:45;Processo de Desinvestimento de Albacora;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=913616&descTipo=IPE&CodigoInstituicao=1
-6;PRIO3;26/10/2021;18:53;INÍCIO DE PRODUÇÃO DO POÇO TBMT-10H;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=910139&descTipo=IPE&CodigoInstituicao=1
-7;PRIO3;07/10/2021;08:31;Esclarecimento notícias sobre Albacora;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=905968&descTipo=IPE&CodigoInstituicao=1
-8;PRIO3;05/10/2021;18:34;Dados Operacionais Setembro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=905496&descTipo=IPE&CodigoInstituicao=1
-9;PRIO3;09/09/2021;18:20;Dados Operacionais Agosto 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=899765&descTipo=IPE&CodigoInstituicao=1
-10;PRIO3;06/08/2021;19:24;DADOS OPERACIONAIS JULHO/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=890450&descTipo=IPE&CodigoInstituicao=1
-11;PRIO3;29/07/2021;18:43;REDUÇÃO DE ALÍQUOTA DE ROYALTIES DE TUBARÃO MARTELO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=887485&descTipo=IPE&CodigoInstituicao=1
-12;PRIO3;14/07/2021;18:28;CONCLUSÃO DO TIEBACK ENTRE POLVO E TUBARÃO MARTELO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883878&descTipo=IPE&CodigoInstituicao=1
-13;PRIO3;13/07/2021;20:39;CONTRATAÇÃO DE SONDA PARA PERFURAÇÃO EM FRADE E WAHOO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883629&descTipo=IPE&CodigoInstituicao=1
-14;PRIO3;13/07/2021;20:17;CONTRATAÇÃO DE SONDA PARA PERFURAÇÃO EM FRADE E WAHOO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883617&descTipo=IPE&CodigoInstituicao=1
-15;PRIO3;08/07/2021;18:22;CONCLUSÃO DE AQUISIÇÃO DE PARTICIPAÇÃO EM WAHOO ;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=882543&descTipo=IPE&CodigoInstituicao=1
-16;PRIO3;07/07/2021;18:43;DADOS OPERACIONAIS - MAIO/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=882049&descTipo=IPE&CodigoInstituicao=1
-17;PRIO3;07/07/2021;18:43;Dados Operacionais Junho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=882050&descTipo=IPE&CodigoInstituicao=1
-18;PRIO3;07/07/2021;18:43;Dados operacionais Abril 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=882055&descTipo=IPE&CodigoInstituicao=1
-19;PRIO3;07/07/2021;17:48;Dados Operacionais Junho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=882003&descTipo=IPE&CodigoInstituicao=1
-20;PRIO3;24/06/2021;19:03;APROVAÇÃO DO PLANO DE DESENVOLVIMENTO DO CAMPO DE FRADE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=878712&descTipo=IPE&CodigoInstituicao=1
-21;PRIO3;17/06/2021;17:50;CONCLUSÃO DE AQUISIÇÃO DE PARTICIPAÇÕES EM WAHOO E ITAIPU;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=877117&descTipo=IPE&CodigoInstituicao=1
-22;PRIO3;08/06/2021;18:25;DADOS OPERACIONAIS - MAIO/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=874747&descTipo=IPE&CodigoInstituicao=1
-23;PRIO3;02/06/2021;17:57;EMISSÃO DE NOTAS REPRESENTATIVAS DA DÍVIDA | PRECIFICAÇÃO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=873285&descTipo=IPE&CodigoInstituicao=1
-24;PRIO3;27/05/2021;10:53;EMISSÃO DE NOTAS REPRESENTATIVAS DA DÍVIDA;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=871429&descTipo=IPE&CodigoInstituicao=1
-25;PRIO3;10/05/2021;18:18;Resultado de Perfuração em Polvo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=865132&descTipo=IPE&CodigoInstituicao=1
-26;PRIO3;07/05/2021;18:37;Dados operacionais Abril 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=864418&descTipo=IPE&CodigoInstituicao=1
-27;PRIO3;03/05/2021;18:44;Desdobramento das ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=861996&descTipo=IPE&CodigoInstituicao=1
-28;PRIO3;30/04/2021;21:59;Desdobramento das ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=861530&descTipo=IPE&CodigoInstituicao=1
-29;PRIO3;12/04/2021;18:56;Alteração na Administração da Companhia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=853242&descTipo=IPE&CodigoInstituicao=1
-30;PRIO3;12/04/2021;17:39;CERTIFICAÇÃO DE RESERVAS E RECURSOS;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=853176&descTipo=IPE&CodigoInstituicao=1
-31;PRIO3;12/04/2021;11:47;Dados Operacionais Março/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=852992&descTipo=IPE&CodigoInstituicao=1
-32;PRIO3;12/04/2021;11:03;Dados Operacionais Março/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=852978&descTipo=IPE&CodigoInstituicao=1
-33;PRIO3;07/04/2021;18:40;Dados Operacionais Março/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=851484&descTipo=IPE&CodigoInstituicao=1
-34;PRIO3;05/04/2021;18:16;NOVA CONVOCAÇÃO DA ASSEMBLEIA GERAL ORDINÁRIA;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=850505&descTipo=IPE&CodigoInstituicao=1
-35;PRIO3;25/03/2021;18:38;ADIAMENTO DA ASSEMBLEIA GERAL ORDINÁRIA;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=845989&descTipo=IPE&CodigoInstituicao=1
-36;PRIO3;04/03/2021;18:10;AQUISIÇÃO DE PARTICIPAÇÃO EM WAHOO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=838705&descTipo=IPE&CodigoInstituicao=1
-37;PRIO3;25/02/2021;19:17;Término de isenção IRPF;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=835931&descTipo=IPE&CodigoInstituicao=1
-38;PRIO3;08/02/2021;18:16;DADOS OPERACIONAIS JANEIRO 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=828615&descTipo=IPE&CodigoInstituicao=1
-39;PRIO3;05/02/2021;18:18;CONCLUSÃO DA AQUISIÇÃO DE 30% DO CAMPO DE FRADE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=828057&descTipo=IPE&CodigoInstituicao=1
-40;PRIO3;29/01/2021;08:17;OFERTA PÚBLICA DE AÇÕES COM ESFORÇOS RESTRITOS (FOLLOW-ON);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=825811&descTipo=IPE&CodigoInstituicao=1
-41;PRIO3;21/01/2021;20:36;CONCLUSÃO DE AQUISIÇÃO DE 30% DO CAMPO DE FRADE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=824361&descTipo=IPE&CodigoInstituicao=1
-42;PRIO3;19/01/2021;18:47;OFERTA PÚBLICA DE AÇÕES COM ESFORÇOS RESTRITOS (FOLLOW-ON);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=823723&descTipo=IPE&CodigoInstituicao=1
-43;PRIO3;18/01/2021;21:01;OFERTA PÚBLICA DE AÇÕES COM ESFORÇOS RESTRITOS (FOLLOW-ON);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=823529&descTipo=IPE&CodigoInstituicao=1
-44;PRIO3;08/01/2021;19:43;Dados Operacionais - Dezembro/2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=821585&descTipo=IPE&CodigoInstituicao=1
-45;PRIO3;24/12/2020;14:54;Oferta Pública de Ações (Follow-on);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=819154&descTipo=IPE&CodigoInstituicao=1
-46;PRIO3;21/12/2020;20:59;Conversão do Financiamento com a Prisma e Aquisição de Sonda;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=818454&descTipo=IPE&CodigoInstituicao=1
-47;PRIO3;15/12/2020;19:41;Oferta Pública de Ações (Follow-on);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=817043&descTipo=IPE&CodigoInstituicao=1
-48;PRIO3;08/12/2020;18:20;Dados operacionais Novembro/2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=814083&descTipo=IPE&CodigoInstituicao=1
-49;PRIO3;04/12/2020;18:42;Deliberações da Assembleia Geral Extraordinária;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=813278&descTipo=IPE&CodigoInstituicao=1
-50;PRIO3;19/11/2020;06:01;Fato Relevante - Aquisição de Participação nos Campos de Wahoo e Itaipu;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=809955&descTipo=IPE&CodigoInstituicao=1
-51;PRIO3;10/11/2020;18:35;ALTERAÇÃO NA ADMINISTRAÇÃO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=807227&descTipo=IPE&CodigoInstituicao=1
-52;PRIO3;09/11/2020;18:37;Dados operacionais de Outubro/2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=806637&descTipo=IPE&CodigoInstituicao=1
-53;PRIO3;05/11/2020;09:07;ALIENAÇÃO DE PARTICIPAÇÃO NO CAMPO DE MANATI;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=805233&descTipo=IPE&CodigoInstituicao=1
-54;PRIO3;03/11/2020;22:00;Deliberações Da Reunião Do Conselho De Administração;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=804658&descTipo=IPE&CodigoInstituicao=1
-55;PRIO3;07/10/2020;18:13;Dados Operacionais de Setembro/2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=798172&descTipo=IPE&CodigoInstituicao=1
-56;PRIO3;23/09/2020;09:34;PARTICIPAÇÃO EM EVENTO ABERTO AO PÚBLICO  LIVE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=794839&descTipo=IPE&CodigoInstituicao=1
-57;PRIO3;17/09/2020;19:39;ATUALIZAÇÃO SOBRE AS NOTAS REPRESENTATIVAS DA DÍVIDA;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=793943&descTipo=IPE&CodigoInstituicao=1
-58;PRIO3;10/09/2020;09:01;EMISSÃO DE NOTAS REPRESENTATIVAS DA DÍVIDA;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=792295&descTipo=IPE&CodigoInstituicao=1
-59;PRIO3;08/09/2020;21:55;Dados Operacionais - Agosto 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=791911&descTipo=IPE&CodigoInstituicao=1
-60;PRIO3;08/09/2020;15:33;Dados Operacionais - Agosto 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=791645&descTipo=IPE&CodigoInstituicao=1
-61;PRIO3;08/09/2020;09:06;Comunicado PRIO3 ingressa no indice Bovespa (B3);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=791468&descTipo=IPE&CodigoInstituicao=1
-62;PRIO3;28/08/2020;00:56;Refazimento das Demonstrações Financeiras;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=788649&descTipo=IPE&CodigoInstituicao=1
-63;PRIO3;18/08/2020;21:49;Início de Produção do Quinto Poço de Tubarão Martelo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=785957&descTipo=IPE&CodigoInstituicao=1
-64;PRIO3;10/08/2020;18:09;Dados Operacionais - Julho 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=783196&descTipo=IPE&CodigoInstituicao=1
-65;PRIO3;10/08/2020;17:53;Dados Operacionais - Julho 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=783174&descTipo=IPE&CodigoInstituicao=1
-66;PRIO3;04/08/2020;02:09;Reapresentação Espontânea de Execícios Anteriores;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=780844&descTipo=IPE&CodigoInstituicao=1
-67;PRIO3;03/08/2020;22:53;Fato Relevante - Conclusão Farm-In em Tubarão Martelo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=780812&descTipo=IPE&CodigoInstituicao=1
-68;PRIO3;16/06/2020;09:21;Fato Relevante Reperfilamento Divida Chevron;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=769355&descTipo=IPE&CodigoInstituicao=1
-69;PRIO3;11/06/2020;21:46;Dados Operacionais - Maio 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=768397&descTipo=IPE&CodigoInstituicao=1
-70;PRIO3;15/05/2020;01:14;Comunicado ao Mercado (reclassificação do IR diferido);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=762215&descTipo=IPE&CodigoInstituicao=1
-71;PRIO3;14/05/2020;10:50;Comunicado ao Mercado - Notícias Sobre Negociação na B3;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=761834&descTipo=IPE&CodigoInstituicao=1
-72;PRIO3;06/05/2020;18:55;Dados Operacionais - Abril 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=759473&descTipo=IPE&CodigoInstituicao=1
-73;PRIO3;24/04/2020;19:20;Comunicado ao Mercado - Segunda Convocação - AGE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=756297&descTipo=IPE&CodigoInstituicao=1
-74;PRIO3;20/04/2020;19:55;Fato Relevante - Mudança na Administração;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=755268&descTipo=IPE&CodigoInstituicao=1
-75;PRIO3;06/04/2020;18:23;Dados Operacionais - Março 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=752267&descTipo=IPE&CodigoInstituicao=1
-76;PRIO3;31/03/2020;20:56;Substituição de Auditor Independente;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=750906&descTipo=IPE&CodigoInstituicao=1
-77;PRIO3;31/03/2020;20:35;Substituição de Auditor Independente;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=750896&descTipo=IPE&CodigoInstituicao=1
-78;PRIO3;31/03/2020;20:27;Substituição de Auditor Independente;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=750886&descTipo=IPE&CodigoInstituicao=1
-79;PRIO3;31/03/2020;19:48;Reapresentação Boletim de Voto à Distância;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=750845&descTipo=IPE&CodigoInstituicao=1
-80;PRIO3;19/03/2020;20:51;3ª Fase da Revitalização de Polvo e Atualização Sobre Royalties;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=746936&descTipo=IPE&CodigoInstituicao=1
-81;PRIO3;18/03/2020;22:33;Covid-19 e Queda do Brent;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=746597&descTipo=IPE&CodigoInstituicao=1
-82;PRIO3;09/03/2020;18:01;Dados Operacionais - Fevereiro 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=744188&descTipo=IPE&CodigoInstituicao=1
-83;PRIO3;11/02/2020;08:11;Dados Operacionais - Janeiro 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=736027&descTipo=IPE&CodigoInstituicao=1
-84;PRIO3;03/02/2020;18:57;Aquisição do FPSO OSX-3, Farm-In em Tubarão Martelo e Atualização Sobre Polvo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=733329&descTipo=IPE&CodigoInstituicao=1
-85;PRIO3;13/01/2020;20:24;Aumento de Capital (Plano de Opções);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=730165&descTipo=IPE&CodigoInstituicao=1
-86;PRIO3;07/01/2020;19:12;"Dados Operacionais - Dezembro 2019; http://ri.petroriosa.com.br/";https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=729165&descTipo=IPE&CodigoInstituicao=1
-87;PRIO3;06/01/2020;18:51;Ingresso no Índice IBrX-100 (B3) e Atualização Sobre Hedges;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=728922&descTipo=IPE&CodigoInstituicao=1
-88;PRIO3;20/12/2019;18:18;Política de Transações com Partes Relacionadas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=727648&descTipo=IPE&CodigoInstituicao=1
-89;PRIO3;20/12/2019;18:13;Política de Transações com Partes Relacionadas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=727632&descTipo=IPE&CodigoInstituicao=1
-90;PRIO3;20/12/2019;18:09;Política de Transações com Partes Relacionadas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=727623&descTipo=IPE&CodigoInstituicao=1
-91;PRIO3;09/12/2019;19:26;Dados Operacionais - Novembro 2019;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=725196&descTipo=IPE&CodigoInstituicao=1
-92;PRIO3;28/11/2019;18:09;Aquisição de Participação Adicional no Campo de Frade;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=723394&descTipo=IPE&CodigoInstituicao=1
-93;PRIO3;14/11/2019;19:24;Alteração na Administração da Companhia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=721782&descTipo=IPE&CodigoInstituicao=1
-94;PRIO3;14/11/2019;18:30;Alteração na Administração da Companhia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=721751&descTipo=IPE&CodigoInstituicao=1
-95;PRIO3;14/11/2019;18:16;Alteração na Administração da Companhia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=721723&descTipo=IPE&CodigoInstituicao=1
-96;PRIO3;14/11/2019;18:12;Contratação de Formador de Mercado;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=721706&descTipo=IPE&CodigoInstituicao=1
-97;PRIO3;11/11/2019;18:19;Dados Operacionais - Outubro;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=720644&descTipo=IPE&CodigoInstituicao=1
-98;PRIO3;07/10/2019;18:12;Dados Operacionais - Setembro 2019;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=714957&descTipo=IPE&CodigoInstituicao=1
-99;PRIO3;02/10/2019;00:04;Conclusão de Aquisição de Participação em Frade;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=713780&descTipo=IPE&CodigoInstituicao=1
+0;PRIO3;26/01/2022;18:44;Esclarecimento sobre a notícia veiculada na imprensa;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=935674&descTipo=IPE&CodigoInstituicao=1
+1;PRIO3;22/01/2022;15:21;Esclarecimentos Sobre Notícia Veiculada na Imprensa;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=935020&descTipo=IPE&CodigoInstituicao=1
+2;PRIO3;06/01/2022;18:34;Dados Operacionais - Dezembro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=931518&descTipo=IPE&CodigoInstituicao=1
+3;PRIO3;22/12/2021;08:58;Declaração de Comercialidade de Wahoo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928076&descTipo=IPE&CodigoInstituicao=1
+4;PRIO3;06/12/2021;18:14;Dados Operacionais - Novembro/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=922723&descTipo=IPE&CodigoInstituicao=1
+5;PRIO3;09/11/2021;18:20;Dados Operacionais Outubro/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=914896&descTipo=IPE&CodigoInstituicao=1
+6;PRIO3;05/11/2021;11:45;Processo de Desinvestimento de Albacora;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=913616&descTipo=IPE&CodigoInstituicao=1
+7;PRIO3;26/10/2021;18:53;INÍCIO DE PRODUÇÃO DO POÇO TBMT-10H;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=910139&descTipo=IPE&CodigoInstituicao=1
+8;PRIO3;07/10/2021;08:31;Esclarecimento notícias sobre Albacora;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=905968&descTipo=IPE&CodigoInstituicao=1
+9;PRIO3;05/10/2021;18:34;Dados Operacionais Setembro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=905496&descTipo=IPE&CodigoInstituicao=1
+10;PRIO3;09/09/2021;18:20;Dados Operacionais Agosto 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=899765&descTipo=IPE&CodigoInstituicao=1
+11;PRIO3;06/08/2021;19:24;DADOS OPERACIONAIS JULHO/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=890450&descTipo=IPE&CodigoInstituicao=1
+12;PRIO3;29/07/2021;18:43;REDUÇÃO DE ALÍQUOTA DE ROYALTIES DE TUBARÃO MARTELO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=887485&descTipo=IPE&CodigoInstituicao=1
+13;PRIO3;14/07/2021;18:28;CONCLUSÃO DO TIEBACK ENTRE POLVO E TUBARÃO MARTELO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883878&descTipo=IPE&CodigoInstituicao=1
+14;PRIO3;13/07/2021;20:39;CONTRATAÇÃO DE SONDA PARA PERFURAÇÃO EM FRADE E WAHOO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883629&descTipo=IPE&CodigoInstituicao=1
+15;PRIO3;13/07/2021;20:17;CONTRATAÇÃO DE SONDA PARA PERFURAÇÃO EM FRADE E WAHOO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883617&descTipo=IPE&CodigoInstituicao=1
+16;PRIO3;08/07/2021;18:22;CONCLUSÃO DE AQUISIÇÃO DE PARTICIPAÇÃO EM WAHOO ;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=882543&descTipo=IPE&CodigoInstituicao=1
+17;PRIO3;07/07/2021;18:43;DADOS OPERACIONAIS - MAIO/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=882049&descTipo=IPE&CodigoInstituicao=1
+18;PRIO3;07/07/2021;18:43;Dados Operacionais Junho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=882050&descTipo=IPE&CodigoInstituicao=1
+19;PRIO3;07/07/2021;18:43;Dados operacionais Abril 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=882055&descTipo=IPE&CodigoInstituicao=1
+20;PRIO3;07/07/2021;17:48;Dados Operacionais Junho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=882003&descTipo=IPE&CodigoInstituicao=1
+21;PRIO3;24/06/2021;19:03;APROVAÇÃO DO PLANO DE DESENVOLVIMENTO DO CAMPO DE FRADE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=878712&descTipo=IPE&CodigoInstituicao=1
+22;PRIO3;17/06/2021;17:50;CONCLUSÃO DE AQUISIÇÃO DE PARTICIPAÇÕES EM WAHOO E ITAIPU;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=877117&descTipo=IPE&CodigoInstituicao=1
+23;PRIO3;08/06/2021;18:25;DADOS OPERACIONAIS - MAIO/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=874747&descTipo=IPE&CodigoInstituicao=1
+24;PRIO3;02/06/2021;17:57;EMISSÃO DE NOTAS REPRESENTATIVAS DA DÍVIDA | PRECIFICAÇÃO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=873285&descTipo=IPE&CodigoInstituicao=1
+25;PRIO3;27/05/2021;10:53;EMISSÃO DE NOTAS REPRESENTATIVAS DA DÍVIDA;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=871429&descTipo=IPE&CodigoInstituicao=1
+26;PRIO3;10/05/2021;18:18;Resultado de Perfuração em Polvo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=865132&descTipo=IPE&CodigoInstituicao=1
+27;PRIO3;07/05/2021;18:37;Dados operacionais Abril 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=864418&descTipo=IPE&CodigoInstituicao=1
+28;PRIO3;03/05/2021;18:44;Desdobramento das ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=861996&descTipo=IPE&CodigoInstituicao=1
+29;PRIO3;30/04/2021;21:59;Desdobramento das ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=861530&descTipo=IPE&CodigoInstituicao=1
+30;PRIO3;12/04/2021;18:56;Alteração na Administração da Companhia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=853242&descTipo=IPE&CodigoInstituicao=1
+31;PRIO3;12/04/2021;17:39;CERTIFICAÇÃO DE RESERVAS E RECURSOS;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=853176&descTipo=IPE&CodigoInstituicao=1
+32;PRIO3;12/04/2021;11:47;Dados Operacionais Março/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=852992&descTipo=IPE&CodigoInstituicao=1
+33;PRIO3;12/04/2021;11:03;Dados Operacionais Março/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=852978&descTipo=IPE&CodigoInstituicao=1
+34;PRIO3;07/04/2021;18:40;Dados Operacionais Março/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=851484&descTipo=IPE&CodigoInstituicao=1
+35;PRIO3;05/04/2021;18:16;NOVA CONVOCAÇÃO DA ASSEMBLEIA GERAL ORDINÁRIA;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=850505&descTipo=IPE&CodigoInstituicao=1
+36;PRIO3;25/03/2021;18:38;ADIAMENTO DA ASSEMBLEIA GERAL ORDINÁRIA;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=845989&descTipo=IPE&CodigoInstituicao=1
+37;PRIO3;04/03/2021;18:10;AQUISIÇÃO DE PARTICIPAÇÃO EM WAHOO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=838705&descTipo=IPE&CodigoInstituicao=1
+38;PRIO3;25/02/2021;19:17;Término de isenção IRPF;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=835931&descTipo=IPE&CodigoInstituicao=1
+39;PRIO3;08/02/2021;18:16;DADOS OPERACIONAIS JANEIRO 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=828615&descTipo=IPE&CodigoInstituicao=1
+40;PRIO3;05/02/2021;18:18;CONCLUSÃO DA AQUISIÇÃO DE 30% DO CAMPO DE FRADE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=828057&descTipo=IPE&CodigoInstituicao=1
+41;PRIO3;29/01/2021;08:17;OFERTA PÚBLICA DE AÇÕES COM ESFORÇOS RESTRITOS (FOLLOW-ON);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=825811&descTipo=IPE&CodigoInstituicao=1
+42;PRIO3;21/01/2021;20:36;CONCLUSÃO DE AQUISIÇÃO DE 30% DO CAMPO DE FRADE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=824361&descTipo=IPE&CodigoInstituicao=1
+43;PRIO3;19/01/2021;18:47;OFERTA PÚBLICA DE AÇÕES COM ESFORÇOS RESTRITOS (FOLLOW-ON);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=823723&descTipo=IPE&CodigoInstituicao=1
+44;PRIO3;18/01/2021;21:01;OFERTA PÚBLICA DE AÇÕES COM ESFORÇOS RESTRITOS (FOLLOW-ON);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=823529&descTipo=IPE&CodigoInstituicao=1
+45;PRIO3;08/01/2021;19:43;Dados Operacionais - Dezembro/2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=821585&descTipo=IPE&CodigoInstituicao=1
+46;PRIO3;24/12/2020;14:54;Oferta Pública de Ações (Follow-on);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=819154&descTipo=IPE&CodigoInstituicao=1
+47;PRIO3;21/12/2020;20:59;Conversão do Financiamento com a Prisma e Aquisição de Sonda;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=818454&descTipo=IPE&CodigoInstituicao=1
+48;PRIO3;15/12/2020;19:41;Oferta Pública de Ações (Follow-on);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=817043&descTipo=IPE&CodigoInstituicao=1
+49;PRIO3;08/12/2020;18:20;Dados operacionais Novembro/2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=814083&descTipo=IPE&CodigoInstituicao=1
+50;PRIO3;04/12/2020;18:42;Deliberações da Assembleia Geral Extraordinária;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=813278&descTipo=IPE&CodigoInstituicao=1
+51;PRIO3;19/11/2020;06:01;Fato Relevante - Aquisição de Participação nos Campos de Wahoo e Itaipu;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=809955&descTipo=IPE&CodigoInstituicao=1
+52;PRIO3;10/11/2020;18:35;ALTERAÇÃO NA ADMINISTRAÇÃO;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=807227&descTipo=IPE&CodigoInstituicao=1
+53;PRIO3;09/11/2020;18:37;Dados operacionais de Outubro/2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=806637&descTipo=IPE&CodigoInstituicao=1
+54;PRIO3;05/11/2020;09:07;ALIENAÇÃO DE PARTICIPAÇÃO NO CAMPO DE MANATI;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=805233&descTipo=IPE&CodigoInstituicao=1
+55;PRIO3;03/11/2020;22:00;Deliberações Da Reunião Do Conselho De Administração;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=804658&descTipo=IPE&CodigoInstituicao=1
+56;PRIO3;07/10/2020;18:13;Dados Operacionais de Setembro/2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=798172&descTipo=IPE&CodigoInstituicao=1
+57;PRIO3;23/09/2020;09:34;PARTICIPAÇÃO EM EVENTO ABERTO AO PÚBLICO  LIVE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=794839&descTipo=IPE&CodigoInstituicao=1
+58;PRIO3;17/09/2020;19:39;ATUALIZAÇÃO SOBRE AS NOTAS REPRESENTATIVAS DA DÍVIDA;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=793943&descTipo=IPE&CodigoInstituicao=1
+59;PRIO3;10/09/2020;09:01;EMISSÃO DE NOTAS REPRESENTATIVAS DA DÍVIDA;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=792295&descTipo=IPE&CodigoInstituicao=1
+60;PRIO3;08/09/2020;21:55;Dados Operacionais - Agosto 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=791911&descTipo=IPE&CodigoInstituicao=1
+61;PRIO3;08/09/2020;15:33;Dados Operacionais - Agosto 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=791645&descTipo=IPE&CodigoInstituicao=1
+62;PRIO3;08/09/2020;09:06;Comunicado PRIO3 ingressa no indice Bovespa (B3);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=791468&descTipo=IPE&CodigoInstituicao=1
+63;PRIO3;28/08/2020;00:56;Refazimento das Demonstrações Financeiras;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=788649&descTipo=IPE&CodigoInstituicao=1
+64;PRIO3;18/08/2020;21:49;Início de Produção do Quinto Poço de Tubarão Martelo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=785957&descTipo=IPE&CodigoInstituicao=1
+65;PRIO3;10/08/2020;18:09;Dados Operacionais - Julho 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=783196&descTipo=IPE&CodigoInstituicao=1
+66;PRIO3;10/08/2020;17:53;Dados Operacionais - Julho 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=783174&descTipo=IPE&CodigoInstituicao=1
+67;PRIO3;04/08/2020;02:09;Reapresentação Espontânea de Execícios Anteriores;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=780844&descTipo=IPE&CodigoInstituicao=1
+68;PRIO3;03/08/2020;22:53;Fato Relevante - Conclusão Farm-In em Tubarão Martelo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=780812&descTipo=IPE&CodigoInstituicao=1
+69;PRIO3;16/06/2020;09:21;Fato Relevante Reperfilamento Divida Chevron;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=769355&descTipo=IPE&CodigoInstituicao=1
+70;PRIO3;11/06/2020;21:46;Dados Operacionais - Maio 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=768397&descTipo=IPE&CodigoInstituicao=1
+71;PRIO3;15/05/2020;01:14;Comunicado ao Mercado (reclassificação do IR diferido);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=762215&descTipo=IPE&CodigoInstituicao=1
+72;PRIO3;14/05/2020;10:50;Comunicado ao Mercado - Notícias Sobre Negociação na B3;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=761834&descTipo=IPE&CodigoInstituicao=1
+73;PRIO3;06/05/2020;18:55;Dados Operacionais - Abril 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=759473&descTipo=IPE&CodigoInstituicao=1
+74;PRIO3;24/04/2020;19:20;Comunicado ao Mercado - Segunda Convocação - AGE;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=756297&descTipo=IPE&CodigoInstituicao=1
+75;PRIO3;20/04/2020;19:55;Fato Relevante - Mudança na Administração;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=755268&descTipo=IPE&CodigoInstituicao=1
+76;PRIO3;06/04/2020;18:23;Dados Operacionais - Março 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=752267&descTipo=IPE&CodigoInstituicao=1
+77;PRIO3;31/03/2020;20:56;Substituição de Auditor Independente;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=750906&descTipo=IPE&CodigoInstituicao=1
+78;PRIO3;31/03/2020;20:35;Substituição de Auditor Independente;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=750896&descTipo=IPE&CodigoInstituicao=1
+79;PRIO3;31/03/2020;20:27;Substituição de Auditor Independente;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=750886&descTipo=IPE&CodigoInstituicao=1
+80;PRIO3;31/03/2020;19:48;Reapresentação Boletim de Voto à Distância;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=750845&descTipo=IPE&CodigoInstituicao=1
+81;PRIO3;19/03/2020;20:51;3ª Fase da Revitalização de Polvo e Atualização Sobre Royalties;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=746936&descTipo=IPE&CodigoInstituicao=1
+82;PRIO3;18/03/2020;22:33;Covid-19 e Queda do Brent;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=746597&descTipo=IPE&CodigoInstituicao=1
+83;PRIO3;09/03/2020;18:01;Dados Operacionais - Fevereiro 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=744188&descTipo=IPE&CodigoInstituicao=1
+84;PRIO3;11/02/2020;08:11;Dados Operacionais - Janeiro 2020;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=736027&descTipo=IPE&CodigoInstituicao=1
+85;PRIO3;03/02/2020;18:57;Aquisição do FPSO OSX-3, Farm-In em Tubarão Martelo e Atualização Sobre Polvo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=733329&descTipo=IPE&CodigoInstituicao=1
+86;PRIO3;13/01/2020;20:24;Aumento de Capital (Plano de Opções);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=730165&descTipo=IPE&CodigoInstituicao=1
+87;PRIO3;07/01/2020;19:12;"Dados Operacionais - Dezembro 2019; http://ri.petroriosa.com.br/";https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=729165&descTipo=IPE&CodigoInstituicao=1
+88;PRIO3;06/01/2020;18:51;Ingresso no Índice IBrX-100 (B3) e Atualização Sobre Hedges;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=728922&descTipo=IPE&CodigoInstituicao=1
+89;PRIO3;20/12/2019;18:18;Política de Transações com Partes Relacionadas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=727648&descTipo=IPE&CodigoInstituicao=1
+90;PRIO3;20/12/2019;18:13;Política de Transações com Partes Relacionadas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=727632&descTipo=IPE&CodigoInstituicao=1
+91;PRIO3;20/12/2019;18:09;Política de Transações com Partes Relacionadas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=727623&descTipo=IPE&CodigoInstituicao=1
+92;PRIO3;09/12/2019;19:26;Dados Operacionais - Novembro 2019;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=725196&descTipo=IPE&CodigoInstituicao=1
+93;PRIO3;28/11/2019;18:09;Aquisição de Participação Adicional no Campo de Frade;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=723394&descTipo=IPE&CodigoInstituicao=1
+94;PRIO3;14/11/2019;19:24;Alteração na Administração da Companhia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=721782&descTipo=IPE&CodigoInstituicao=1
+95;PRIO3;14/11/2019;18:30;Alteração na Administração da Companhia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=721751&descTipo=IPE&CodigoInstituicao=1
+96;PRIO3;14/11/2019;18:16;Alteração na Administração da Companhia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=721723&descTipo=IPE&CodigoInstituicao=1
+97;PRIO3;14/11/2019;18:12;Contratação de Formador de Mercado;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=721706&descTipo=IPE&CodigoInstituicao=1
+98;PRIO3;11/11/2019;18:19;Dados Operacionais - Outubro;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=720644&descTipo=IPE&CodigoInstituicao=1
+99;PRIO3;07/10/2019;18:12;Dados Operacionais - Setembro 2019;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=714957&descTipo=IPE&CodigoInstituicao=1
