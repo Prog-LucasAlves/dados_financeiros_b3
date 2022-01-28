@@ -22,15 +22,23 @@ inicio = '2000-01-01'
 fim = date.today()
 
 acao = __list__.lst_acao
+indices = __list__.lst_indices
 
 # Coletando as cotações das ações
-for i in tqdm(acao):
-    df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
-    df.to_csv(f'./precos/{i}.csv',sep=';')
+#for i in tqdm(acao):
+    #df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
+    #df.to_csv(f'./precos/{i}.csv',sep=';')
 
-# Coletando as cotações do índice bovespa
-ticker = 'BVSP'
-df_b = yf.download(f'^{ticker}', start=inicio, end=fim, progress=False, threads=False)
-df_b.to_csv(f'./precos/{ticker}.csv',sep=';')  
+# Coletando as cotações de alguns índices 
+for i in tqdm(indices):
+    df_b = yf.download(f'^{i}', start=inicio, end=fim, progress=False, threads=False)
+    df_b.to_csv(f'./indices/{i}.csv',sep=';')  
 
+# Função para calcular o retorno
+def calcula_retono():
+    for i in indices:
+        df = pd.read_csv(f'./indices/{i}.csv', sep=';')
+        df['Retonos'] = round(df['Adj Close'].pct_change() * 100 , 2)
+        df.to_csv(f'./indices/{i}.csv', sep=';')
 
+calcula_retono()

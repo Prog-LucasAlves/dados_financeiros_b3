@@ -461,3 +461,12 @@ lst_acao = [
     "VITT3",
     "VBBR3",
 ]
+
+lst_indices = [
+    "BVSP",
+    "NDX",
+    "GSPC",
+    "DJI",
+    "VIX",
+    "N225",
+]

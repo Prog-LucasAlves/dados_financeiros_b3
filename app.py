@@ -6,7 +6,6 @@
 
 import streamlit as st
 import pandas as pd
-import vectorbt as vbt
 import re
 from datetime import datetime, timedelta
 import quantstats as qs
@@ -14,11 +13,21 @@ import os
 import plotly.express as px
 import seaborn as sb
 import math
-import statistics
 
 ###################################
 # Inicio da Construção Streamlit
 ###################################
+
+######
+st.subheader('🆚 Alguns Índices')
+
+# Cria colunas
+col1 , col2 = st.columns(2)
+
+ibov = pd.read_csv('./Api/indices/BVSP.csv', sep=';')
+ibov_preco = ibov['Adj Close'][-1]
+ibov_retorno = ibov['Retorno'][-1]
+col1.metric(label="IBOV", value=f"R${ibov_preco}", delta=f"{ibov_retorno}%")
 
 ######
 # Cabeçalho da página
@@ -372,7 +381,7 @@ ulcer_index_result = ulcer_index['papel'][ulcer_index_index]
 qs.extend_pandas()
 ulcer_index_stock = qs.utils.download_returns(f"{ulcer_index_result}.SA")
 ulcer_index_ulcer_index = round(ulcer_index_stock.ulcer_index(), 2) 
-col2.metric(label="Profit Factor", value=f"{ulcer_index_ulcer_index}")
+col2.metric(label="Ulcer Index", value=f"{ulcer_index_ulcer_index}")
 
 ######
 
@@ -545,34 +554,6 @@ precos_df_vol = (
 precos_df_ad[f"Vol {precos_papel}"] = precos_df_vol
 fig_vol = px.line(precos_df_ad, x="Date", y=f"Vol {precos_papel}")
 st.plotly_chart(fig_vol)
-
-# Backtesting
-data = datetime.today().strftime('%d-%m-%Y')
-st.write("-----------------------------------------")
-st.write( f" 🚦 Backtesting da Ação {col1_selection}" )
-st.write( " 🚦 *Estratégia:* " ) 
-st.write( " 🚦 Cruzamento de Médias Moveis " )
-st.write( " 🚦 Intervalo utilizado -> Diário(Fechamento) " )
-st.write(f" 🚦Periodo: 01-01-2020 até {data} ")
-
-media_ra = st.number_input("Insira o Valor da Média Rápida(1-200)",value=17, min_value=1, max_value=200)
-media_le = st.number_input("Insira o Valor da Média Lenta(1-200)",value=72, min_value=1, max_value=200)
-
-windows = media_ra, media_le
-
-dados_back = vbt.YFData.download_symbol(f'{col1_selection}.SA', start='2020-01-01')
-fechamento = dados_back['Close']
-media_rapida, media_lenta = vbt.MA.run_combs(fechamento, window=windows, r=2)
-
-entradas = media_rapida.ma_crossed_above(media_lenta) 
-saidas = media_rapida.ma_crossed_below(media_lenta)
-pf = vbt.Portfolio.from_signals(fechamento, entradas, saidas)
-df_pf = pf.stats()
-fig = pf.plot()
-st.plotly_chart(fig)
-st.write("-----")
-st.write("*Informações sobre a Estratégia:*")
-st.text(df_pf)
 
 ######
 
