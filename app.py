@@ -35,10 +35,25 @@ ndx_preco = round(ndx['Adj Close'].iloc[-1], 2)
 ndx_retorno = ndx['Retornos'].iloc[-1]
 col2.metric(label="NDX", value=f'{ndx_preco}', delta=f'{ndx_retorno}%')
 
+dji = pd.read_csv('./Api/indices/DJI.csv', sep=';')
+dji_precos = round(dji['Adj Close'].iloc[-1], 2)
+dji_retorno = dji['Retornos'].iloc[-1]
+col3.metric(label="DJI", value=f'{dji_precos}', delta=f'{dji_retorno}%')
+
 sp_500 = pd.read_csv('./Api/indices/GSPC.csv', sep=';')
 sp_500_preco = round(sp_500['Adj Close'].iloc[-1], 2)
 sp_500_retorno = sp_500['Retornos'].iloc[-1]
-col3.metric(label="SP-500", value=f"{sp_500_preco}", delta=f"{sp_500_retorno}")
+col1.metric(label="SP-500", value=f"{sp_500_preco}", delta=f"{sp_500_retorno}%")
+
+vix = pd.read_csv('./Api/indices/VIX.csv', sep=';')
+vix_preco = round(vix['Adj Close'].iloc[-1], 2)
+vix_retorno = vix['Retornos'].iloc[-1]
+col2.metric(label="VIX", value=f"{vix_preco}", delta=f"{vix_retorno}%")
+
+n225 = pd.read_csv('./Api/indices/N225.csv', sep=';')
+n225_preco = round(n225['Adj Close'].iloc[-1], 2)
+n225_retorno = n225['Retornos'].iloc[-1]
+col3.metric(label="Nikkei 225", value=f"{n225_preco}", delta=f"{n225_retorno}%")
 
 ######
 # Cabeçalho da página - Informações das Ações
