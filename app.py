@@ -23,7 +23,7 @@ import math
 st.subheader('🆚 Alguns Índices')
 
 # Cria colunas
-col1 , col2 = st.columns(2)
+col1 , col2 , col3 = st.columns(3)
 
 ibov = pd.read_csv('./Api/indices/BVSP.csv', sep=';')
 ibov_preco = round(ibov['Adj Close'].iloc[-1], 2)
@@ -38,7 +38,7 @@ col2.metric(label="NDX", value=f'{ndx_preco}', delta=f'{ndx_retorno}%')
 sp_500 = pd.read_csv('./Api/indices/GSPC.csv', sep=';')
 sp_500_preco = round(sp_500['Adj Close'].iloc[-1], 2)
 sp_500_retorno = sp_500['Retornos'].iloc[-1]
-col1.metric(label="SP-500", value=f"{sp_500_preco}", delta=f"{sp_500_retorno}")
+col3.metric(label="SP-500", value=f"{sp_500_preco}", delta=f"{sp_500_retorno}")
 
 ######
 # Cabeçalho da página - Informações das Ações
