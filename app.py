@@ -27,17 +27,17 @@ col1 , col2 = st.columns(2)
 
 ibov = pd.read_csv('./Api/indices/BVSP.csv', sep=';')
 ibov_preco = ibov['Adj Close'].iloc[-1]
-ibov_retorno = ibov['Retornos'].iloc[-1]
+ibov_retorno = round(ibov['Retornos'].iloc[-1], 2)
 col1.metric(label="IBOV", value=f"{ibov_preco}", delta=f"{ibov_retorno}%")
 
 ndx = pd.read_csv('./Api/indices/NDX.csv', sep=';')
 ndx_preco = ndx['Adj Close'].iloc[-1]
-ndx_retorno = ndx['Retornos'].iloc[-1]
+ndx_retorno = round(ndx['Retornos'].iloc[-1], 2)
 col2.metric(label="NDX", value=f'{ndx_preco}', delta=f'{ndx_retorno}%')
 
 sp_500 = pd.read_csv('./Api/indices/GSPC.csv', sep=';')
 sp_500_preco = sp_500['Adj Close'].iloc[-1]
-sp_500_retorno = sp_500['Retornos'].iloc[-1]
+sp_500_retorno = round(sp_500['Retornos'].iloc[-1], 2)
 col1.metric(label="SP-500", value=f"{sp_500_preco}", delta=f"{sp_500_retorno}")
 
 ######
