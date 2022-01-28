@@ -26,7 +26,7 @@ col1 , col2 = st.columns(2)
 
 ibov = pd.read_csv('./Api/indices/BVSP.csv', sep=';')
 ibov_preco = ibov['Adj Close'].iloc[-1]
-ibov_retorno = ibov['Retorno'].iloc[-1]
+ibov_retorno = ibov['Retornos'].iloc[-1]
 col1.metric(label="IBOV", value=f"R${ibov_preco}", delta=f"{ibov_retorno}%")
 
 ######
