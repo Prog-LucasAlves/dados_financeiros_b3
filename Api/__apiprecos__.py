@@ -38,7 +38,7 @@ for i in tqdm(indices):
 def calcula_retono():
     for i in indices:
         df = pd.read_csv(f'./indices/{i}.csv', sep=';')
-        df['Retonos'] = round(df['Adj Close'].pct_change() * 100 , 2)
+        df['Retornos'] = round(df['Adj Close'].pct_change() * 100 , 2)
         df.to_csv(f'./indices/{i}.csv', sep=';')
 
 calcula_retono()
