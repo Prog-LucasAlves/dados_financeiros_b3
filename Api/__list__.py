@@ -464,9 +464,18 @@ lst_acao = [
 
 lst_indices = [
     "BVSP",
-    "NDX",
+    "IXIC",
     "GSPC",
     "DJI",
     "VIX",
     "N225",
+    "RUT",
+    "HSI",
+    "MERV"
+]
+
+lst_crypto =[
+    "BTC-USD",
+    "ETH-USD",
+    "USDT-USD"
 ]

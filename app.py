@@ -20,7 +20,7 @@ import math
 
 ######
 # Cabeçalho da página - Informações de fechamento de alguns Ìndices
-st.subheader('🆚 Alguns Índices')
+st.subheader('🌎 Alguns Índices Globais')
 
 # Cria colunas
 col1 , col2 , col3 = st.columns(3)
@@ -28,22 +28,22 @@ col1 , col2 , col3 = st.columns(3)
 ibov = pd.read_csv('./Api/indices/BVSP.csv', sep=';')
 ibov_preco = round(ibov['Adj Close'].iloc[-1], 2)
 ibov_retorno = ibov['Retornos'].iloc[-1]
-col1.metric(label="IBOV", value=f"{ibov_preco}", delta=f"{ibov_retorno}%")
+col1.metric(label="IBOVESPA", value=f"{ibov_preco}", delta=f"{ibov_retorno}%")
 
-ndx = pd.read_csv('./Api/indices/NDX.csv', sep=';')
-ndx_preco = round(ndx['Adj Close'].iloc[-1], 2)
-ndx_retorno = ndx['Retornos'].iloc[-1]
-col2.metric(label="NDX", value=f'{ndx_preco}', delta=f'{ndx_retorno}%')
+ixic = pd.read_csv('./Api/indices/IXIC.csv', sep=';')
+ixic_preco = round(ixic['Adj Close'].iloc[-1], 2)
+ixic_retorno = ixic['Retornos'].iloc[-1]
+col2.metric(label="NASDAQ Composite", value=f'{ixic_preco}', delta=f'{ixic_retorno}%')
 
 dji = pd.read_csv('./Api/indices/DJI.csv', sep=';')
 dji_precos = round(dji['Adj Close'].iloc[-1], 2)
 dji_retorno = dji['Retornos'].iloc[-1]
-col3.metric(label="DJI", value=f'{dji_precos}', delta=f'{dji_retorno}%')
+col3.metric(label="Dow Jones Industrial Average", value=f'{dji_precos}', delta=f'{dji_retorno}%')
 
 sp_500 = pd.read_csv('./Api/indices/GSPC.csv', sep=';')
 sp_500_preco = round(sp_500['Adj Close'].iloc[-1], 2)
 sp_500_retorno = sp_500['Retornos'].iloc[-1]
-col1.metric(label="SP-500", value=f"{sp_500_preco}", delta=f"{sp_500_retorno}%")
+col1.metric(label="S&P 500", value=f"{sp_500_preco}", delta=f"{sp_500_retorno}%")
 
 vix = pd.read_csv('./Api/indices/VIX.csv', sep=';')
 vix_preco = round(vix['Adj Close'].iloc[-1], 2)
@@ -54,6 +54,8 @@ n225 = pd.read_csv('./Api/indices/N225.csv', sep=';')
 n225_preco = round(n225['Adj Close'].iloc[-1], 2)
 n225_retorno = n225['Retornos'].iloc[-1]
 col3.metric(label="Nikkei 225", value=f"{n225_preco}", delta=f"{n225_retorno}%")
+
+st.subheader(' Algumas Cryptomoedas')
 
 ######
 # Cabeçalho da página - Informações das Ações

@@ -23,6 +23,7 @@ fim = date.today()
 
 acao = __list__.lst_acao
 indices = __list__.lst_indices
+crypto = __list__.lst_crypto
 
 # Coletando as cotações das ações
 #for i in tqdm(acao):
@@ -32,7 +33,12 @@ indices = __list__.lst_indices
 # Coletando as cotações de alguns índices 
 for i in tqdm(indices):
     df_b = yf.download(f'^{i}', start=inicio, end=fim, progress=False, threads=False)
-    df_b.to_csv(f'./indices/{i}.csv',sep=';')  
+    df_b.to_csv(f'./indices/{i}.csv', sep=';') 
+
+# Coletando as cotações de algumas crypto
+for i in tqdm(crypto):
+    df_crypto = yf.download(f'{i}', start=inicio, end=fim, progress=False, threads=False)
+    df_crypto.to_csv(f'./crypto/{i}.csv', sep=';')
 
 # Função para calcular o retorno
 def calcula_retono():
