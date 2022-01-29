@@ -28,7 +28,8 @@ col1 , col2 , col3 = st.columns(3)
 ibov = pd.read_csv('./Api/indices/BVSP.csv', sep=';')
 ibov_preco = round(ibov['Adj Close'].iloc[-1], 2)
 ibov_retorno = ibov['Retornos'].iloc[-1]
-col1.metric(label="IBOVESPA", value=f"{ibov_preco}", delta=f"{ibov_retorno}%")
+ibov_date = ibov['Date'].iloc[-1]
+col1.metric(label=f"IBOVESPA - {ibov_date}", value=f"{ibov_preco}", delta=f"{ibov_retorno}%")
 
 ixic = pd.read_csv('./Api/indices/IXIC.csv', sep=';')
 ixic_preco = round(ixic['Adj Close'].iloc[-1], 2)
