@@ -26,9 +26,9 @@ indices = __list__.lst_indices
 crypto = __list__.lst_crypto
 
 # Coletando as cotações das ações
-#for i in tqdm(acao):
-    #df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
-    #df.to_csv(f'./precos/{i}.csv',sep=';')
+for i in tqdm(acao):
+    df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
+    df.to_csv(f'./precos/{i}.csv',sep=';')
 
 # Coletando as cotações de alguns índices 
 for i in tqdm(indices):
@@ -52,6 +52,7 @@ def calcula_retorno_crypto():
     for i in crypto:
         df = pd.read_csv(f'./crypto/{i}.csv', sep=';')
         df['Retornos'] = round(df['Adj Close'].pct_change() * 100, 2)
+        df.to_csv(f'./crypto/{i}.csv', sep=';')
 
 calcula_retono_indices()
 calcula_retorno_crypto()
