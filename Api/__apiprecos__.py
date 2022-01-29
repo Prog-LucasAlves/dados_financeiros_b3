@@ -41,10 +41,17 @@ for i in tqdm(crypto):
     df_crypto.to_csv(f'./crypto/{i}.csv', sep=';')
 
 # Função para calcular o retorno
-def calcula_retono():
+def calcula_retono_indices():
     for i in indices:
         df = pd.read_csv(f'./indices/{i}.csv', sep=';')
-        df['Retornos'] = round(df['Adj Close'].pct_change() * 100 , 2)
+        df['Retornos'] = round(df['Adj Close'].pct_change() * 100, 2)
         df.to_csv(f'./indices/{i}.csv', sep=';')
 
-calcula_retono()
+# Função para calcular o retorno
+def calcula_retorno_crypto():
+    for i in crypto:
+        df = pd.read_csv(f'./crypto/{i}.csv', sep=';')
+        df['Retornos'] = round(df['Adj Close'].pct_change() * 100, 2)
+
+calcula_retono_indices()
+calcula_retorno_crypto()

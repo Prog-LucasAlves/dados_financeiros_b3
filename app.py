@@ -55,11 +55,20 @@ n225_preco = round(n225['Adj Close'].iloc[-1], 2)
 n225_retorno = n225['Retornos'].iloc[-1]
 col3.metric(label="Nikkei 225", value=f"{n225_preco}", delta=f"{n225_retorno}%")
 
-st.subheader(' Algumas Cryptomoedas')
+######
+
+st.subheader('🪙 Algumas Cryptomoedas')
+
+col1 , col2 , col3 = st.columns(3)
+
+btc_usd = pd.read_csv('./Api/crypto/BTC-USD.csv', sep=';')
+btc_usd_preco = round(btc_usd['Adj Close'].iloc[-1], 2)
+btc_usd_retorno = btc_usd['Retornos'].iloc[-1]
+col1.metric(label='BTC', value=f"{btc_usd_preco}", delta=f"{btc_usd_retorno}")
 
 ######
 # Cabeçalho da página - Informações das Ações
-st.subheader('🆚 Informações das Ações Listadas na B3')
+st.subheader('ℹ️ Informações das Ações Listadas na B3')
 
 ######
 # Importando os dados atuais
@@ -415,7 +424,7 @@ col2.metric(label="Ulcer Index", value=f"{ulcer_index_ulcer_index}")
 
 # valor justo de uma ação segundo o cálculo de Graham
 st.write("-----------------------------------------")
-st.subheader(" Valor Justo de uma ação segundo o cálculo de Graham ")
+st.subheader("💎 Valor Justo de uma ação segundo o cálculo de Graham ")
 acao_g = df[df['papel'] == col1_selection]
 acao_g_index = int(acao_g['Unnamed: 0'])
 acao_g_result = acao_g['papel'][acao_g_index]
@@ -592,7 +601,7 @@ date_atual = date_att - atraso
 date_atual = date_atual.strftime('%d/%m/%Y')
 st.write(f"Atualizações do dia {date_atual}:")
 
-st.write('Fatos Relevantes:')
+st.write('📰 Fatos Relevantes:')
 df_analisar_ft = pd.read_csv("./Todos/FT.csv", sep=";")
 df_date_ft = df_analisar_ft.loc[df_analisar_ft['Data'] == date_atual , ['Acao']]
 if df_date_ft.empty == False:
@@ -600,7 +609,7 @@ if df_date_ft.empty == False:
 else:
     st.write('*Sem Atualizações* 🤫')    
 
-st.write('Proventos:')
+st.write('💰 Proventos:')
 df_analisar_pr = pd.read_csv("./Todos/PR.csv", sep=";")
 df_date_pr = df_analisar_pr.loc[df_analisar_pr['Data'] == date_atual , ['Acao']]
 if df_date_pr.empty == False:
@@ -608,7 +617,7 @@ if df_date_pr.empty == False:
 else:
     st.write('*Sem Atualizações* 🤫') 
 
-st.write('Dados Trimestrais - Release de Resultados:')
+st.write('📋 Dados Trimestrais - Release de Resultados:')
 df_analisar_tr = pd.read_csv("./Todos/TR.csv", sep=";")
 df_date_tr = df_analisar_tr.loc[df_analisar_tr['Data Referência'] == date_atual , ['Acao']]
 if df_date_tr.empty == False:
