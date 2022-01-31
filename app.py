@@ -65,7 +65,7 @@ col1 , col2 , col3 = st.columns(3)
 btc_usd = pd.read_csv('./Api/crypto/BTC-USD.csv', sep=';')
 btc_usd_preco = round(btc_usd['Adj Close'].iloc[-1], 2)
 btc_usd_retorno = btc_usd['Retornos'].iloc[-1]
-col1.metric(label='BTC', value=f"{btc_usd_preco}", delta=f"{btc_usd_retorno}")
+col1.metric(label='BTC-USD', value=f"{btc_usd_preco}", delta=f"{btc_usd_retorno}")
 
 ######
 # Cabeçalho da página - Informações das Ações
