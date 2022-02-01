@@ -93,12 +93,20 @@ col1 , col2 , col3 = st.columns(3)
 btcusd = pd.read_csv('./Api/crypto/BTC-USD.csv', sep=';')
 btcusd_preco = round(btcusd['Adj Close'].iloc[-1], 2)
 btcusd_retorno = btcusd['Retornos'].iloc[-1]
-col1.metric(label="BTC-USD", value=f"{btcusd_preco}", delta=f"{btcusd_retorno}%")
+btcusd_date = btcusd['Date'].iloc[-1]
+col1.metric(label=f"BTC-USD - {btcusd_date}", value=f"{btcusd_preco}", delta=f"{btcusd_retorno}%")
 
 ethusd = pd.read_csv('./Api/crypto/ETH-USD.csv', sep=';')
 ethusd_preco = round(ethusd['Adj Close'].iloc[-1], 2)
 ethusd_retorno = ethusd['Retornos'].iloc[-1]
-col2.metric(label="ETH-USD", value=f"{ethusd_preco}", delta=f"{ethusd_retorno}%")
+ethusd_date = ethusd['Date'].iloc[-1]
+col2.metric(label=f"ETH-USD - {ethusd_date}", value=f"{ethusd_preco}", delta=f"{ethusd_retorno}%")
+
+usdtusd = pd.read_csv('./Api/crypto/USDT-USD.csv', sep=';')
+usdtusd_preco = round(usdtusd['Adj Close'].iloc[-1], 2)
+usdtusd_retorno = usdtusd['Retornos'].iloc[-1]
+usdtusd_date = usdtusd['Date'].iloc[-1]
+col3.metric(label=f"USDT-USD - {usdtusd_date}", value=f"{usdtusd_preco}", delta=f"{usdtusd_retorno}%")
 
 ######
 # Cabeçalho da página - Informações das Ações
