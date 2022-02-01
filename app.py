@@ -645,17 +645,17 @@ st.write(f"Atualizações do dia {date_atual}:")
 
 st.write('📰 Fatos Relevantes:')
 df_analisar_ft = pd.read_csv("./Todos/FT.csv", sep=";")
-df_date_ft = df_analisar_ft.loc[df_analisar_ft['Data'] == date_atual , ['Acao']]
+df_date_ft = df_analisar_ft.loc[df_analisar_ft['Data'] == date_atual , ['Acao','Link']]
 if df_date_ft.empty == False:
-    st.write(list(df_date_ft['Acao'].unique()))
+    st.write(list(df_date_ft[['Acao','Link']].unique()))
 else:
     st.write('*Sem Atualizações* 🤫')    
 
 st.write('💰 Proventos:')
 df_analisar_pr = pd.read_csv("./Todos/PR.csv", sep=";")
-df_date_pr = df_analisar_pr.loc[df_analisar_pr['Data'] == date_atual , ['Acao','Link']]
+df_date_pr = df_analisar_pr.loc[df_analisar_pr['Data'] == date_atual , ['Acao']]
 if df_date_pr.empty == False:
-    st.write(list(df_date_pr[['Acao','Link']].unique()))
+    st.write(list(df_date_pr[['Acao']].unique()))
 else:
     st.write('*Sem Atualizações* 🤫') 
 
