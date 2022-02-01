@@ -647,7 +647,7 @@ st.write('📰 Fatos Relevantes:')
 df_analisar_ft = pd.read_csv("./Todos/FT.csv", sep=";")
 df_date_ft = df_analisar_ft.loc[df_analisar_ft['Data'] == date_atual , ['Acao','Link']]
 if df_date_ft.empty == False:
-    st.write(list(df_date_ft[['Acao','Link']]))
+    st.write(list(df_date_ft['Acao','Link']))
 else:
     st.write('*Sem Atualizações* 🤫')    
 
