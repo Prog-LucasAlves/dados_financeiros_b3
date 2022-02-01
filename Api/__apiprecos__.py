@@ -60,7 +60,7 @@ def calcula_retorno_crypto():
         df.to_csv(f'./crypto/{i}.csv', sep=';')
 
 # Funçaõ para calcular o retonor
-def calcula_retorno_crypto():
+def calcula_retorno_moedas():
     for i in moedas:
         df = pd.read_csv(f'./moedas/{i}.csv', sep=';')
         df['Retornos'] = round(df['Adj Close'].pct_change() * 100, 2)
@@ -68,3 +68,4 @@ def calcula_retorno_crypto():
 
 calcula_retono_indices()
 calcula_retorno_crypto()
+calcula_retorno_moedas()

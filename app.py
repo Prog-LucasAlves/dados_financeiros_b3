@@ -74,13 +74,13 @@ col1.metric(label=f"USD-BRL - {usdbrl_date}", value=f"{usdbrl_preco}", delta=f"{
 
 eurbrl = pd.read_csv('./Api/moedas/EURBRL=x.csv', sep=';')
 eurbrl_preco = round(eurbrl['Adj Close'].iloc[-1], 2)
-eurbrl_retorno = eurbrl['Retorno'].iloc[-1]
+eurbrl_retorno = eurbrl['Retornos'].iloc[-1]
 eurbrl_date = eurbrl['Date'].iloc[-1]
 col2.metric(label=f"EUR-BRL - {eurbrl_date}", value=f"{eurbrl_preco}", delta=f"{eurbrl_retorno}%")
 
 eurusd = pd.read_csv('./Api/moedas/EURUSD=x.csv', sep=';')
 eurusd_preco = round(eurusd['Adj Close'].iloc[-1], 2)
-eurusd_retorno = eurusd['Retorno'].iloc[-1]
+eurusd_retorno = eurusd['Retornos'].iloc[-1]
 eurusd_date = eurusd['Date'].iloc[-1]
 col3.metric(label=f"EUR-USD - {eurusd_date}", value=f"{eurusd_preco}", delta=f"{eurusd_retorno}%")
 
