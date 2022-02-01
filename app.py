@@ -34,27 +34,43 @@ col1.metric(label=f"IBOVESPA - {ibov_date}", value=f"{ibov_preco}", delta=f"{ibo
 ixic = pd.read_csv('./Api/indices/IXIC.csv', sep=';')
 ixic_preco = round(ixic['Adj Close'].iloc[-1], 2)
 ixic_retorno = ixic['Retornos'].iloc[-1]
-col2.metric(label="NASDAQ Composite", value=f'{ixic_preco}', delta=f'{ixic_retorno}%')
+ixic_date = ixic['Date'].iloc[-1]
+col2.metric(label=f"NASDAQ Composite - {ixic_date}", value=f'{ixic_preco}', delta=f'{ixic_retorno}%')
 
 dji = pd.read_csv('./Api/indices/DJI.csv', sep=';')
 dji_precos = round(dji['Adj Close'].iloc[-1], 2)
 dji_retorno = dji['Retornos'].iloc[-1]
-col3.metric(label="Dow Jones Industrial Average", value=f'{dji_precos}', delta=f'{dji_retorno}%')
+dji_date = dji['Date'].iloc[-1]
+col3.metric(label=f"Dow Jones Industrial Average - {dji_date}", value=f'{dji_precos}', delta=f'{dji_retorno}%')
 
 sp_500 = pd.read_csv('./Api/indices/GSPC.csv', sep=';')
 sp_500_preco = round(sp_500['Adj Close'].iloc[-1], 2)
 sp_500_retorno = sp_500['Retornos'].iloc[-1]
-col1.metric(label="S&P 500", value=f"{sp_500_preco}", delta=f"{sp_500_retorno}%")
+sp_500_date = sp_500['Date'].iloc[-1]
+col1.metric(label=f"S&P 500 - {sp_500_date}", value=f"{sp_500_preco}", delta=f"{sp_500_retorno}%")
 
 vix = pd.read_csv('./Api/indices/VIX.csv', sep=';')
 vix_preco = round(vix['Adj Close'].iloc[-1], 2)
 vix_retorno = vix['Retornos'].iloc[-1]
-col2.metric(label="VIX", value=f"{vix_preco}", delta=f"{vix_retorno}%")
+vix_date = vix['Date'].iloc[-1]
+col2.metric(label=f"VIX - {vix_date}", value=f"{vix_preco}", delta=f"{vix_retorno}%")
 
 n225 = pd.read_csv('./Api/indices/N225.csv', sep=';')
 n225_preco = round(n225['Adj Close'].iloc[-1], 2)
 n225_retorno = n225['Retornos'].iloc[-1]
-col3.metric(label="Nikkei 225", value=f"{n225_preco}", delta=f"{n225_retorno}%")
+n225_date = n225['Date'].iloc[-1]
+col3.metric(label=f"Nikkei 225 - {n225_date}", value=f"{n225_preco}", delta=f"{n225_retorno}%")
+
+######
+st.subheader('💵 Alguns Pares de Moedas')
+
+col1 , col2 , col3 = st.columns(3)
+
+usdbrl = pd.read_csv('./Api/moedas/USDBRL=x.csv', sep=';')
+usdbrl_preco = round(usdbrl['Adj Close'].iloc[-1], 2)
+usdbrl_retorno = usdbrl['Retornos'].iloc[-1]
+usdbrl_date = usdbrl['Date'].iloc[-1]
+col1.metric(label=f"USD-BRL - {usdbrl_date}", value=f"{usdbrl_preco}", delta=f"{usdbrl_retorno}")
 
 ######
 
@@ -65,7 +81,7 @@ col1 , col2 , col3 = st.columns(3)
 btc_usd = pd.read_csv('./Api/crypto/BTC-USD.csv', sep=';')
 btc_usd_preco = round(btc_usd['Adj Close'].iloc[-1], 2)
 btc_usd_retorno = btc_usd['Retornos'].iloc[-1]
-col1.metric(label='BTC-USD', value=f"{btc_usd_preco}", delta=f"{btc_usd_retorno}")
+col1.metric(label='BTC-USD', value=f"{btc_usd_preco}", delta=f"{btc_usd_retorno}%")
 
 ######
 # Cabeçalho da página - Informações das Ações

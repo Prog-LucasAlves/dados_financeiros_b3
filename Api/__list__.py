@@ -474,8 +474,12 @@ lst_indices = [
     "MERV"
 ]
 
-lst_crypto =[
+lst_crypto = [
     "BTC-USD",
     "ETH-USD",
     "USDT-USD"
+]
+
+lst_moedas = [
+    "USDBRL=x"
 ]
