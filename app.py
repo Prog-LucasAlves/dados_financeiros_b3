@@ -41,7 +41,7 @@ dji = pd.read_csv('./Api/indices/DJI.csv', sep=';')
 dji_precos = round(dji['Adj Close'].iloc[-1], 2)
 dji_retorno = dji['Retornos'].iloc[-1]
 dji_date = dji['Date'].iloc[-1]
-col3.metric(label=f"Dow Jones Industrial Average - {dji_date}", value=f'{dji_precos}', delta=f'{dji_retorno}%')
+col3.metric(label=f"Dow Jones Ind. Average - {dji_date}", value=f'{dji_precos}', delta=f'{dji_retorno}%')
 
 sp_500 = pd.read_csv('./Api/indices/GSPC.csv', sep=';')
 sp_500_preco = round(sp_500['Adj Close'].iloc[-1], 2)
@@ -70,7 +70,19 @@ usdbrl = pd.read_csv('./Api/moedas/USDBRL=x.csv', sep=';')
 usdbrl_preco = round(usdbrl['Adj Close'].iloc[-1], 2)
 usdbrl_retorno = usdbrl['Retornos'].iloc[-1]
 usdbrl_date = usdbrl['Date'].iloc[-1]
-col1.metric(label=f"USD-BRL - {usdbrl_date}", value=f"{usdbrl_preco}", delta=f"{usdbrl_retorno}")
+col1.metric(label=f"USD-BRL - {usdbrl_date}", value=f"{usdbrl_preco}", delta=f"{usdbrl_retorno}%")
+
+eurbrl = pd.read_csv('./Api/moedas/EURBRL=x.csv', sep=';')
+eurbrl_preco = round(eurbrl['Adj Close'].iloc[-1], 2)
+eurbrl_retorno = eurbrl['Retorno'].iloc[-1]
+eurbrl_date = eurbrl['Date'].iloc[-1]
+col2.metric(label=f"EUR-BRL - {eurbrl_date}", value=f"{eurbrl_preco}", delta=f"{eurbrl_retorno}%")
+
+eurusd = pd.read_csv('./Api/moedas/EURUSD=x.csv', sep=';')
+eurusd_preco = round(eurusd['Adj Close'].iloc[-1], 2)
+eurusd_retorno = eurusd['Retorno'].iloc[-1]
+eurusd_date = eurusd['Date'].iloc[-1]
+col3.metric(label=f"EUR-USD - {eurusd_date}", value=f"{eurusd_preco}", delta=f"{eurusd_retorno}%")
 
 ######
 
@@ -78,10 +90,15 @@ st.subheader('🪙 Algumas Cryptomoedas')
 
 col1 , col2 , col3 = st.columns(3)
 
-btc_usd = pd.read_csv('./Api/crypto/BTC-USD.csv', sep=';')
-btc_usd_preco = round(btc_usd['Adj Close'].iloc[-1], 2)
-btc_usd_retorno = btc_usd['Retornos'].iloc[-1]
-col1.metric(label='BTC-USD', value=f"{btc_usd_preco}", delta=f"{btc_usd_retorno}%")
+btcusd = pd.read_csv('./Api/crypto/BTC-USD.csv', sep=';')
+btcusd_preco = round(btcusd['Adj Close'].iloc[-1], 2)
+btcusd_retorno = btcusd['Retornos'].iloc[-1]
+col1.metric(label="BTC-USD", value=f"{btcusd_preco}", delta=f"{btcusd_retorno}%")
+
+ethusd = pd.read_csv('./Api/crypto/ETH-USD.csv', sep=';')
+ethusd_preco = round(ethusd['Adj Close'].iloc[-1], 2)
+ethusd_retorno = ethusd['Retornos'].iloc[-1]
+col2.metric(label="ETH-USD", value=f"{ethusd_preco}", delta=f"{ethusd_retorno}%")
 
 ######
 # Cabeçalho da página - Informações das Ações

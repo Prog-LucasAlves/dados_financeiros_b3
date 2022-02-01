@@ -481,5 +481,7 @@ lst_crypto = [
 ]
 
 lst_moedas = [
-    "USDBRL=x"
+    "USDBRL=x",
+    "EURBRL=x",
+    "EURUSD=x"
 ]

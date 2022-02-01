@@ -37,9 +37,9 @@ moedas = __list__.lst_moedas
     #df_b.to_csv(f'./indices/{i}.csv', sep=';') 
 
 # Coletando as cotações de algumas crypto
-#for i in tqdm(crypto):
-    #df_crypto = yf.download(f'{i}', start=inicio, end=fim, progress=False, threads=False)
-    #df_crypto.to_csv(f'./crypto/{i}.csv', sep=';')
+for i in tqdm(crypto):
+    df_crypto = yf.download(f'{i}', start=inicio, end=fim, progress=False, threads=False)
+    df_crypto.to_csv(f'./crypto/{i}.csv', sep=';')
 
 for i in tqdm(moedas):
     df_moedas = yf.download(f'{i}', start=inicio, end=fim, progress=False, threads=False)
