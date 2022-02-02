@@ -18,7 +18,7 @@ import __list__
 
 df = pd.DataFrame()
 
-inicio = '2000-01-01'
+inicio = '2001-01-01'
 fim = date.today()
 
 acao = __list__.lst_acao
