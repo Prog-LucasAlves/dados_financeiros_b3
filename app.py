@@ -35,7 +35,7 @@ ixic = pd.read_csv('./Api/indices/IXIC.csv', sep=';')
 ixic_preco = round(ixic['Adj Close'].iloc[-1], 2)
 ixic_retorno = ixic['Retornos'].iloc[-1]
 ixic_date = ixic['Date'].iloc[-1]
-col2.metric(label=f"NASDAQ Composite - {ixic_date}", value=f'{ixic_preco}', delta=f'{ixic_retorno}%')
+col2.metric(label=f"NASDAQ Composite - {ixic_date}", value=f'{ixic_preco:.2f}', delta=f'{ixic_retorno}%')
 
 dji = pd.read_csv('./Api/indices/DJI.csv', sep=';')
 dji_precos = round(dji['Adj Close'].iloc[-1], 2)
