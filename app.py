@@ -82,7 +82,7 @@ gbpbrl = pd.read_csv('./Api/moedas/GBPBRL=x.csv', sep=';')
 gbpbrl_preco = round(gbpbrl['Adj Close'].iloc[-1], 2)
 gbpbrl_retorno = gbpbrl['Retornos'].iloc[-1]
 gbpbrl_date = gbpbrl['Date'].iloc[-1]
-col3.metric(label=f"GBP-BRL - {gbpbrl_date}", value=f"{gbpbrl_preco:.2f}", deltal=f"{gbpbrl_retorno}%")
+col3.metric(label=f"GBP-BRL - {gbpbrl_date}", value=f"{gbpbrl_preco:.2f}", delta=f"{gbpbrl_retorno}%")
 
 brlusd = pd.read_csv('./Api/moedas/BRLUSD=x.csv', sep=';')
 brlusd_preco = round(brlusd['Adj Close'].iloc[-1], 2)
