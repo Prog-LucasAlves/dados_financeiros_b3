@@ -477,11 +477,14 @@ lst_indices = [
 lst_crypto = [
     "BTC-USD",
     "ETH-USD",
-    "USDT-USD"
+    "LTC-USD",
+    
 ]
 
 lst_moedas = [
     "USDBRL=x",
     "EURBRL=x",
-    "EURUSD=x"
+    "GBPBRL=x",
+    "EURUSD=x",
+    "BRLUSD=x"
 ]

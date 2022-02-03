@@ -78,6 +78,18 @@ eurbrl_retorno = eurbrl['Retornos'].iloc[-1]
 eurbrl_date = eurbrl['Date'].iloc[-1]
 col2.metric(label=f"EUR-BRL - {eurbrl_date}", value=f"{eurbrl_preco:.2f}", delta=f"{eurbrl_retorno}%")
 
+gbpbrl = pd.read_csv('./Api/moedas/GBPBRL=x.csv', sep=';')
+gbpbrl_preco = round(gbpbrl['Adj Close'].iloc[-1], 2)
+gbpbrl_retorno = gbpbrl['Retornos'].iloc[-1]
+gbpbrl_date = gbpbrl['Date'].iloc[-1]
+col3.metric(label=f"GBP-BRL - {gbpbrl_date}", value=f"{gbpbrl_preco:.2f}", deltal=f"{gbpbrl_retorno}%")
+
+brlusd = pd.read_csv('./Api/moedas/BRLUSD=x.csv', sep=';')
+brlusd_preco = round(brlusd['Adj Close'].iloc[-1], 2)
+brlusd_retorno = brlusd['Retornos'].iloc[-1]
+brlusd_date = brlusd['Date'].iloc[-1]
+col1.metric(label=f"BRL-USD - {brlusd_date}", value=f"{brlusd_preco:.2f}", delta=f"{brlusd_retorno}%")
+
 eurusd = pd.read_csv('./Api/moedas/EURUSD=x.csv', sep=';')
 eurusd_preco = round(eurusd['Adj Close'].iloc[-1], 2)
 eurusd_retorno = eurusd['Retornos'].iloc[-1]
@@ -102,11 +114,11 @@ ethusd_retorno = ethusd['Retornos'].iloc[-1]
 ethusd_date = ethusd['Date'].iloc[-1]
 col2.metric(label=f"ETH-USD - {ethusd_date}", value=f"{ethusd_preco:.2f}", delta=f"{ethusd_retorno}%")
 
-usdtusd = pd.read_csv('./Api/crypto/USDT-USD.csv', sep=';')
-usdtusd_preco = round(usdtusd['Adj Close'].iloc[-1], 2)
-usdtusd_retorno = usdtusd['Retornos'].iloc[-1]
-usdtusd_date = usdtusd['Date'].iloc[-1]
-col3.metric(label=f"USDT-USD - {usdtusd_date}", value=f"{usdtusd_preco:.2f}", delta=f"{usdtusd_retorno}%")
+ltcusd = pd.read_csv('./Api/crypto/LTC-USD.csv', sep=';')
+ltcusd_preco = round(ltcusd['Adj Close'].iloc[-1], 2)
+ltcusd_retorno = ltcusd['Retornos'].iloc[-1]
+ltcusd_date = ltcusd['Date'].iloc[-1]
+col3.metric(label=f"USDT-USD - {ltcusd_date}", value=f"{ltcusd_preco:.2f}", delta=f"{ltcusd_retorno}%")
 
 ######
 # Cabeçalho da página - Informações das Ações
