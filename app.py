@@ -1,5 +1,3 @@
-
-
 ###################################
 # Bibliotecas/Pacotes importadas
 ###################################
@@ -62,8 +60,11 @@ n225_date = n225['Date'].iloc[-1]
 col3.metric(label=f"Nikkei 225 - {n225_date}", value=f"{n225_preco:.2f}", delta=f"{n225_retorno}%")
 
 ######
+# Cabeçalho da página - Informações de fechamento de alguns Pares de Moedas
 st.subheader('💵 Alguns Pares de Moedas')
 
+######
+# Cria colunas
 col1 , col2 , col3 = st.columns(3)
 
 usdbrl = pd.read_csv('./Api/moedas/USDBRL=x.csv', sep=';')
@@ -97,9 +98,11 @@ eurusd_date = eurusd['Date'].iloc[-1]
 col3.metric(label=f"EUR-USD - {eurusd_date}", value=f"{eurusd_preco:.2f}", delta=f"{eurusd_retorno}%")
 
 ######
-
+# Cabeçalho da página - Informações de fechamento de algumas Cryptomoedas
 st.subheader('🪙 Algumas Cryptomoedas')
 
+######
+# Cria colunas
 col1 , col2 , col3 = st.columns(3)
 
 btcusd = pd.read_csv('./Api/crypto/BTC-USD.csv', sep=';')
