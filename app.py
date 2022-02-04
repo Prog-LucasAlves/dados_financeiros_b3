@@ -670,7 +670,7 @@ st.write('💰 Proventos:')
 df_analisar_pr = pd.read_csv("./Todos/PR.csv", sep=";")
 df_date_pr = df_analisar_pr.loc[df_analisar_pr['Data'] == date_atual , ['Acao']]
 if df_date_pr.empty == False:
-    st.write(list(df_date_pr[['Acao']].unique()))
+    st.write(list(df_date_pr['Acao'].unique()))
 else:
     st.write('*Sem Atualizações* 🤫') 
 
