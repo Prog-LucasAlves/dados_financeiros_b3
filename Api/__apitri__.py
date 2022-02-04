@@ -13,10 +13,16 @@ from tqdm import tqdm
 import requests
 import glob
 import numpy as np
+from datetime import datetime, timedelta
 
 # Lista com o nome das ações
 import __list__
 
+
+date_att = datetime.today()
+atraso = timedelta(0)
+date_atual = date_att - atraso
+date_atual = date_atual.strftime('%d/%m/%Y')
 
 # Lista com o nome das ações
 acao = __list__.lst_acao
@@ -63,8 +69,14 @@ for i in tqdm(acao):
     data['Release de Resultados'] = pd.Series(lista_rr)
     data['Acao'] = i
 
-    # Salavando os dados em um arquivo .csv
-    data.to_csv(f'../Api/trimestre/{i}.csv', sep=';') 
+    data_date = pd.read_csv(f'../Api/trimestre/{i}.csv', sep=';')
+
+    if len(data) == len(data_date):
+        # Salavando os dados em um arquivo .csv
+        data.to_csv(f'../Api/trimestre/{i}.csv', sep=';') 
+    else:
+        data['Data Divulgação'] = date_att
+        data.to_csv(f'../Api/trimestre/{i}.csv', sep=';')     
 
 arquivos = glob.glob('./trimestre/*.csv')
 # 'arquivos' agora é um array com o nome de todos os .csv que começam com 'arquivo'
