@@ -1,39 +1,41 @@
 ;Acao;Data;Hora;Descrição;Link
-0;RECV3;07/02/2022;19:39;Fato Relevante - Divulgação Relatório de Reservas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=939572&descTipo=IPE&CodigoInstituicao=1
-1;RECV3;04/02/2022;14:17;Participação em Live - Gas Week epbr;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=938977&descTipo=IPE&CodigoInstituicao=1
-2;RECV3;18/01/2022;19:41;Comunicado de Produção - Dezembro/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=934238&descTipo=IPE&CodigoInstituicao=1
-3;RECV3;31/12/2021;11:41;Cumprimento de Condições precedentes para Fornecimento de Gás Natural;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=930014&descTipo=IPE&CodigoInstituicao=1
-4;RECV3;23/12/2021;18:20;Assinatura de Contrato de Compra e Venda de Gás Natural com Bahiagás;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928686&descTipo=IPE&CodigoInstituicao=1
-5;RECV3;22/12/2021;18:19;Conclusão da aquisição do Polo Remanso;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928256&descTipo=IPE&CodigoInstituicao=1
-6;RECV3;16/12/2021;19:41;Comunicado de Produção - Novembro/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=926642&descTipo=IPE&CodigoInstituicao=1
-7;RECV3;15/12/2021;13:48;Participação em Live: Papo com Destri - Destri Energy Canal;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=926134&descTipo=IPE&CodigoInstituicao=1
-8;RECV3;13/12/2021;18:32;Assinatura de contrato de compra e venda de gás natural com a PBGas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=925558&descTipo=IPE&CodigoInstituicao=1
-9;RECV3;10/12/2021;00:53;Aprovação de Redução de Royalties Potiguar E&P;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=924289&descTipo=IPE&CodigoInstituicao=1
-10;RECV3;06/12/2021;19:20;Closing da Aquisição do Polo Miranga;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=922775&descTipo=IPE&CodigoInstituicao=1
-11;RECV3;29/11/2021;18:29; Participação em eventos abertos ao público - Lives;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=920718&descTipo=IPE&CodigoInstituicao=1
-12;RECV3;24/11/2021;21:20;Participação em Evento aberto ao Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=920172&descTipo=IPE&CodigoInstituicao=1
-13;RECV3;17/11/2021;19:12;Produção de Outubro/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=918224&descTipo=IPE&CodigoInstituicao=1
-14;RECV3;16/11/2021;18:49;Assinatura de contratos de cessão de uso de gasoduto no RN;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=917688&descTipo=IPE&CodigoInstituicao=1
-15;RECV3;09/11/2021;19:04;Participação em Live: Por Dentro dos Resultados - InfoMoney;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=914952&descTipo=IPE&CodigoInstituicao=1
-16;RECV3;01/11/2021;08:45;Encerramento das Negociações de Suprimentos de Gás Natural - CEGAS 2022/23;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=911811&descTipo=IPE&CodigoInstituicao=1
-17;RECV3;26/10/2021;18:53;Participação em evento aberto ao público - Live;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=910159&descTipo=IPE&CodigoInstituicao=1
-18;RECV3;22/10/2021;19:35;Alteração de Calendário de Eventos Corporativos;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=909577&descTipo=IPE&CodigoInstituicao=1
-19;RECV3;19/10/2021;18:37;Produção de Setembro;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=908417&descTipo=IPE&CodigoInstituicao=1
-20;RECV3;18/10/2021;18:47;Restabelecimento de Entrega de Produção de Gás Natural;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=908138&descTipo=IPE&CodigoInstituicao=1
-21;RECV3;13/10/2021;09:43;Chamada Publica para Suprimentos de Gás Natural - PBGAS;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=907231&descTipo=IPE&CodigoInstituicao=1
-22;RECV3;11/10/2021;08:24;Evento online aberto ao público (Live) organizado pela Genial Investimentos;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=906967&descTipo=IPE&CodigoInstituicao=1
-23;RECV3;29/09/2021;21:13;Assinatura de Contrato com a Potigás;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=904277&descTipo=IPE&CodigoInstituicao=1
-24;RECV3;28/09/2021;19:00;Comunicado ao Mercado - Parada UPGN para Manutenção Planejada;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=904008&descTipo=IPE&CodigoInstituicao=1
-25;RECV3;23/09/2021;18:11;Comunicado ao Mercado sobre Aprovação da ANP Concessão do Polo Miranga;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=903013&descTipo=IPE&CodigoInstituicao=1
-26;RECV3;21/09/2021;20:43;Chamada Publica para Suprimentos de Gás Natural - CEGAS;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=902563&descTipo=IPE&CodigoInstituicao=1
-27;RECV3;17/09/2021;07:49;Produção de Agosto;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=901692&descTipo=IPE&CodigoInstituicao=1
-28;RECV3;08/09/2021;08:13;Evento online aberto ao público (Live) organizado pela Bastter ;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=899209&descTipo=IPE&CodigoInstituicao=1
-29;RECV3;17/08/2021;20:00;Produção Julho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=894419&descTipo=IPE&CodigoInstituicao=1
-30;RECV3;31/07/2021;16:11;Chamada Pública para Suprimento de Gás Natural ;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=888168&descTipo=IPE&CodigoInstituicao=1
-31;RECV3;26/07/2021;18:40;Live Desenvolvimento do Mercado de Gás Natural na Bahia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=886229&descTipo=IPE&CodigoInstituicao=1
-32;RECV3;23/07/2021;06:44;Aquisição de Ações de Emissão da Própria Companhia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=885670&descTipo=IPE&CodigoInstituicao=1
-33;RECV3;19/07/2021;07:22;Produção Junho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=884721&descTipo=IPE&CodigoInstituicao=1
-34;RECV3;17/06/2021;18:45;Produção Maio 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=877154&descTipo=IPE&CodigoInstituicao=1
-35;RECV3;01/06/2021;19:02;Celebração ou Extinção de Contrato;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=872771&descTipo=IPE&CodigoInstituicao=1
-36;RECV3;28/05/2021;07:25;Comunicado ao Mercado sobre Aprovação da ANP Concessão do Polo Remanso;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=871746&descTipo=IPE&CodigoInstituicao=1
-37;RECV3;17/05/2021;19:42;Produção de Abril;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=868695&descTipo=IPE&CodigoInstituicao=1
+0;RECV3;10/02/2022;09:37;Apresentação Certificação de Reservas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=941054&descTipo=IPE&CodigoInstituicao=1
+1;RECV3;10/02/2022;08:09;Produção de Janeiro de 2022;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=940995&descTipo=IPE&CodigoInstituicao=1
+2;RECV3;07/02/2022;19:39;Fato Relevante - Divulgação Relatório de Reservas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=939572&descTipo=IPE&CodigoInstituicao=1
+3;RECV3;04/02/2022;14:17;Participação em Live - Gas Week epbr;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=938977&descTipo=IPE&CodigoInstituicao=1
+4;RECV3;18/01/2022;19:41;Comunicado de Produção - Dezembro/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=934238&descTipo=IPE&CodigoInstituicao=1
+5;RECV3;31/12/2021;11:41;Cumprimento de Condições precedentes para Fornecimento de Gás Natural;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=930014&descTipo=IPE&CodigoInstituicao=1
+6;RECV3;23/12/2021;18:20;Assinatura de Contrato de Compra e Venda de Gás Natural com Bahiagás;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928686&descTipo=IPE&CodigoInstituicao=1
+7;RECV3;22/12/2021;18:19;Conclusão da aquisição do Polo Remanso;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928256&descTipo=IPE&CodigoInstituicao=1
+8;RECV3;16/12/2021;19:41;Comunicado de Produção - Novembro/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=926642&descTipo=IPE&CodigoInstituicao=1
+9;RECV3;15/12/2021;13:48;Participação em Live: Papo com Destri - Destri Energy Canal;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=926134&descTipo=IPE&CodigoInstituicao=1
+10;RECV3;13/12/2021;18:32;Assinatura de contrato de compra e venda de gás natural com a PBGas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=925558&descTipo=IPE&CodigoInstituicao=1
+11;RECV3;10/12/2021;00:53;Aprovação de Redução de Royalties Potiguar E&P;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=924289&descTipo=IPE&CodigoInstituicao=1
+12;RECV3;06/12/2021;19:20;Closing da Aquisição do Polo Miranga;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=922775&descTipo=IPE&CodigoInstituicao=1
+13;RECV3;29/11/2021;18:29; Participação em eventos abertos ao público - Lives;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=920718&descTipo=IPE&CodigoInstituicao=1
+14;RECV3;24/11/2021;21:20;Participação em Evento aberto ao Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=920172&descTipo=IPE&CodigoInstituicao=1
+15;RECV3;17/11/2021;19:12;Produção de Outubro/2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=918224&descTipo=IPE&CodigoInstituicao=1
+16;RECV3;16/11/2021;18:49;Assinatura de contratos de cessão de uso de gasoduto no RN;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=917688&descTipo=IPE&CodigoInstituicao=1
+17;RECV3;09/11/2021;19:04;Participação em Live: Por Dentro dos Resultados - InfoMoney;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=914952&descTipo=IPE&CodigoInstituicao=1
+18;RECV3;01/11/2021;08:45;Encerramento das Negociações de Suprimentos de Gás Natural - CEGAS 2022/23;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=911811&descTipo=IPE&CodigoInstituicao=1
+19;RECV3;26/10/2021;18:53;Participação em evento aberto ao público - Live;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=910159&descTipo=IPE&CodigoInstituicao=1
+20;RECV3;22/10/2021;19:35;Alteração de Calendário de Eventos Corporativos;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=909577&descTipo=IPE&CodigoInstituicao=1
+21;RECV3;19/10/2021;18:37;Produção de Setembro;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=908417&descTipo=IPE&CodigoInstituicao=1
+22;RECV3;18/10/2021;18:47;Restabelecimento de Entrega de Produção de Gás Natural;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=908138&descTipo=IPE&CodigoInstituicao=1
+23;RECV3;13/10/2021;09:43;Chamada Publica para Suprimentos de Gás Natural - PBGAS;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=907231&descTipo=IPE&CodigoInstituicao=1
+24;RECV3;11/10/2021;08:24;Evento online aberto ao público (Live) organizado pela Genial Investimentos;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=906967&descTipo=IPE&CodigoInstituicao=1
+25;RECV3;29/09/2021;21:13;Assinatura de Contrato com a Potigás;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=904277&descTipo=IPE&CodigoInstituicao=1
+26;RECV3;28/09/2021;19:00;Comunicado ao Mercado - Parada UPGN para Manutenção Planejada;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=904008&descTipo=IPE&CodigoInstituicao=1
+27;RECV3;23/09/2021;18:11;Comunicado ao Mercado sobre Aprovação da ANP Concessão do Polo Miranga;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=903013&descTipo=IPE&CodigoInstituicao=1
+28;RECV3;21/09/2021;20:43;Chamada Publica para Suprimentos de Gás Natural - CEGAS;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=902563&descTipo=IPE&CodigoInstituicao=1
+29;RECV3;17/09/2021;07:49;Produção de Agosto;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=901692&descTipo=IPE&CodigoInstituicao=1
+30;RECV3;08/09/2021;08:13;Evento online aberto ao público (Live) organizado pela Bastter ;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=899209&descTipo=IPE&CodigoInstituicao=1
+31;RECV3;17/08/2021;20:00;Produção Julho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=894419&descTipo=IPE&CodigoInstituicao=1
+32;RECV3;31/07/2021;16:11;Chamada Pública para Suprimento de Gás Natural ;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=888168&descTipo=IPE&CodigoInstituicao=1
+33;RECV3;26/07/2021;18:40;Live Desenvolvimento do Mercado de Gás Natural na Bahia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=886229&descTipo=IPE&CodigoInstituicao=1
+34;RECV3;23/07/2021;06:44;Aquisição de Ações de Emissão da Própria Companhia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=885670&descTipo=IPE&CodigoInstituicao=1
+35;RECV3;19/07/2021;07:22;Produção Junho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=884721&descTipo=IPE&CodigoInstituicao=1
+36;RECV3;17/06/2021;18:45;Produção Maio 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=877154&descTipo=IPE&CodigoInstituicao=1
+37;RECV3;01/06/2021;19:02;Celebração ou Extinção de Contrato;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=872771&descTipo=IPE&CodigoInstituicao=1
+38;RECV3;28/05/2021;07:25;Comunicado ao Mercado sobre Aprovação da ANP Concessão do Polo Remanso;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=871746&descTipo=IPE&CodigoInstituicao=1
+39;RECV3;17/05/2021;19:42;Produção de Abril;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=868695&descTipo=IPE&CodigoInstituicao=1
