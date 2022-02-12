@@ -1,9 +1,12 @@
 """
 Código utilizado para verificar se o lacal aonde será coletado os dados já esta atualizado
 """
+# %%
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from datetime import datetime
+
+# %%
 
 import __check_semana__
 
