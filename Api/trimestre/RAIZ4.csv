@@ -1,4 +1,5 @@
-;Data Referência;Demonstração Financeira;Release de Resultados;Acao
-0;30/09/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=109877&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=916423&descTipo=IPE&CodigoInstituicao=1;RAIZ4
-1;30/06/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=107733&CodigoTipoInstituicao=1;;RAIZ4
-2;31/03/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=105560&CodigoTipoInstituicao=1;;RAIZ4
+;Data Referência;Demonstração Financeira;Release de Resultados;Acao;Data Divulgação
+0;31/12/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=111762&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=943557&descTipo=IPE&CodigoInstituicao=1;RAIZ4;2022-02-15 09:32:19.833697
+1;30/09/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=109877&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=916423&descTipo=IPE&CodigoInstituicao=1;RAIZ4;2022-02-15 09:32:19.833697
+2;30/06/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=107733&CodigoTipoInstituicao=1;;RAIZ4;2022-02-15 09:32:19.833697
+3;31/03/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=105560&CodigoTipoInstituicao=1;;RAIZ4;2022-02-15 09:32:19.833697
