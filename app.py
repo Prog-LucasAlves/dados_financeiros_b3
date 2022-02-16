@@ -1,6 +1,6 @@
-###################################
-# Bibliotecas/Pacotes importadas
-###################################
+##################################
+# Bibliotecas/Pacotes importadas #
+##################################
 
 import streamlit as st
 import pandas as pd
@@ -12,9 +12,9 @@ import plotly.express as px
 import seaborn as sb
 import math
 
-###################################
-# Inicio da Construção Streamlit
-###################################
+##################################
+# Inicio da Construção Streamlit #
+##################################
 
 ######
 # Cabeçalho da página - Informações de fechamento de alguns Ìndices
@@ -95,7 +95,7 @@ eurusd = pd.read_csv('./Api/moedas/EURUSD=x.csv', sep=';')
 eurusd_preco = round(eurusd['Adj Close'].iloc[-1], 2)
 eurusd_retorno = eurusd['Retornos'].iloc[-1]
 eurusd_date = eurusd['Date'].iloc[-1]
-col3.metric(label=f"EUR-USD - {eurusd_date}", value=f"{eurusd_preco:.2f}", delta=f"{eurusd_retorno}%")
+col2.metric(label=f"EUR-USD - {eurusd_date}", value=f"{eurusd_preco:.2f}", delta=f"{eurusd_retorno}%")
 
 ######
 # Cabeçalho da página - Informações de fechamento de algumas Cryptomoedas
