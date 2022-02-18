@@ -27,6 +27,7 @@ crypto = __list__.lst_crypto
 moedas = __list__.lst_moedas
 
 # Coletando as cotações das ações
+
 for i in tqdm(acao):
     df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
     df.to_csv(f'./precos/{i}.csv',sep=';')
@@ -45,21 +46,21 @@ for i in tqdm(moedas):
     df_moedas = yf.download(f'{i}', start=inicio, end=fim, progress=False, threads=False)
     df_moedas.to_csv(f'./moedas/{i}.csv', sep=';')
 
-# Função para calcular o retorno
+# Função para calcular o retorno(Índices)
 def calcula_retono_indices():
     for i in indices:
         df = pd.read_csv(f'./indices/{i}.csv', sep=';')
         df['Retornos'] = round(df['Adj Close'].pct_change() * 100, 2)
         df.to_csv(f'./indices/{i}.csv', sep=';')
 
-# Função para calcular o retorno
+# Função para calcular o retorno(Crypto)
 def calcula_retorno_crypto():
     for i in crypto:
         df = pd.read_csv(f'./crypto/{i}.csv', sep=';')
         df['Retornos'] = round(df['Adj Close'].pct_change() * 100, 2)
         df.to_csv(f'./crypto/{i}.csv', sep=';')
 
-# Funçaõ para calcular o retonor
+# Função para calcular o retorno(Moedas)
 def calcula_retorno_moedas():
     for i in moedas:
         df = pd.read_csv(f'./moedas/{i}.csv', sep=';')

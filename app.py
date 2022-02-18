@@ -91,11 +91,17 @@ brlusd_retorno = brlusd['Retornos'].iloc[-1]
 brlusd_date = brlusd['Date'].iloc[-1]
 col1.metric(label=f"BRL-USD - {brlusd_date}", value=f"{brlusd_preco:.2f}", delta=f"{brlusd_retorno}%")
 
+brlgbp = pd.read_csv('./Api/moedas/BRLGBP=x.csv', sep=';')
+brlgbp_preco = round(brlgbp['Adj Close'].iloc[-1], 2)
+brlgbp_retorno = brlgbp['Retornos'].iloc[-1]
+brlgbp_date = brlgbp['Date'].iloc[-1]
+col2.metric(label=f"BRL-GBP - {brlgbp_date}", value=f"{brlgbp_preco:.2f}", delta=f"{brlgbp_retorno}%")
+
 eurusd = pd.read_csv('./Api/moedas/EURUSD=x.csv', sep=';')
 eurusd_preco = round(eurusd['Adj Close'].iloc[-1], 2)
 eurusd_retorno = eurusd['Retornos'].iloc[-1]
 eurusd_date = eurusd['Date'].iloc[-1]
-col2.metric(label=f"EUR-USD - {eurusd_date}", value=f"{eurusd_preco:.2f}", delta=f"{eurusd_retorno}%")
+col3.metric(label=f"EUR-USD - {eurusd_date}", value=f"{eurusd_preco:.2f}", delta=f"{eurusd_retorno}%")
 
 ######
 # Cabeçalho da página - Informações de fechamento de algumas Cryptomoedas
