@@ -1,8 +1,8 @@
-;Data Referência;Demonstração Financeira;Release de Resultados;Acao;Data Divulgação
-0;31/12/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=111903&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=910940&descTipo=IPE&CodigoInstituicao=1;ASAI3;2022-02-21 20:26:46.208423
-1;30/09/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=109277&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=890200&descTipo=IPE&CodigoInstituicao=1;ASAI3;2022-02-21 20:26:46.208423
-2;30/06/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=106701&CodigoTipoInstituicao=1;;ASAI3;2022-02-21 20:26:46.208423
-3;31/03/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=103367&CodigoTipoInstituicao=1;;ASAI3;2022-02-21 20:26:46.208423
-4;31/12/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=100574&CodigoTipoInstituicao=1;;ASAI3;2022-02-21 20:26:46.208423
-5;30/09/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=99879&CodigoTipoInstituicao=1;;ASAI3;2022-02-21 20:26:46.208423
-6;31/12/2019;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=99878&CodigoTipoInstituicao=1;;ASAI3;2022-02-21 20:26:46.208423
+;Data Referência;Demonstração Financeira;Release de Resultados;Acao
+0;31/12/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=111903&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=945926&descTipo=IPE&CodigoInstituicao=1;ASAI3
+1;30/09/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=109277&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=910940&descTipo=IPE&CodigoInstituicao=1;ASAI3
+2;30/06/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=106701&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=890200&descTipo=IPE&CodigoInstituicao=1;ASAI3
+3;31/03/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=103367&CodigoTipoInstituicao=1;;ASAI3
+4;31/12/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=100574&CodigoTipoInstituicao=1;;ASAI3
+5;30/09/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=99879&CodigoTipoInstituicao=1;;ASAI3
+6;31/12/2019;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=99878&CodigoTipoInstituicao=1;;ASAI3
