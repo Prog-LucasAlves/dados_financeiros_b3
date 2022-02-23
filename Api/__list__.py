@@ -485,5 +485,4 @@ lst_moedas = [
     "GBPBRL=x",
     "EURUSD=x",
     "BRLUSD=x",
-    "BRLGBP=x",
 ]
