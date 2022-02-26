@@ -27,7 +27,7 @@ crypto = __list__.lst_crypto
 moedas = __list__.lst_moedas
 
 # Coletando as cotações das ações
-'''
+
 for i in tqdm(acao):
     df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
     df.to_csv(f'./precos/{i}.csv',sep=';')
@@ -41,8 +41,6 @@ for i in tqdm(indices):
 for i in tqdm(crypto):
     df_crypto = yf.download(f'{i}', start=inicio, end=fim, progress=False, threads=False)
     df_crypto.to_csv(f'./crypto/{i}.csv', sep=';')
-
-'''
 
 for i in tqdm(moedas):
     df_moedas = yf.download(f'{i}', start=inicio, end=fim, progress=False, threads=False)
