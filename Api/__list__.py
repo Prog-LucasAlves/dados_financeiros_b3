@@ -316,7 +316,6 @@ lst_acao = [
     "OFSA3",
     "OIBR3",
     "OIBR4",
-    "OMGE3",
     "ONCO3",
     "OPCT3",
     "ORVR3",
