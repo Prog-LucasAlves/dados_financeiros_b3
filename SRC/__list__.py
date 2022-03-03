@@ -1,4 +1,4 @@
-lst_acao2 = ["ABEV3"]
+lst_acao2 = ["VAMO3",]
 
 lst_acao = [
     "AALR3",
@@ -439,7 +439,7 @@ lst_acao = [
     "USIM5",
     "USIM6",
     "VALE3",
-    #"VAMO3",
+    "VAMO3",
     "VBBR3",
     "VIIA3",
     "VITT3",

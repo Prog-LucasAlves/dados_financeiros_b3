@@ -1,3 +1,4 @@
+# Lista dias da semana
 DIAS = [
     "Segunda-feira",
     "Terça-feira",

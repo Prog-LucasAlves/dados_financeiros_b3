@@ -5,7 +5,7 @@ Author: Lucas Alves
 Linkedin: https://www.linkedin.com/in/lucasalves-ast/
 '''
 
-# TODO #4 Atualizar python 3.9.5 -> 3.9.9
+# TODO #4 Atualizar python 3.9.5 -> 3.10.2 - Realizado
 
 # Importar bibliotecas internas
 import __conectdb__
@@ -171,19 +171,19 @@ def dados():
                             if "Papel" in papel[0]:
                                 papel.append(dadosI[1].text.strip())
                             else:
-                                papel.append(0)
+                                papel.append(0)   
                             #
                             tipo.append(dadosI[4].text)
                             if "Tipo" in tipo[0]:
                                 tipo.append(dadosI[5].text.strip())
                             else:
-                                tipo.append(0)
+                                tipo.append(0)   
                             #
                             empresa.append(dadosI[8].text)
                             if "Empresa" in empresa[0]:
                                 empresa.append(dadosI[9].text)
                             else:
-                                empresa.append(0)
+                                empresa.append(0)   
                             #
                             setor.append(dadosI[12].text)
                             if "Setor" in setor[0]:
@@ -487,8 +487,19 @@ def dados():
                                 )
                                 if len(cres_rec[1]) <= 1:
                                     cres_rec[1] = 0
+                                elif len(cres_rec[1]) >= 5:
+                                    del cres_rec[1]
+                                    cres_rec.append(
+                                    dadosI[82]
+                                    .text.replace("\n", "")
+                                    .replace("%", "")
+                                    .replace(".", "")
+                                    .replace(",", ".")
+                                )            
                             else:
                                 cres_rec.append(0)
+                            print(cres_rec)    
+                                
                             #
                             if setor[1] == "Intermediários Financeiros":
                                 ativo.append("Ativo")
@@ -577,7 +588,7 @@ def dados():
                         dados_atual.to_csv('../Dados_Atual/dados.csv', sep=';')    
 
                 except:
-                    print(f"+{RED} Dados da ação: {i}, não gravados {RESET} +")
+                    print(f"+{RED} Dados da ação: {i}, não gravados {RESET}+")
                     return
 
             # Removendo linhas(tabela dados) do Banco de Dados com valores vazios (ref.: na coluna papel)

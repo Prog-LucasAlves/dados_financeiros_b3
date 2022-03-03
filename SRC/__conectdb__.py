@@ -4,6 +4,7 @@ import psycopg2
 
 dotenv.load_dotenv(dotenv.find_dotenv())
 
+# Conexão com o banco de dados (SELECT / INSERT / DELETE)
 
 def conexao():
     """
