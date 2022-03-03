@@ -439,7 +439,7 @@ lst_acao = [
     "USIM5",
     "USIM6",
     "VALE3",
-    "VAMO3",
+    #"VAMO3",
     "VBBR3",
     "VIIA3",
     "VITT3",

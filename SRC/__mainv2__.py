@@ -37,9 +37,6 @@ GRAY = "\033[1;35m"
 
 #####
 
-logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO)
-
 @backoff.on_exception(backoff.expo, (), max_tries=10)
 
 # Inicio da funcao para coleta dos dados
@@ -78,6 +75,7 @@ def dados():
 -{RED} Docker {RESET} 
                 """
             )
+
         else:
             print(
                 f"""
@@ -576,7 +574,7 @@ def dados():
                         ]
 
                         # Dados atual - Salvando os dados atuais em um arquivo .csv
-                        dados_atual.to_csv('../Dados_Atual/dados.csv', sep=';')     
+                        dados_atual.to_csv('../Dados_Atual/dados.csv', sep=';')    
 
                 except:
                     print(f"+{RED} Dados da ação: {i}, não gravados {RESET} +")

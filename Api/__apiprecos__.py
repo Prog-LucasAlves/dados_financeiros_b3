@@ -12,9 +12,12 @@ import yfinance as yf
 import pandas as pd
 from datetime import date
 from tqdm import tqdm
+import logging
 
 # Lista com o nome das ações
 import __list__
+
+logging.basicConfig(filename='./log/espc.log', level=logging.DEBUG, format='%(asctime)s :: %(levelname)s :: %(filename)s :: %(lineno)d')
 
 df = pd.DataFrame()
 
@@ -31,6 +34,7 @@ moedas = __list__.lst_moedas
 for i in tqdm(acao):
     df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
     df.to_csv(f'./precos/{i}.csv',sep=';')
+    logging.info('Preços das ações salvos com SUCESSO')
 
 # Coletando as cotações de alguns índices 
 for i in tqdm(indices):
@@ -67,6 +71,7 @@ def calcula_retorno_moedas():
         df['Retornos'] = round(df['Adj Close'].pct_change() * 100, 2)
         df.to_csv(f'./moedas/{i}.csv', sep=';')
 
-calcula_retono_indices()
-calcula_retorno_crypto()
-calcula_retorno_moedas()
+if __name__ == "__main__":
+    calcula_retono_indices()
+    calcula_retorno_crypto()
+    calcula_retorno_moedas()
