@@ -36,3 +36,5 @@ for i in tqdm(acao):
         datah[['DEC']] = datah[['DEC']].applymap('{0:.2%}'.format)
         datah[['EOY']] = datah[['EOY']].applymap('{0:.2%}'.format)
         datah.to_csv(f'./historico/{i}.csv',sep=';')  
+
+#####

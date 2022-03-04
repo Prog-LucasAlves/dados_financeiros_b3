@@ -75,3 +75,5 @@ if __name__ == "__main__":
     calcula_retono_indices()
     calcula_retorno_crypto()
     calcula_retorno_moedas()
+
+#####

@@ -497,8 +497,7 @@ def dados():
                                     .replace(",", ".")
                                 )            
                             else:
-                                cres_rec.append(0)
-                            print(cres_rec)    
+                                cres_rec.append(0)   
                                 
                             #
                             if setor[1] == "Intermediários Financeiros":
@@ -620,4 +619,5 @@ def dados():
             )
             print(f"{RESET}{RED}-----------------{RESET}")      
 
-dados()
+if __name__ == "__main__":
+    dados()

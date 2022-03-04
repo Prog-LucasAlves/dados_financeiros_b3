@@ -1,12 +1,10 @@
 """
 Código utilizado para verificar se o lacal aonde será coletado os dados já esta atualizado
 """
-# %%
+
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from datetime import datetime
-
-# %%
 
 import __check_semana__
 
@@ -28,3 +26,5 @@ data_check_dt = datetime.strptime(data_check, "%d/%m/%Y").date()
 data_check_dt_t = data_check_dt.strftime("%d/%m/%Y")
 data_check_sem = data_check_dt.weekday()
 day = __check_semana__.DIAS[data_check_sem]
+
+#####

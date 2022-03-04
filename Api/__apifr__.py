@@ -79,4 +79,3 @@ df = pd.concat(array_df, axis=0)
 df.to_csv('../Todos/FT.csv', sep=';')
 
 #####
-

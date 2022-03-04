@@ -24,3 +24,5 @@ delete_duplicados_query = " DELETE FROM dados a USING (SELECT MAX(ctid) AS ctid,
 
 # Query que realiza uma cópia(Bachup) de banco de dados
 backup_query = " COPY (SELECT * FROM dados) TO STDOUT WITH CSV HEADER DELIMITER ';' ENCODING 'UTF-8' "
+
+#####

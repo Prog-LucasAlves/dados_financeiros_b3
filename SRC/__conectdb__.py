@@ -68,3 +68,5 @@ def verifica_conexao():
 
     except:
         return False
+
+#####

@@ -87,4 +87,6 @@ for x in arquivos:
     array_df.append(temp_df)
 
 df = pd.concat(array_df, axis=0)
-df.to_csv('../Todos/TR.csv', sep=';')    
+df.to_csv('../Todos/TR.csv', sep=';')  
+
+#####

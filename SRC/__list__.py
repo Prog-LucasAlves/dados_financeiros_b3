@@ -6,7 +6,7 @@ lst_acao = [
     "ABEV3",
     "ADHM3",
     "AERI3",
-    "AESB3",
+    #"AESB3",
     "AFLT3",
     "AGRO3",
     "AGXY3",
