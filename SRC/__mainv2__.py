@@ -484,6 +484,7 @@ def dados():
                                     .text.replace("\n", "")
                                     .replace(",", ".")
                                     .replace("%", "")
+                                    .replace("-", "0")
                                 )
                                 if len(cres_rec[1]) <= 1:
                                     cres_rec[1] = 0
@@ -584,7 +585,8 @@ def dados():
                         ]
 
                         # Dados atual - Salvando os dados atuais em um arquivo .csv
-                        dados_atual.to_csv('../Dados_Atual/dados.csv', sep=';')    
+                        dados_atual.to_csv('../Dados_Atual/dados.csv', sep=';')
+                        #dados_atual.to_parquet('../Dados_Atual/dados')    
 
                 except:
                     print(f"+{RED} Dados da ação: {i}, não gravados {RESET}+")
@@ -598,11 +600,17 @@ def dados():
             delete_duplicados = __query__.delete_duplicados_query
             __conectdb__.in_dados(delete_duplicados)
 
-            # Backup do banco de dados
+            # Backup do banco de dados csv
             csv_file_name = "../Backup/some_file.csv"
             bk = __query__.backup_query
             with open(csv_file_name, "w") as f:
-                __conectdb__.bk(bk, f)            
+                __conectdb__.bk(bk, f)
+
+            # Backup do banco de dados parquet
+            parquet_file_name = "../Backup/some_file"
+            bk = __query__.backup_query
+            with open(parquet_file_name, "w") as f:
+                __conectdb__.bk(bk, f)                
 
             # Fim do contador de Tempo do script
             fim = time.time()

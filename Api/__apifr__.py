@@ -17,7 +17,7 @@ from datetime import datetime
 # Lista com o nome das ações
 import __list__
 
-acao = __list__.lst_acao
+acao = __list__.lst_acao2
 
 for i in tqdm(acao):
         url = f'https://www.fundamentus.com.br/fatos_relevantes.php?papel={i}'
@@ -77,5 +77,6 @@ for x in arquivos:
 
 df = pd.concat(array_df, axis=0)
 df.to_csv('../Todos/FT.csv', sep=';')
+df.to_parquet('../Todos/FT')
 
 #####
