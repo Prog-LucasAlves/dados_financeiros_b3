@@ -88,5 +88,6 @@ for x in arquivos:
 
 df = pd.concat(array_df, axis=0)
 df.to_csv('../Todos/TR.csv', sep=';')  
+df.to_parquet('../Todos/TR.parquet.gzip',compression='gzip')
 
 #####
