@@ -49,7 +49,7 @@ def dados():
 
     # Variável(dt) - responsavel por informar qual (x) dia sera feita a coleta dos dados
     # Ex.: dt = date.today() - timedelta(days=3) -> volta 3 dias atras no calendario
-    dt = date.today() - timedelta(days=0)
+    dt = date.today() - timedelta(days=1)
     dt_sem = dt.weekday()
 
     # Variavel dt_dia_sem - responsavel por verificar qual e o dia da semana(Se for Sabado ou Domingo - nao havera coleta de dados)
@@ -585,12 +585,11 @@ def dados():
                         ]
 
                         # Dados atual - Salvando os dados atuais em um arquivo .csv
-                        dados_atual.to_csv('../Dados_Atual/dados.csv', sep=';')
-                        #dados_atual.to_parquet('../Dados_Atual/dados')    
+                        dados_atual.to_csv('../Dados_Atual/dados.csv', sep=';')   
 
                 except:
                     print(f"+{RED} Dados da ação: {i}, não gravados {RESET}+")
-                    return
+                    pass
 
             # Removendo linhas(tabela dados) do Banco de Dados com valores vazios (ref.: na coluna papel)
             delete_vazio = __query__.delete_vazio_query
@@ -604,13 +603,7 @@ def dados():
             csv_file_name = "../Backup/some_file.csv"
             bk = __query__.backup_query
             with open(csv_file_name, "w") as f:
-                __conectdb__.bk(bk, f)
-
-            # Backup do banco de dados parquet
-            parquet_file_name = "../Backup/some_file"
-            bk = __query__.backup_query
-            with open(parquet_file_name, "w") as f:
-                __conectdb__.bk(bk, f)                
+                __conectdb__.bk(bk, f)              
 
             # Fim do contador de Tempo do script
             fim = time.time()

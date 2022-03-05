@@ -659,7 +659,8 @@ date_atual = date_atual.strftime('%d/%m/%Y')
 st.write(f"Atualizações do dia {date_atual}:")
 
 st.write('📰 Fatos Relevantes:')
-df_analisar_ft = pd.read_csv("./Todos/FT.csv", sep=";")
+#df_analisar_ft = pd.read_csv("./Todos/FT.csv", sep=";")
+df_analisar_ft = pd.read_parquet("./Todos/FT.parquet.gzip")
 df_date_ft = df_analisar_ft.loc[df_analisar_ft['Data'] == date_atual , ['Acao','Link']]
 if df_date_ft.empty == False:
     st.write(list(df_date_ft['Acao'].unique()))
