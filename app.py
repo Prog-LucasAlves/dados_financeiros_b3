@@ -606,7 +606,6 @@ drawdown_precos_index = int(drawdown_precos['Unnamed: 0'])
 drawdown_precos_papel = drawdown_precos['papel'][drawdown_precos_index]
 # Pegando os dados dos preços nos arquivos .csv
 drawdown_precos_df = pd.read_csv(f"./Api/precos/{drawdown_precos_papel}.csv", sep=";")
-#drawdown_precos_df = pd.read_parquet(f"./Api/precos/{drawdown_precos_papel}.parquet.gzip", engine='pyarrow')
 drawdown_precos_df.drop(['Open','High','Low','Close','Volume'], inplace=True, axis=1)
 drawdown_precos_df['Retornos'] = drawdown_precos_df['Adj Close'].pct_change()
 drawdown_precos_df['Carteira'] = 100 * (drawdown_precos_df['Retornos'] + 1)

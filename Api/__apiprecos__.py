@@ -34,7 +34,6 @@ moedas = __list__.lst_moedas
 for i in tqdm(acao):
     df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
     df.to_csv(f'./precos/{i}.csv',sep=';')
-    df.to_parquet(f'./precos/{i}.parquet.gzip',compression='gzip')
     logging.info('Preços das ações salvos com SUCESSO')
 
 # Coletando as cotações de alguns índices 

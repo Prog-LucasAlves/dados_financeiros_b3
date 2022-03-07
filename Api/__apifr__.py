@@ -76,7 +76,7 @@ for x in arquivos:
     array_df.append(temp_df)
 
 df = pd.concat(array_df, axis=0)
-df.to_csv('../Todos/FT.csv', sep=';')
+#df.to_csv('../Todos/FT.csv', sep=';')
 df.to_parquet('../Todos/FT.parquet.gzip',compression='gzip')
 
 #####
