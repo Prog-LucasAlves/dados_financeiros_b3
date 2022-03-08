@@ -21,7 +21,7 @@ logging.basicConfig(filename='./log/espc.log', level=logging.DEBUG, format='%(as
 
 df = pd.DataFrame()
 
-inicio = '2001-01-01'
+inicio = '2010-01-01'
 fim = date.today()
 
 acao = __list__.lst_acao

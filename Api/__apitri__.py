@@ -75,7 +75,7 @@ for i in tqdm(acao):
         # Salavando os dados em um arquivo .csv
         data.to_csv(f'../Api/trimestre/{i}.csv', sep=';') 
     else:
-        data['Data Divulgação'] = date_att
+        data['Data Divulgação'][0] = date_att
         data.to_csv(f'../Api/trimestre/{i}.csv', sep=';')     
 
 arquivos = glob.glob('./trimestre/*.csv')
@@ -87,7 +87,7 @@ for x in arquivos:
     array_df.append(temp_df)
 
 df = pd.concat(array_df, axis=0)
-#df.to_csv('../Todos/TR.csv', sep=';')  
+df.to_csv('../Todos/TR.csv', sep=';')  
 df.to_parquet('../Todos/TR.parquet.gzip',compression='gzip')
 
 #####
