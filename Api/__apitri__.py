@@ -15,6 +15,9 @@ import glob
 import numpy as np
 from datetime import datetime, timedelta
 
+import warnings
+warnings.filterwarnings("ignore")
+
 # Lista com o nome das ações
 import __list__
 
@@ -66,7 +69,7 @@ for i in tqdm(acao):
     # Adicionando os dados coletados em um DataFrame
     data = pd.DataFrame(df_dados, columns=column_headers[:])
     data['Demonstração Financeira'] = lista_df
-    data['Release de Resultados'] = pd.Series(lista_rr)
+    data['Release de Resultados'] = pd.Series(lista_rr)  
     data['Acao'] = i
 
     data_date = pd.read_csv(f'../Api/trimestre/{i}.csv', sep=';')
@@ -75,7 +78,7 @@ for i in tqdm(acao):
         # Salavando os dados em um arquivo .csv
         data.to_csv(f'../Api/trimestre/{i}.csv', sep=';') 
     else:
-        data['Data Divulgação'][0] = date_att
+        data['Data Divulgação'] = date_att
         data.to_csv(f'../Api/trimestre/{i}.csv', sep=';')     
 
 arquivos = glob.glob('./trimestre/*.csv')
