@@ -17,6 +17,9 @@ import math
 ##################################
 
 ######
+
+st.set_page_config(layout = "wide")
+
 # Cabeçalho da página - Informações de fechamento de alguns Ìndices
 st.subheader('🌎 Alguns Índices Globais')
 
