@@ -1,10 +1,10 @@
-;Data Referência;Demonstração Financeira;Release de Resultados;Acao;Data Divulgação
-0;31/12/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=112429&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=952753&descTipo=IPE&CodigoInstituicao=1;GMAT3;2022-03-10 20:53:58.359372
-1;30/09/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=110182&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=916350&descTipo=IPE&CodigoInstituicao=1;GMAT3;2022-03-10 20:53:58.359372
-2;30/06/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=107708&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=867290&descTipo=IPE&CodigoInstituicao=1;GMAT3;2022-03-10 20:53:58.359372
-3;31/03/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=105858&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=845566&descTipo=IPE&CodigoInstituicao=1;GMAT3;2022-03-10 20:53:58.359372
-4;31/12/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=102193&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=807833&descTipo=IPE&CodigoInstituicao=1;GMAT3;2022-03-10 20:53:58.359372
-5;30/09/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=98389&CodigoTipoInstituicao=1;;GMAT3;2022-03-10 20:53:58.359372
-6;30/06/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=96149&CodigoTipoInstituicao=1;;GMAT3;2022-03-10 20:53:58.359372
-7;31/03/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=96148&CodigoTipoInstituicao=1;;GMAT3;2022-03-10 20:53:58.359372
-8;31/12/2019;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=96147&CodigoTipoInstituicao=1;;GMAT3;2022-03-10 20:53:58.359372
+;Data Referência;Demonstração Financeira;Release de Resultados;Acao
+0;31/12/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=112429&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=952753&descTipo=IPE&CodigoInstituicao=1;GMAT3
+1;30/09/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=110182&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=916350&descTipo=IPE&CodigoInstituicao=1;GMAT3
+2;30/06/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=107708&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=867290&descTipo=IPE&CodigoInstituicao=1;GMAT3
+3;31/03/2021;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=105858&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=845566&descTipo=IPE&CodigoInstituicao=1;GMAT3
+4;31/12/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=102193&CodigoTipoInstituicao=1;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=807833&descTipo=IPE&CodigoInstituicao=1;GMAT3
+5;30/09/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=98389&CodigoTipoInstituicao=1;;GMAT3
+6;30/06/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=96149&CodigoTipoInstituicao=1;;GMAT3
+7;31/03/2020;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=96148&CodigoTipoInstituicao=1;;GMAT3
+8;31/12/2019;https://www.rad.cvm.gov.br/ENET/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=96147&CodigoTipoInstituicao=1;;GMAT3
