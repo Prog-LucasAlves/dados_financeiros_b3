@@ -19,8 +19,7 @@ import backoff
 from bs4 import BeautifulSoup
 import requests
 import time
-from datetime import date, datetime, timedelta
-import logging
+from datetime import date, timedelta
 from tqdm import tqdm
 import pandas as pd
 
