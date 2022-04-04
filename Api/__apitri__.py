@@ -71,6 +71,7 @@ for i in tqdm(acao):
     data['Demonstração Financeira'] = lista_df
     data['Release de Resultados'] = pd.Series(lista_rr)  
     data['Acao'] = i
+    data.to_csv(f'../Api/trimestre/{i}.csv', sep=';')
 
     data_date = pd.read_csv(f'../Api/trimestre/{i}.csv', sep=';')
 
