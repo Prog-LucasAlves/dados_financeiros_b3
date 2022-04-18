@@ -656,7 +656,7 @@ st.plotly_chart(fig_vol)
 
 st.write("-----------------------------------------")
 date_att = datetime.today()
-atraso = timedelta(1)
+atraso = timedelta(0)
 date_atual = date_att - atraso
 date_atual = date_atual.strftime('%d/%m/%Y')
 st.write(f"Atualizações do dia {date_atual}:")
