@@ -219,7 +219,7 @@ lst_acao = [
     "GGBR4",
     "GGPS3",
     "GMAT3",
-    "GNDI3",
+    #"GNDI3",
     "GOAU3",
     "GOAU4",
     "GOLL4",
