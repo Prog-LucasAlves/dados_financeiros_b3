@@ -1,81 +1,83 @@
 ;Acao;Data;Hora;Descrição;Link
-0;RRRP3;13/04/2022;22:39;Participação em Oferta Permanente da ANP;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=967277&descTipo=IPE&CodigoInstituicao=1
-1;RRRP3;08/04/2022;09:33;Dados de Produção - Março 2022;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=965280&descTipo=IPE&CodigoInstituicao=1
-2;RRRP3;05/04/2022;20:41;Certificação de Reservas Polo Potiguar;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=964212&descTipo=IPE&CodigoInstituicao=1
-3;RRRP3;05/04/2022;08:24;Certificação de Reservas Polo Potiguar;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=963807&descTipo=IPE&CodigoInstituicao=1
-4;RRRP3;30/03/2022;09:35;Indicação de Membros para o Conselho de Administração;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=960997&descTipo=IPE&CodigoInstituicao=1
-5;RRRP3;23/03/2022;09:06;Esclarecimento de notícia veiculada na mídia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=957070&descTipo=IPE&CodigoInstituicao=1
-6;RRRP3;21/03/2022;18:47;Participação em Evento Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=956464&descTipo=IPE&CodigoInstituicao=1
-7;RRRP3;08/03/2022;22:58;Dados de Produção - Fevereiro 2022;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=951534&descTipo=IPE&CodigoInstituicao=1
-8;RRRP3;17/02/2022;20:33;Esclarecimentos sobre notícia veiculada na mídia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=945087&descTipo=IPE&CodigoInstituicao=1
-9;RRRP3;09/02/2022;08:30;Dados de Produção - Janeiro 2022;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=940312&descTipo=IPE&CodigoInstituicao=1
-10;RRRP3;07/02/2022;22:57;Instalação de Comitês de Assessoramento ao Conselho de Administração;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=939689&descTipo=IPE&CodigoInstituicao=1
-11;RRRP3;04/02/2022;09:53;Participação em Evento Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=938853&descTipo=IPE&CodigoInstituicao=1
-12;RRRP3;31/01/2022;20:38;Assinatura da Aquisição do Polo Potiguar;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=936974&descTipo=IPE&CodigoInstituicao=1
-13;RRRP3;28/01/2022;22:03;Aquisição Polo Potiguar;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=936451&descTipo=IPE&CodigoInstituicao=1
-14;RRRP3;24/01/2022;19:14;Participação em Evento Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=935261&descTipo=IPE&CodigoInstituicao=1
-15;RRRP3;12/01/2022;08:46;Dados de Produção - Dezembro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=932926&descTipo=IPE&CodigoInstituicao=1
-16;RRRP3;03/01/2022;08:59;Pré-Pagamento de Títulos de Dívida;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=930045&descTipo=IPE&CodigoInstituicao=1
-17;RRRP3;03/01/2022;08:59;3R Petroleum ingressa nos índices Ibovespa e IBrX 100;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=930046&descTipo=IPE&CodigoInstituicao=1
-18;RRRP3;30/12/2021;20:17;Benefício Fiscal da Sudene para o Polo Rio Ventura;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=929942&descTipo=IPE&CodigoInstituicao=1
-19;RRRP3;22/12/2021;14:39;Participação em evento público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928142&descTipo=IPE&CodigoInstituicao=1
-20;RRRP3;22/12/2021;08:36;Conclusão da aquisição da parcela complementar do campo de Sanhaçu;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928072&descTipo=IPE&CodigoInstituicao=1
-21;RRRP3;10/12/2021;09:19;Renegociação dos Contratos de Gás na Bacia Potiguar;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=924351&descTipo=IPE&CodigoInstituicao=1
-22;RRRP3;06/12/2021;08:53;Dados de Produção - Novembro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=922530&descTipo=IPE&CodigoInstituicao=1
-23;RRRP3;03/12/2021;08:39;Cancelamento da 1ª Emissão de Debêntures;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=922010&descTipo=IPE&CodigoInstituicao=1
-24;RRRP3;24/11/2021;18:24;Participação em Evento Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=920092&descTipo=IPE&CodigoInstituicao=1
-25;RRRP3;17/11/2021;19:56;Participação em Evento Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=918267&descTipo=IPE&CodigoInstituicao=1
-26;RRRP3;11/11/2021;10:18;Dados de Produção - Outubro de 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=916033&descTipo=IPE&CodigoInstituicao=1
-27;RRRP3;09/11/2021;01:39;Participação em evento público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=914601&descTipo=IPE&CodigoInstituicao=1
-28;RRRP3;04/11/2021;23:50;Precificação de Oferta de Ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=913408&descTipo=IPE&CodigoInstituicao=1
-29;RRRP3;03/11/2021;08:36;Conculsão da aquisição da Duna Energia S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=912299&descTipo=IPE&CodigoInstituicao=1
-30;RRRP3;25/10/2021;20:22;Oferta Pública de Ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=909919&descTipo=IPE&CodigoInstituicao=1
-31;RRRP3;25/10/2021;00:01;Oferta Pública de Ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=909737&descTipo=IPE&CodigoInstituicao=1
-32;RRRP3;23/10/2021;00:32;Certificação de Reservas do Campo de Papa Terra;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=909657&descTipo=IPE&CodigoInstituicao=1
-33;RRRP3;21/10/2021;16:16;Esclarecimento à notícia veiculada na mídia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=909082&descTipo=IPE&CodigoInstituicao=1
-34;RRRP3;05/10/2021;18:56;Participação em evento público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=905521&descTipo=IPE&CodigoInstituicao=1
-35;RRRP3;05/10/2021;08:51;Dados de Produção - Setembro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=905343&descTipo=IPE&CodigoInstituicao=1
-36;RRRP3;29/09/2021;08:56;Manutenção UPGN Guamaré;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=904137&descTipo=IPE&CodigoInstituicao=1
-37;RRRP3;23/09/2021;20:01;Participação em evento público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=903092&descTipo=IPE&CodigoInstituicao=1
-38;RRRP3;13/09/2021;09:35;Dados de Produção - Agosto 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=900590&descTipo=IPE&CodigoInstituicao=1
-39;RRRP3;13/09/2021;09:35;Medição da Produção de Óleo do Polo Macau;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=900592&descTipo=IPE&CodigoInstituicao=1
-40;RRRP3;31/08/2021;09:00;Aquisição das Ações de Emissão da Duna Energia S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=897197&descTipo=IPE&CodigoInstituicao=1
-41;RRRP3;27/08/2021;23:25;Pedido de Registro de Oferta Pública de Distribuição de Debêntures;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=896897&descTipo=IPE&CodigoInstituicao=1
-42;RRRP3;27/08/2021;08:45;Esclarecimentos sobre notícia veiculada na mídia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=896608&descTipo=IPE&CodigoInstituicao=1
-43;RRRP3;19/08/2021;08:59;Aquisição de Participação Complementar no Campo de Sanhaçu;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=894912&descTipo=IPE&CodigoInstituicao=1
-44;RRRP3;05/08/2021;03:04;Dados de Produção - Julho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=889654&descTipo=IPE&CodigoInstituicao=1
-45;RRRP3;14/07/2021;20:00;Conclusão da Aquisição do Polo Rio Ventura;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883933&descTipo=IPE&CodigoInstituicao=1
-46;RRRP3;14/07/2021;18:50;Conclusão da Aquisição do Polo Rio Ventura;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883911&descTipo=IPE&CodigoInstituicao=1
-47;RRRP3;14/07/2021;00:30;Dados de Produção - Junho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883689&descTipo=IPE&CodigoInstituicao=1
-48;RRRP3;12/07/2021;08:43;Aquisição Polo Papa Terra;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883089&descTipo=IPE&CodigoInstituicao=1
-49;RRRP3;06/07/2021;19:51;Participação em Live;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=881573&descTipo=IPE&CodigoInstituicao=1
-50;RRRP3;29/06/2021;09:25;Avaliação de Emissão de Dívida;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=879650&descTipo=IPE&CodigoInstituicao=1
-51;RRRP3;23/06/2021;23:59;Aquisição das Ações de Emissão da Duna Energia S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=878423&descTipo=IPE&CodigoInstituicao=1
-52;RRRP3;22/06/2021;21:57;Aquisição das Ações de Emissão da Duna Energia S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=878087&descTipo=IPE&CodigoInstituicao=1
-53;RRRP3;22/06/2021;08:45;Aquisição das Ações de Emissão da Duna Energia S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=877836&descTipo=IPE&CodigoInstituicao=1
-54;RRRP3;08/06/2021;18:47;Dados de Produção - Maio 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=874756&descTipo=IPE&CodigoInstituicao=1
-55;RRRP3;28/05/2021;07:58;Lançamento nova logomarca;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=871747&descTipo=IPE&CodigoInstituicao=1
-56;RRRP3;24/05/2021;18:21;Participação em Live;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=870739&descTipo=IPE&CodigoInstituicao=1
-57;RRRP3;21/05/2021;18:40;Participação em Live;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=870466&descTipo=IPE&CodigoInstituicao=1
-58;RRRP3;19/05/2021;21:56;Participação em Live;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=869760&descTipo=IPE&CodigoInstituicao=1
-59;RRRP3;19/05/2021;21:45;Alteração de participação acionária;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=869756&descTipo=IPE&CodigoInstituicao=1
-60;RRRP3;11/05/2021;08:36;Parceria com DBO e Estabelecimento da 3R Petroleum Offshore S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=865657&descTipo=IPE&CodigoInstituicao=1
-61;RRRP3;07/05/2021;08:10;Eleição de Diretor para Subsidiária;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=863994&descTipo=IPE&CodigoInstituicao=1
-62;RRRP3;05/05/2021;20:19;Dados de Produção - Abril 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=863116&descTipo=IPE&CodigoInstituicao=1
-63;RRRP3;05/05/2021;18:30;Participação em Live aberta ao público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=862900&descTipo=IPE&CodigoInstituicao=1
-64;RRRP3;05/04/2021;19:34;Dados de Produção - Março 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=850566&descTipo=IPE&CodigoInstituicao=1
-65;RRRP3;31/03/2021;09:01;Aumento de Capital e Precificação de Ações Emitidas (Follow On);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=848719&descTipo=IPE&CodigoInstituicao=1
-66;RRRP3;18/03/2021;23:39;Oferta Pública de Ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=844089&descTipo=IPE&CodigoInstituicao=1
-67;RRRP3;17/03/2021;06:46;Certificação de Reservas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=843291&descTipo=IPE&CodigoInstituicao=1
-68;RRRP3;05/03/2021;23:37;Parceria Estratégica com a DBO Energia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=839366&descTipo=IPE&CodigoInstituicao=1
-69;RRRP3;03/03/2021;19:35;Dados de Produção - Fevereiro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=838357&descTipo=IPE&CodigoInstituicao=1
-70;RRRP3;02/03/2021;23:08;Avaliação de Oferta Pública de Ações com Esforços Restritos (FOLLOW ON);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=837923&descTipo=IPE&CodigoInstituicao=1
-71;RRRP3;01/03/2021;19:30;Eleição de Diretor Estatutário;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=837337&descTipo=IPE&CodigoInstituicao=1
-72;RRRP3;23/02/2021;20:43;Contratação de Formador de Mercado;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=834870&descTipo=IPE&CodigoInstituicao=1
-73;RRRP3;19/02/2021;08:31;Dados de Produção - Janeiro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=833291&descTipo=IPE&CodigoInstituicao=1
-74;RRRP3;01/02/2021;08:24;Aquisição Polo Peroá;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=826231&descTipo=IPE&CodigoInstituicao=1
-75;RRRP3;28/12/2020;08:52;Aprovação Benefício Fiscal da SUDENE - Polo Macau;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=819182&descTipo=IPE&CodigoInstituicao=1
-76;RRRP3;17/12/2020;21:02;Aquisição do Polo Recôncavo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=817782&descTipo=IPE&CodigoInstituicao=1
-77;RRRP3;04/12/2020;09:25;Polo Urucu;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=813047&descTipo=IPE&CodigoInstituicao=1
-78;RRRP3;25/11/2020;22:10;Esclarecimento sobre notícias referente ao campo de Papa Terra;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=811264&descTipo=IPE&CodigoInstituicao=1
-79;RRRP3;10/11/2020;11:41;Incorporação da 3R Petroleum e Participações S.A. pela Companhia.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=806850&descTipo=IPE&CodigoInstituicao=1
+0;RRRP3;29/04/2022;21:16;Eleição de Conselheiros e Instalação do Conselho Fiscal;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=974810&descTipo=IPE&CodigoInstituicao=1
+1;RRRP3;29/04/2022;20:54;Plano de Outorga de Opção de Compra de Ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=974778&descTipo=IPE&CodigoInstituicao=1
+2;RRRP3;13/04/2022;22:39;Participação em Oferta Permanente da ANP;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=967277&descTipo=IPE&CodigoInstituicao=1
+3;RRRP3;08/04/2022;09:33;Dados de Produção - Março 2022;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=965280&descTipo=IPE&CodigoInstituicao=1
+4;RRRP3;05/04/2022;20:41;Certificação de Reservas Polo Potiguar;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=964212&descTipo=IPE&CodigoInstituicao=1
+5;RRRP3;05/04/2022;08:24;Certificação de Reservas Polo Potiguar;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=963807&descTipo=IPE&CodigoInstituicao=1
+6;RRRP3;30/03/2022;09:35;Indicação de Membros para o Conselho de Administração;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=960997&descTipo=IPE&CodigoInstituicao=1
+7;RRRP3;23/03/2022;09:06;Esclarecimento de notícia veiculada na mídia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=957070&descTipo=IPE&CodigoInstituicao=1
+8;RRRP3;21/03/2022;18:47;Participação em Evento Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=956464&descTipo=IPE&CodigoInstituicao=1
+9;RRRP3;08/03/2022;22:58;Dados de Produção - Fevereiro 2022;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=951534&descTipo=IPE&CodigoInstituicao=1
+10;RRRP3;17/02/2022;20:33;Esclarecimentos sobre notícia veiculada na mídia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=945087&descTipo=IPE&CodigoInstituicao=1
+11;RRRP3;09/02/2022;08:30;Dados de Produção - Janeiro 2022;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=940312&descTipo=IPE&CodigoInstituicao=1
+12;RRRP3;07/02/2022;22:57;Instalação de Comitês de Assessoramento ao Conselho de Administração;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=939689&descTipo=IPE&CodigoInstituicao=1
+13;RRRP3;04/02/2022;09:53;Participação em Evento Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=938853&descTipo=IPE&CodigoInstituicao=1
+14;RRRP3;31/01/2022;20:38;Assinatura da Aquisição do Polo Potiguar;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=936974&descTipo=IPE&CodigoInstituicao=1
+15;RRRP3;28/01/2022;22:03;Aquisição Polo Potiguar;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=936451&descTipo=IPE&CodigoInstituicao=1
+16;RRRP3;24/01/2022;19:14;Participação em Evento Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=935261&descTipo=IPE&CodigoInstituicao=1
+17;RRRP3;12/01/2022;08:46;Dados de Produção - Dezembro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=932926&descTipo=IPE&CodigoInstituicao=1
+18;RRRP3;03/01/2022;08:59;Pré-Pagamento de Títulos de Dívida;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=930045&descTipo=IPE&CodigoInstituicao=1
+19;RRRP3;03/01/2022;08:59;3R Petroleum ingressa nos índices Ibovespa e IBrX 100;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=930046&descTipo=IPE&CodigoInstituicao=1
+20;RRRP3;30/12/2021;20:17;Benefício Fiscal da Sudene para o Polo Rio Ventura;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=929942&descTipo=IPE&CodigoInstituicao=1
+21;RRRP3;22/12/2021;14:39;Participação em evento público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928142&descTipo=IPE&CodigoInstituicao=1
+22;RRRP3;22/12/2021;08:36;Conclusão da aquisição da parcela complementar do campo de Sanhaçu;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=928072&descTipo=IPE&CodigoInstituicao=1
+23;RRRP3;10/12/2021;09:19;Renegociação dos Contratos de Gás na Bacia Potiguar;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=924351&descTipo=IPE&CodigoInstituicao=1
+24;RRRP3;06/12/2021;08:53;Dados de Produção - Novembro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=922530&descTipo=IPE&CodigoInstituicao=1
+25;RRRP3;03/12/2021;08:39;Cancelamento da 1ª Emissão de Debêntures;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=922010&descTipo=IPE&CodigoInstituicao=1
+26;RRRP3;24/11/2021;18:24;Participação em Evento Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=920092&descTipo=IPE&CodigoInstituicao=1
+27;RRRP3;17/11/2021;19:56;Participação em Evento Público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=918267&descTipo=IPE&CodigoInstituicao=1
+28;RRRP3;11/11/2021;10:18;Dados de Produção - Outubro de 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=916033&descTipo=IPE&CodigoInstituicao=1
+29;RRRP3;09/11/2021;01:39;Participação em evento público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=914601&descTipo=IPE&CodigoInstituicao=1
+30;RRRP3;04/11/2021;23:50;Precificação de Oferta de Ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=913408&descTipo=IPE&CodigoInstituicao=1
+31;RRRP3;03/11/2021;08:36;Conculsão da aquisição da Duna Energia S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=912299&descTipo=IPE&CodigoInstituicao=1
+32;RRRP3;25/10/2021;20:22;Oferta Pública de Ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=909919&descTipo=IPE&CodigoInstituicao=1
+33;RRRP3;25/10/2021;00:01;Oferta Pública de Ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=909737&descTipo=IPE&CodigoInstituicao=1
+34;RRRP3;23/10/2021;00:32;Certificação de Reservas do Campo de Papa Terra;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=909657&descTipo=IPE&CodigoInstituicao=1
+35;RRRP3;21/10/2021;16:16;Esclarecimento à notícia veiculada na mídia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=909082&descTipo=IPE&CodigoInstituicao=1
+36;RRRP3;05/10/2021;18:56;Participação em evento público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=905521&descTipo=IPE&CodigoInstituicao=1
+37;RRRP3;05/10/2021;08:51;Dados de Produção - Setembro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=905343&descTipo=IPE&CodigoInstituicao=1
+38;RRRP3;29/09/2021;08:56;Manutenção UPGN Guamaré;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=904137&descTipo=IPE&CodigoInstituicao=1
+39;RRRP3;23/09/2021;20:01;Participação em evento público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=903092&descTipo=IPE&CodigoInstituicao=1
+40;RRRP3;13/09/2021;09:35;Dados de Produção - Agosto 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=900590&descTipo=IPE&CodigoInstituicao=1
+41;RRRP3;13/09/2021;09:35;Medição da Produção de Óleo do Polo Macau;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=900592&descTipo=IPE&CodigoInstituicao=1
+42;RRRP3;31/08/2021;09:00;Aquisição das Ações de Emissão da Duna Energia S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=897197&descTipo=IPE&CodigoInstituicao=1
+43;RRRP3;27/08/2021;23:25;Pedido de Registro de Oferta Pública de Distribuição de Debêntures;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=896897&descTipo=IPE&CodigoInstituicao=1
+44;RRRP3;27/08/2021;08:45;Esclarecimentos sobre notícia veiculada na mídia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=896608&descTipo=IPE&CodigoInstituicao=1
+45;RRRP3;19/08/2021;08:59;Aquisição de Participação Complementar no Campo de Sanhaçu;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=894912&descTipo=IPE&CodigoInstituicao=1
+46;RRRP3;05/08/2021;03:04;Dados de Produção - Julho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=889654&descTipo=IPE&CodigoInstituicao=1
+47;RRRP3;14/07/2021;20:00;Conclusão da Aquisição do Polo Rio Ventura;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883933&descTipo=IPE&CodigoInstituicao=1
+48;RRRP3;14/07/2021;18:50;Conclusão da Aquisição do Polo Rio Ventura;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883911&descTipo=IPE&CodigoInstituicao=1
+49;RRRP3;14/07/2021;00:30;Dados de Produção - Junho 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883689&descTipo=IPE&CodigoInstituicao=1
+50;RRRP3;12/07/2021;08:43;Aquisição Polo Papa Terra;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=883089&descTipo=IPE&CodigoInstituicao=1
+51;RRRP3;06/07/2021;19:51;Participação em Live;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=881573&descTipo=IPE&CodigoInstituicao=1
+52;RRRP3;29/06/2021;09:25;Avaliação de Emissão de Dívida;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=879650&descTipo=IPE&CodigoInstituicao=1
+53;RRRP3;23/06/2021;23:59;Aquisição das Ações de Emissão da Duna Energia S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=878423&descTipo=IPE&CodigoInstituicao=1
+54;RRRP3;22/06/2021;21:57;Aquisição das Ações de Emissão da Duna Energia S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=878087&descTipo=IPE&CodigoInstituicao=1
+55;RRRP3;22/06/2021;08:45;Aquisição das Ações de Emissão da Duna Energia S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=877836&descTipo=IPE&CodigoInstituicao=1
+56;RRRP3;08/06/2021;18:47;Dados de Produção - Maio 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=874756&descTipo=IPE&CodigoInstituicao=1
+57;RRRP3;28/05/2021;07:58;Lançamento nova logomarca;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=871747&descTipo=IPE&CodigoInstituicao=1
+58;RRRP3;24/05/2021;18:21;Participação em Live;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=870739&descTipo=IPE&CodigoInstituicao=1
+59;RRRP3;21/05/2021;18:40;Participação em Live;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=870466&descTipo=IPE&CodigoInstituicao=1
+60;RRRP3;19/05/2021;21:56;Participação em Live;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=869760&descTipo=IPE&CodigoInstituicao=1
+61;RRRP3;19/05/2021;21:45;Alteração de participação acionária;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=869756&descTipo=IPE&CodigoInstituicao=1
+62;RRRP3;11/05/2021;08:36;Parceria com DBO e Estabelecimento da 3R Petroleum Offshore S.A.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=865657&descTipo=IPE&CodigoInstituicao=1
+63;RRRP3;07/05/2021;08:10;Eleição de Diretor para Subsidiária;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=863994&descTipo=IPE&CodigoInstituicao=1
+64;RRRP3;05/05/2021;20:19;Dados de Produção - Abril 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=863116&descTipo=IPE&CodigoInstituicao=1
+65;RRRP3;05/05/2021;18:30;Participação em Live aberta ao público;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=862900&descTipo=IPE&CodigoInstituicao=1
+66;RRRP3;05/04/2021;19:34;Dados de Produção - Março 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=850566&descTipo=IPE&CodigoInstituicao=1
+67;RRRP3;31/03/2021;09:01;Aumento de Capital e Precificação de Ações Emitidas (Follow On);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=848719&descTipo=IPE&CodigoInstituicao=1
+68;RRRP3;18/03/2021;23:39;Oferta Pública de Ações;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=844089&descTipo=IPE&CodigoInstituicao=1
+69;RRRP3;17/03/2021;06:46;Certificação de Reservas;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=843291&descTipo=IPE&CodigoInstituicao=1
+70;RRRP3;05/03/2021;23:37;Parceria Estratégica com a DBO Energia;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=839366&descTipo=IPE&CodigoInstituicao=1
+71;RRRP3;03/03/2021;19:35;Dados de Produção - Fevereiro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=838357&descTipo=IPE&CodigoInstituicao=1
+72;RRRP3;02/03/2021;23:08;Avaliação de Oferta Pública de Ações com Esforços Restritos (FOLLOW ON);https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=837923&descTipo=IPE&CodigoInstituicao=1
+73;RRRP3;01/03/2021;19:30;Eleição de Diretor Estatutário;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=837337&descTipo=IPE&CodigoInstituicao=1
+74;RRRP3;23/02/2021;20:43;Contratação de Formador de Mercado;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=834870&descTipo=IPE&CodigoInstituicao=1
+75;RRRP3;19/02/2021;08:31;Dados de Produção - Janeiro 2021;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=833291&descTipo=IPE&CodigoInstituicao=1
+76;RRRP3;01/02/2021;08:24;Aquisição Polo Peroá;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=826231&descTipo=IPE&CodigoInstituicao=1
+77;RRRP3;28/12/2020;08:52;Aprovação Benefício Fiscal da SUDENE - Polo Macau;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=819182&descTipo=IPE&CodigoInstituicao=1
+78;RRRP3;17/12/2020;21:02;Aquisição do Polo Recôncavo;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=817782&descTipo=IPE&CodigoInstituicao=1
+79;RRRP3;04/12/2020;09:25;Polo Urucu;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=813047&descTipo=IPE&CodigoInstituicao=1
+80;RRRP3;25/11/2020;22:10;Esclarecimento sobre notícias referente ao campo de Papa Terra;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=811264&descTipo=IPE&CodigoInstituicao=1
+81;RRRP3;10/11/2020;11:41;Incorporação da 3R Petroleum e Participações S.A. pela Companhia.;https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&numProtocolo=806850&descTipo=IPE&CodigoInstituicao=1
