@@ -15,4 +15,4 @@ font = 'sans serif'
 headless = true
 port = $PORT
 enableCORS = false
-" > ~/.streamlit/config.toml
+" >> ~/.streamlit/config.toml
