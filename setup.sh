@@ -5,14 +5,16 @@ echo "\
 email = \"seu-email@dominio.com\"\n\
 " > ~/.streamlit/credentials.toml
 
-echo 
-"[theme]
-primaryColor=' #020202 '
-backgroundColor=' #c4c3c3 '
-secondaryBackgroundColor=' #ebd316 '
-font = 'sans serif'
-[servidor]
-headless = true
-port = $PORT
-enableCORS = false
-" >> ~/.streamlit/config.toml
+echo "\
+[theme]\n\
+base='light'\n\
+primaryColor='#3a70ec'\n\
+backgroundColor='#FFD600'\n\
+secondaryBackgroundColor = '#F0F2F6'\n\
+textColor='#0e1862'\n\
+
+[server]\n\
+headless = true\n\
+enableCORS=false\n\
+port = $PORT\n\
+" > ~/.streamlit/config.toml
