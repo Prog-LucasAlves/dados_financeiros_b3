@@ -13,7 +13,7 @@ from tqdm import tqdm
 import requests
 import glob
 import numpy as np
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -71,6 +71,7 @@ for i in tqdm(acao):
     data['Demonstração Financeira'] = lista_df
     data['Release de Resultados'] = pd.Series(lista_rr)  
     data['Acao'] = i
+
     data.to_csv(f'../Api/trimestre/{i}.csv', sep=';')
 
     data_date = pd.read_csv(f'../Api/trimestre/{i}.csv', sep=';')
@@ -79,7 +80,7 @@ for i in tqdm(acao):
         # Salavando os dados em um arquivo .csv
         data.to_csv(f'../Api/trimestre/{i}.csv', sep=';') 
     else:
-        data['Data Divulgação'] = date_att
+        data['Data Divulgação'] = date_atual
         data.to_csv(f'../Api/trimestre/{i}.csv', sep=';')     
 
 arquivos = glob.glob('./trimestre/*.csv')
