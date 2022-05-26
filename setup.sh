@@ -11,3 +11,19 @@ headless = true\n\
 enableCORS=false\n\
 port = $PORT\n\
 " > ~/.streamlit/config.toml
+
+echo "\
+[theme]\n\
+# Primary accent for interactive elements
+primaryColor = '#7792E3'\n\
+# Background color for the main content area
+backgroundColor = '#273346'\n\
+# Background color for sidebar and most interactive widgets
+secondaryBackgroundColor = '#B9F1C0'\n\
+# Color used for almost all text
+textColor = '#FFFFFF'\n\
+# Font family for all text in the app, except code blocks
+# Accepted values (serif | sans serif | monospace) 
+# Default: 'sans serif'\n\
+font = 'sans serif'\n\
+" > ~/.streamlit/config.toml
