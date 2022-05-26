@@ -5,13 +5,13 @@ echo "\
 email = \"seu-email@dominio.com\"\n\
 " > ~/.streamlit/credentials.toml
 
-echo "\
+echo "
 [theme]
-primaryColor = ' #84a3a7 '
-backgroundColor = ' #7b9971 '
-secondaryBackgroundColor = ' #fafafa '
-textColor = ' #424242 '
-font = ' sans serif '
+primaryColor = '#84a3a7'
+backgroundColor = '#7b9971'
+secondaryBackgroundColor = '#fafafa '
+textColor = '#424242'
+font = 'sans serif'
 [servidor]
 headless = true
 port = $PORT
