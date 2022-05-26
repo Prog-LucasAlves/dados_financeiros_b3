@@ -10,9 +10,7 @@ echo "\
 headless = true\n\
 enableCORS=false\n\
 port = $PORT\n\
-" > ~/.streamlit/config.toml
 
-echo "\
 [theme]\n\
 # Primary accent for interactive elements
 primaryColor = '#7792E3'
