@@ -8,7 +8,7 @@ email = \"seu-email@dominio.com\"\n\
 echo "\
 [theme]\n\
 base='light'\n\
-primaryColor='#3a70ec'\n\
+primaryColor='#5d5c49'\n\
 backgroundColor='#FFD600'\n\
 secondaryBackgroundColor = '#F0F2F6'\n\
 textColor='#0e1862'\n\
