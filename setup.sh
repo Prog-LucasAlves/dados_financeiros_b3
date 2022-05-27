@@ -10,7 +10,7 @@ echo "\
 base='light'\n\
 primaryColor='#000000'\n\
 backgroundColor='#fbf6d0'\n\
-secondaryBackgroundColor = '#3CB371'\n\
+secondaryBackgroundColor = '#000000'\n\
 textColor='#0e1862'\n\
 
 [server]\n\
