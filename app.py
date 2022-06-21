@@ -443,6 +443,9 @@ fr_df = pd.read_csv(f"./Api/fatos_relevantes/{fr_papel}.csv", sep=";")
 fr_df_1 = fr_df[['Data', 'Hora', 'Descrição', 'Link']]
 st.caption(" ⏰ Fatos Relevamtes ")
 st.write(fr_df_1)
+fr_df_data = fr_df_1['Data'][0]
+fr_df_link = fr_df_1['Link'][0]
+st.writ(f"Data fato Relevante {fr_df_data} - Download: [Link]({fr_df_link})")
 
 # Tabela Proventos
 st.write("-----------------------------------------")
