@@ -567,6 +567,14 @@ st.plotly_chart(fig_vol)
 
 ######
 
+# Gráfico indicador de Mayer (Preço atual / MMM 200)
+st.write("-----------------------------------------")
+st.write(f" 🔥 Indicador de Mayer {precos_papel} ")
+df_mayer = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
+fig_may = px.line(df_mayer, x='Date', y='Mayer')
+st.plotly_chart(fig_may)
+######
+
 st.write("-----------------------------------------")
 date_att = datetime.today()
 atraso = timedelta(1)

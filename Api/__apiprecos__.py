@@ -33,6 +33,8 @@ moedas = __list__.lst_moedas
 
 for i in tqdm(acao):
     df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
+    df['MM200'] = df['Adj Close'].rolling(200).mean()
+    df['Mayer'] = df['Adj Close'] / df['MM200']
     df.to_csv(f'./precos/{i}.csv',sep=';')
     logging.info('Preços das ações salvos com SUCESSO')
 
