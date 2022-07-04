@@ -571,17 +571,17 @@ st.plotly_chart(fig_vol)
 st.write("-----------------------------------------")
 st.write(f" 🔥 Indicador de Mayer {precos_papel} ")
 df_mayer = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
-fig_may = px.line(df_mayer, x="Date", y=f"Mayer {precos_papel}")
+fig_may = px.line(df_mayer, x='Date', y=f'Mayer {precos_papel}')
 st.plotly_chart(fig_may)
 
 ######
 
 # Gráfico MM200
-st.write("-----------------------------------------")
-st.write(f" 🔥 Indicador de Mayer {precos_papel} ")
-df_mm200 = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
-fig_200 = px.line(df_mm200, x="Date", y=[f"MM200","Adj Close"])
-st.plotly_chart(fig_200)
+#st.write("-----------------------------------------")
+#st.write(f" 🔥 Indicador de Mayer {precos_papel} ")
+#df_mm200 = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
+#fig_200 = px.line(df_mm200, x="Date", y=[f"MM200","Adj Close"])
+#st.plotly_chart(fig_200)
 
 ######
 
