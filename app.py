@@ -585,7 +585,7 @@ fig_200 = px.line(df_mm200, x="Date", y=[f"MM200","Adj Close"])
 layout = go.Layout(title='',
                    yaxis={'title':'Vlor da ação'},
                    xaxis={'title': 'Data'})
-st.plotly_chart(fig_200)
+st.plotly_chart(fig_200, layout)
 
 ######
 
