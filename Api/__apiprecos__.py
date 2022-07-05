@@ -10,6 +10,7 @@ Local: pasta(precos)
 # Bibliotecas utilizadas
 import yfinance as yf
 import pandas as pd
+import numpy as np
 from datetime import date
 from tqdm import tqdm
 import logging
@@ -33,8 +34,28 @@ moedas = __list__.lst_moedas
 
 for i in tqdm(acao):
     df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
+    # Média Movel 200P
     df['MM200'] = df['Adj Close'].rolling(200).mean()
+    # Indicador Mayer
     df['Mayer'] = df['Adj Close'] / df['MM200']
+    # Indicador IFR
+    df['Variation'] = df['Adj Close'].diff()
+    df['Gain'] = np.where(df['Variation'] > 0, df['Variation'], 0) 
+    df['Loss'] = np.where(df['Variation'] < 0, df['Variation'], 0) 
+    n = 14 # define window interval
+    simple_avg_gain = df['Gain'].rolling(n).mean()
+    simple_avg_loss = df['Loss'].abs().rolling(n).mean()
+    classic_avg_gain = simple_avg_gain.copy()
+    classic_avg_loss = simple_avg_loss.copy()
+    for f in range(n, len(classic_avg_gain)):
+        classic_avg_gain[f] = (classic_avg_gain[f - 1] * (n - 1) + df['Gain'].iloc[f]) / n
+        classic_avg_loss[f] = (classic_avg_loss[f - 1] * (n - 1) + df['Loss'].abs().iloc[f]) / n
+    df['Simple RS'] = simple_avg_gain / simple_avg_loss
+    df['Classic RS'] = classic_avg_gain / classic_avg_loss
+    df['Simple RSI'] = 100 - (100 / (1 + df['Simple RS']))
+    df['Classic RSI'] = 100 - (100 / (1 + df['Classic RS']))
+
+
     df.to_csv(f'./precos/{i}.csv',sep=';')
     logging.info('Preços das ações salvos com SUCESSO')
 
