@@ -603,6 +603,7 @@ fig = go.Figure()
 fig.add_trace(go.Scatter(y=[30],
                     mode='lines',
                     name='lines'))
+fig.show()                    
 
 fig_may = px.line(df_mayer, x="Date", y="Classic RSI",
                 labels={
