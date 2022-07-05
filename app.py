@@ -597,7 +597,13 @@ st.plotly_chart(fig_may)
 # Gráfico IFR
 st.write("-----------------------------------------")
 st.write(f" 🔥 Indicador IFR - {precos_papel} ")
-df_mayer = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
+df_ifr = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
+
+fig = go.Figure()
+fig.add_trace(go.Scatte(y=30,
+                    mode='lines',
+                    name='lines'))
+
 fig_may = px.line(df_mayer, x="Date", y="Classic RSI",
                 labels={
                     "Date":"Data"
