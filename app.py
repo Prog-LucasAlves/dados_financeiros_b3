@@ -584,7 +584,8 @@ st.write(f" 🔥 Média Movel de 200 {precos_papel} ")
 df_mm200 = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
 fig_200 = px.line(df_mm200, x="Date", y=[f"MM200","Adj Close"],
                 labels={
-                    "Date":"Data"
+                    "Date":"Data",
+                    "value":"Preço da Ação"
                 })
 
 st.plotly_chart(fig_200)
