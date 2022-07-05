@@ -599,11 +599,11 @@ st.write("-----------------------------------------")
 st.write(f" 🔥 Indicador IFR - {precos_papel} ")
 df_ifr = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
 
-fig = go.Figure()
-fig.add_trace(go.Scatter(y=[30],
+fig1 = go.Figure()
+fig1.add_trace(go.Scatter(y=[30],
                     mode='lines',
                     name='lines'))
-fig.show()                    
+st.plotly_chart(fig1)                    
 
 fig_may = px.line(df_mayer, x="Date", y="Classic RSI",
                 labels={
