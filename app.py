@@ -2,6 +2,7 @@
 # Bibliotecas/Pacotes importadas #
 ##################################
 
+from cProfile import label
 import streamlit as st
 import pandas as pd
 import re
@@ -581,11 +582,12 @@ st.plotly_chart(fig_may)
 st.write("-----------------------------------------")
 st.write(f" 🔥 Média Movel de 200 {precos_papel} ")
 df_mm200 = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
-fig_200 = px.line(df_mm200, x="Date", y=[f"MM200","Adj Close"])
-layout = go.Layout(title='',
-                   yaxis={'title':'Vlor da ação'},
-                   xaxis={'title': 'Data'})
-st.plotly_chart(fig_200, layout)
+fig_200 = px.line(df_mm200, x="Date", y=[f"MM200","Adj Close"],
+                labels={
+                    "Date":"Data"
+                })
+
+st.plotly_chart(fig_200)
 
 ######
 
