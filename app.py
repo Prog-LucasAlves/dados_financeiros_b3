@@ -603,8 +603,10 @@ fig1 = go.Figure()
 fig1.add_trace(go.Scatter(y=[30,30],
                     name="Name of Trace 1"))
 fig1.add_trace(go.Scatter(y=[70,70],
-                    name="Name of Trace 2"))   
-fig1.add_trace(go.Scatter(df_ifr, x="Date", y="Classic RSI"))                                     
+                    name="Name of Trace 2"))
+d = df_ifr['Date']
+c = df_ifr['Classic RSI']                       
+fig1.add_trace(go.Scatter(df_ifr, x=d, y=c))                                     
 st.plotly_chart(fig1)                    
 
 fig_may = px.line(df_mayer, x="Date", y="Classic RSI",
