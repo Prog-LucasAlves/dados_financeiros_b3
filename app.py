@@ -600,7 +600,7 @@ st.write(f" 🔥 Indicador IFR - {precos_papel} ")
 df_ifr = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
 
 fig = go.Figure()
-fig.add_trace(go.Scatter(y=30,
+fig.add_trace(go.Scatter(y=[30],
                     mode='lines',
                     name='lines'))
 
