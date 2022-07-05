@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 import quantstats as qs
 import os
 import plotly.express as px
+import plotly.graph_objs as go
 import seaborn as sb
 import math
 
@@ -578,9 +579,12 @@ st.plotly_chart(fig_may)
 
 # Gráfico MM200
 st.write("-----------------------------------------")
-st.write(f" 🔥 Indicador de Mayer {precos_papel} ")
+st.write(f" 🔥 Média Movel de 200 {precos_papel} ")
 df_mm200 = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
 fig_200 = px.line(df_mm200, x="Date", y=[f"MM200","Adj Close"])
+layout = go.Layout(title='',
+                   yaxis={'title':'Vlor da ação'},
+                   xaxis={'title': 'Data'})
 st.plotly_chart(fig_200)
 
 ######
