@@ -600,9 +600,8 @@ st.write(f" 🔥 Indicador IFR - {precos_papel} ")
 df_ifr = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
 
 fig1 = go.Figure()
-fig1.add_trace(go.Scatter(y=[30],
-                    mode='lines',
-                    name='lines'))
+fig1.add_trace(go.Scatter(y=[30,30],
+                    name="Name of Trace 1"))
 st.plotly_chart(fig1)                    
 
 fig_may = px.line(df_mayer, x="Date", y="Classic RSI",
