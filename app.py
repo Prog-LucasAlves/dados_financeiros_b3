@@ -535,6 +535,7 @@ fig = qs.plots.earnings(stock)
 #st.plotly_chart(qs.plots.earnings(stock))
 st.pyplot(qs.plots.earnings(stock))
 st.pyplot(fig)
+st.markdown(fig, unsafe_allow_html=True)
 
 ######
 
