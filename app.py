@@ -541,6 +541,7 @@ st.write("-----------------------------------------")
 st.write(f" ⌛ Retornos Acumulados da Ação {precos_papel} ")
 df_ret_ac = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
 fig_ret_ac = px.line(df_ret_ac, x='Date', y='tret')
+fig_ret_ac.update_layout(xaxis_title='Month')
 st.plotly_chart(fig_ret_ac)
 ######
 
