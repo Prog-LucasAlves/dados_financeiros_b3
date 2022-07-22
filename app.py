@@ -504,6 +504,7 @@ precos_df_ad = precos_df_ad.drop(
 # Gráfico com o historico de fechamento
 st.write(f" 📈📉 Histórico de Fechamento da Ação {precos_papel} ")
 fig_pre = px.line(precos_df_ad, x="Date", y=f"{precos_papel}")
+fig_pre.update_layout(xaxis_title='Date', yaxis_title=f'Preço de Fechamento - {precos_papel}')
 st.plotly_chart(fig_pre)
 
 df_download = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
@@ -528,10 +529,11 @@ st.table(tb_df.style.background_gradient(cmap=cm))
 
 # Gráfico de Retornos Diários
 st.write("-----------------------------------------")
-st.write(f" ⌛ Retornos Diarios da Ação {precos_papel} ")
+st.write(f" ⌛ Retornos Diários da Ação {precos_papel} ")
 precos_df_ret = precos_df_ad[f'{precos_papel}'].pct_change()
 precos_df_ad[f'Ret {precos_papel}'] = precos_df_ret
 fig_ret = px.line(precos_df_ad, x="Date", y=f"Ret {precos_papel}")
+fig_ret.update_layout(xaxis_title='Date', yaxis_title=f'Retorno Diário - {precos_papel}')
 st.plotly_chart(fig_ret)
 
 ######
@@ -541,7 +543,7 @@ st.write("-----------------------------------------")
 st.write(f" ⌛ Retornos Acumulados da Ação {precos_papel} ")
 df_ret_ac = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
 fig_ret_ac = px.line(df_ret_ac, x='Date', y='tret')
-fig_ret_ac.update_layout(xaxis_title='Month')
+fig_ret_ac.update_layout(xaxis_title='Date', yaxis_title=f'Retorno Acumulado - {precos_papel}')
 st.plotly_chart(fig_ret_ac)
 ######
 
@@ -553,6 +555,7 @@ precos_df_vol = (
 )
 precos_df_ad[f"Vol {precos_papel}"] = precos_df_vol
 fig_vol = px.line(precos_df_ad, x="Date", y=f"Vol {precos_papel}")
+fig_vol.update_layout(xaxis_title='Date', yaxis_title=f'Volatilidade - {precos_papel}')
 st.plotly_chart(fig_vol)
 
 ######
