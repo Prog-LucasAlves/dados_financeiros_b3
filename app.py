@@ -525,6 +525,16 @@ st.table(tb_df.style.background_gradient(cmap=cm))
 
 ######
 
+# Gráfico de Retornos Acumulados
+st.write("-----------------------------------------")
+st.write(f" ✳️ Retornos Acumulados da Ação {precos_papel} ")
+qs.extend_pandas()
+stock = qs.utils.download_returns(f'{precos_papel}.SA')
+fig = qs.plots.earnings(stock)
+st.plotly_chart(fig)
+
+######
+
 # Gráfico de Retornos Diários
 st.write("-----------------------------------------")
 st.write(f" ⌛ Retornos Diarios da Ação {precos_papel} ")
@@ -586,6 +596,5 @@ else:
 # Rodapé
 st.write("-----------------------------------------")
 st.write("*Utilize modo light para uma melhor visualização.*")
-
 
 #####
