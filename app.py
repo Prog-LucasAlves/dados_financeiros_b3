@@ -516,44 +516,22 @@ st.download_button(
 
 ######
 
-# Grafico Drawdown
-st.write("-----------------------------------------")
-st.write(f" 📈📉 Drawdown da Ação {precos_papel} ")
-drawdown_precos = df[df['papel'] == col1_selection]
-drawdown_precos_index = int(drawdown_precos['Unnamed: 0'])
-drawdown_precos_papel = drawdown_precos['papel'][drawdown_precos_index]
-# Pegando os dados dos preços nos arquivos .csv
-drawdown_precos_df = pd.read_csv(f"./Api/precos/{drawdown_precos_papel}.csv", sep=";")
-drawdown_precos_df.drop(['Open','High','Low','Close','Volume'], inplace=True, axis=1)
-drawdown_precos_df['Retornos'] = drawdown_precos_df['Adj Close'].pct_change()
-drawdown_precos_df['Carteira'] = 100 * (drawdown_precos_df['Retornos'] + 1)
-drawdown_precos_df['Picos'] = drawdown_precos_df['Carteira'].cummax()
-drawdown_precos_df['Drawdown'] = (drawdown_precos_df['Carteira'] - drawdown_precos_df['Picos']) / drawdown_precos_df['Picos']
-max_drawdown = drawdown_precos_df['Drawdown'].min()
-max_drawdown = round(max_drawdown * -100, 2)
-drawdown_data = datetime.today().strftime('%d-%m-%Y')
-drawdown_fig = px.line(drawdown_precos_df, x='Date', y='Drawdown')
-st.write(f"Máximo Drawdown -> {max_drawdown:.2f}")
-st.plotly_chart(drawdown_fig)
-
-######
-
-# Gráfico de Retornos
-st.write("-----------------------------------------")
-st.write(f" ⌛ Retornos Diarios da Ação {precos_papel} ")
-precos_df_ret = precos_df_ad[f'{precos_papel}'].pct_change()
-precos_df_ad[f'Ret {precos_papel}'] = precos_df_ret
-fig_ret = px.line(precos_df_ad, x="Date", y=f"Ret {precos_papel}")
-st.plotly_chart(fig_ret)
-
-######
-
 # Tabela de Retornos
 st.write("-----------------------------------------")
 st.write(f" ✳️ Retornos da Ação {precos_papel} - Mensal ")
 tb_df = pd.read_csv(f"./Api/historico/{precos_papel}.csv", sep=";", index_col=[0])
 cm = sb.light_palette("green", as_cmap=True)
 st.table(tb_df.style.background_gradient(cmap=cm))
+
+######
+
+# Gráfico de Retornos Diários
+st.write("-----------------------------------------")
+st.write(f" ⌛ Retornos Diarios da Ação {precos_papel} ")
+precos_df_ret = precos_df_ad[f'{precos_papel}'].pct_change()
+precos_df_ad[f'Ret {precos_papel}'] = precos_df_ret
+fig_ret = px.line(precos_df_ad, x="Date", y=f"Ret {precos_papel}")
+st.plotly_chart(fig_ret)
 
 ######
 
@@ -566,43 +544,6 @@ precos_df_vol = (
 precos_df_ad[f"Vol {precos_papel}"] = precos_df_vol
 fig_vol = px.line(precos_df_ad, x="Date", y=f"Vol {precos_papel}")
 st.plotly_chart(fig_vol)
-
-######
-
-# Gráfico MM200
-st.write("-----------------------------------------")
-st.write(f" 🔥 Média Movel de 200 - {precos_papel} ")
-df_mm200 = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
-fig_200 = px.line(df_mm200, x="Date", y=[f"MM200","Adj Close"],
-                labels={
-                    "Date":"Data",
-                    "value":"Preço da Ação"
-                })
-st.plotly_chart(fig_200)
-
-######
-
-# Gráfico indicador de Mayer (Preço atual / MMM 200)
-st.write("-----------------------------------------")
-st.write(f" 🔥 Indicador de Mayer - {precos_papel} ")
-df_mayer = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
-fig_may = px.line(df_mayer, x="Date", y="Mayer",
-                labels={
-                    "Date":"Data"
-                })
-st.plotly_chart(fig_may)
-
-######
-
-# Gráfico IFR
-st.write("-----------------------------------------")
-st.write(f" 🔥 Indicador IFR - {precos_papel} ")
-df_ifr = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")                
-fig_may = px.line(df_ifr, x="Date", y="Classic RSI",
-                labels={
-                    "Date":"Data"
-                })
-st.plotly_chart(fig_may)
 
 ######
 
