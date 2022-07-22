@@ -34,6 +34,8 @@ moedas = __list__.lst_moedas
 
 for i in tqdm(acao):
     df = yf.download(f'{i}.SA', start=inicio, end=fim, progress=False, threads=False)
+    df['ret'] = round((df['Adj Close'].pct_change()) * 100, 2)
+    df['tret'] = df['ret'].cumsum()
     df.to_csv(f'./precos/{i}.csv',sep=';')
     logging.info('Preços das ações salvos com SUCESSO')
 

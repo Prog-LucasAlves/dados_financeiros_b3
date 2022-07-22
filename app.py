@@ -536,6 +536,14 @@ st.plotly_chart(fig_ret)
 
 ######
 
+# Gráfico de Retornos Diários
+st.write("-----------------------------------------")
+st.write(f" ⌛ Retornos Acumulados da Ação {precos_papel} ")
+df_ret_ac = pd.read_csv(f"./Api/precos/{precos_papel}.csv", sep=";")
+fig_ret_ac = px.line(df_ret_ac, x='Date', y='tret')
+st.plotly_chart(fig_ret_ac)
+######
+
 # Gráfico de Voltilidade
 st.write("-----------------------------------------")
 st.write(f" 🔥 Volatiliadade da Ação {precos_papel} - (30 dias) ")
