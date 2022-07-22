@@ -530,7 +530,10 @@ st.write("-----------------------------------------")
 st.write(f" ✳️ Retornos Acumulados da Ação {precos_papel} ")
 qs.extend_pandas()
 stock = qs.utils.download_returns(f'{precos_papel}.SA')
-st.plotly_chart(qs.plots.earnings(stock))
+fig = qs.plots.earnings(stock)
+#st.plotly_chart(qs.plots.earnings(stock))
+st.pyplot(qs.plots.earnings(stock))
+st.pyplot(fig)
 
 ######
 
