@@ -19,6 +19,7 @@ import math
 ##################################
 
 ######
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.set_page_config(layout = "wide")
 
