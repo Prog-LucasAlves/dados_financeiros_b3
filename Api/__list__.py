@@ -43,7 +43,6 @@ lst_acao = [
     "BBAS3",
     "BBDC3",
     "BBDC4",
-    "BBRK3",
     "BBSE3",
     "BDLL3",
     "BDLL4",
