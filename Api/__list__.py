@@ -1,5 +1,3 @@
-lst_acao2 = ["AALR3","ALLD3"]
-
 lst_acao = [
     "AALR3",
     "ABCB4",
