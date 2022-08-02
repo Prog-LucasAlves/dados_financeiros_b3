@@ -1,6 +1,7 @@
 lst_acao2 = [ 
-    "AALR3.SA",
-    "ABCB4.SA"]
+    "AALR3",
+    "ABCB4"
+    ]
 
 lst_acao = [
     "AALR3",
